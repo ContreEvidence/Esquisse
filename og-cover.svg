@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#101820"/>
+<rect x="70" y="70" width="1060" height="490" rx="34" fill="#14212c" stroke="#344451" stroke-width="3"/>
+<text x="110" y="220" fill="#f2c14e" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="5">SYSTÈMES · STRATÉGIES · DÉCISIONS</text>
+<text x="105" y="345" fill="#f7f4ec" font-family="Arial, sans-serif" font-size="88" font-weight="800">CONTRE-ÉVIDENCE</text>
+<text x="110" y="430" fill="#d2dbe1" font-family="Arial, sans-serif" font-size="39">Comprendre le réel. Élargir sa marge de manœuvre.</text>
+<path d="M930 477 1078 329" stroke="#f2c14e" stroke-width="24" stroke-linecap="round"/>
+<path d="M1033 319h55v55" fill="none" stroke="#f2c14e" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

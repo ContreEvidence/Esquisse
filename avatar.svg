@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">Avatar éditorial Contre-évidence</title>
+<desc id="desc">Silhouette abstraite composée de lignes et d'une fenêtre lumineuse.</desc>
+<rect width="512" height="512" rx="96" fill="#101820"/>
+<circle cx="256" cy="213" r="106" fill="#182632" stroke="#65727d" stroke-width="10"/>
+<path d="M162 408c18-86 62-129 94-129s76 43 94 129" fill="#182632" stroke="#65727d" stroke-width="10" stroke-linecap="round"/>
+<path d="M199 244 313 130" stroke="#f2c14e" stroke-width="25" stroke-linecap="round"/>
+<path d="M278 123h44v44" fill="none" stroke="#f2c14e" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="256" cy="213" r="143" fill="none" stroke="#2a3946" stroke-width="6" stroke-dasharray="10 18"/>
+</svg>
