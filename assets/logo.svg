@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+<title id="title">Logo Contre-évidence</title>
+<desc id="desc">Une grille sombre traversée par une ouverture lumineuse en diagonale.</desc>
+<rect width="256" height="256" rx="48" fill="#101820"/>
+<path d="M52 52h152v152H52z" fill="none" stroke="#dbe4ea" stroke-width="12"/>
+<path d="M52 103h152M52 153h152M103 52v152M153 52v152" stroke="#44515d" stroke-width="8"/>
+<path d="M83 187 187 83" stroke="#f2c14e" stroke-width="20" stroke-linecap="round"/>
+<path d="M156 76h39v39" fill="none" stroke="#f2c14e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
