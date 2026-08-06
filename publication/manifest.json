@@ -1,0 +1,98 @@
+[
+  {
+    "ordre": 1,
+    "fichier": "01-preuves-competences.mp4",
+    "durée": 21.2,
+    "accroche": "VOUS NE MANQUEZ PEUT-ÊTRE PAS DE COMPÉTENCES.",
+    "légende": "Une compétence déclarée reste une promesse. Une preuve réduit le risque perçu.",
+    "article": "articles/competences-invisibles-preuves.html"
+  },
+  {
+    "ordre": 2,
+    "fichier": "02-premiere-chance.mp4",
+    "durée": 21.2,
+    "accroche": "PERSONNE NE VEUT PRENDRE LE RISQUE ?",
+    "légende": "Le manque d’expérience est surtout un manque d’information pour celui qui recrute.",
+    "article": "articles/premiere-chance-sans-experience.html"
+  },
+  {
+    "ordre": 3,
+    "fichier": "03-premier-emploi.mp4",
+    "durée": 21.2,
+    "accroche": "FAUT-IL ACCEPTER N’IMPORTE QUEL PREMIER EMPLOI ?",
+    "légende": "Évaluez le poste par ce qu’il paie aujourd’hui et par ce qu’il rend possible demain.",
+    "article": "articles/accepter-nimporte-quel-premier-emploi.html"
+  },
+  {
+    "ordre": 4,
+    "fichier": "04-retour-emploi.mp4",
+    "durée": 21.2,
+    "accroche": "UNE LONGUE INTERRUPTION NE SUPPRIME PAS VOTRE VALEUR.",
+    "légende": "Expliquez brièvement le passé, puis montrez ce qui rend votre reprise crédible aujourd’hui.",
+    "article": "articles/retrouver-emploi-apres-interruption.html"
+  },
+  {
+    "ordre": 5,
+    "fichier": "05-parcours-accidente.mp4",
+    "durée": 21.2,
+    "accroche": "UN PARCOURS N’A PAS BESOIN D’ÊTRE LINÉAIRE.",
+    "légende": "Reliez les étapes par les problèmes résolus, les apprentissages et la direction actuelle.",
+    "article": "articles/expliquer-parcours-accidente.html"
+  },
+  {
+    "ordre": 6,
+    "fichier": "06-reconversion-formation.mp4",
+    "durée": 21.2,
+    "accroche": "UNE RECONVERSION NE COMMENCE PAS PAR UNE FORMATION.",
+    "légende": "Observez le métier réel et identifiez l’écart précis avant d’acheter une formation.",
+    "article": "articles/reconversion-ne-commence-pas-formation.html"
+  },
+  {
+    "ordre": 7,
+    "fichier": "07-competences-transferables.mp4",
+    "durée": 21.2,
+    "accroche": "VOS INTITULÉS DE POSTE NE SONT PAS VOS COMPÉTENCES.",
+    "légende": "Séparez le métier, l’outil, la méthode et le résultat pour identifier ce qui se transfère.",
+    "article": "articles/competences-transferables.html"
+  },
+  {
+    "ordre": 8,
+    "fichier": "08-repartir-zero.mp4",
+    "durée": 21.2,
+    "accroche": "CHANGER DE MÉTIER NE SIGNIFIE PAS REPARTIR DE ZÉRO.",
+    "légende": "Vous pouvez débuter sur la technique sans redevenir débutant sur le jugement, l’organisation ou la fiabilité.",
+    "article": "articles/repartir-sans-recommencer-zero.html"
+  },
+  {
+    "ordre": 9,
+    "fichier": "09-reconversion-50-ans.mp4",
+    "durée": 21.2,
+    "accroche": "APRÈS 50 ANS, L’EXPÉRIENCE PEUT RASSURER…",
+    "légende": "Répondez aux craintes de coût, d’adaptation et de stabilité avec des preuves récentes.",
+    "article": "articles/reconversion-apres-50-ans.html"
+  },
+  {
+    "ordre": 10,
+    "fichier": "10-surqualification.mp4",
+    "durée": 21.2,
+    "accroche": "« SURQUALIFIÉ » NE VEUT PAS TOUJOURS DIRE TROP COMPÉTENT.",
+    "légende": "Clarifiez stabilité, hiérarchie, contenu du travail et rémunération sans effacer votre expérience.",
+    "article": "articles/surqualification-rassurer-employeur.html"
+  },
+  {
+    "ordre": 11,
+    "fichier": "11-sante-changer-metier.mp4",
+    "durée": 21.2,
+    "accroche": "QUAND LA SANTÉ FERME UN MÉTIER…",
+    "légende": "Partez des capacités durables et des fonctions transférables, puis testez les contraintes du poste cible.",
+    "article": "articles/sante-oblige-changer-metier.html"
+  },
+  {
+    "ordre": 12,
+    "fichier": "12-transition-temporaire.mp4",
+    "durée": 21.2,
+    "accroche": "UNE SOLUTION TEMPORAIRE PEUT VOUS SAUVER…",
+    "légende": "Donnez une fonction, une durée et une date de bilan à toute transition.",
+    "article": "articles/transition-temporaire-sans-abandonner-projet.html"
+  }
+]
