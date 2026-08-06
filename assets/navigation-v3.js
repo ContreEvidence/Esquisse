@@ -1,29 +1,29 @@
 (() => {
   'use strict';
-  if (document.documentElement.dataset.ceFlatNav === '13') return;
-  document.documentElement.dataset.ceFlatNav = '13';
+  if (document.documentElement.dataset.ceFlatNav === '14') return;
+  document.documentElement.dataset.ceFlatNav = '14';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '13';
+  style.dataset.ceFlatNav = '14';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.36);box-shadow:0 7px 24px rgba(0,0,0,.32);font-family:inherit}
     .ce-flat-shell{width:min(1180px,92vw);margin:0 auto}
     .ce-flat-top{min-height:102px;display:grid;grid-template-columns:minmax(300px,auto) minmax(260px,1fr) auto;align-items:center;gap:1rem;padding:.65rem 0}
     .ce-flat-brand{display:inline-flex;align-items:center;gap:1rem;color:#fff;text-decoration:none;white-space:nowrap}
-    .ce-flat-brand img{display:block;width:82px;height:82px;flex:0 0 82px;object-fit:contain;border-radius:50%;box-shadow:0 0 0 2px #d4ab56,0 0 0 5px #fff,0 10px 28px rgba(0,0,0,.42)}
+    .ce-flat-brand img{display:block;width:82px;height:82px;flex:0 0 82px;object-fit:contain;border-radius:50%;background:#050506;box-shadow:0 0 0 2px #d4ab56,0 0 0 5px #fff,0 10px 28px rgba(0,0,0,.42)}
     .ce-flat-brand-copy{display:flex;flex-direction:column;gap:.28rem;line-height:1}
     .ce-flat-brand-copy strong{font-size:clamp(1.18rem,1.8vw,1.6rem);letter-spacing:.045em;color:#fff}
     .ce-flat-brand-copy strong em{font-style:normal;color:#d4ab56}
     .ce-flat-brand-copy small{font-size:.66rem;letter-spacing:.15em;color:#e8c979;font-weight:800}
-    .ce-search{display:flex;align-items:stretch;width:100%;max-width:610px;margin-inline:auto;background:#fff;border:2px solid #fff;border-radius:13px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.22)}
-    .ce-search input{min-width:0;flex:1;height:46px;padding:0 .9rem;border:0;background:#fff;color:#101820;font:inherit;font-size:.94rem}
+    .ce-search{display:flex!important;visibility:visible!important;opacity:1!important;align-items:stretch;width:100%;max-width:610px;margin-inline:auto;background:#fff;border:2px solid #fff;border-radius:13px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.22)}
+    .ce-search input{display:block!important;min-width:0;flex:1;height:46px;padding:0 .9rem;border:0;background:#fff;color:#101820;font:inherit;font-size:.94rem}
     .ce-search input::placeholder{color:#59646d;opacity:1}
-    .ce-search button{min-width:52px;border:0;background:#d4ab56;color:#101010;font-size:1rem;font-weight:900;cursor:pointer}
+    .ce-search button{display:block!important;min-width:92px;border:0;background:#d4ab56;color:#101010;font-size:.92rem;font-weight:900;cursor:pointer}
     .ce-search button:hover,.ce-search button:focus-visible{background:#e8c979;outline:2px solid #fff;outline-offset:-4px}
     .ce-flat-actions{display:flex;align-items:center;gap:.55rem}
     .ce-flat-toplink{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.68rem .95rem;border-radius:999px;text-decoration:none;font-size:.87rem;font-weight:850;white-space:nowrap;background:#18181a;color:#fff;border:1px solid rgba(255,255,255,.28)}
@@ -40,7 +40,7 @@
       .ce-flat-brand img{width:64px;height:64px;flex-basis:64px;box-shadow:0 0 0 2px #d4ab56,0 0 0 4px #fff}
       .ce-flat-brand{gap:.72rem}.ce-flat-brand-copy strong{font-size:.96rem}.ce-flat-brand-copy small{display:none}
       .ce-flat-actions{justify-self:end}.ce-flat-toplink{display:none}.ce-flat-toggle{display:block}
-      .ce-search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}.ce-search input{height:44px;font-size:.9rem}
+      .ce-search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}.ce-search input{height:44px;font-size:.9rem}.ce-search button{min-width:86px;font-size:.86rem}
       .ce-flat-nav{display:none;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 130px);overflow:auto;background:#0d0d0f;box-shadow:0 18px 40px rgba(0,0,0,.44)}
       .ce-flat-header.is-open .ce-flat-nav{display:block}
       .ce-flat-links{grid-template-columns:1fr;gap:.45rem;width:min(94vw,680px);padding:.7rem 0 1rem}
@@ -65,7 +65,7 @@
   header.className = 'ce-flat-header';
   header.innerHTML = `
     <div class="ce-flat-shell ce-flat-top">
-      <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>SYSTÈMES · STRATÉGIES · DÉCISIONS</small></span></a>
+      <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260806-1855" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>SYSTÈMES · STRATÉGIES · DÉCISIONS</small></span></a>
       <form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search">
         <input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, épargne, IA, décision…" autocomplete="off">
         <button type="submit">Rechercher</button>
@@ -73,6 +73,9 @@
       <div class="ce-flat-actions"><a class="ce-flat-toplink" href="${u('a-propos.html')}">À propos</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div>
     </div>
     <nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
+
+  const brandImg = header.querySelector('.ce-flat-brand img');
+  brandImg?.addEventListener('error', () => { brandImg.style.display = 'none'; });
 
   const currentQuery = new URLSearchParams(window.location.search).get('q');
   const searchInput = header.querySelector('.ce-search input');
