@@ -1,14 +1,14 @@
 (() => {
   'use strict';
-  if (document.documentElement.dataset.ceFlatNav === '2') return;
-  document.documentElement.dataset.ceFlatNav = '2';
+  if (document.documentElement.dataset.ceFlatNav === '3') return;
+  document.documentElement.dataset.ceFlatNav = '3';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '2';
+  style.dataset.ceFlatNav = '3';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.34);box-shadow:0 7px 24px rgba(0,0,0,.32);font-family:inherit}
@@ -16,25 +16,22 @@
     .ce-flat-top{min-height:82px;display:grid;grid-template-columns:auto minmax(260px,1fr) auto;align-items:center;gap:1rem;padding:.7rem 0}
     .ce-flat-brand{display:inline-flex;align-items:center;gap:.8rem;color:#fff;text-decoration:none;font-size:clamp(1.05rem,1.7vw,1.35rem);font-weight:900;letter-spacing:-.025em;white-space:nowrap}
     .ce-flat-brand img{display:block;width:58px;height:58px;flex:0 0 58px;border-radius:50%;box-shadow:0 0 0 1px rgba(232,201,121,.35)}
-    .ce-search{display:flex;align-items:stretch;width:100%;max-width:560px;margin-inline:auto;background:#fff;border:2px solid #fff;border-radius:13px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.22)}
+    .ce-search{display:flex;align-items:stretch;width:100%;max-width:620px;margin-inline:auto;background:#fff;border:2px solid #fff;border-radius:13px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.22)}
     .ce-search input{min-width:0;flex:1;height:46px;padding:0 .9rem;border:0;background:#fff;color:#101820;font:inherit;font-size:.94rem}
     .ce-search input::placeholder{color:#59646d;opacity:1}
     .ce-search input:focus{outline:3px solid rgba(232,201,121,.7);outline-offset:-3px}
     .ce-search button{min-width:50px;border:0;background:#d4ab56;color:#101010;font-size:1.15rem;font-weight:900;cursor:pointer}
     .ce-search button:hover,.ce-search button:focus-visible{background:#e8c979;outline:2px solid #fff;outline-offset:-4px}
     .ce-flat-actions{display:flex;align-items:center;gap:.55rem}
-    .ce-flat-toplink,.ce-video-toplink{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.68rem .95rem;border-radius:999px;text-decoration:none;font-size:.87rem;font-weight:850;white-space:nowrap}
-    .ce-flat-toplink{background:#18181a;color:#fff;border:1px solid rgba(255,255,255,.28)}
-    .ce-video-toplink{background:#d4ab56;color:#0c0c0d;border:1px solid #e8c979}
+    .ce-flat-toplink{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.68rem .95rem;border-radius:999px;text-decoration:none;font-size:.87rem;font-weight:850;white-space:nowrap;background:#18181a;color:#fff;border:1px solid rgba(255,255,255,.28)}
     .ce-flat-toplink:hover,.ce-flat-toplink:focus-visible{background:#242427;border-color:#fff;color:#fff;outline:none}
-    .ce-video-toplink:hover,.ce-video-toplink:focus-visible{background:#e8c979;color:#000;outline:2px solid #fff;outline-offset:2px}
     .ce-flat-toggle{display:none;width:46px;height:46px;padding:0;border:1px solid rgba(255,255,255,.34);border-radius:12px;background:#18181a;cursor:pointer}
     .ce-flat-toggle span{display:block;width:20px;height:2px;margin:4px auto;background:#fff;border-radius:2px;transition:transform .18s ease,opacity .18s ease}
     .ce-flat-header.is-open .ce-flat-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
     .ce-flat-header.is-open .ce-flat-toggle span:nth-child(2){opacity:0}
     .ce-flat-header.is-open .ce-flat-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
     .ce-flat-nav{background:#111113;border-top:1px solid rgba(232,201,121,.22)}
-    .ce-flat-links{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:.48rem;padding:.62rem 0 .78rem}
+    .ce-flat-links{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.48rem;padding:.62rem 0 .78rem}
     .ce-flat-link{display:flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem .56rem;color:#fff;text-decoration:none;text-align:center;font-size:.82rem;font-weight:850;line-height:1.15;background:#1c1c1f;border:1px solid rgba(255,255,255,.18);border-bottom:3px solid #b28a38;border-radius:12px;box-shadow:0 2px 6px rgba(0,0,0,.16);transition:transform .14s ease,box-shadow .14s ease,background .14s ease,color .14s ease,border-color .14s ease}
     .ce-flat-link:hover,.ce-flat-link:focus-visible{transform:translateY(-2px);box-shadow:0 7px 14px rgba(0,0,0,.28);background:#29292d;color:#fff;outline:2px solid #e8c979;outline-offset:2px}
     .ce-flat-link.is-current{background:#d4ab56!important;color:#09090a!important;border-color:#e8c979!important;border-bottom-color:#fff1b8!important;box-shadow:0 8px 18px rgba(0,0,0,.32)}
@@ -52,7 +49,6 @@
       .ce-flat-brand span{display:inline}
       .ce-flat-actions{justify-self:end}
       .ce-flat-toplink{display:none}
-      .ce-video-toplink{min-height:42px;padding:.58rem .76rem;font-size:.82rem}
       .ce-flat-toggle{display:block}
       .ce-search{grid-column:1 / -1;grid-row:2;max-width:none;margin:0}
       .ce-search input{height:44px;font-size:.91rem}
@@ -74,7 +70,6 @@
     ['IA & technologie','themes/ia.html','ia'],
     ['Décisions','themes/decisions.html','decisions'],
     ['Systèmes','themes/systemes.html','systemes'],
-    ['Vidéos','videos.html','videos'],
     ['Bibliothèque','bibliotheque.html','bibliotheque']
   ];
 
@@ -83,12 +78,11 @@
     <div class="ce-flat-shell ce-flat-top">
       <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo-ce-512.png')}" alt="Logo Contre-évidence"><span>Contre-évidence</span></a>
       <form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search">
-        <input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher un article ou un sujet…" autocomplete="off">
+        <input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, épargne, IA, décision…" autocomplete="off">
         <button type="submit" aria-label="Lancer la recherche">⌕</button>
       </form>
       <div class="ce-flat-actions">
-        <a class="ce-video-toplink" href="${u('videos.html')}">▶ Vidéos</a>
-        <a class="ce-flat-toplink" href="${u('a-propos.html')}">À propos</a>
+<a class="ce-flat-toplink" href="${u('a-propos.html')}">À propos</a>
         <button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -107,7 +101,6 @@
     : path.includes('/themes/ia') ? 'ia'
     : path.includes('/themes/decisions') ? 'decisions'
     : path.includes('/themes/systemes') ? 'systemes'
-    : path.includes('/videos') ? 'videos'
     : path.includes('/bibliotheque') ? 'bibliotheque' : '';
   if (current) header.querySelector(`[data-key="${current}"]`)?.classList.add('is-current');
 

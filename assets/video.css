@@ -36,3 +36,5 @@
 .home-videos .video-section-head .btn-ghost{background:#fff;color:#101820;border-color:#59636c}
 .home-videos .video-section-head .btn-ghost:hover{background:#101820;color:#fff}
 .video-status-note{margin:.9rem 0 0;padding:.9rem 1rem;border-radius:12px;background:#fff4cf;color:#101820;border:1px solid #a77c1b;font-weight:700}
+
+.domain-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.domain-video-grid .video-card{background:#151518!important;color:#fff!important}.domain-video-grid .video-card h2{color:#fff!important}.domain-video-grid .video-card p{color:#ded8cc!important}.domain-video-grid .kicker{color:#efd88f!important}@media(max-width:950px){.domain-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.domain-video-grid{grid-template-columns:1fr}.domain-video-grid .video-card video{max-height:72vh}}

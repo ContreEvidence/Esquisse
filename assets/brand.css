@@ -58,3 +58,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #c28f
   .hero p,.article-hero p{color:#f0f3f5}
   .section-head p,.theme-card p,.article-card p,.home-video-card p,.video-card p{font-size:1rem;line-height:1.55}
 }
+
+/* Pack 11 */
+body{background:#f5f1e8;color:#141517}.home-videos{background:#0b0b0d;color:#fff}.home-videos h2,.home-videos h3{color:#fff}.home-videos p{color:#e4ded2!important}
