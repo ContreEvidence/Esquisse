@@ -1,0 +1,24 @@
+CORRECTION DU MENU — CONTRE-ÉVIDENCE
+
+FICHIER À REMPLACER
+-------------------
+Dans ton dépôt GitHub, ouvre le dossier : assets
+
+Remplace uniquement le fichier :
+navigation-v3.js
+
+par celui contenu dans ce pack :
+assets/navigation-v3.js
+
+IMPORTANT
+---------
+1. Ne renomme pas le fichier.
+2. Ne modifie pas les pages HTML.
+3. Le nouveau fichier contient directement toute la mise en forme du menu.
+4. Il n'utilise plus navigation-tabs.css : les anciens conflits de CSS sont donc neutralisés.
+5. Après la mise en ligne, attends environ une minute puis recharge avec Ctrl + F5.
+
+CONTENU DU PACK
+---------------
+assets/navigation-v3.js : fichier de remplacement
+PREVIEW-MENU.html       : démonstration locale du nouveau menu
