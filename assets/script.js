@@ -4,7 +4,7 @@
   if (!document.documentElement.dataset.ceNavLoader) {
     document.documentElement.dataset.ceNavLoader = '1';
     const navScript = document.createElement('script');
-    navScript.src = new URL('navigation-v3.js?v=20260806-9', currentScript?.src || window.location.href).href;
+    navScript.src = new URL('navigation-v3.js?v=20260806-12', currentScript?.src || window.location.href).href;
     navScript.defer = true;
     document.head.appendChild(navScript);
   }

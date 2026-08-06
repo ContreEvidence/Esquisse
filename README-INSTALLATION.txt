@@ -1,17 +1,41 @@
-PACK 09 — identité visuelle et vidéos visibles
+PACK 10 — LISIBILITÉ, RECHERCHE ET VIDÉOS VISIBLES
 
-À remplacer ou ajouter à la racine du site GitHub Pages :
+CORRECTIONS
+-----------
+1. Contrastes renforcés :
+   - texte sombre sur fond clair ;
+   - texte blanc sur fond sombre ;
+   - boutons fantômes corrigés ;
+   - cartes du bloc sombre rendues lisibles ;
+   - doré foncé utilisé pour les petits textes sur fond blanc.
+
+2. Vidéos rendues visibles :
+   - bouton « ▶ Vidéos » permanent dans l’en-tête ;
+   - rubrique Vidéos dans le menu ;
+   - trois vidéos placées immédiatement sous le premier écran de l’accueil ;
+   - chargement des lecteurs en mode « metadata » ;
+   - lien direct sous chaque lecteur en cas de problème d’affichage.
+
+3. Recherche ajoutée :
+   - barre de recherche visible dans l’en-tête, y compris sur téléphone ;
+   - la recherche ouvre la bibliothèque et filtre les articles par titre, thème ou mot-clé.
+
+FICHIERS À REMPLACER EN PRIORITÉ
+--------------------------------
+À la racine :
 - index.html
 - videos.html
 - bibliotheque.html
-- moins-de-25-ans.html
-- parcours-argent.html
-- themes/argent.html
-- dossier articles (12 fichiers vidéo mis à jour)
-- dossier assets (ajout de brand.css, logo-ce-512.png, og-cover-brand.png et mise à jour de navigation-v3.js)
 
-Important :
-- le menu principal comporte maintenant un accès direct à « Vidéos » ;
-- « À propos » reste disponible en lien discret dans l'en-tête ;
-- le logo noir, blanc et or des réseaux devient le visuel principal du site ;
-- faites un Ctrl + F5 après publication.
+Dans assets :
+- navigation-v3.js
+- script.js
+- brand.css
+- video.css
+
+Les autres fichiers du pack peuvent également être remplacés pour appliquer la nouvelle version de cache à toutes les pages concernées.
+
+IMPORTANT
+---------
+Ne supprimez pas les fichiers qui ne figurent pas dans ce pack, notamment assets/style.css.
+Après l’envoi sur GitHub, attendez la publication puis rechargez normalement. Les références versionnées en 20260806-12 évitent de réutiliser l’ancien menu en cache.
