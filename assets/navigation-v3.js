@@ -1,9 +1,32 @@
 (() => {
+  if (!document.querySelector('link[href$="navigation-tabs.css"]')) {
+    const tabsStyles = document.createElement('link');
+    tabsStyles.rel = 'stylesheet';
+    tabsStyles.href = new URL('navigation-tabs.css', document.currentScript?.src || window.location.href).href;
+    document.head.appendChild(tabsStyles);
+  }
+
   const header = document.querySelector('header');
   const menuButton = header?.querySelector('.menu');
   const nav = header?.querySelector('.site-nav');
   const items = [...document.querySelectorAll('.nav-item')];
   if (!header || !nav) return;
+
+  const normalizePath = value => {
+    try {
+      const url = new URL(value, window.location.href);
+      return url.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
+    } catch {
+      return '';
+    }
+  };
+
+  const currentPath = normalizePath(window.location.href);
+  nav.querySelectorAll('a[href]').forEach(link => {
+    if (normalizePath(link.href) !== currentPath) return;
+    link.classList.add('is-current');
+    link.closest('.nav-item')?.classList.add('has-current');
+  });
 
   const closeDropdowns = (except = null) => {
     items.forEach(item => {
