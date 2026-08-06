@@ -1,28 +1,42 @@
-CONTRE-ÉVIDENCE — PACK 01 : 10 ARTICLES ADDITIONNELS
-======================================================
+CONTRE-ÉVIDENCE — PACK 02 : 10 ARTICLES SUPPLÉMENTAIRES
+===========================================================
 
 ADRESSE DU SITE
 https://contreevidence.github.io/Esquisse/
 
-CONTENU DU PACK
-- 10 nouveaux articles HTML dans le dossier articles/
-- bibliotheque.html : index des 13 articles
-- index.html : page d'accueil actualisée
-- rss.xml : flux contenant les 13 articles
-- sitemap.xml : toutes les URL du site
-- robots.txt : adresse correcte du sitemap
+CE PACK S'INSTALLE APRÈS LE PACK 01.
 
-INSTALLATION
-1. Décompressez l'archive.
-2. Ouvrez le dépôt GitHub qui publie le site /Esquisse/.
-3. Ajoutez les 10 fichiers du dossier articles/ dans le dossier articles/ existant.
-4. Ajoutez bibliotheque.html à la racine.
-5. Remplacez index.html, rss.xml, sitemap.xml et robots.txt par les versions de ce pack.
-6. Conservez votre dossier assets/ actuel : les nouveaux fichiers réutilisent assets/style.css, assets/script.js, assets/logo.svg et assets/og-cover.svg.
-7. Validez les modifications dans GitHub. GitHub Pages republiera le site.
+À AJOUTER DANS LE DOSSIER articles/
+- modeles-mentaux.html
+- contraintes-innovation.html
+- decisions-reversibles-irreversibles.html
+- marge-de-securite.html
+- rendements-decroissants.html
+- information-comprehension.html
+- risque-incertitude.html
+- biais-confirmation.html
+- simplifier-sans-trahir.html
+- mesure-devient-cible.html
 
-IMPORTANT
-- Le bouton newsletter conserve « VOTRE-ADRESSE » tant que l'adresse éditoriale n'a pas été fournie.
-- Les trois articles fondateurs restent référencés mais ne sont pas dupliqués dans ce pack.
-- Tous les liens absolus utilisent maintenant :
-  https://contreevidence.github.io/Esquisse/
+À REMPLACER À LA RACINE
+- index.html
+- bibliotheque.html
+- rss.xml
+- sitemap.xml
+
+À CONSERVER
+- le dossier assets/
+- tous les fichiers du Pack 01
+- les trois articles fondateurs
+- a-propos.html, confidentialite.html, mentions.html, 404.html
+- manifest.webmanifest et robots.txt
+
+RÉSULTAT
+Le site présentera 23 articles au total.
+
+INSTALLATION SUR GITHUB
+1. Ouvrez le dépôt Esquisse.
+2. Dans articles/, téléversez les 10 nouveaux fichiers.
+3. À la racine, téléversez les quatre fichiers de remplacement.
+4. Validez les changements avec Commit changes.
+5. Attendez la republication automatique de GitHub Pages.
