@@ -1,0 +1,21 @@
+/* Vidéos Contre-évidence */
+.video-intro{max-width:760px}
+.video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.3rem;align-items:start}
+.video-card{display:flex;flex-direction:column;gap:.85rem;padding:1rem;background:#fff;border:1px solid rgba(16,24,32,.12);border-radius:18px;box-shadow:0 8px 24px rgba(16,24,32,.06)}
+.video-card video,.home-video-card video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#101820;border-radius:13px}
+.video-card h2,.home-video-card h3{margin:0;font-size:1.08rem;line-height:1.25}
+.video-card p,.home-video-card p{margin:0;color:#58656e;line-height:1.5}
+.video-card .video-actions{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:auto}
+.video-card .video-actions a{font-size:.86rem}
+.home-videos{background:linear-gradient(135deg,#fffdf8,#f1f6f8)}
+.home-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
+.home-video-card{display:flex;flex-direction:column;gap:.75rem;padding:.9rem;background:#fff;border:1px solid rgba(16,24,32,.11);border-radius:17px;box-shadow:0 7px 20px rgba(16,24,32,.055)}
+.home-video-card .video-read{font-weight:800;text-decoration:none}
+.video-section-head{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.4rem}
+.article-video-feature{max-width:440px;margin:1.35rem 0 0;padding:.85rem;background:#fff;border:1px solid rgba(16,24,32,.12);border-radius:18px;box-shadow:0 10px 25px rgba(16,24,32,.08)}
+.article-video-feature video{display:block;width:100%;aspect-ratio:9/16;max-height:620px;object-fit:cover;background:#101820;border-radius:12px}
+.article-video-feature p{margin:.7rem .2rem .1rem;font-size:.9rem;color:#59666f}
+.video-library-callout{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:1rem 0 2rem;padding:1rem 1.15rem;border:1px solid rgba(214,169,74,.4);border-radius:16px;background:#fff9e9}
+.video-library-callout p{margin:0}
+@media(max-width:950px){.video-grid,.home-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.video-grid,.home-video-grid{grid-template-columns:1fr}.video-section-head,.video-library-callout{align-items:flex-start;flex-direction:column}.article-video-feature{max-width:360px;margin-inline:auto}}

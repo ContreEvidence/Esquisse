@@ -1,35 +1,21 @@
-MISE À JOUR — FINANCES PERSONNELLES ET MOINS DE 25 ANS
+CONTRE-ÉVIDENCE — PACK 08 : VIDÉOS ET PUBLICATION
 
-OBJECTIF
-- Une rubrique directe par thème.
-- Aucun menu déroulant.
-- « Finances personnelles » remplace « Argent » dans la navigation.
-- « Moins de 25 ans » devient une page transversale accessible depuis l’accueil.
-- « Parcours argent » devient « Organiser ses finances » dans les textes visibles.
+CONTENU
+- page videos.html avec les 12 vidéos ;
+- trois vidéos mises en avant sur la page d’accueil ;
+- vidéos intégrées dans les 12 articles concernés ;
+- affiches légères pour éviter de charger les MP4 avant lecture ;
+- accès aux vidéos depuis la bibliothèque ;
+- calendrier de publication et légendes prêtes.
 
-FICHIERS À REMPLACER
-1. assets/script.js
-2. assets/navigation-v3.js
-3. index.html
-4. bibliotheque.html
-5. parcours-argent.html
-6. themes/argent.html
-7. sitemap.xml
+INSTALLATION
+1. Décompressez le pack.
+2. À la racine du dépôt GitHub, remplacez les fichiers portant le même nom.
+3. Ajoutez les nouveaux dossiers et fichiers : videos/, assets/video-posters/, assets/video.css, videos.html et publication/.
+4. Ne supprimez aucun autre fichier du site.
+5. Attendez la publication GitHub Pages, puis rechargez avec Ctrl + F5.
 
-FICHIERS À AJOUTER
-1. assets/young.css
-2. moins-de-25-ans.html
-
-FAUT-IL SUPPRIMER D’ANCIENS FICHIERS ?
-Non. Ne supprimez pas navigation.css : il sert aussi aux cartes, aux filtres et aux parcours.
-Vous pouvez supprimer navigation-tabs.css s’il existe encore, mais ce n’est plus obligatoire : le nouveau menu n’utilise aucune de ses classes.
-
-ORDRE CONSEILLÉ DANS GITHUB
-1. Envoyer les deux fichiers du dossier assets.
-2. Envoyer les quatre pages HTML de remplacement et la nouvelle page.
-3. Remplacer sitemap.xml.
-4. Attendre une minute.
-5. Recharger le site avec Ctrl + F5.
-
-TEST AVANT INSTALLATION
-Ouvrir PREVIEW-MENU.html sur l’ordinateur. Le fichier montre le principe d’alignement sans modifier le site.
+IMPORTANT
+- Les vidéos ne démarrent jamais automatiquement.
+- Le son reste sous le contrôle du visiteur.
+- Les fichiers MP4 sont chargés uniquement lorsque le visiteur lance la lecture.
