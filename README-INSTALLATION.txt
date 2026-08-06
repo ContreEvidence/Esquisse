@@ -1,21 +1,17 @@
-CONTRE-ÉVIDENCE — PACK 08 : VIDÉOS ET PUBLICATION
+PACK 09 — identité visuelle et vidéos visibles
 
-CONTENU
-- page videos.html avec les 12 vidéos ;
-- trois vidéos mises en avant sur la page d’accueil ;
-- vidéos intégrées dans les 12 articles concernés ;
-- affiches légères pour éviter de charger les MP4 avant lecture ;
-- accès aux vidéos depuis la bibliothèque ;
-- calendrier de publication et légendes prêtes.
+À remplacer ou ajouter à la racine du site GitHub Pages :
+- index.html
+- videos.html
+- bibliotheque.html
+- moins-de-25-ans.html
+- parcours-argent.html
+- themes/argent.html
+- dossier articles (12 fichiers vidéo mis à jour)
+- dossier assets (ajout de brand.css, logo-ce-512.png, og-cover-brand.png et mise à jour de navigation-v3.js)
 
-INSTALLATION
-1. Décompressez le pack.
-2. À la racine du dépôt GitHub, remplacez les fichiers portant le même nom.
-3. Ajoutez les nouveaux dossiers et fichiers : videos/, assets/video-posters/, assets/video.css, videos.html et publication/.
-4. Ne supprimez aucun autre fichier du site.
-5. Attendez la publication GitHub Pages, puis rechargez avec Ctrl + F5.
-
-IMPORTANT
-- Les vidéos ne démarrent jamais automatiquement.
-- Le son reste sous le contrôle du visiteur.
-- Les fichiers MP4 sont chargés uniquement lorsque le visiteur lance la lecture.
+Important :
+- le menu principal comporte maintenant un accès direct à « Vidéos » ;
+- « À propos » reste disponible en lien discret dans l'en-tête ;
+- le logo noir, blanc et or des réseaux devient le visuel principal du site ;
+- faites un Ctrl + F5 après publication.
