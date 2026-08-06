@@ -14,3 +14,32 @@
 .finance-step{padding:1.1rem;border:1px solid rgba(16,24,32,.14);border-radius:18px;background:#fff}
 .finance-step .step-no{font-size:.78rem;font-weight:800;color:#9a6d14;text-transform:uppercase;letter-spacing:.08em}
 @media(max-width:700px){.finance-path{grid-template-columns:1fr}}
+
+
+/* ===== Lecture longue V3 ===== */
+.reading-progress{position:fixed;top:0;left:0;width:0;height:4px;background:var(--ce-gold);z-index:500;transition:width .08s linear}
+.article-tools{margin:0 0 1.7rem;padding:1rem 1.1rem;border:1px solid rgba(16,24,32,.12);border-radius:18px;background:#fff}
+.article-meta-line{display:flex;flex-wrap:wrap;gap:.55rem 1.2rem;align-items:center;font-size:.88rem;font-weight:750;color:#4b5660}
+.article-meta-line span{display:inline-flex;align-items:center;gap:.32rem}
+.article-toc{margin-top:.85rem;border-top:1px solid rgba(16,24,32,.1);padding-top:.8rem}
+.article-toc summary{cursor:pointer;font-weight:850;color:#183149}
+.article-toc nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.25rem .8rem;margin-top:.65rem}
+.article-toc a{padding:.34rem .45rem;border-radius:8px;color:inherit;text-decoration:none;font-size:.9rem;line-height:1.35}
+.article-toc a:hover,.article-toc a:focus-visible{background:#f5f2e9;outline:none}
+.depth-box,.case-study,.decision-box{margin:1.35rem 0;padding:1.1rem 1.2rem;border-radius:16px}
+.depth-box{border:1px solid rgba(24,49,73,.18);background:#f5f9fc}
+.case-study{border-left:4px solid var(--ce-gold);background:#fff9e9}
+.decision-box{border:1px solid rgba(16,24,32,.13);background:#fff}
+.depth-box h3,.case-study h3,.decision-box h3{margin-top:0}
+.decision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.25rem 0}
+.decision-card{padding:1rem;border:1px solid rgba(16,24,32,.13);border-radius:16px;background:#fff}
+.decision-card h3{margin:.05rem 0 .45rem;font-size:1rem}
+.decision-card p:last-child,.decision-card ul:last-child{margin-bottom:0}
+.prose h2{scroll-margin-top:95px}
+.prose h3{scroll-margin-top:95px}
+.prose .compare-table td:first-child{font-weight:750}
+.prose .question-list li{margin:.58rem 0}
+@media(max-width:720px){
+  .article-toc nav,.decision-grid{grid-template-columns:1fr}
+  .article-tools{padding:.9rem}
+}

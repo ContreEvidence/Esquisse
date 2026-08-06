@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
 <meta charset="utf-8"/>
@@ -25,7 +24,43 @@
 <header><div class="container nav">
 <a class="brand" href="index.html"><img alt="" src="assets/logo.svg"/><span>Contre-évidence</span></a>
 <button aria-expanded="false" aria-label="Ouvrir le menu" class="menu">☰</button>
-<nav><a href="debuter.html">Débuter</a><a href="parcours-argent.html">Parcours argent</a><a href="bibliotheque.html">Bibliothèque</a><a href="#methode">Méthode</a><a href="a-propos.html">À propos</a></nav>
+<nav aria-label="Navigation principale" class="site-nav">
+<div class="nav-item">
+<button aria-expanded="false" class="nav-trigger" type="button">Commencer <span aria-hidden="true" class="nav-caret">⌄</span></button>
+<div class="dropdown-panel dropdown-compact">
+<a class="dropdown-feature" href="debuter.html"><strong>Je débute ici</strong><span>Un parcours guidé, sans jargon inutile.</span></a>
+<a class="dropdown-link" href="parcours-argent.html">Parcours argent et épargne<small>De la sécurité à l’investissement.</small></a>
+<a class="dropdown-link" href="index.html#methode">La méthode Contre-évidence<small>Comprendre, comparer, décider, tester.</small></a>
+</div>
+</div>
+<div class="nav-item">
+<button aria-expanded="false" class="nav-trigger" type="button">Thèmes <span aria-hidden="true" class="nav-caret">⌄</span></button>
+<div class="dropdown-panel">
+<div class="dropdown-grid">
+<div class="dropdown-group"><span class="dropdown-label">Vie économique</span>
+<a class="dropdown-link" href="themes/argent.html">Argent et consommation<small>Budget, épargne, risque, investissement.</small></a>
+<a class="dropdown-link" href="themes/travail.html">Travail et carrière<small>Compétences, organisation, reconversion.</small></a>
+<a class="dropdown-link" href="themes/entreprendre.html">Entreprendre<small>Clients, offre, leviers et création de valeur.</small></a>
+</div>
+<div class="dropdown-group"><span class="dropdown-label">Comprendre les mécanismes</span>
+<a class="dropdown-link" href="themes/decisions.html">Décisions et psychologie<small>Biais, incertitude et arbitrages.</small></a>
+<a class="dropdown-link" href="themes/systemes.html">Systèmes et société<small>Règles, incitations et effets indirects.</small></a>
+<a class="dropdown-link" href="themes/ia.html">IA et technologie<small>Outils, automatisation et jugement.</small></a>
+</div>
+</div>
+</div>
+</div>
+<div class="nav-item">
+<button aria-expanded="false" class="nav-trigger" type="button">Bibliothèque <span aria-hidden="true" class="nav-caret">⌄</span></button>
+<div class="dropdown-panel dropdown-compact align-right">
+<a class="dropdown-feature" href="bibliotheque.html"><strong>Tous les articles</strong><span>Recherche et filtres par thème et niveau.</span></a>
+<a class="dropdown-link" href="bibliotheque.html?level=1">Niveau 1 · Découvrir</a>
+<a class="dropdown-link" href="bibliotheque.html?level=2">Niveau 2 · Comprendre</a>
+<a class="dropdown-link" href="bibliotheque.html?level=3">Niveau 3 · Approfondir</a>
+</div>
+</div>
+<a href="a-propos.html">À propos</a>
+</nav>
 </div></header>
 <main id="contenu">
 <section class="hero beginner-hero">
@@ -84,7 +119,7 @@
 <section id="articles">
 <div class="container">
 <div class="topic-header">
-<div class="section-head"><div class="kicker">Niveau 1 · Découvrir</div><h2>Dix situations concrètes pour commencer.</h2><p>Des articles courts, accessibles et orientés vers une action immédiatement testable.</p></div>
+<div class="section-head"><div class="kicker">Niveau 1 · Découvrir</div><h2>Dix situations concrètes pour commencer.</h2><p>Des articles progressifs : une réponse rapide, puis des mécanismes, des cas concrets et des grilles de décision.</p></div>
 <a class="btn btn-ghost" href="debuter.html">Suivre le parcours débutant</a>
 </div>
 <div class="articles"><article class="article-card filter-card" data-level="1" data-theme="travail">
@@ -153,4 +188,4 @@
 <span><a href="confidentialite.html">Confidentialité</a> · <a href="mentions.html">Mentions</a></span>
 </div></footer>
 <script src="assets/script.js"></script>
-</body></html>
+<script src="assets/navigation-v3.js"></script></body></html>
