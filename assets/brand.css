@@ -13,7 +13,7 @@ body{background:var(--brand-ivory);color:var(--brand-text)}
 .hero:after{border-color:rgba(232,201,121,.22)}
 .hero p,.article-hero p{color:#e0e5e8}
 .hero-card{background:linear-gradient(180deg,#121214,#09090a);border:1px solid rgba(232,201,121,.46);box-shadow:0 26px 70px rgba(0,0,0,.45);color:#fff}
-.hero-card img{width:148px;border-radius:50%;box-shadow:0 0 0 2px rgba(232,201,121,.24)}
+.hero-card img{display:block;width:min(250px,78%);margin:0 auto 26px;border-radius:50%;box-shadow:0 0 0 4px #d4ab56,0 0 0 8px #fff,0 22px 48px rgba(0,0,0,.42)}
 .hero-card h2{font-size:1.7rem;color:#fff}
 .hero-card p{color:#e4e0d7}
 .kicker{color:var(--brand-gold-text)}
@@ -61,3 +61,6 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #c28f
 
 /* Pack 11 */
 body{background:#f5f1e8;color:#141517}.home-videos{background:#0b0b0d;color:#fff}.home-videos h2,.home-videos h3{color:#fff}.home-videos p{color:#e4ded2!important}
+
+/* Logo central — Pack 12 */
+.hero-card{text-align:center}.hero-card .kicker,.hero-card h2,.hero-card p{text-align:left}@media(max-width:759px){.hero-card img{width:min(210px,74vw)}.hero-card{padding-top:30px}}

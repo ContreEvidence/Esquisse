@@ -1,21 +1,26 @@
 (() => {
   'use strict';
-  if (document.documentElement.dataset.ceFlatNav === '3') return;
-  document.documentElement.dataset.ceFlatNav = '3';
+  if (document.documentElement.dataset.ceFlatNav === '4') return;
+  document.documentElement.dataset.ceFlatNav = '4';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '3';
+  style.dataset.ceFlatNav = '4';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.34);box-shadow:0 7px 24px rgba(0,0,0,.32);font-family:inherit}
     .ce-flat-shell{width:min(1180px,92vw);margin:0 auto}
-    .ce-flat-top{min-height:82px;display:grid;grid-template-columns:auto minmax(260px,1fr) auto;align-items:center;gap:1rem;padding:.7rem 0}
-    .ce-flat-brand{display:inline-flex;align-items:center;gap:.8rem;color:#fff;text-decoration:none;font-size:clamp(1.05rem,1.7vw,1.35rem);font-weight:900;letter-spacing:-.025em;white-space:nowrap}
-    .ce-flat-brand img{display:block;width:58px;height:58px;flex:0 0 58px;border-radius:50%;box-shadow:0 0 0 1px rgba(232,201,121,.35)}
+    .ce-flat-top{min-height:112px;display:grid;grid-template-columns:minmax(330px,auto) minmax(260px,1fr) auto;align-items:center;gap:1rem;padding:.7rem 0}
+    .ce-flat-brand{display:inline-flex;align-items:center;gap:1.15rem;color:#fff;text-decoration:none;white-space:nowrap}
+    .ce-flat-brand img{display:block;width:92px;height:92px;flex:0 0 92px;border-radius:50%;box-shadow:0 0 0 3px #d4ab56,0 0 0 6px #fff,0 10px 28px rgba(0,0,0,.42)}
+
+    .ce-flat-brand-copy{display:flex;flex-direction:column;gap:.24rem;line-height:1}
+    .ce-flat-brand-copy strong{font-size:clamp(1.24rem,2vw,1.72rem);letter-spacing:.055em;color:#fff}
+    .ce-flat-brand-copy strong em{font-style:normal;color:#d4ab56}
+    .ce-flat-brand-copy small{font-size:.68rem;letter-spacing:.16em;color:#e8c979;font-weight:800}
     .ce-search{display:flex;align-items:stretch;width:100%;max-width:620px;margin-inline:auto;background:#fff;border:2px solid #fff;border-radius:13px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.22)}
     .ce-search input{min-width:0;flex:1;height:46px;padding:0 .9rem;border:0;background:#fff;color:#101820;font:inherit;font-size:.94rem}
     .ce-search input::placeholder{color:#59646d;opacity:1}
@@ -37,16 +42,16 @@
     .ce-flat-link.is-current{background:#d4ab56!important;color:#09090a!important;border-color:#e8c979!important;border-bottom-color:#fff1b8!important;box-shadow:0 8px 18px rgba(0,0,0,.32)}
     @media(max-width:1099px) and (min-width:760px){
       .ce-flat-top{grid-template-columns:auto 1fr auto}
-      .ce-flat-brand span{display:none}
+      .ce-flat-brand-copy small{display:none}.ce-flat-brand-copy strong{font-size:1.16rem}
       .ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))}
       .ce-flat-link{font-size:.86rem}
       .ce-flat-toplink{display:none}
     }
     @media(max-width:759px){
       .ce-flat-top{min-height:0;grid-template-columns:1fr auto;gap:.65rem;padding:.55rem 0 .65rem}
-      .ce-flat-brand img{width:46px;height:46px;flex-basis:46px}
-      .ce-flat-brand{font-size:1rem;gap:.6rem}
-      .ce-flat-brand span{display:inline}
+      .ce-flat-brand img{width:68px;height:68px;flex-basis:68px;box-shadow:0 0 0 2px #d4ab56,0 0 0 4px #fff,0 8px 20px rgba(0,0,0,.38)}
+      .ce-flat-brand{gap:.75rem}
+      .ce-flat-brand-copy{display:flex}.ce-flat-brand-copy strong{font-size:1rem;letter-spacing:.035em}.ce-flat-brand-copy small{display:none}
       .ce-flat-actions{justify-self:end}
       .ce-flat-toplink{display:none}
       .ce-flat-toggle{display:block}
@@ -76,7 +81,7 @@
   header.className = 'ce-flat-header';
   header.innerHTML = `
     <div class="ce-flat-shell ce-flat-top">
-      <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo-ce-512.png')}" alt="Logo Contre-évidence"><span>Contre-évidence</span></a>
+      <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo-ce-512.png')}" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>SYSTÈMES · STRATÉGIES · DÉCISIONS</small></span></a>
       <form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search">
         <input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, épargne, IA, décision…" autocomplete="off">
         <button type="submit" aria-label="Lancer la recherche">⌕</button>
