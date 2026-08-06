@@ -2,12 +2,33 @@
   'use strict';
   const currentScript = document.currentScript;
   if (!document.documentElement.dataset.ceNavLoader) {
-    document.documentElement.dataset.ceNavLoader = '1';
+    document.documentElement.dataset.ceNavLoader = '13';
     const navScript = document.createElement('script');
     navScript.src = new URL('navigation-v3.js?v=20260806-13', currentScript?.src || window.location.href).href;
     navScript.defer = true;
     document.head.appendChild(navScript);
   }
+
+  const nested = /\/(articles|themes)\//.test(window.location.pathname);
+  const prefix = nested ? '../' : '';
+
+  // Corrige les anciennes références visibles vers le logo.
+  document.querySelectorAll('img').forEach(image => {
+    const src = image.getAttribute('src') || '';
+    if (/logo-ce|logo\.svg|avatar\.svg/.test(src)) {
+      image.src = `${prefix}assets/logo.png`;
+      image.alt = 'Logo Contre-évidence';
+    }
+  });
+
+  // Classe chaque groupe d'articles du niveau 1 au niveau 3,
+  // en conservant l'ordre éditorial à l'intérieur d'un même niveau.
+  document.querySelectorAll('.articles').forEach(container => {
+    const cards = [...container.children].filter(card => card.matches?.('.article-card[data-level]'));
+    cards.map((card,index) => ({card,index,level:Number(card.dataset.level) || 99}))
+      .sort((a,b) => a.level - b.level || a.index - b.index)
+      .forEach(({card}) => container.appendChild(card));
+  });
 
   const prose = document.querySelector('article.prose');
   const heroContainer = document.querySelector('.article-hero .container');
@@ -20,21 +41,6 @@
       meta.textContent = `${minutes} min de lecture · ${words.toLocaleString('fr-FR')} mots`;
       const paragraph = heroContainer.querySelector(':scope > p:last-of-type');
       paragraph ? paragraph.insertAdjacentElement('afterend', meta) : heroContainer.append(meta);
-    }
-    const headings = [...prose.querySelectorAll('h2')].filter(h => !h.closest('.source-list'));
-    if (headings.length >= 4 && !prose.querySelector('.article-toc')) {
-      headings.forEach((heading,index) => {
-        if (!heading.id) {
-          const slug = heading.textContent.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
-          heading.id = slug || `section-${index+1}`;
-        }
-      });
-      const toc = document.createElement('details');
-      toc.className = 'article-toc';
-      toc.open = window.matchMedia('(min-width:900px)').matches;
-      toc.innerHTML = `<summary>Dans cet article</summary><ol>${headings.map(h => `<li><a href="#${h.id}">${h.textContent}</a></li>`).join('')}</ol>`;
-      const anchor = prose.querySelector('.answer-box') || prose.querySelector('.voice-note') || prose.firstElementChild;
-      anchor ? anchor.insertAdjacentElement('afterend',toc) : prose.prepend(toc);
     }
   }
   if (!document.querySelector('.reading-progress')) {
