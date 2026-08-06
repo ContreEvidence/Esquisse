@@ -1,22 +1,39 @@
-CONTRE-ÉVIDENCE — PACK 03 : 10 ARTICLES SUPPLÉMENTAIRES
-===========================================================
+CONTRE-ÉVIDENCE — PACK 04
+===========================
 
-ADRESSE DU SITE
-https://contreevidence.github.io/Esquisse/
+OBJECTIF
+Créer une vraie entrée pour les novices et organiser le site selon deux axes :
+- 6 thèmes concrets ;
+- 3 niveaux : Découvrir, Comprendre, Approfondir.
 
-CE PACK S'INSTALLE APRÈS LES PACKS 01 ET 02.
+CE PACK S'INSTALLE APRÈS LES PACKS 01, 02 ET 03.
 
-À AJOUTER DANS LE DOSSIER articles/
-- penser-en-probabilites.html
-- taux-de-base.html
-- biais-du-survivant.html
-- couts-irrecuperables.html
-- dependance-au-sentier.html
-- optimisation-locale.html
-- valeur-des-options.html
-- effets-de-reseau.html
-- effet-de-cadrage.html
-- strategie-barbell.html
+À AJOUTER DANS articles/
+- dire-oui-coute-cher.html
+- travailler-plus-avancer-moins.html
+- promotion-bonne-affaire.html
+- reconnaitre-bonne-affaire.html
+- changer-metier-sans-zero.html
+- demarche-bloquee.html
+- ia-gagner-temps-jugement.html
+- applications-captent-attention.html
+- lancer-activite-probleme-client.html
+- decision-difficile-options-imparfaites.html
+
+À AJOUTER À LA RACINE
+- debuter.html
+
+À AJOUTER DANS themes/
+- argent.html
+- travail.html
+- entreprendre.html
+- ia.html
+- decisions.html
+- systemes.html
+
+À AJOUTER DANS assets/
+- navigation.css
+- library.js
 
 À REMPLACER À LA RACINE
 - index.html
@@ -25,18 +42,22 @@ CE PACK S'INSTALLE APRÈS LES PACKS 01 ET 02.
 - sitemap.xml
 
 À CONSERVER
-- le dossier assets/
-- tous les fichiers et articles des Packs 01 et 02
-- les trois articles fondateurs
-- a-propos.html, confidentialite.html, mentions.html, 404.html
+- assets/style.css, assets/script.js, assets/logo.svg, assets/avatar.svg et assets/og-cover.svg
+- tous les anciens articles
+- les pages À propos, Confidentialité, Mentions et 404
 - manifest.webmanifest et robots.txt
 
 RÉSULTAT
-Le site présentera 33 articles au total.
+- 43 articles au total
+- 10 nouveaux articles de niveau 1
+- une page d'accueil orientée vers les besoins du lecteur
+- une bibliothèque filtrable par thème et niveau
+- 6 pages thématiques
+- un parcours « Débuter »
 
-INSTALLATION SUR GITHUB
+INSTALLATION GITHUB
 1. Ouvrez le dépôt Esquisse.
-2. Dans articles/, téléversez les 10 nouveaux fichiers.
-3. À la racine, téléversez les quatre fichiers de remplacement.
+2. Téléversez les fichiers dans les dossiers indiqués.
+3. Pour index.html, bibliotheque.html, rss.xml et sitemap.xml, acceptez le remplacement.
 4. Validez avec Commit changes.
 5. Attendez la republication automatique de GitHub Pages.

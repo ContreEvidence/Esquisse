@@ -1,67 +1,244 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bibliothèque — Contre-évidence</title>
-<meta name="description" content="Toutes les analyses de Contre-évidence sur les systèmes, les stratégies et les décisions.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bibliothèque par thème et niveau — Contre-évidence</title>
+<meta name="description" content="Filtrez les articles de Contre-évidence par thème et par niveau : découvrir, comprendre ou approfondir.">
 <link rel="canonical" href="https://contreevidence.github.io/Esquisse/bibliotheque.html">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/navigation.css">
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-<header><div class="container nav">
-<a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>Contre-évidence</span></a>
+<header><div class="container nav"><a class="brand" href="index.html"><img src="assets/logo.svg" alt=""><span>Contre-évidence</span></a>
 <button class="menu" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-<nav><a href="index.html#articles">Articles</a><a href="index.html#methode">Méthode</a><a href="bibliotheque.html">Bibliothèque</a><a href="a-propos.html">À propos</a></nav>
-</div></header>
+<nav><a href="debuter.html">Débuter</a><a href="bibliotheque.html">Bibliothèque</a><a href="index.html#methode">Méthode</a><a href="a-propos.html">À propos</a></nav></div></header>
 <main id="contenu">
-<section class="article-hero"><div class="container">
-<div class="kicker">Bibliothèque</div>
-<h1>Comprendre les mécanismes. Ouvrir les options.</h1>
-<p>Trente-trois analyses reliées par une même grille : systèmes, stratégies et décisions.</p>
+<section class="article-hero"><div class="container"><div class="kicker">Bibliothèque</div>
+<h1>Choisissez votre thème et votre niveau.</h1><p>43 articles : des situations accessibles aux analyses avancées.</p></div></section>
+<section><div class="container">
+<div class="library-tools" aria-label="Filtres de la bibliothèque">
+<div class="filter-group"><span class="filter-label">Thème :</span><button class="filter-btn" data-filter-group="theme" data-filter-value="all" aria-pressed="true">Tous</button><button class="filter-btn" data-filter-group="theme" data-filter-value="argent" aria-pressed="false">Argent</button><button class="filter-btn" data-filter-group="theme" data-filter-value="travail" aria-pressed="false">Travail</button><button class="filter-btn" data-filter-group="theme" data-filter-value="entreprendre" aria-pressed="false">Entreprendre</button><button class="filter-btn" data-filter-group="theme" data-filter-value="ia" aria-pressed="false">IA &amp; technologie</button><button class="filter-btn" data-filter-group="theme" data-filter-value="decisions" aria-pressed="false">Décisions</button><button class="filter-btn" data-filter-group="theme" data-filter-value="systemes" aria-pressed="false">Systèmes</button></div>
+<div class="filter-group"><span class="filter-label">Niveau :</span><button class="filter-btn" data-filter-group="level" data-filter-value="all" aria-pressed="true">Tous</button><button class="filter-btn" data-filter-group="level" data-filter-value="1" aria-pressed="false">Niveau 1 · Découvrir</button><button class="filter-btn" data-filter-group="level" data-filter-value="2" aria-pressed="false">Niveau 2 · Comprendre</button><button class="filter-btn" data-filter-group="level" data-filter-value="3" aria-pressed="false">Niveau 3 · Approfondir</button></div>
+<div class="results-count" data-results-count>43 articles</div>
+</div>
+<div class="articles"><article class="article-card filter-card" data-theme="decisions" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">Décisions</span></div>
+<h3>Une porte fermée ne prouve pas qu’il n’y a pas d’issue</h3><p>Le refus du fatalisme n’est pas une formule de motivation : c’est une méthode d’analyse.</p>
+</div><a href="articles/portes-fermees.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="argent" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Argent</span></div>
+<h3>Pourquoi une bonne entreprise peut être un mauvais investissement</h3><p>La qualité d’une société ne suffit pas : le prix payé modifie le rendement futur.</p>
+</div><a href="articles/bonne-entreprise-mauvais-investissement.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="ia" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">IA &amp; technologie</span></div>
+<h3>L’intelligence artificielle remplace-t-elle vraiment le codage ?</h3><p>L’écriture du code se banalise, mais la formulation du problème et le contrôle deviennent plus précieux.</p>
+</div><a href="articles/ia-remplace-t-elle-le-codage.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="systemes" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Systèmes</span></div>
+<h3>Le problème n’est presque jamais le problème</h3><p>Traiter un symptôme soulage parfois. Comprendre le mécanisme qui le produit change durablement la situation.</p>
+</div><a href="articles/probleme-symptome-cause.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="entreprendre" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Entreprendre</span></div>
+<h3>Le bon levier vaut mieux que mille efforts</h3><p>L’efficacité ne consiste pas à agir partout, mais à trouver l’endroit où une petite modification produit un grand effet.</p>
+</div><a href="articles/effet-de-levier.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Décisions</span></div>
+<h3>Les effets de second ordre : ce qui arrive après le résultat visible</h3><p>Une décision ne s’arrête pas à son premier effet. Elle modifie aussi les comportements, les incitations et les options futures.</p>
+</div><a href="articles/effets-second-ordre.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="argent" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Argent</span></div>
+<h3>Le coût d’opportunité : le prix invisible de chaque choix</h3><p>Le coût réel d’une décision inclut ce à quoi elle nous empêche de consacrer notre argent, notre temps et notre attention.</p>
+</div><a href="articles/cout-opportunite.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Décisions</span></div>
+<h3>Pourquoi la majorité peut se tromper</h3><p>Un consensus peut contenir une information utile, mais il ne transforme pas automatiquement une opinion partagée en vérité.</p>
+</div><a href="articles/majorite-peut-se-tromper.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="systemes" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Systèmes</span></div>
+<h3>Les incitations gouvernent plus que les intentions</h3><p>Pour comprendre un comportement durable, observe ce que le système récompense, tolère ou rend difficile.</p>
+</div><a href="articles/incitations-gouvernent.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="argent" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Argent</span></div>
+<h3>L’asymétrie : rechercher plus de potentiel que de perte</h3><p>Une bonne stratégie ne cherche pas seulement une forte probabilité de réussite ; elle examine aussi l’écart entre ce qui peut être gagné et perdu.</p>
+</div><a href="articles/asymetrie.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="systemes" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Systèmes</span></div>
+<h3>Les boucles de rétroaction : quand les résultats renforcent leurs propres causes</h3><p>Certains systèmes s’amplifient ou se stabilisent parce que leurs résultats reviennent influencer le mécanisme qui les a produits.</p>
+</div><a href="articles/boucles-retroaction.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Décisions</span></div>
+<h3>Les bonnes questions changent les réponses</h3><p>Une question mal formulée réduit le champ des possibles avant même que la réflexion commence.</p>
+</div><a href="articles/bonnes-questions.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Décisions</span></div>
+<h3>Comprendre avant d’agir — sans attendre de tout savoir</h3><p>L’action précipitée et l’analyse infinie sont deux manières opposées d’éviter une décision correctement testée.</p>
+</div><a href="articles/comprendre-avant-agir.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Décisions</span></div>
+<h3>Les modèles mentaux : des cartes utiles, jamais le territoire</h3><p>Un modèle mental simplifie le réel pour mieux décider. Il devient dangereux lorsqu’on oublie ce qu’il laisse de côté.</p>
+</div><a href="articles/modeles-mentaux.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="entreprendre" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Entreprendre</span></div>
+<h3>Les contraintes peuvent créer l’innovation</h3><p>Une limite ne produit pas automatiquement une solution, mais elle peut obliger à abandonner les réponses paresseuses et révéler un autre chemin.</p>
+</div><a href="articles/contraintes-innovation.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Décisions</span></div>
+<h3>Décisions réversibles et irréversibles : ne pas leur consacrer le même temps</h3><p>La profondeur d’analyse devrait dépendre moins de l’importance apparente d’un choix que du coût réel d’un retour en arrière.</p>
+</div><a href="articles/decisions-reversibles-irreversibles.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="argent" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Argent</span></div>
+<h3>La marge de sécurité : prévoir que le réel ne suivra pas exactement le plan</h3><p>Une stratégie robuste conserve de l’espace pour l’erreur, le retard, la variation et l’événement imprévu.</p>
+</div><a href="articles/marge-de-securite.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="travail" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Travail</span></div>
+<h3>Les rendements décroissants : pourquoi davantage finit par rapporter moins</h3><p>Une action efficace au début peut perdre sa puissance à mesure qu’on l’intensifie, jusqu’à devenir contre-productive.</p>
+</div><a href="articles/rendements-decroissants.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="ia" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">IA &amp; technologie</span></div>
+<h3>L’information n’est pas la compréhension</h3><p>Accumuler des faits augmente parfois la confiance plus vite que la capacité à expliquer, prévoir ou décider.</p>
+</div><a href="articles/information-comprehension.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Décisions</span></div>
+<h3>Risque et incertitude : quand les probabilités ne suffisent plus</h3><p>Le risque peut être estimé à partir d’événements connus. L’incertitude apparaît lorsque les scénarios eux-mêmes restent incomplets.</p>
+</div><a href="articles/risque-incertitude.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Décisions</span></div>
+<h3>Le biais de confirmation : chercher des preuves ou protéger une conviction ?</h3><p>Nous accordons spontanément plus d’attention aux informations qui confirment ce que nous croyons déjà.</p>
+</div><a href="articles/biais-confirmation.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="ia" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">IA &amp; technologie</span></div>
+<h3>Simplifier sans trahir</h3><p>Une explication utile retire le bruit sans supprimer les mécanismes qui changent réellement la conclusion.</p>
+</div><a href="articles/simplifier-sans-trahir.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="systemes" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Systèmes</span></div>
+<h3>Quand une mesure devient une cible, elle cesse souvent de bien mesurer</h3><p>Un indicateur utile peut être déformé dès que les acteurs sont récompensés pour l’optimiser plutôt que pour améliorer le résultat réel.</p>
+</div><a href="articles/mesure-devient-cible.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Décisions</span></div>
+<h3>Penser en probabilités plutôt qu’en certitudes</h3><p>Une décision solide ne consiste pas à prédire parfaitement, mais à distinguer ce qui est possible, probable et supportable.</p>
+</div><a href="articles/penser-en-probabilites.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Décisions</span></div>
+<h3>Les taux de base : commencer par ce qui arrive habituellement</h3><p>Un cas spectaculaire attire l’attention, mais une prévision fiable doit aussi tenir compte de la fréquence habituelle du phénomène.</p>
+</div><a href="articles/taux-de-base.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="entreprendre" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Entreprendre</span></div>
+<h3>Le biais du survivant : apprendre aussi de ceux qui ont disparu</h3><p>Observer uniquement les réussites visibles déforme notre compréhension des stratégies qui fonctionnent réellement.</p>
+</div><a href="articles/biais-du-survivant.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="argent" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Argent</span></div>
+<h3>Les coûts irrécupérables : pourquoi ce qui est déjà dépensé ne doit pas décider à notre place</h3><p>Continuer uniquement parce que l’on a déjà beaucoup investi transforme une perte passée en pertes futures.</p>
+</div><a href="articles/couts-irrecuperables.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="systemes" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Systèmes</span></div>
+<h3>La dépendance au sentier : pourquoi le passé continue de choisir avec nous</h3><p>Une décision ancienne peut structurer durablement les options présentes, même lorsque sa justification initiale a disparu.</p>
+</div><a href="articles/dependance-au-sentier.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="travail" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Travail</span></div>
+<h3>Optimiser une partie peut dégrader l’ensemble</h3><p>Une amélioration locale n’est utile que si elle améliore le flux global plutôt que de déplacer l’attente, le coût ou la fragilité.</p>
+</div><a href="articles/optimisation-locale.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="entreprendre" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Entreprendre</span></div>
+<h3>La valeur des options : protéger le droit de changer d’avis</h3><p>Dans un environnement incertain, conserver plusieurs voies peut valoir davantage qu’optimiser trop tôt une seule trajectoire.</p>
+</div><a href="articles/valeur-des-options.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="ia" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">IA &amp; technologie</span></div>
+<h3>Les effets de réseau : quand chaque nouvel utilisateur change la valeur du système</h3><p>Certains produits et communautés deviennent plus utiles à mesure que le nombre de participants augmente, mais cette croissance crée aussi des fragilités.</p>
+</div><a href="articles/effets-de-reseau.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="2">
+<div>
+<div class="card-meta"><span class="level-badge level-2">Niveau 2 · Comprendre</span><span class="theme-chip">Décisions</span></div>
+<h3>L’effet de cadrage : la même réalité, des décisions différentes</h3><p>La manière de présenter un choix influence notre jugement, même lorsque les conséquences objectives restent identiques.</p>
+</div><a href="articles/effet-de-cadrage.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="argent" data-level="3">
+<div>
+<div class="card-meta"><span class="level-badge level-3">Niveau 3 · Approfondir</span><span class="theme-chip">Argent</span></div>
+<h3>La stratégie en haltère : protéger l’essentiel, expérimenter sur le reste</h3><p>Une allocation robuste peut combiner une base très protégée et une petite poche d’expériences à fort potentiel, plutôt qu’un risque moyen partout.</p>
+</div><a href="articles/strategie-barbell.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="travail" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">Travail</span></div>
+<h3>Pourquoi dire oui à tout finit par vous coûter cher</h3><p>Chaque nouveau oui prend du temps, de l’attention et de l’énergie à quelque chose qui comptait déjà.</p>
+</div><a href="articles/dire-oui-coute-cher.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="travail" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">Travail</span></div>
+<h3>Pourquoi travailler plus peut vous faire avancer moins</h3><p>Au-delà d’un certain point, la fatigue, les erreurs et les reprises absorbent une partie de l’effort supplémentaire.</p>
+</div><a href="articles/travailler-plus-avancer-moins.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="argent" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">Argent</span></div>
+<h3>Pourquoi une promotion peut vous faire dépenser plus que prévu</h3><p>Une réduction diminue le prix d’un achat, mais elle ne prouve pas que cet achat était nécessaire ni avantageux.</p>
+</div><a href="articles/promotion-bonne-affaire.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="argent" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">Argent</span></div>
+<h3>Comment savoir si une « bonne affaire » en est vraiment une</h3><p>Un prix bas n’est avantageux que si le produit répond au besoin, dure assez longtemps et n’entraîne pas de coûts cachés.</p>
+</div><a href="articles/reconnaitre-bonne-affaire.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="travail" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">Travail</span></div>
+<h3>Changer de métier sans repartir de zéro</h3><p>Une reconversion ne supprime pas votre expérience : elle oblige à traduire vos acquis dans le langage du nouveau métier.</p>
+</div><a href="articles/changer-metier-sans-zero.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="systemes" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">Systèmes</span></div>
+<h3>Quand une démarche vous bloque : comment reformuler le problème</h3><p>Un refus ou une procédure bloquée peut fermer une voie précise sans supprimer toutes les possibilités d’obtenir le résultat recherché.</p>
+</div><a href="articles/demarche-bloquee.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="ia" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">IA &amp; technologie</span></div>
+<h3>Comment utiliser l’IA pour gagner du temps sans lui abandonner votre jugement</h3><p>L’IA peut accélérer la préparation, la comparaison et la reformulation, mais la responsabilité de la décision reste humaine.</p>
+</div><a href="articles/ia-gagner-temps-jugement.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="ia" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">IA &amp; technologie</span></div>
+<h3>Pourquoi certaines applications captent votre attention plus longtemps que prévu</h3><p>Les notifications, le défilement continu et les récompenses variables réduisent les moments naturels où vous pourriez décider d’arrêter.</p>
+</div><a href="articles/applications-captent-attention.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="entreprendre" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">Entreprendre</span></div>
+<h3>Lancer une activité : commencer par le problème du client, pas par votre solution</h3><p>Une offre devient utile lorsqu’elle résout un problème assez important pour que quelqu’un accepte de changer ses habitudes ou de payer.</p>
+</div><a href="articles/lancer-activite-probleme-client.html">Lire l’article →</a></article>
+<article class="article-card filter-card" data-theme="decisions" data-level="1">
+<div>
+<div class="card-meta"><span class="level-badge level-1">Niveau 1 · Découvrir</span><span class="theme-chip">Décisions</span></div>
+<h3>Comment décider quand aucune option n’est parfaite</h3><p>Une décision difficile oppose souvent plusieurs avantages importants et plusieurs coûts réels ; attendre l’option sans défaut ne résout rien.</p>
+</div><a href="articles/decision-difficile-options-imparfaites.html">Lire l’article →</a></article></div>
 </div></section>
-<section><div class="container"><div class="articles">
-<article class="article-card"><div><div class="label">Fenêtres · Manifeste</div><h3>Une porte fermée ne prouve pas qu’il n’y a pas d’issue</h3><p>Le refus du fatalisme n’est pas une formule de motivation : c’est une méthode d’analyse.</p></div><a href="articles/portes-fermees.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Finance · Contre-évidence</div><h3>Pourquoi une bonne entreprise peut être un mauvais investissement</h3><p>La qualité d’une société ne suffit pas : le prix payé modifie le rendement futur.</p></div><a href="articles/bonne-entreprise-mauvais-investissement.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">IA · Stratégie</div><h3>L’intelligence artificielle remplace-t-elle vraiment le codage ?</h3><p>L’écriture du code se banalise, mais la formulation du problème et le contrôle deviennent plus précieux.</p></div><a href="articles/ia-remplace-t-elle-le-codage.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Systèmes · Diagnostic</div><h3>Le problème n’est presque jamais le problème</h3><p>Traiter un symptôme soulage parfois. Comprendre le mécanisme qui le produit change durablement la situation.</p></div><a href="articles/probleme-symptome-cause.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Stratégie · Levier</div><h3>Le bon levier vaut mieux que mille efforts</h3><p>L’efficacité ne consiste pas à agir partout, mais à trouver l’endroit où une petite modification produit un grand effet.</p></div><a href="articles/effet-de-levier.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Décision · Conséquences</div><h3>Les effets de second ordre : ce qui arrive après le résultat visible</h3><p>Une décision ne s’arrête pas à son premier effet. Elle modifie aussi les comportements, les incitations et les options futures.</p></div><a href="articles/effets-second-ordre.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Arbitrage · Ressources</div><h3>Le coût d’opportunité : le prix invisible de chaque choix</h3><p>Le coût réel d’une décision inclut ce à quoi elle nous empêche de consacrer notre argent, notre temps et notre attention.</p></div><a href="articles/cout-opportunite.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Raisonnement · Consensus</div><h3>Pourquoi la majorité peut se tromper</h3><p>Un consensus peut contenir une information utile, mais il ne transforme pas automatiquement une opinion partagée en vérité.</p></div><a href="articles/majorite-peut-se-tromper.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Systèmes · Comportements</div><h3>Les incitations gouvernent plus que les intentions</h3><p>Pour comprendre un comportement durable, observe ce que le système récompense, tolère ou rend difficile.</p></div><a href="articles/incitations-gouvernent.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Stratégie · Risque</div><h3>L’asymétrie : rechercher plus de potentiel que de perte</h3><p>Une bonne stratégie ne cherche pas seulement une forte probabilité de réussite ; elle examine aussi l’écart entre ce qui peut être gagné et perdu.</p></div><a href="articles/asymetrie.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Systèmes · Dynamique</div><h3>Les boucles de rétroaction : quand les résultats renforcent leurs propres causes</h3><p>Certains systèmes s’amplifient ou se stabilisent parce que leurs résultats reviennent influencer le mécanisme qui les a produits.</p></div><a href="articles/boucles-retroaction.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Raisonnement · Cadrage</div><h3>Les bonnes questions changent les réponses</h3><p>Une question mal formulée réduit le champ des possibles avant même que la réflexion commence.</p></div><a href="articles/bonnes-questions.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Méthode · Décision</div><h3>Comprendre avant d’agir — sans attendre de tout savoir</h3><p>L’action précipitée et l’analyse infinie sont deux manières opposées d’éviter une décision correctement testée.</p></div><a href="articles/comprendre-avant-agir.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Raisonnement · Outils</div><h3>Les modèles mentaux : des cartes utiles, jamais le territoire</h3><p>Un modèle mental simplifie le réel pour mieux décider. Il devient dangereux lorsqu’on oublie ce qu’il laisse de côté.</p></div><a href="articles/modeles-mentaux.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Stratégie · Création</div><h3>Les contraintes peuvent créer l’innovation</h3><p>Une limite ne produit pas automatiquement une solution, mais elle peut obliger à abandonner les réponses paresseuses et révéler un autre chemin.</p></div><a href="articles/contraintes-innovation.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Décision · Engagement</div><h3>Décisions réversibles et irréversibles : ne pas leur consacrer le même temps</h3><p>La profondeur d’analyse devrait dépendre moins de l’importance apparente d’un choix que du coût réel d’un retour en arrière.</p></div><a href="articles/decisions-reversibles-irreversibles.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Risque · Robustesse</div><h3>La marge de sécurité : prévoir que le réel ne suivra pas exactement le plan</h3><p>Une stratégie robuste conserve de l’espace pour l’erreur, le retard, la variation et l’événement imprévu.</p></div><a href="articles/marge-de-securite.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Systèmes · Performance</div><h3>Les rendements décroissants : pourquoi davantage finit par rapporter moins</h3><p>Une action efficace au début peut perdre sa puissance à mesure qu’on l’intensifie, jusqu’à devenir contre-productive.</p></div><a href="articles/rendements-decroissants.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Connaissance · Jugement</div><h3>L’information n’est pas la compréhension</h3><p>Accumuler des faits augmente parfois la confiance plus vite que la capacité à expliquer, prévoir ou décider.</p></div><a href="articles/information-comprehension.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Décision · Incertitude</div><h3>Risque et incertitude : quand les probabilités ne suffisent plus</h3><p>Le risque peut être estimé à partir d’événements connus. L’incertitude apparaît lorsque les scénarios eux-mêmes restent incomplets.</p></div><a href="articles/risque-incertitude.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Psychologie · Preuves</div><h3>Le biais de confirmation : chercher des preuves ou protéger une conviction ?</h3><p>Nous accordons spontanément plus d’attention aux informations qui confirment ce que nous croyons déjà.</p></div><a href="articles/biais-confirmation.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Raisonnement · Complexité</div><h3>Simplifier sans trahir</h3><p>Une explication utile retire le bruit sans supprimer les mécanismes qui changent réellement la conclusion.</p></div><a href="articles/simplifier-sans-trahir.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Systèmes · Indicateurs</div><h3>Quand une mesure devient une cible, elle cesse souvent de bien mesurer</h3><p>Un indicateur utile peut être déformé dès que les acteurs sont récompensés pour l’optimiser plutôt que pour améliorer le résultat réel.</p></div><a href="articles/mesure-devient-cible.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Décision · Probabilités</div><h3>Penser en probabilités plutôt qu’en certitudes</h3><p>Une décision solide ne consiste pas à prédire parfaitement, mais à distinguer ce qui est possible, probable et supportable.</p></div><a href="articles/penser-en-probabilites.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Raisonnement · Statistiques</div><h3>Les taux de base : commencer par ce qui arrive habituellement</h3><p>Un cas spectaculaire attire l’attention, mais une prévision fiable doit aussi tenir compte de la fréquence habituelle du phénomène.</p></div><a href="articles/taux-de-base.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Psychologie · Sélection</div><h3>Le biais du survivant : apprendre aussi de ceux qui ont disparu</h3><p>Observer uniquement les réussites visibles déforme notre compréhension des stratégies qui fonctionnent réellement.</p></div><a href="articles/biais-du-survivant.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Décision · Abandon</div><h3>Les coûts irrécupérables : pourquoi ce qui est déjà dépensé ne doit pas décider à notre place</h3><p>Continuer uniquement parce que l’on a déjà beaucoup investi transforme une perte passée en pertes futures.</p></div><a href="articles/couts-irrecuperables.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Systèmes · Histoire</div><h3>La dépendance au sentier : pourquoi le passé continue de choisir avec nous</h3><p>Une décision ancienne peut structurer durablement les options présentes, même lorsque sa justification initiale a disparu.</p></div><a href="articles/dependance-au-sentier.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Systèmes · Performance</div><h3>Optimiser une partie peut dégrader l’ensemble</h3><p>Une amélioration locale n’est utile que si elle améliore le flux global plutôt que de déplacer l’attente, le coût ou la fragilité.</p></div><a href="articles/optimisation-locale.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Stratégie · Flexibilité</div><h3>La valeur des options : protéger le droit de changer d’avis</h3><p>Dans un environnement incertain, conserver plusieurs voies peut valoir davantage qu’optimiser trop tôt une seule trajectoire.</p></div><a href="articles/valeur-des-options.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Systèmes · Croissance</div><h3>Les effets de réseau : quand chaque nouvel utilisateur change la valeur du système</h3><p>Certains produits et communautés deviennent plus utiles à mesure que le nombre de participants augmente, mais cette croissance crée aussi des fragilités.</p></div><a href="articles/effets-de-reseau.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Psychologie · Présentation</div><h3>L’effet de cadrage : la même réalité, des décisions différentes</h3><p>La manière de présenter un choix influence notre jugement, même lorsque les conséquences objectives restent identiques.</p></div><a href="articles/effet-de-cadrage.html">Lire l’article →</a></article>
-<article class="article-card"><div><div class="label">Risque · Allocation</div><h3>La stratégie en haltère : protéger l’essentiel, expérimenter sur le reste</h3><p>Une allocation robuste peut combiner une base très protégée et une petite poche d’expériences à fort potentiel, plutôt qu’un risque moyen partout.</p></div><a href="articles/strategie-barbell.html">Lire l’article →</a></article>
-</div></div></section>
 </main>
-<footer><div class="container foot">
-<span>© <span data-year></span> Contre-évidence</span>
-<span><a href="confidentialite.html">Confidentialité</a> · <a href="mentions.html">Mentions</a></span>
-</div></footer>
-<script src="assets/script.js"></script>
-</body>
-</html>
+<footer><div class="container foot"><span>© <span data-year></span> Contre-évidence</span><span><a href="confidentialite.html">Confidentialité</a> · <a href="mentions.html">Mentions</a></span></div></footer>
+<script src="assets/script.js"></script><script src="assets/library.js"></script>
+</body></html>
