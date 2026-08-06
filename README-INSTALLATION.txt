@@ -1,25 +1,35 @@
-CONTRE-ÉVIDENCE — PACK 05 V2 : GROS MONTANTS ET PAGE À PROPOS
-================================================================
+MISE À JOUR — FINANCES PERSONNELLES ET MOINS DE 25 ANS
 
-CORRECTIONS
-- Nouvelle page À propos centrée sur l’utilité pour le lecteur et non sur le parcours du créateur.
-- Page d’accueil recentrée sur les besoins du visiteur.
-- Nouveau dossier pratique : allocations illustratives pour 250 000 €, 500 000 € et 1 000 000 €.
-- Liens visibles depuis l’accueil, le parcours argent, la bibliothèque et le thème Argent.
-- Compléments dans les articles « grosse entrée d’argent » et « construire une allocation ».
+OBJECTIF
+- Une rubrique directe par thème.
+- Aucun menu déroulant.
+- « Finances personnelles » remplace « Argent » dans la navigation.
+- « Moins de 25 ans » devient une page transversale accessible depuis l’accueil.
+- « Parcours argent » devient « Organiser ses finances » dans les textes visibles.
 
-À AJOUTER
-- articles/exemples-allocation-250000-500000-1000000.html
+FICHIERS À REMPLACER
+1. assets/script.js
+2. assets/navigation-v3.js
+3. index.html
+4. bibliotheque.html
+5. parcours-argent.html
+6. themes/argent.html
+7. sitemap.xml
 
-À REMPLACER
-- a-propos.html
-- index.html
-- parcours-argent.html
-- bibliotheque.html
-- themes/argent.html
-- articles/grosse-entree-argent-que-faire.html
-- articles/construire-allocation-debutant.html
-- rss.xml
-- sitemap.xml
+FICHIERS À AJOUTER
+1. assets/young.css
+2. moins-de-25-ans.html
 
-Après installation, le site affiche 54 articles.
+FAUT-IL SUPPRIMER D’ANCIENS FICHIERS ?
+Non. Ne supprimez pas navigation.css : il sert aussi aux cartes, aux filtres et aux parcours.
+Vous pouvez supprimer navigation-tabs.css s’il existe encore, mais ce n’est plus obligatoire : le nouveau menu n’utilise aucune de ses classes.
+
+ORDRE CONSEILLÉ DANS GITHUB
+1. Envoyer les deux fichiers du dossier assets.
+2. Envoyer les quatre pages HTML de remplacement et la nouvelle page.
+3. Remplacer sitemap.xml.
+4. Attendre une minute.
+5. Recharger le site avec Ctrl + F5.
+
+TEST AVANT INSTALLATION
+Ouvrir PREVIEW-MENU.html sur l’ordinateur. Le fichier montre le principe d’alignement sans modifier le site.

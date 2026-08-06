@@ -1,19 +1,111 @@
-<!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aperçu du menu Contre-évidence</title>
-<style>
-  :root{--max:1180px}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f7f8;color:#101820}.demo{width:min(1180px,92vw);margin:3rem auto;padding:2rem;background:#fff;border-radius:18px;box-shadow:0 12px 35px rgba(16,24,32,.08)}h1{margin-top:0}p{line-height:1.6}
-</style>
-</head>
-<body>
-<header><div>Ancien menu remplacé automatiquement</div></header>
-<main class="demo">
-<h1>Aperçu de la navigation corrigée</h1>
-<p>Les onglets sont alignés. Les contenus secondaires restent invisibles jusqu’au clic. Réduis la largeur de la fenêtre pour vérifier la version tablette et mobile.</p>
-</main>
-<script src="assets/navigation-v3.js"></script>
-</body>
-</html>
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Aperçu menu simple</title><style>body{margin:0;font-family:Arial,sans-serif;background:#eef2f4;color:#101820}main{width:min(1100px,92vw);margin:3rem auto;background:#fff;padding:2rem;border-radius:18px}h1{margin-top:0}</style></head><body><header></header><main><h1>Aperçu du menu définitif</h1><p>Sur grand écran : huit rubriques directes. Entre 760 et 1099 px : deux lignes de quatre onglets. Sur téléphone : une liste simple, sans sous-rubriques ni descriptions.</p><p>Réduisez la fenêtre pour contrôler les trois comportements.</p></main><script>(() => {
+  'use strict';
+  if (document.documentElement.dataset.ceFlatNav === '1') return;
+  document.documentElement.dataset.ceFlatNav = '1';
+
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
+  const style = document.createElement('style');
+  style.dataset.ceFlatNav = '1';
+  style.textContent = `
+    .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
+    .ce-flat-header{
+      position:sticky!important;top:0;z-index:5000;width:100%;
+      background:#f7f4ec!important;color:#101820;
+      border-bottom:1px solid rgba(16,24,32,.14);
+      box-shadow:0 3px 15px rgba(16,24,32,.07);
+      font-family:inherit;
+    }
+    .ce-flat-shell{width:min(1180px,92vw);margin:0 auto}
+    .ce-flat-top{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .ce-flat-brand{display:inline-flex;align-items:center;gap:.8rem;color:#101820;text-decoration:none;font-size:clamp(1.05rem,1.7vw,1.35rem);font-weight:900;letter-spacing:-.025em}
+    .ce-flat-brand img{display:block;width:52px;height:52px;flex:0 0 52px}
+    .ce-flat-toggle{display:none;width:46px;height:46px;padding:0;border:1px solid rgba(16,24,32,.16);border-radius:12px;background:#fff;cursor:pointer}
+    .ce-flat-toggle span{display:block;width:20px;height:2px;margin:4px auto;background:#101820;border-radius:2px;transition:transform .18s ease,opacity .18s ease}
+    .ce-flat-header.is-open .ce-flat-toggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .ce-flat-header.is-open .ce-flat-toggle span:nth-child(2){opacity:0}
+    .ce-flat-header.is-open .ce-flat-toggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    .ce-flat-nav{background:#fff;border-top:1px solid rgba(16,24,32,.08)}
+    .ce-flat-links{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:.48rem;padding:.58rem 0 .68rem}
+    .ce-flat-link{
+      display:flex;align-items:center;justify-content:center;min-height:48px;padding:.66rem .5rem;
+      color:#28343e;text-decoration:none;text-align:center;font-size:.82rem;font-weight:820;line-height:1.15;
+      background:#fff;border:1px solid rgba(16,24,32,.12);border-bottom:4px solid #9ba7ae;border-radius:11px 11px 4px 4px;
+      box-shadow:0 2px 6px rgba(16,24,32,.04);transition:transform .14s ease,box-shadow .14s ease,background .14s ease,color .14s ease
+    }
+    .ce-flat-link:hover,.ce-flat-link:focus-visible{transform:translateY(-2px);box-shadow:0 7px 14px rgba(16,24,32,.09);color:#101820;outline:none}
+    .ce-flat-link:nth-child(1){background:#edf4f7;border-color:#c3d3dc;border-bottom-color:#7898ab}
+    .ce-flat-link:nth-child(2){background:#fff5d8;border-color:#e4c775;border-bottom-color:#d6a94a}
+    .ce-flat-link:nth-child(3){background:#f5f0fa;border-color:#d9cbed;border-bottom-color:#8f75b6}
+    .ce-flat-link:nth-child(4){background:#edf5ee;border-color:#c7dbc9;border-bottom-color:#709875}
+    .ce-flat-link:nth-child(5){background:#f3eef6;border-color:#d8cadf;border-bottom-color:#897098}
+    .ce-flat-link:nth-child(6){background:#eef2f5;border-color:#cad4da;border-bottom-color:#728895}
+    .ce-flat-link:nth-child(7),.ce-flat-link:nth-child(8){background:#fff;border-color:#d8dfe3;border-bottom-color:#96a2a9}
+    .ce-flat-link.is-current{background:#101820!important;color:#fff!important;border-color:#101820!important;border-bottom-color:#d6a94a!important;box-shadow:0 7px 15px rgba(16,24,32,.16)}
+    @media(max-width:1099px) and (min-width:760px){
+      .ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))}
+      .ce-flat-link{font-size:.86rem}
+    }
+    @media(max-width:759px){
+      .ce-flat-top{min-height:66px}
+      .ce-flat-brand img{width:44px;height:44px;flex-basis:44px}
+      .ce-flat-brand{font-size:1rem;gap:.65rem}
+      .ce-flat-toggle{display:block}
+      .ce-flat-nav{display:none;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 68px);overflow:auto;background:#f7f4ec;box-shadow:0 18px 40px rgba(16,24,32,.18)}
+      .ce-flat-header.is-open .ce-flat-nav{display:block}
+      .ce-flat-links{grid-template-columns:1fr;gap:.45rem;width:min(94vw,680px);padding:.7rem 0 1rem}
+      .ce-flat-link{min-height:46px;justify-content:flex-start;padding:.72rem .85rem;text-align:left;border-width:1px;border-left-width:5px;border-radius:10px;font-size:.92rem}
+    }
+  `;
+  document.head.appendChild(style);
+
+  const nested = /\/(articles|themes)\//.test(window.location.pathname);
+  const prefix = nested ? '../' : '';
+  const u = path => `${prefix}${path}`;
+  const links = [
+    ['Vie professionnelle','themes/travail.html','travail'],
+    ['Finances personnelles','themes/argent.html','finances'],
+    ['Entreprendre','themes/entreprendre.html','entreprendre'],
+    ['IA & technologie','themes/ia.html','ia'],
+    ['Décisions','themes/decisions.html','decisions'],
+    ['Systèmes','themes/systemes.html','systemes'],
+    ['Bibliothèque','bibliotheque.html','bibliotheque'],
+    ['À propos','a-propos.html','apropos']
+  ];
+
+  header.className = 'ce-flat-header';
+  header.innerHTML = `
+    <div class="ce-flat-shell ce-flat-top">
+      <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.svg')}" alt=""><span>Contre-évidence</span></a>
+      <button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="ce-flat-nav" aria-label="Navigation principale">
+      <div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div>
+    </nav>`;
+
+  const path = window.location.pathname;
+  const current = path.includes('/themes/travail') || path.includes('/parcours-vie-professionnelle') ? 'travail'
+    : path.includes('/themes/argent') || path.includes('/parcours-argent') || path.includes('/moins-de-25-ans') ? 'finances'
+    : path.includes('/themes/entreprendre') ? 'entreprendre'
+    : path.includes('/themes/ia') ? 'ia'
+    : path.includes('/themes/decisions') ? 'decisions'
+    : path.includes('/themes/systemes') ? 'systemes'
+    : path.includes('/bibliotheque') ? 'bibliotheque'
+    : path.includes('/a-propos') ? 'apropos' : '';
+  if (current) header.querySelector(`[data-key="${current}"]`)?.classList.add('is-current');
+
+  const toggle = header.querySelector('.ce-flat-toggle');
+  toggle?.addEventListener('click', event => {
+    event.stopPropagation();
+    const open = header.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+  header.querySelectorAll('a').forEach(a => a.addEventListener('click', () => header.classList.remove('is-open')));
+  document.addEventListener('click', event => { if (!header.contains(event.target)) header.classList.remove('is-open'); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') header.classList.remove('is-open'); });
+  window.addEventListener('resize', () => { if (window.innerWidth >= 760) header.classList.remove('is-open'); });
+})();
+</script></body></html>
