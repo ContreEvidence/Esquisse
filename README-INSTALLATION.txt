@@ -1,34 +1,25 @@
-CONTRE-ÉVIDENCE — PACK 05 : ARGENT ET ÉPARGNE POUR DÉBUTANTS
-==============================================================
+CONTRE-ÉVIDENCE — PACK 05 V2 : GROS MONTANTS ET PAGE À PROPOS
+================================================================
 
-CE PACK S'INSTALLE APRÈS LA REFONTE DE VOIX DES PACKS 01 À 04.
+CORRECTIONS
+- Nouvelle page À propos centrée sur l’utilité pour le lecteur et non sur le parcours du créateur.
+- Page d’accueil recentrée sur les besoins du visiteur.
+- Nouveau dossier pratique : allocations illustratives pour 250 000 €, 500 000 € et 1 000 000 €.
+- Liens visibles depuis l’accueil, le parcours argent, la bibliothèque et le thème Argent.
+- Compléments dans les articles « grosse entrée d’argent » et « construire une allocation ».
 
-AJOUTS
-- 10 articles dans articles/
-- parcours-argent.html à la racine
-- assets/finance.css
+À AJOUTER
+- articles/exemples-allocation-250000-500000-1000000.html
 
-REMPLACEMENTS
+À REMPLACER
+- a-propos.html
 - index.html
+- parcours-argent.html
 - bibliotheque.html
 - themes/argent.html
+- articles/grosse-entree-argent-que-faire.html
+- articles/construire-allocation-debutant.html
 - rss.xml
 - sitemap.xml
 
-CONSERVEZ
-Tous les anciens articles et tous les autres fichiers du site.
-
-RÉSULTAT
-- 53 articles au total
-- un parcours débutant complet sur la gestion d'une grosse entrée d'argent
-- des comparatifs produits bancaires, enveloppes et supports
-- trois exemples d'allocation
-- des articles ETF, frais/fiscalité et protection contre les arnaques
-- des sources officielles intégrées à chaque article
-
-INSTALLATION
-1. Ajoutez les 10 fichiers dans articles/.
-2. Ajoutez parcours-argent.html à la racine.
-3. Ajoutez finance.css dans assets/.
-4. Remplacez les cinq fichiers indiqués ci-dessus.
-5. Commit changes, puis attendez la republication GitHub Pages.
+Après installation, le site affiche 54 articles.
