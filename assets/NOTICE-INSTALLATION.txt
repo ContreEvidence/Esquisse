@@ -1,0 +1,42 @@
+MENU FINAL — CONTRE-ÉVIDENCE
+============================
+
+CHOIX RETENU
+------------
+Le menu déroulant complexe est supprimé.
+
+Ordinateur : six onglets simples et alignés.
+Petit écran ou navigateur très zoomé : un tiroir latéral propre, sans sous-menus ni descriptions entassées.
+
+Cette solution est volontairement plus simple et beaucoup plus robuste.
+
+INSTALLATION LA PLUS SÛRE
+-------------------------
+1. Place ce dossier à la racine d'une copie locale complète du site.
+2. Copie les deux fichiers du dossier assets dans le dossier assets du site en acceptant le remplacement :
+   - assets/script.js
+   - assets/navigation-v3.js
+3. Copie APPLIQUER-CORRECTION.bat et APPLIQUER-CORRECTION.ps1 à la racine du site.
+4. Double-clique sur APPLIQUER-CORRECTION.bat.
+5. Téléverse ensuite les fichiers corrigés sur GitHub.
+
+Le programme ajoute un numéro de version aux scripts dans toutes les pages HTML afin d'empêcher Chrome d'utiliser une ancienne version en cache.
+
+INSTALLATION MANUELLE DANS GITHUB
+---------------------------------
+1. Remplace assets/script.js.
+2. Remplace assets/navigation-v3.js.
+3. Dans les pages HTML, remplace :
+   assets/script.js
+   par : assets/script.js?v=20260806-final
+
+   et :
+   assets/navigation-v3.js
+   par : assets/navigation-v3.js?v=20260806-final
+
+Pour les pages situées dans articles ou themes, conserve le préfixe ../ déjà présent.
+
+TEST AVANT PUBLICATION
+----------------------
+Ouvre PREVIEW-MENU.html.
+Réduis la largeur de la fenêtre : le bouton ouvre un tiroir latéral et non un grand accordéon.
