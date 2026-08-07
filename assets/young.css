@@ -9,5 +9,7 @@
 .young-checklist div{padding:.65rem .75rem;border-left:3px solid #d6a94a;background:rgba(255,255,255,.05);border-radius:0 10px 10px 0}
 .young-home-card{display:grid;grid-template-columns:1.2fr auto;gap:1.25rem;align-items:center;padding:1.5rem;border:1px solid rgba(214,169,74,.45);border-radius:22px;background:linear-gradient(135deg,#fff7dd,#f4f8fb)}
 .young-home-card h2{margin:.15rem 0 .4rem}.young-home-card p{margin:0;max-width:760px}
-@media(max-width:850px){.young-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.young-home-card{grid-template-columns:1fr}.young-home-card .btn{justify-self:start}}
-@media(max-width:560px){.young-grid,.young-checklist{grid-template-columns:1fr}}
+.hero-youth-card{margin:1.25rem 0 0;padding:1rem 1.1rem;grid-template-columns:1fr auto;border:2px solid #d4ab56;box-shadow:0 10px 28px rgba(0,0,0,.22)}
+.hero-youth-card .kicker{color:#73530c!important}.hero-youth-card h2{font-size:1.12rem;color:#101820;margin:.1rem 0 .25rem}.hero-youth-card p{font-size:.9rem!important;line-height:1.45;color:#3f4a52!important}.hero-youth-card .btn{min-height:42px;padding:0 14px;white-space:nowrap}
+@media(max-width:850px){.young-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.young-home-card{grid-template-columns:1fr}.young-home-card .btn{justify-self:start}.hero-youth-card{grid-template-columns:1fr}}
+@media(max-width:560px){.young-grid,.young-checklist{grid-template-columns:1fr}.hero-youth-card{padding:.9rem}.hero-youth-card h2{font-size:1rem}.hero-youth-card p{font-size:.84rem!important}}
