@@ -19,6 +19,11 @@
   const search = searchWrap.querySelector('input');
   search.value = state.query;
 
+  const wall = document.createElement('div');
+  wall.className = 'library-wallpaper-strip';
+  wall.innerHTML = '<strong>Fonds d’écran</strong><a href="assets/hors-cadre/wallpaper-001.svg" download><img src="assets/hors-cadre/wallpaper-001.svg" alt="Édition 001"></a><a href="assets/hors-cadre/wallpaper-002.svg" download><img src="assets/hors-cadre/wallpaper-002.svg" alt="Édition 002"></a><a href="assets/hors-cadre/wallpaper-003.svg" download><img src="assets/hors-cadre/wallpaper-003.svg" alt="Édition 003"></a><a href="assets/hors-cadre/wallpaper-004.svg" download><img src="assets/hors-cadre/wallpaper-004.svg" alt="Édition 004"></a><a class="btn btn-ghost" href="hors-cadre-images.html">Voir la galerie</a>';
+  tools.parentNode.insertBefore(wall, tools);
+
   function syncButtons() {
     buttons.forEach(button => {
       const group = button.dataset.filterGroup;
