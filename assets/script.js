@@ -2,9 +2,9 @@
   'use strict';
   const currentScript = document.currentScript;
   if (!document.documentElement.dataset.ceNavLoader) {
-    document.documentElement.dataset.ceNavLoader = '24';
+    document.documentElement.dataset.ceNavLoader = '25';
     const navScript = document.createElement('script');
-    navScript.src = new URL('navigation-v3.js?v=20260807-24', currentScript?.src || window.location.href).href;
+    navScript.src = new URL('navigation-v3.js?v=20260807-25', currentScript?.src || window.location.href).href;
     navScript.defer = true;
     document.head.appendChild(navScript);
   }
