@@ -2,9 +2,9 @@
   'use strict';
   const currentScript = document.currentScript;
   if (!document.documentElement.dataset.ceNavLoader) {
-    document.documentElement.dataset.ceNavLoader = '25';
+    document.documentElement.dataset.ceNavLoader = '26';
     const navScript = document.createElement('script');
-    navScript.src = new URL('navigation-v3.js?v=20260807-25', currentScript?.src || window.location.href).href;
+    navScript.src = new URL('navigation-v3.js?v=20260807-26', currentScript?.src || window.location.href).href;
     navScript.defer = true;
     document.head.appendChild(navScript);
   }
@@ -69,8 +69,9 @@
     const libraryButton = [...document.querySelectorAll('.hero .btn')].find(a => a.getAttribute('href') === 'bibliotheque.html');
     if (libraryButton) libraryButton.textContent = 'Explorer la bibliothèque';
 
-    const duplicateSearch = document.querySelector('.global-search-band');
-    if (duplicateSearch && document.querySelector('.ce-search-strip')) duplicateSearch.remove();
+    document.querySelector('.youth-entry-banner')?.remove();
+    document.querySelector('.ce-search-strip')?.remove();
+    document.querySelector('.global-search-band')?.remove();
 
     const situationGrid = document.querySelector('.situation-grid');
     if (situationGrid) {
@@ -83,12 +84,6 @@
       const sectionHead = levelGrid.closest('section')?.querySelector('.section-head');
       if (sectionHead) sectionHead.innerHTML = '<div class="kicker">Choisissez votre profondeur</div><h2>Une même idée, quatre niveaux de lecture.</h2><p>Commencez simplement, approfondissez les mécanismes puis passez à l’analyse lorsque les bases sont acquises.</p>';
       levelGrid.insertAdjacentHTML('beforeend', '<a class="level-card level-card-expert" data-level="4" href="marches-analyses-avancees.html"><span class="level-badge level-4">Niveau 4</span><h3>Analyser</h3><p>Croiser données, scénarios, valorisation, signaux et risque pour construire une décision argumentée.</p></a>');
-    }
-
-    const methodSection = document.getElementById('methode');
-    if (methodSection) {
-      const box = methodSection.querySelector('.start-here');
-      if (box) box.innerHTML = '<div><div class="kicker">Méthode éditoriale</div><h2>Comprendre avant de suivre. Comparer avant de choisir. Tester avant d’affirmer.</h2><p>Les sources, hypothèses, dates et limites doivent rester visibles lorsque l’enjeu le justifie.</p></div><a class="btn btn-primary" href="methode-sources.html">Méthode & sources</a>';
     }
   }
 
