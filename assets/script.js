@@ -2,9 +2,9 @@
   'use strict';
   const currentScript = document.currentScript;
   if (!document.documentElement.dataset.ceNavLoader) {
-    document.documentElement.dataset.ceNavLoader = '18';
+    document.documentElement.dataset.ceNavLoader = '19';
     const navScript = document.createElement('script');
-    navScript.src = new URL('navigation-v3.js?v=20260807-18', currentScript?.src || window.location.href).href;
+    navScript.src = new URL('navigation-v3.js?v=20260807-19', currentScript?.src || window.location.href).href;
     navScript.defer = true;
     document.head.appendChild(navScript);
   }
@@ -55,6 +55,14 @@
 
   document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 
+  document.querySelectorAll('.foot').forEach(foot => {
+    const links = foot.querySelector('span:last-child');
+    if (links && !links.querySelector('a[href$="methode-sources.html"]')) {
+      const methodHref = `${prefix}methode-sources.html`;
+      links.insertAdjacentHTML('afterbegin', `<a href="${methodHref}">Méthode & sources</a> · `);
+    }
+  });
+
   const path = window.location.pathname;
   const isHome = /\/Esquisse\/?$/.test(path) || /\/index\.html$/.test(path);
   if (isHome) {
@@ -101,7 +109,7 @@
     document.querySelector('.video-library-callout')?.closest('section')?.remove();
     const tools = document.querySelector('.library-tools');
     if (tools && !document.querySelector('.library-expert-gateway')) {
-      tools.insertAdjacentHTML('beforebegin', '<div class="library-expert-gateway"><div><span class="level-badge level-4">Niveau 4 · Analyser</span><h2>Vous cherchez les analyses de marché et d’entreprise ?</h2><p>Les contenus avancés sont regroupés dans un espace séparé afin de ne pas être noyés dans les articles pédagogiques.</p></div><a class="btn btn-primary" href="marches-analyses-avancees.html">Marchés & analyses avancées</a></div>');
+      tools.insertAdjacentHTML('beforebegin', '<div class="library-expert-gateway"><div><span class="level-badge level-4">Niveau 4 · Analyser</span><h2>Vous cherchez les analyses de marché et d’entreprise ?</h2><p>Les contenus avancés sont regroupés dans un espace séparé afin de ne pas être noyés dans les articles pédagogiques.</p></div><a class="btn btn-primary" href="marches-analyses-avancees.html">Marchés & analyses avancées</a></div><div class="format-gateway"><span class="filter-label">Explorer par format :</span><a href="parcours-argent.html">Dossiers</a><a href="#articles">Articles</a><a href="marches-analyses-avancees.html">Analyses</a><a href="methode-sources.html">Méthode & sources</a></div>');
     }
   }
 })();
