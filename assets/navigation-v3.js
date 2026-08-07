@@ -9,15 +9,15 @@
     document.head.appendChild(analytics);
   }
 
-  if (document.documentElement.dataset.ceFlatNav === '26') return;
-  document.documentElement.dataset.ceFlatNav = '26';
+  if (document.documentElement.dataset.ceFlatNav === '27') return;
+  document.documentElement.dataset.ceFlatNav = '27';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '26';
+  style.dataset.ceFlatNav = '27';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.34);box-shadow:0 5px 18px rgba(0,0,0,.28);font-family:inherit}
@@ -42,17 +42,24 @@
     .ce-flat-toggle{display:none;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.34);border-radius:11px;background:#18181a;cursor:pointer}
     .ce-flat-toggle span{display:block;width:20px;height:2px;margin:4px auto;background:#fff;border-radius:2px}
     .ce-flat-nav{background:#111113;border-top:1px solid rgba(232,201,121,.2)}
-    .ce-flat-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.4rem;padding:.46rem 0 .56rem}
-    .ce-flat-link{display:flex;align-items:center;justify-content:center;min-height:40px;padding:.54rem .48rem;color:#fff;text-decoration:none;text-align:center;font-size:.78rem;font-weight:850;line-height:1.12;background:#1c1c1f;border:1px solid rgba(255,255,255,.16);border-bottom:2px solid #b28a38;border-radius:10px}
-    .ce-flat-link:hover,.ce-flat-link:focus-visible{background:#29292d;color:#fff;outline:2px solid #e8c979;outline-offset:2px}
-    .ce-flat-link.is-current{background:#d4ab56!important;color:#09090a!important;border-color:#e8c979!important}
-    .ce-flat-link[data-key="hors-cadre"]{border-bottom-color:#e8c979;background:linear-gradient(180deg,#28231b,#1c1c1f)}
-    .ce-flat-link[data-key="hors-cadre"]:hover,.ce-flat-link[data-key="hors-cadre"].is-current{background:#d4ab56!important;color:#09090a!important}
+    .ce-flat-links{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:.18rem;padding:.3rem 0 .36rem}
+    .ce-flat-link{position:relative;display:flex;align-items:center;justify-content:center;min-height:38px;padding:.48rem .3rem;color:#e9edef;text-decoration:none;text-align:center;font-size:.77rem;font-weight:800;line-height:1.08;background:transparent;border:0;border-radius:6px;white-space:nowrap}
+    .ce-flat-link:after{content:'';position:absolute;left:18%;right:18%;bottom:1px;height:2px;background:transparent;border-radius:3px}
+    .ce-flat-link:hover,.ce-flat-link:focus-visible{background:#1a1a1d;color:#fff;outline:none}
+    .ce-flat-link:hover:after,.ce-flat-link:focus-visible:after{background:#8d7133}
+    .ce-flat-link.is-current{background:#171719!important;color:#fff!important}
+    .ce-flat-link.is-current:after{background:#d4ab56!important}
+    .ce-flat-link[data-key="hors-cadre"]{color:#e8c979}
+    .ce-flat-link[data-key="hors-cadre"].is-current{color:#fff}
     .ce-footer-socials{width:100%;display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .6rem;margin-top:.45rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.14)}
     .ce-footer-socials strong{color:#e8c979;margin-right:.15rem}
     .ce-footer-socials a{display:inline-flex;align-items:center;min-height:30px;padding:.28rem .55rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:#fff!important;text-decoration:none;font-size:.84rem;font-weight:800}
     .ce-footer-socials a:hover,.ce-footer-socials a:focus-visible{background:#d4ab56;color:#09090a!important;border-color:#e8c979}
-    @media(max-width:1020px) and (min-width:760px){.ce-flat-top{grid-template-columns:auto 1fr}.ce-search{grid-column:1/-1;grid-row:2;max-width:none}.ce-flat-actions{grid-column:2;grid-row:1}.ce-flat-brand-copy small{display:none}}
+    @media(max-width:1120px) and (min-width:760px){
+      .ce-flat-top{grid-template-columns:auto 1fr}.ce-search{grid-column:1/-1;grid-row:2;max-width:none}.ce-flat-actions{grid-column:2;grid-row:1}.ce-flat-brand-copy small{display:none}
+      .ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr));gap:.3rem;padding:.38rem 0 .46rem}
+      .ce-flat-link{white-space:normal;min-height:38px}
+    }
     @media(max-width:759px){
       .ce-flat-top{grid-template-columns:1fr auto;gap:.55rem;padding:.48rem 0 .55rem}
       .ce-flat-brand img{width:58px;height:58px;flex-basis:58px}.ce-flat-brand{gap:.65rem}.ce-flat-brand-copy strong{font-size:.94rem}.ce-flat-brand-copy small{display:none}
@@ -60,8 +67,9 @@
       .ce-search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}.ce-search input{height:40px;font-size:.86rem}.ce-search button{min-width:82px;font-size:.83rem}
       .ce-flat-nav{display:none;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 118px);overflow:auto;background:#0d0d0f;box-shadow:0 18px 40px rgba(0,0,0,.44)}
       .ce-flat-header.is-open .ce-flat-nav{display:block}
-      .ce-flat-links{grid-template-columns:1fr;gap:.4rem;width:min(94vw,680px);padding:.65rem 0 .85rem}
-      .ce-flat-link{min-height:44px;justify-content:flex-start;padding:.72rem .85rem;text-align:left;border-left:5px solid #b28a38;border-bottom-width:1px;border-radius:9px;font-size:.91rem}
+      .ce-flat-links{grid-template-columns:1fr;gap:.25rem;width:min(94vw,680px);padding:.55rem 0 .75rem}
+      .ce-flat-link{min-height:42px;justify-content:flex-start;padding:.68rem .82rem;text-align:left;border-left:4px solid #8d7133;border-radius:7px;font-size:.9rem;white-space:normal}
+      .ce-flat-link:after{display:none}.ce-flat-link.is-current{border-left-color:#d4ab56}
     }
   `;
   document.head.appendChild(style);
@@ -70,10 +78,10 @@
   const prefix = nested ? '../' : '';
   const u = path => `${prefix}${path}`;
   const links = [
-    ['Vie professionnelle','themes/travail.html','travail'],
-    ['Finances personnelles','themes/argent.html','finances'],
+    ['Vie pro','themes/travail.html','travail'],
+    ['Finances','themes/argent.html','finances'],
     ['Entreprendre','themes/entreprendre.html','entreprendre'],
-    ['IA & technologie','themes/ia.html','ia'],
+    ['IA & Tech','themes/ia.html','ia'],
     ['Décisions','themes/decisions.html','decisions'],
     ['Systèmes','themes/systemes.html','systemes'],
     ['Bibliothèque','bibliotheque.html','bibliotheque'],
