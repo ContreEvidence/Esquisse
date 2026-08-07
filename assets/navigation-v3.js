@@ -1,14 +1,23 @@
 (() => {
   'use strict';
-  if (document.documentElement.dataset.ceFlatNav === '16') return;
-  document.documentElement.dataset.ceFlatNav = '16';
+
+  if (!document.querySelector('script[data-cf-beacon]')) {
+    const analytics = document.createElement('script');
+    analytics.defer = true;
+    analytics.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    analytics.setAttribute('data-cf-beacon', JSON.stringify({ token: 'a2d9198dc1684d70bce3ef999bf831a0' }));
+    document.head.appendChild(analytics);
+  }
+
+  if (document.documentElement.dataset.ceFlatNav === '17') return;
+  document.documentElement.dataset.ceFlatNav = '17';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '16';
+  style.dataset.ceFlatNav = '17';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.36);box-shadow:0 7px 24px rgba(0,0,0,.32);font-family:inherit}
