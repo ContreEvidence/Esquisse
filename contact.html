@@ -9,7 +9,7 @@
 <link rel="icon" type="image/png" href="assets/logo.png"/>
 <link rel="stylesheet" href="assets/style.css"/>
 <link rel="stylesheet" href="assets/navigation.css"/>
-<link rel="stylesheet" href="assets/brand.css?v=20260806-15"/>
+<link rel="stylesheet" href="assets/brand.css?v=20260807-1"/>
 <style>
 .contact-hero{background:#09090a;color:#fff;padding:4.5rem 0 3.5rem;border-bottom:1px solid rgba(212,171,86,.35)}
 .contact-hero .kicker{color:#e8c979}.contact-hero h1{max-width:850px;margin:.4rem 0 1rem;font-size:clamp(2.1rem,5vw,4.2rem);line-height:1.02}.contact-hero p{max-width:760px;color:#e8e4dc;font-size:1.08rem}
@@ -30,42 +30,34 @@
 <section><div class="container contact-layout">
 <div class="contact-panel">
 <h2>Écrire à Contre-évidence</h2>
-<form class="contact-form" id="contact-form">
-<div class="contact-field"><label for="type">Nature de la demande</label><select id="type" name="type" required><option value="Demande de précision">Demander une précision</option><option value="Question">Poser une question</option><option value="Proposition de sujet">Proposer un sujet</option><option value="Correction ou signalement">Signaler une erreur ou un problème</option></select></div>
-<div class="contact-field"><label for="subject">Article ou sujet concerné</label><input id="subject" name="subject" type="text" placeholder="Ex. reconversion après 50 ans, PEA, intelligence artificielle…"/></div>
-<div class="contact-field"><label for="message">Votre message</label><textarea id="message" name="message" required placeholder="Expliquez ce qui reste flou, votre question ou le sujet que vous aimeriez voir traité."></textarea></div>
-<div class="contact-field"><label for="reply">Adresse e-mail pour recevoir une réponse <span aria-hidden="true">(facultatif)</span></label><input id="reply" name="reply" type="email" autocomplete="email" placeholder="votre-adresse@exemple.fr"/></div>
-<button class="contact-submit" type="submit">Préparer le message</button>
-<p class="contact-note">Le bouton ouvre votre application de messagerie avec le message prérempli. Rien n’est envoyé avant votre confirmation.</p>
+<form class="contact-form" id="contact-form" action="https://formsubmit.co/contreevidence@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Nouveau message depuis Contre-évidence"/>
+<input type="hidden" name="_next" value="https://contreevidence.github.io/Esquisse/merci.html"/>
+<input type="hidden" name="_captcha" value="false"/>
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
+<div class="contact-field"><label for="type">Nature de la demande</label><select id="type" name="Nature de la demande" required><option value="Demande de précision">Demander une précision</option><option value="Question">Poser une question</option><option value="Proposition de sujet">Proposer un sujet</option><option value="Correction ou signalement">Signaler une erreur ou un problème</option></select></div>
+<div class="contact-field"><label for="subject">Article ou sujet concerné</label><input id="subject" name="Sujet concerné" type="text" placeholder="Ex. reconversion après 50 ans, PEA, intelligence artificielle…"/></div>
+<div class="contact-field"><label for="message">Votre message</label><textarea id="message" name="Message" required placeholder="Expliquez ce qui reste flou, votre question ou le sujet que vous aimeriez voir traité."></textarea></div>
+<div class="contact-field"><label for="reply">Adresse e-mail pour recevoir une réponse <span aria-hidden="true">(facultatif)</span></label><input id="reply" name="email" type="email" autocomplete="email" placeholder="votre-adresse@exemple.fr"/></div>
+<button class="contact-submit" type="submit">Envoyer la question</button>
+<p class="contact-note">Votre message est envoyé depuis cette page. Aucune application de messagerie n’est nécessaire.</p>
 </form>
 </div>
 <aside class="contact-aside">
 <div class="kicker">Trois usages</div><h2>Votre retour peut améliorer le site.</h2>
 <div class="contact-choice"><a href="#contact-form" data-contact-type="Demande de précision">Un passage reste flou</a><a href="#contact-form" data-contact-type="Question">J’ai une question concrète</a><a href="#contact-form" data-contact-type="Proposition de sujet">Un sujet mérite d’être traité</a></div>
-<p>Vous pouvez aussi écrire directement à :</p><a class="contact-email" href="mailto:contreevidence@gmail.com">contreevidence@gmail.com</a>
-<ul class="contact-list"><li>Pas de création de compte.</li><li>Adresse de réponse facultative.</li><li>Les questions récurrentes peuvent inspirer de nouveaux contenus, sans publication de données personnelles.</li></ul>
+<p>Les messages du formulaire arrivent dans la boîte dédiée de Contre-évidence.</p>
+<ul class="contact-list"><li>Pas de création de compte pour le lecteur.</li><li>Adresse de réponse facultative.</li><li>Les questions récurrentes peuvent inspirer de nouveaux contenus, sans publication de données personnelles.</li></ul>
 </aside>
 </div></section>
 </main>
 <footer><div class="container foot"><span>© <span data-year></span> Contre-évidence</span><span><a href="contact.html">Poser une question</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="mentions.html">Mentions</a></span></div></footer>
 <script>
 (() => {
-  const form = document.getElementById('contact-form');
   const type = document.getElementById('type');
   document.querySelectorAll('[data-contact-type]').forEach(link => link.addEventListener('click', () => { type.value = link.dataset.contactType; }));
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const requestType = String(data.get('type') || 'Question');
-    const topic = String(data.get('subject') || '').trim();
-    const message = String(data.get('message') || '').trim();
-    const reply = String(data.get('reply') || '').trim();
-    const subject = `[Contre-évidence] ${requestType}${topic ? ` — ${topic}` : ''}`;
-    const body = `${requestType}\n\nSujet concerné : ${topic || 'Non précisé'}\n\nMessage :\n${message}\n\nAdresse de réponse : ${reply || 'Non renseignée'}`;
-    window.location.href = `mailto:contreevidence@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  });
 })();
 </script>
-<script src="assets/script.js?v=20260806-15"></script>
-<script src="assets/navigation-v3.js?v=20260806-15"></script>
+<script src="assets/script.js?v=20260807-1"></script>
+<script src="assets/navigation-v3.js?v=20260807-16"></script>
 </body></html>
