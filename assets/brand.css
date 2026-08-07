@@ -79,3 +79,34 @@ body{background:#f5f1e8;color:#141517}.home-videos{background:#0b0b0d;color:#fff
 .ce-page-search-controls{display:flex;gap:10px}.ce-page-search input{flex:1;min-width:0;height:48px;padding:0 14px;border:2px solid #65717a;border-radius:11px;background:#fff;color:#101820;font:inherit;font-size:1rem}.ce-page-search input::placeholder{color:#56616a;opacity:1}.ce-page-search button{min-height:48px;padding:0 19px;border:1px solid #9c741d;border-radius:11px;background:#d4ab56;color:#09090a;font:inherit;font-weight:900;cursor:pointer}.ce-page-search button:hover,.ce-page-search button:focus-visible{background:#e8c979}
 .article-card[data-level="1"]{order:1}.article-card[data-level="2"]{order:2}.article-card[data-level="3"]{order:3}.article-card[data-level="4"]{order:4}
 @media(max-width:720px){.ce-search-strip{padding:14px 0}.ce-page-search{grid-template-columns:1fr;gap:12px;padding:16px}.ce-page-search-controls{flex-direction:column}.ce-page-search button{width:100%}}
+
+/* Accueil — contraste renforcé */
+.home-index{background:#f2ede3;color:#0b1116}
+.home-index main>section:not(.hero):not(.dark){background:#f2ede3}
+.home-index .section-head h2,.home-index .theme-card h3,.home-index .situation-card h3,.home-index .finance-step h3{color:#0b1116}
+.home-index .section-head p,.home-index .theme-card p,.home-index .situation-card p,.home-index .finance-step p{color:#2d3942!important;opacity:1!important}
+.home-index .section-head .kicker{color:#5d4208!important}
+.home-index .theme-card,.home-index .situation-card,.home-index .finance-step{background:#fff;color:#0b1116;border:1px solid #aeb7bd;box-shadow:0 10px 24px rgba(16,24,32,.09)}
+.home-index .theme-card:hover,.home-index .situation-card:hover,.home-index .finance-step:hover{border-color:#76580e;box-shadow:0 14px 30px rgba(16,24,32,.13)}
+.home-index .theme-link,.home-index .theme-chip{background:#dfe5e9;color:#17232c}
+.home-index .theme-icon{color:#5b4007}
+.home-index .situation-card .number{background:#101820;color:#f0cf83}
+.home-index .finance-step .step-no{color:#654700;font-weight:900}
+.home-index .ce-search-strip{background:#e6dcc9;border-color:#9d7a2d}
+.home-index .ce-page-search{border-color:#9aa4ab;box-shadow:0 10px 26px rgba(16,24,32,.10)}
+.home-index .ce-page-search-copy span{color:#293640}
+.home-index .dark{background:#0b1117;color:#fff}
+.home-index .dark .section-head h2{color:#fff}
+.home-index .dark .section-head p{color:#f0f3f5!important}
+.home-index .dark .section-head .kicker{color:#f1d68f!important}
+.home-index .dark .level-card{background:#fff;color:#0b1116;border-color:#aeb7bd}
+.home-index .dark .level-card h3{color:#0b1116}
+.home-index .dark .level-card p{color:#293640!important;opacity:1!important}
+.home-index .dark .level-card-expert{background:linear-gradient(145deg,#172a3a,#0b1117)!important;color:#fff!important;border-color:#d4ab56!important}
+.home-index .dark .level-card-expert h3,.home-index .dark .level-card-expert p{color:#fff!important}
+.home-index .youth-entry-banner{background:#e0b85e;color:#09090a;border-bottom-color:#71520c}
+.home-index .youth-entry-copy strong{color:#09090a}
+.home-index .youth-entry-copy span{color:#2c2109}
+.home-index .youth-entry-cta{background:#09090a;color:#fff;border-color:#09090a}
+.home-index .youth-entry-banner a:hover .youth-entry-cta,.home-index .youth-entry-banner a:focus-visible .youth-entry-cta{background:#fff;color:#09090a}
+@media(max-width:620px){.home-index .section-head p,.home-index .theme-card p,.home-index .situation-card p,.home-index .finance-step p{font-size:1rem;line-height:1.58}}
