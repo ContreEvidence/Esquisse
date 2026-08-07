@@ -9,15 +9,15 @@
     document.head.appendChild(analytics);
   }
 
-  if (document.documentElement.dataset.ceFlatNav === '17') return;
-  document.documentElement.dataset.ceFlatNav = '17';
+  if (document.documentElement.dataset.ceFlatNav === '18') return;
+  document.documentElement.dataset.ceFlatNav = '18';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '17';
+  style.dataset.ceFlatNav = '18';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.36);box-shadow:0 7px 24px rgba(0,0,0,.32);font-family:inherit}
@@ -34,9 +34,11 @@
     .ce-search input::placeholder{color:#59646d;opacity:1}
     .ce-search button{display:block!important;min-width:92px;border:0;background:#d4ab56;color:#101010;font-size:.92rem;font-weight:900;cursor:pointer}
     .ce-search button:hover,.ce-search button:focus-visible{background:#e8c979;outline:2px solid #fff;outline-offset:-4px}
-    .ce-flat-actions{display:flex;align-items:center;gap:.55rem}
-    .ce-flat-toplink,.ce-contact-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.68rem .95rem;border-radius:999px;text-decoration:none;font-size:.87rem;font-weight:850;white-space:nowrap}
+    .ce-flat-actions{display:flex;align-items:center;gap:.48rem}
+    .ce-flat-toplink,.ce-contact-link,.ce-youth-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.68rem .9rem;border-radius:999px;text-decoration:none;font-size:.84rem;font-weight:850;white-space:nowrap}
     .ce-flat-toplink{background:#18181a;color:#fff;border:1px solid rgba(255,255,255,.28)}
+    .ce-youth-link{background:#fff;color:#101820;border:2px solid #d4ab56}
+    .ce-youth-link:hover,.ce-youth-link:focus-visible{background:#fff3c8;color:#000;outline:2px solid #fff;outline-offset:2px}
     .ce-contact-link{background:#d4ab56;color:#0b0b0c;border:1px solid #e8c979}
     .ce-contact-link:hover,.ce-contact-link:focus-visible{background:#e8c979;color:#000;outline:2px solid #fff;outline-offset:2px}
     .ce-flat-toggle{display:none;width:46px;height:46px;padding:0;border:1px solid rgba(255,255,255,.34);border-radius:12px;background:#18181a;cursor:pointer}
@@ -46,17 +48,22 @@
     .ce-flat-link{display:flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem .56rem;color:#fff;text-decoration:none;text-align:center;font-size:.82rem;font-weight:850;line-height:1.15;background:#1c1c1f;border:1px solid rgba(255,255,255,.18);border-bottom:3px solid #b28a38;border-radius:12px}
     .ce-flat-link:hover,.ce-flat-link:focus-visible{background:#29292d;color:#fff;outline:2px solid #e8c979;outline-offset:2px}
     .ce-flat-link.is-current{background:#d4ab56!important;color:#09090a!important;border-color:#e8c979!important;border-bottom-color:#fff1b8!important}
-    @media(max-width:1099px) and (min-width:760px){.ce-flat-top{grid-template-columns:auto 1fr auto}.ce-flat-brand-copy small{display:none}.ce-flat-brand-copy strong{font-size:1.08rem}.ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))}.ce-flat-toplink{display:none}}
+    .ce-youth-fast{display:flex;align-items:center;gap:.8rem;max-width:720px;margin:1.05rem 0 0;padding:.72rem .85rem;border:1px solid rgba(232,201,121,.78);border-radius:14px;background:rgba(255,255,255,.08);color:#fff;text-decoration:none;line-height:1.25}
+    .ce-youth-fast:hover,.ce-youth-fast:focus-visible{background:rgba(232,201,121,.16);outline:2px solid #e8c979;outline-offset:3px}
+    .ce-youth-fast-badge{display:inline-flex;align-items:center;justify-content:center;min-width:64px;padding:.45rem .55rem;border-radius:999px;background:#d4ab56;color:#09090a;font-size:.82rem;font-weight:950;white-space:nowrap}
+    .ce-youth-fast-copy{display:flex;flex-direction:column;gap:.12rem}.ce-youth-fast-copy strong{font-size:.98rem;color:#fff}.ce-youth-fast-copy span{font-size:.82rem;color:#e4e9ec}.ce-youth-fast-go{margin-left:auto;color:#e8c979;font-weight:900;white-space:nowrap}
+    @media(max-width:1160px) and (min-width:760px){.ce-flat-top{grid-template-columns:auto 1fr auto}.ce-flat-brand-copy small{display:none}.ce-flat-brand-copy strong{font-size:1.08rem}.ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))}.ce-flat-toplink{display:none}.ce-youth-link{padding:.62rem .72rem;font-size:.79rem}}
     @media(max-width:759px){
       .ce-flat-top{grid-template-columns:1fr auto;gap:.6rem;padding:.55rem 0 .65rem}
       .ce-flat-brand img{width:64px;height:64px;flex-basis:64px;box-shadow:0 0 0 2px #d4ab56,0 0 0 4px #fff}
       .ce-flat-brand{gap:.72rem}.ce-flat-brand-copy strong{font-size:.96rem}.ce-flat-brand-copy small{display:none}
-      .ce-flat-actions{justify-self:end}.ce-flat-toplink{display:none}.ce-contact-link{min-height:42px;padding:.58rem .72rem;font-size:.8rem}.ce-flat-toggle{display:block}
+      .ce-flat-actions{justify-self:end}.ce-flat-toplink,.ce-contact-link{display:none}.ce-youth-link{min-height:40px;padding:.5rem .68rem;font-size:.77rem}.ce-flat-toggle{display:block}
       .ce-search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}.ce-search input{height:44px;font-size:.9rem}.ce-search button{min-width:86px;font-size:.86rem}
       .ce-flat-nav{display:none;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 130px);overflow:auto;background:#0d0d0f;box-shadow:0 18px 40px rgba(0,0,0,.44)}
       .ce-flat-header.is-open .ce-flat-nav{display:block}
       .ce-flat-links{grid-template-columns:1fr;gap:.45rem;width:min(94vw,680px);padding:.7rem 0 1rem}
       .ce-flat-link{min-height:48px;justify-content:flex-start;padding:.8rem .9rem;text-align:left;border-width:1px;border-left-width:5px;border-radius:10px;font-size:.94rem}
+      .ce-youth-fast{align-items:flex-start;gap:.6rem;padding:.7rem}.ce-youth-fast-copy span{font-size:.76rem}.ce-youth-fast-go{display:none}
     }
   `;
   document.head.appendChild(style);
@@ -82,7 +89,7 @@
         <input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, épargne, IA, décision…" autocomplete="off">
         <button type="submit">Rechercher</button>
       </form>
-      <div class="ce-flat-actions"><a class="ce-contact-link" href="${u('contact.html')}">Poser une question</a><a class="ce-flat-toplink" href="${u('a-propos.html')}">À propos</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div>
+      <div class="ce-flat-actions"><a class="ce-youth-link" href="${u('moins-de-25-ans.html')}">Moins de 25 ans</a><a class="ce-contact-link" href="${u('contact.html')}">Poser une question</a><a class="ce-flat-toplink" href="${u('a-propos.html')}">À propos</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div>
     </div>
     <nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
 
@@ -98,6 +105,20 @@
     : path.includes('/themes/systemes') ? 'systemes'
     : path.includes('/bibliotheque') ? 'bibliotheque' : '';
   if (current) header.querySelector(`[data-key="${current}"]`)?.classList.add('is-current');
+
+  const pathname = window.location.pathname.replace(/\/+$/, '');
+  const isHome = pathname.endsWith('/Esquisse') || pathname.endsWith('/index.html') || pathname === '' || pathname === '/';
+  if (isHome && !document.querySelector('.ce-youth-fast')) {
+    const heroCopy = document.querySelector('.hero .hero-grid > div:first-child');
+    const buttons = heroCopy?.querySelector('.btns');
+    if (heroCopy && buttons) {
+      const young = document.createElement('a');
+      young.className = 'ce-youth-fast';
+      young.href = u('moins-de-25-ans.html');
+      young.innerHTML = '<span class="ce-youth-fast-badge">-25 ans</span><span class="ce-youth-fast-copy"><strong>Premier emploi, premier salaire, premières décisions ?</strong><span>Budget, banque, logement, épargne, travail et démarches : un parcours pensé pour commencer sans jargon.</span></span><span class="ce-youth-fast-go">Commencer →</span>';
+      buttons.insertAdjacentElement('beforebegin', young);
+    }
+  }
 
   const toggle = header.querySelector('.ce-flat-toggle');
   const closeMenu = () => { header.classList.remove('is-open'); toggle?.setAttribute('aria-expanded','false'); };
