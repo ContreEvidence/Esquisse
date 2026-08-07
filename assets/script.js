@@ -2,7 +2,7 @@
   'use strict';
   const currentScript = document.currentScript;
   if (!document.documentElement.dataset.ceNavLoader) {
-    document.documentElement.dataset.ceNavLoader = '29';
+    document.documentElement.dataset.ceNavLoader = '30';
     const navScript = document.createElement('script');
     navScript.src = new URL('navigation-v3.js?v=20260807-29', currentScript?.src || window.location.href).href;
     navScript.defer = true;
@@ -11,6 +11,15 @@
 
   const nested = /\/(articles|themes|dossiers)\//.test(window.location.pathname);
   const prefix = nested ? '../' : '';
+
+  const themeVideoPaths = ['/themes/argent.html','/themes/entreprendre.html','/themes/ia.html','/themes/decisions.html','/themes/systemes.html'];
+  if (themeVideoPaths.some(p => window.location.pathname.endsWith(p)) && !document.documentElement.dataset.ceThemeVideos) {
+    document.documentElement.dataset.ceThemeVideos = '1';
+    const videoScript = document.createElement('script');
+    videoScript.src = new URL('theme-videos.js?v=20260807-1', currentScript?.src || window.location.href).href;
+    videoScript.defer = true;
+    document.head.appendChild(videoScript);
+  }
 
   document.querySelectorAll('img').forEach(image => {
     const src = image.getAttribute('src') || '';
