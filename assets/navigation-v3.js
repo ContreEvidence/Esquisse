@@ -1,14 +1,14 @@
 (() => {
   'use strict';
-  if (document.documentElement.dataset.ceFlatNav === '15') return;
-  document.documentElement.dataset.ceFlatNav = '15';
+  if (document.documentElement.dataset.ceFlatNav === '16') return;
+  document.documentElement.dataset.ceFlatNav = '16';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '15';
+  style.dataset.ceFlatNav = '16';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.36);box-shadow:0 7px 24px rgba(0,0,0,.32);font-family:inherit}
@@ -52,7 +52,7 @@
   `;
   document.head.appendChild(style);
 
-  const nested = /\/(articles|themes)\//.test(window.location.pathname);
+  const nested = /\/(articles|themes|dossiers)\//.test(window.location.pathname);
   const prefix = nested ? '../' : '';
   const u = path => `${prefix}${path}`;
   const links = [
@@ -68,7 +68,7 @@
   header.className = 'ce-flat-header';
   header.innerHTML = `
     <div class="ce-flat-shell ce-flat-top">
-      <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260806-1919" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>SYSTÈMES · STRATÉGIES · DÉCISIONS</small></span></a>
+      <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260807-2" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>SYSTÈMES · STRATÉGIES · DÉCISIONS</small></span></a>
       <form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search">
         <input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, épargne, IA, décision…" autocomplete="off">
         <button type="submit">Rechercher</button>
@@ -82,7 +82,7 @@
   if (currentQuery && searchInput) searchInput.value = currentQuery;
   const path = window.location.pathname;
   const current = path.includes('/themes/travail') || path.includes('/parcours-vie-professionnelle') ? 'travail'
-    : path.includes('/themes/argent') || path.includes('/parcours-argent') || path.includes('/moins-de-25-ans') ? 'finances'
+    : path.includes('/themes/argent') || path.includes('/parcours-argent') || path.includes('/moins-de-25-ans') || path.includes('/dossiers/finances-') ? 'finances'
     : path.includes('/themes/entreprendre') ? 'entreprendre'
     : path.includes('/themes/ia') ? 'ia'
     : path.includes('/themes/decisions') ? 'decisions'
