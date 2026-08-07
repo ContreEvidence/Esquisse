@@ -9,15 +9,15 @@
     document.head.appendChild(analytics);
   }
 
-  if (document.documentElement.dataset.ceFlatNav === '21') return;
-  document.documentElement.dataset.ceFlatNav = '21';
+  if (document.documentElement.dataset.ceFlatNav === '22') return;
+  document.documentElement.dataset.ceFlatNav = '22';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '21';
+  style.dataset.ceFlatNav = '22';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.36);box-shadow:0 7px 24px rgba(0,0,0,.32);font-family:inherit}
@@ -84,7 +84,7 @@
         <input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, épargne, IA, décision…" autocomplete="off">
         <button type="submit">Rechercher</button>
       </form>
-      <div class="ce-flat-actions"><a class="ce-youth-link" href="${u('parcours-de-vie.html')}">Parcours de vie</a><a class="ce-contact-link" href="${u('contact.html')}">Poser une question</a><a class="ce-flat-toplink" href="${u('a-propos.html')}">À propos</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div>
+      <div class="ce-flat-actions"><a class="ce-youth-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><a class="ce-contact-link" href="${u('contact.html')}">Poser une question</a><a class="ce-flat-toplink" href="${u('a-propos.html')}">À propos</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div>
     </div>
     <nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
 
