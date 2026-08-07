@@ -9,15 +9,15 @@
     document.head.appendChild(analytics);
   }
 
-  if (document.documentElement.dataset.ceFlatNav === '22') return;
-  document.documentElement.dataset.ceFlatNav = '22';
+  if (document.documentElement.dataset.ceFlatNav === '23') return;
+  document.documentElement.dataset.ceFlatNav = '23';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '22';
+  style.dataset.ceFlatNav = '23';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.36);box-shadow:0 7px 24px rgba(0,0,0,.32);font-family:inherit}
@@ -34,13 +34,17 @@
     .ce-search input::placeholder{color:#59646d;opacity:1}
     .ce-search button{display:block!important;min-width:92px;border:0;background:#d4ab56;color:#101010;font-size:.92rem;font-weight:900;cursor:pointer}
     .ce-search button:hover,.ce-search button:focus-visible{background:#e8c979;outline:2px solid #fff;outline-offset:-4px}
-    .ce-flat-actions{display:flex;align-items:center;gap:.48rem}
+    .ce-flat-actions{display:flex;align-items:center;gap:.42rem}
     .ce-flat-toplink,.ce-contact-link,.ce-youth-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.68rem .9rem;border-radius:999px;text-decoration:none;font-size:.84rem;font-weight:850;white-space:nowrap}
     .ce-flat-toplink{background:#18181a;color:#fff;border:1px solid rgba(255,255,255,.28)}
     .ce-youth-link{background:#fff;color:#101820;border:2px solid #d4ab56}
     .ce-youth-link:hover,.ce-youth-link:focus-visible{background:#fff3c8;color:#000;outline:2px solid #fff;outline-offset:2px}
     .ce-contact-link{background:#d4ab56;color:#0b0b0c;border:1px solid #e8c979}
     .ce-contact-link:hover,.ce-contact-link:focus-visible{background:#e8c979;color:#000;outline:2px solid #fff;outline-offset:2px}
+    .ce-socials{display:flex;align-items:center;gap:.28rem}
+    .ce-social-link{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;background:#1c1c1f;color:#fff;border:1px solid rgba(255,255,255,.3);text-decoration:none;font-size:.69rem;font-weight:950;letter-spacing:-.01em}
+    .ce-social-link:hover,.ce-social-link:focus-visible{background:#d4ab56;color:#09090a;border-color:#e8c979;outline:2px solid #fff;outline-offset:2px}
+    .ce-socials-mobile{display:none}
     .ce-flat-toggle{display:none;width:46px;height:46px;padding:0;border:1px solid rgba(255,255,255,.34);border-radius:12px;background:#18181a;cursor:pointer}
     .ce-flat-toggle span{display:block;width:20px;height:2px;margin:4px auto;background:#fff;border-radius:2px}
     .ce-flat-nav{background:#111113;border-top:1px solid rgba(232,201,121,.22)}
@@ -48,17 +52,22 @@
     .ce-flat-link{display:flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem .56rem;color:#fff;text-decoration:none;text-align:center;font-size:.82rem;font-weight:850;line-height:1.15;background:#1c1c1f;border:1px solid rgba(255,255,255,.18);border-bottom:3px solid #b28a38;border-radius:12px}
     .ce-flat-link:hover,.ce-flat-link:focus-visible{background:#29292d;color:#fff;outline:2px solid #e8c979;outline-offset:2px}
     .ce-flat-link.is-current{background:#d4ab56!important;color:#09090a!important;border-color:#e8c979!important;border-bottom-color:#fff1b8!important}
-    @media(max-width:1160px) and (min-width:760px){.ce-flat-top{grid-template-columns:auto 1fr auto}.ce-flat-brand-copy small{display:none}.ce-flat-brand-copy strong{font-size:1.08rem}.ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))}.ce-flat-toplink{display:none}.ce-youth-link{padding:.62rem .72rem;font-size:.79rem}}
+    .ce-footer-socials{width:100%;display:flex;flex-wrap:wrap;align-items:center;gap:.55rem .7rem;margin-top:.45rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.16)}
+    .ce-footer-socials strong{color:#e8c979;margin-right:.25rem}
+    .ce-footer-socials a{display:inline-flex;align-items:center;min-height:34px;padding:.35rem .65rem;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:#fff!important;text-decoration:none;font-weight:800}
+    .ce-footer-socials a:hover,.ce-footer-socials a:focus-visible{background:#d4ab56;color:#09090a!important;border-color:#e8c979;outline:none}
+    @media(max-width:1240px) and (min-width:760px){.ce-flat-top{grid-template-columns:auto 1fr auto}.ce-flat-brand-copy small{display:none}.ce-flat-brand-copy strong{font-size:1.08rem}.ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))}.ce-flat-toplink,.ce-socials-top{display:none}.ce-youth-link{padding:.62rem .72rem;font-size:.79rem}.ce-socials-mobile{display:flex;grid-column:1/-1;justify-content:flex-end;padding-top:.15rem}}
     @media(max-width:759px){
       .ce-flat-top{grid-template-columns:1fr auto;gap:.6rem;padding:.55rem 0 .65rem}
       .ce-flat-brand img{width:64px;height:64px;flex-basis:64px;box-shadow:0 0 0 2px #d4ab56,0 0 0 4px #fff}
       .ce-flat-brand{gap:.72rem}.ce-flat-brand-copy strong{font-size:.96rem}.ce-flat-brand-copy small{display:none}
-      .ce-flat-actions{justify-self:end}.ce-flat-toplink,.ce-contact-link{display:none}.ce-youth-link{min-height:40px;padding:.5rem .68rem;font-size:.77rem}.ce-flat-toggle{display:block}
+      .ce-flat-actions{justify-self:end}.ce-flat-toplink,.ce-contact-link,.ce-socials-top{display:none}.ce-youth-link{min-height:40px;padding:.5rem .68rem;font-size:.77rem}.ce-flat-toggle{display:block}
       .ce-search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}.ce-search input{height:44px;font-size:.9rem}.ce-search button{min-width:86px;font-size:.86rem}
       .ce-flat-nav{display:none;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 130px);overflow:auto;background:#0d0d0f;box-shadow:0 18px 40px rgba(0,0,0,.44)}
       .ce-flat-header.is-open .ce-flat-nav{display:block}
       .ce-flat-links{grid-template-columns:1fr;gap:.45rem;width:min(94vw,680px);padding:.7rem 0 1rem}
       .ce-flat-link{min-height:48px;justify-content:flex-start;padding:.8rem .9rem;text-align:left;border-width:1px;border-left-width:5px;border-radius:10px;font-size:.94rem}
+      .ce-socials-mobile{display:flex;grid-column:1/-1;justify-content:flex-start;padding:.35rem 0 .1rem}.ce-socials-mobile::before{content:'Réseaux';align-self:center;margin-right:.25rem;color:#e8c979;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
     }
   `;
   document.head.appendChild(style);
@@ -75,6 +84,13 @@
     ['Systèmes','themes/systemes.html','systemes'],
     ['Bibliothèque','bibliotheque.html','bibliotheque']
   ];
+  const socials = [
+    ['YouTube','YT','https://www.youtube.com/channel/UCxzyhABkEwWcGxmLyQvXISA'],
+    ['Instagram','IG','https://www.instagram.com/contre_evidence/'],
+    ['Facebook','f','https://www.facebook.com/profile.php?id=61592757877017'],
+    ['TikTok','TT','https://www.tiktok.com/@contreevidence']
+  ];
+  const socialMarkup = extraClass => `<div class="ce-socials ${extraClass}">${socials.map(([name,short,url]) => `<a class="ce-social-link" href="${url}" target="_blank" rel="noopener noreferrer" aria-label="Contre-évidence sur ${name}" title="${name}">${short}</a>`).join('')}</div>`;
 
   header.className = 'ce-flat-header';
   header.innerHTML = `
@@ -84,9 +100,9 @@
         <input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, épargne, IA, décision…" autocomplete="off">
         <button type="submit">Rechercher</button>
       </form>
-      <div class="ce-flat-actions"><a class="ce-youth-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><a class="ce-contact-link" href="${u('contact.html')}">Poser une question</a><a class="ce-flat-toplink" href="${u('a-propos.html')}">À propos</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div>
+      <div class="ce-flat-actions"><a class="ce-youth-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><a class="ce-contact-link" href="${u('contact.html')}">Poser une question</a><a class="ce-flat-toplink" href="${u('a-propos.html')}">À propos</a>${socialMarkup('ce-socials-top')}<button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div>
     </div>
-    <nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
+    <nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}${socialMarkup('ce-socials-mobile')}</div></nav>`;
 
   const currentQuery = new URLSearchParams(window.location.search).get('q');
   const searchInput = header.querySelector('.ce-search input');
@@ -100,6 +116,15 @@
     : path.includes('/themes/systemes') ? 'systemes'
     : path.includes('/bibliotheque') ? 'bibliotheque' : '';
   if (current) header.querySelector(`[data-key="${current}"]`)?.classList.add('is-current');
+
+  const foot = document.querySelector('footer .foot');
+  if (foot && !foot.querySelector('.ce-footer-socials')) {
+    const socialFooter = document.createElement('div');
+    socialFooter.className = 'ce-footer-socials';
+    socialFooter.setAttribute('aria-label','Réseaux sociaux de Contre-évidence');
+    socialFooter.innerHTML = `<strong>Retrouver Contre-évidence</strong>${socials.map(([name,,url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${name}</a>`).join('')}`;
+    foot.appendChild(socialFooter);
+  }
 
   const toggle = header.querySelector('.ce-flat-toggle');
   const closeMenu = () => { header.classList.remove('is-open'); toggle?.setAttribute('aria-expanded','false'); };
