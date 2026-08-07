@@ -2,9 +2,9 @@
   'use strict';
   const currentScript = document.currentScript;
   if (!document.documentElement.dataset.ceNavLoader) {
-    document.documentElement.dataset.ceNavLoader = '27';
+    document.documentElement.dataset.ceNavLoader = '28';
     const navScript = document.createElement('script');
-    navScript.src = new URL('navigation-v3.js?v=20260807-27', currentScript?.src || window.location.href).href;
+    navScript.src = new URL('navigation-v3.js?v=20260807-28', currentScript?.src || window.location.href).href;
     navScript.defer = true;
     document.head.appendChild(navScript);
   }
@@ -83,7 +83,7 @@
     if (levelGrid && !levelGrid.querySelector('[data-level="4"]')) {
       const sectionHead = levelGrid.closest('section')?.querySelector('.section-head');
       if (sectionHead) sectionHead.innerHTML = '<div class="kicker">Choisissez votre profondeur</div><h2>Une même idée, quatre niveaux de lecture.</h2><p>Commencez simplement, approfondissez les mécanismes puis passez à l’analyse lorsque les bases sont acquises.</p>';
-      levelGrid.insertAdjacentHTML('beforeend', '<a class="level-card level-card-expert" data-level="4" href="marches-analyses-avancees.html"><span class="level-badge level-4">Niveau 4</span><h3>Analyser</h3><p>Croiser données, scénarios, valorisation, signaux et risque pour construire une décision argumentée.</p></a>');
+      levelGrid.insertAdjacentHTML('beforeend', '<a class="level-card level-card-expert" data-level="4" href="marches-analyses-avancees.html"><span class="level-badge level-4">Niveau 4 · Analyser</span><h3>Analyser</h3><p>Croiser données, scénarios, valorisation, signaux et risque pour construire une décision argumentée.</p></a>');
     }
   }
 
