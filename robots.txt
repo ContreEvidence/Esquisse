@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://contreevidence.github.io/Esquisse/sitemap.xml
+Sitemap: https://contreevidence.github.io/Esquisse/sitemap-core.xml
 Sitemap: https://contreevidence.github.io/Esquisse/sitemap-finances.xml
+Sitemap: https://contreevidence.github.io/Esquisse/sitemap.xml
