@@ -61,7 +61,6 @@
   .topic-header{grid-template-columns:1fr}
 }
 
-
 /* ===== Navigation V3 : menus déroulants accessibles ===== */
 header{position:relative;z-index:100}
 .nav{position:relative}
@@ -126,7 +125,6 @@ header{position:relative;z-index:100}
 .library-search input:focus{outline:2px solid rgba(214,169,74,.45);border-color:var(--ce-gold)}
 @media(max-width:600px){.library-search{grid-template-columns:1fr;gap:.35rem}}
 
-
 /* ===== Pack 11 : identité Contre-évidence, lisibilité et contraste ===== */
 :root{
   --ce-black:#080809;
@@ -184,3 +182,8 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
   h1{font-size:clamp(2.25rem,11vw,3.8rem)!important}
   .section-head h2{font-size:clamp(1.8rem,8vw,2.7rem)!important}
 }
+
+/* Navigation principale : typographie plus éditoriale et moins lourde */
+.ce-flat-link{font-weight:600!important;color:#dfe3e6!important;letter-spacing:.005em!important}
+.ce-flat-link:hover,.ce-flat-link:focus-visible,.ce-flat-link.is-current{color:#fff!important}
+.ce-flat-link[data-key="hors-cadre"]{font-weight:600!important;color:#e5c76f!important}
