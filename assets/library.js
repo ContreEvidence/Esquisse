@@ -15,10 +15,10 @@
     {domain:'vie-pro', theme:'systemes', level:'1', type:'terrain', chip:'Management', title:'Le compteur monte, le service se dégrade', desc:'Une équipe peut améliorer tous ses chiffres et pourtant rendre un moins bon service lorsque l’indicateur devient l’objectif.', href:'articles/indicateur-monte-service-se-degrade.html'},
     {domain:'vie-pro', theme:'systemes', level:'1', type:'terrain', chip:'Organisation', title:'Cette règle paraît absurde : avant de la contourner, cherchez ce qu’elle protège', desc:'Une mauvaise règle peut répondre à un vrai risque. Comprendre sa fonction permet de simplifier sans recréer le problème.', href:'articles/regle-absurde-logique-cachee.html'},
     {domain:'patrimoine', theme:'argent', level:'1', type:'guide', chip:'Budget', title:'Où part votre argent ? Faire l’audit de son budget en 60 minutes', desc:'Trois mois de relevés, quatre nombres, un tableau à recopier et trois corrections maximum pour rendre le budget réellement pilotable.', href:'dossiers/audit-budget-60-minutes.html'},
-    {domain:'vie-pro', theme:'entreprendre', level:'1', type:'guide', chip:'Prix & marge', title:'Quel prix minimum facturer pour ne pas travailler à perte ?', desc:'Calculer le temps total, les coûts invisibles, la marge de risque et le prix plancher d’une prestation avec une méthode reproductible.', href:'dossiers/calculer-prix-minimum-rentable.html'},
-    {domain:'vie-pro', theme:'travail', level:'1', type:'guide', chip:'Recherche d’emploi', title:'30 jours pour relancer une recherche d’emploi qui tourne en rond', desc:'Un plan en quatre semaines avec ciblage, tableau exigence/preuve, deux séries de candidatures, suivi des conversions et préparation d’entretien.', href:'dossiers/plan-30-jours-recherche-emploi.html'},
+    {domain:'vie-pro', theme:'entreprendre', level:'2', type:'guide', chip:'Économie d’activité', title:'Quel prix minimum facturer pour gagner réellement de l’argent ?', desc:'Capacité facturable, coûts fixes et variables, marge contributive, point mort, coût d’opportunité, concentration client et scénarios de sensibilité.', href:'dossiers/calculer-prix-minimum-rentable.html'},
+    {domain:'vie-pro', theme:'travail', level:'2', type:'guide', chip:'Recherche d’emploi', title:'30 jours pour relancer une recherche d’emploi qui tourne en rond', desc:'Segmenter le marché, construire les preuves, suivre l’entonnoir de conversion, tester deux versions et traiter le risque perçu en entretien.', href:'dossiers/plan-30-jours-recherche-emploi.html'},
     {domain:'vie-pro patrimoine', theme:'ia', level:'1', type:'guide', chip:'IA appliquée', title:'Avant de croire une réponse IA : le protocole de vérification en 10 minutes', desc:'Classer le risque, isoler le fait central, hiérarchiser les sources, chercher la contradiction et décider du niveau de confiance.', href:'dossiers/protocole-verifier-reponse-ia.html'},
-    {domain:'vie-pro patrimoine', theme:'decisions', level:'1', type:'guide', chip:'Décision appliquée', title:'Prendre une décision importante sans tourner en rond', desc:'Cinq critères, coût d’erreur, réversibilité, hypothèses à tester, pré-mortem, matrice et journal de décision.', href:'dossiers/decider-sans-tourner-en-rond.html'},
+    {domain:'vie-pro patrimoine', theme:'decisions', level:'2', type:'guide', chip:'Décision appliquée', title:'Prendre une décision importante sans tourner en rond', desc:'Taux de base, coût d’erreur, valeur de l’option, coûts irrécupérables, biais de confirmation, effets de second ordre et pré-mortem.', href:'dossiers/decider-sans-tourner-en-rond.html'},
     {domain:'vie-pro', theme:'systemes', level:'1', type:'guide', chip:'Démarches', title:'Démarche bloquée : comment sortir d’une boucle administrative', desc:'Identifier ce que la pièce cherche à prouver, construire une chronologie, obtenir un motif écrit, proposer une preuve équivalente et escalader proprement.', href:'dossiers/debloquer-demarche-administrative.html'}
   ];
 
@@ -28,8 +28,8 @@
     const fresh = terrainEntries.filter(item => !existing.has(item.href));
     if (fresh.length) {
       const html = fresh.map(item => {
-        const label = item.type === 'guide' ? 'Guide pratique' : 'Dossier terrain';
-        return `<article class="article-card filter-card" data-level="${item.level}" data-theme="${item.theme}" data-domain="${item.domain}" data-terrain="true"><div><div class="card-meta"><span class="level-badge level-1">${label}</span><span class="theme-chip">${item.chip}</span></div><h3>${item.title}</h3><p>${item.desc}</p></div><a href="${item.href}">${item.type === 'guide' ? 'Ouvrir le guide' : 'Lire le dossier'} →</a></article>`;
+        const label = item.type === 'guide' ? 'Guide expert' : 'Dossier terrain';
+        return `<article class="article-card filter-card" data-level="${item.level}" data-theme="${item.theme}" data-domain="${item.domain}" data-content-type="${item.type}" data-terrain="true"><div><div class="card-meta"><span class="level-badge level-1">${label}</span><span class="theme-chip">${item.chip}</span></div><h3>${item.title}</h3><p>${item.desc}</p></div><a href="${item.href}">${item.type === 'guide' ? 'Ouvrir le guide' : 'Lire le dossier'} →</a></article>`;
       }).join('');
       list.insertAdjacentHTML('afterbegin', html);
     }
@@ -39,17 +39,39 @@
     'articles/decision-difficile-options-imparfaites.html','articles/majorite-peut-se-tromper.html','articles/bonnes-questions.html','articles/comprendre-avant-agir.html','articles/biais-confirmation.html','articles/penser-en-probabilites.html','articles/effet-de-cadrage.html','articles/modeles-mentaux.html','articles/decisions-reversibles-irreversibles.html','articles/risque-incertitude.html','articles/taux-de-base.html','articles/information-comprehension.html','articles/simplifier-sans-trahir.html','articles/continuer-parce-quon-a-deja-trop-investi.html','articles/hesiter-trois-semaines-deux-options.html','articles/ia-reponse-convaincante-fausse.html','dossiers/protocole-verifier-reponse-ia.html','dossiers/decider-sans-tourner-en-rond.html'
   ]);
 
+  const conceptPaths = new Set([
+    'articles/majorite-peut-se-tromper.html','articles/bonnes-questions.html','articles/comprendre-avant-agir.html','articles/biais-confirmation.html','articles/penser-en-probabilites.html','articles/effet-de-cadrage.html','articles/modeles-mentaux.html','articles/decisions-reversibles-irreversibles.html','articles/risque-incertitude.html','articles/taux-de-base.html','articles/asymetrie.html','articles/strategie-barbell.html','articles/effets-second-ordre.html','articles/incitations-gouvernent.html','articles/boucles-retroaction.html','articles/mesure-devient-cible.html','articles/dependance-au-sentier.html','articles/probleme-symptome-cause.html','articles/contraintes-innovation.html','articles/information-comprehension.html','articles/simplifier-sans-trahir.html','articles/effets-de-reseau.html','articles/effet-de-levier.html'
+  ]);
+
   const cards = [...document.querySelectorAll('.filter-card')];
   cards.forEach(card => {
-    if (card.dataset.domain) return;
-    const theme = card.dataset.theme;
     const href = card.querySelector('a[href]')?.getAttribute('href') || '';
-    if (theme === 'argent') card.dataset.domain = 'patrimoine';
-    else if (theme === 'travail' || theme === 'entreprendre') card.dataset.domain = 'vie-pro';
-    else if (dualDomainPaths.has(href)) card.dataset.domain = 'vie-pro patrimoine';
-    else if (theme === 'ia' || theme === 'decisions' || theme === 'systemes') card.dataset.domain = 'vie-pro';
-    else card.dataset.domain = 'vie-pro';
+    if (!card.dataset.domain) {
+      const theme = card.dataset.theme;
+      if (theme === 'argent') card.dataset.domain = 'patrimoine';
+      else if (theme === 'travail' || theme === 'entreprendre') card.dataset.domain = 'vie-pro';
+      else if (dualDomainPaths.has(href)) card.dataset.domain = 'vie-pro patrimoine';
+      else if (theme === 'ia' || theme === 'decisions' || theme === 'systemes') card.dataset.domain = 'vie-pro';
+      else card.dataset.domain = 'vie-pro';
+    }
+    if (conceptPaths.has(href) && !card.dataset.terrain) {
+      card.dataset.contentType = 'notion';
+      card.classList.add('support-note');
+      const badge = card.querySelector('.level-badge');
+      if (badge) badge.textContent = 'Fiche notion';
+      const chip = card.querySelector('.theme-chip');
+      if (chip) chip.textContent = 'Référence d’appui';
+    }
   });
+
+  if (list) {
+    const priority = card => card.dataset.contentType === 'guide' ? 0 : card.dataset.terrain ? 1 : card.dataset.contentType === 'notion' ? 3 : 2;
+    [...cards].sort((a,b) => priority(a)-priority(b)).forEach(card => list.appendChild(card));
+    const note = document.createElement('div');
+    note.className = 'callout-light library-editorial-note';
+    note.innerHTML = '<strong>Comment lire cette bibliothèque :</strong> les guides et dossiers applicables passent en premier. Les « fiches notion » sont des références secondaires : biais, modèles mentaux, incitations ou effets de second ordre sont surtout développés à l’intérieur des dossiers lorsqu’ils changent réellement une décision.';
+    list.parentElement?.insertBefore(note, list);
+  }
 
   const buttons = [...document.querySelectorAll('.filter-btn')];
   const count = document.querySelector('[data-results-count]');
@@ -60,8 +82,8 @@
   if (hero) {
     const h1 = hero.querySelector('h1');
     const p = hero.querySelector('p');
-    if (h1) h1.textContent = 'Tous les contenus, rangés selon leur terrain d’application.';
-    if (p) p.textContent = 'Patrimoine ou vie professionnelle. Les contenus de psychologie, IA, décisions et systèmes sont intégrés là où ils servent réellement.';
+    if (h1) h1.textContent = 'Des dossiers pour agir, des notions pour aller plus loin.';
+    if (p) p.textContent = 'Patrimoine ou vie professionnelle. Les concepts ne sont plus une destination en soi : ils sont intégrés aux dossiers quand ils améliorent réellement l’analyse.';
   }
 
   const themeGroup = tools.querySelector('[data-filter-group="theme"]')?.closest('.filter-group');
@@ -73,11 +95,7 @@
   const params = new URLSearchParams(location.search);
   const legacyTheme = params.get('theme');
   const legacyDomain = legacyTheme === 'argent' ? 'patrimoine' : (legacyTheme === 'travail' || legacyTheme === 'entreprendre' || legacyTheme === 'ia' || legacyTheme === 'decisions' || legacyTheme === 'systemes') ? 'vie-pro' : 'all';
-  const state = {
-    domain: params.get('domain') || legacyDomain,
-    level: params.get('level') || 'all',
-    query: params.get('q') || ''
-  };
+  const state = {domain: params.get('domain') || legacyDomain, level: params.get('level') || 'all', query: params.get('q') || ''};
 
   const searchWrap = document.createElement('label');
   searchWrap.className = 'library-search';
@@ -92,7 +110,6 @@
       button.setAttribute('aria-pressed', String(state[group] === button.dataset.filterValue));
     });
   }
-
   function updateURL() {
     const next = new URLSearchParams();
     if (state.domain !== 'all') next.set('domain', state.domain);
@@ -100,7 +117,6 @@
     if (state.query) next.set('q', state.query);
     history.replaceState(null, '', next.toString() ? `?${next}` : location.pathname);
   }
-
   function applyFilters() {
     const needle = state.query.trim().toLocaleLowerCase('fr');
     let visible = 0;
@@ -114,15 +130,9 @@
       if (show) visible += 1;
     });
     if (count) count.textContent = `${visible} contenu${visible > 1 ? 's' : ''}`;
-    syncButtons();
-    updateURL();
+    syncButtons(); updateURL();
   }
-
-  filterButtons.forEach(button => button.addEventListener('click', () => {
-    state[button.dataset.filterGroup] = button.dataset.filterValue;
-    applyFilters();
-  }));
-  search.addEventListener('input', () => { state.query = search.value; applyFilters(); });
-  syncButtons();
-  applyFilters();
+  filterButtons.forEach(button => button.addEventListener('click', () => {state[button.dataset.filterGroup] = button.dataset.filterValue; applyFilters();}));
+  search.addEventListener('input', () => {state.query = search.value; applyFilters();});
+  syncButtons(); applyFilters();
 })();
