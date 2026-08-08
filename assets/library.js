@@ -10,7 +10,8 @@
     'articles/automatiser-tache-5-minutes-perdre-30.html',
     'articles/indicateur-monte-service-se-degrade.html',
     'articles/regle-absurde-logique-cachee.html',
-    'articles/lancer-activite-probleme-client.html'
+    'articles/lancer-activite-probleme-client.html',
+    'articles/gagner-plus-epargner-moins.html'
   ]);
   const catalog = [...upgrades, ...rawCatalog.filter(item => !retired.has(item.h))];
   const list = document.querySelector('.articles');
