@@ -9,15 +9,15 @@
     document.head.appendChild(analytics);
   }
 
-  if (document.documentElement.dataset.ceFlatNav === '30') return;
-  document.documentElement.dataset.ceFlatNav = '30';
+  if (document.documentElement.dataset.ceFlatNav === '31') return;
+  document.documentElement.dataset.ceFlatNav = '31';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '30';
+  style.dataset.ceFlatNav = '31';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.34);box-shadow:0 5px 18px rgba(0,0,0,.28);font-family:inherit}
@@ -55,21 +55,8 @@
     .ce-footer-socials strong{color:#e8c979;margin-right:.15rem}
     .ce-footer-socials a{display:inline-flex;align-items:center;min-height:30px;padding:.28rem .55rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:#fff!important;text-decoration:none;font-size:.84rem;font-weight:800}
     .ce-footer-socials a:hover,.ce-footer-socials a:focus-visible{background:#d4ab56;color:#09090a!important;border-color:#e8c979}
-    @media(max-width:1040px) and (min-width:760px){
-      .ce-flat-top{grid-template-columns:auto 1fr}.ce-search{grid-column:1/-1;grid-row:2;max-width:none}.ce-flat-actions{grid-column:2;grid-row:1}.ce-flat-brand-copy small{display:none}
-      .ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))}.ce-flat-link{white-space:normal;font-size:.96rem}
-    }
-    @media(max-width:759px){
-      .ce-flat-top{grid-template-columns:1fr auto;gap:.55rem;padding:.48rem 0 .55rem}
-      .ce-flat-brand img{width:58px;height:58px;flex-basis:58px}.ce-flat-brand{gap:.65rem}.ce-flat-brand-copy strong{font-size:.94rem}.ce-flat-brand-copy small{display:none}
-      .ce-flat-actions{justify-self:end}.ce-contact-link{display:none}.ce-start-link{min-height:38px;padding:.46rem .62rem;font-size:.74rem}.ce-flat-toggle{display:block}
-      .ce-search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}.ce-search input{height:40px;font-size:.86rem}.ce-search button{min-width:82px;font-size:.83rem}
-      .ce-flat-nav{display:none;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 118px);overflow:auto;background:#0d0d0f;box-shadow:0 18px 40px rgba(0,0,0,.44)}
-      .ce-flat-header.is-open .ce-flat-nav{display:block}
-      .ce-flat-links{grid-template-columns:1fr;gap:.25rem;width:min(94vw,680px);padding:.55rem 0 .75rem}
-      .ce-flat-link{min-height:44px;justify-content:flex-start;padding:.72rem .82rem;text-align:left;border-left:4px solid #8d7133;border-radius:7px;font-size:1rem;white-space:normal}
-      .ce-flat-link:after{display:none}.ce-flat-link.is-current{border-left-color:#d4ab56}
-    }
+    @media(max-width:1040px) and (min-width:760px){.ce-flat-top{grid-template-columns:auto 1fr}.ce-search{grid-column:1/-1;grid-row:2;max-width:none}.ce-flat-actions{grid-column:2;grid-row:1}.ce-flat-brand-copy small{display:none}.ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))}.ce-flat-link{white-space:normal;font-size:.96rem}}
+    @media(max-width:759px){.ce-flat-top{grid-template-columns:1fr auto;gap:.55rem;padding:.48rem 0 .55rem}.ce-flat-brand img{width:58px;height:58px;flex-basis:58px}.ce-flat-brand{gap:.65rem}.ce-flat-brand-copy strong{font-size:.94rem}.ce-flat-brand-copy small{display:none}.ce-flat-actions{justify-self:end}.ce-contact-link{display:none}.ce-start-link{min-height:38px;padding:.46rem .62rem;font-size:.74rem}.ce-flat-toggle{display:block}.ce-search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}.ce-search input{height:40px;font-size:.86rem}.ce-search button{min-width:82px;font-size:.83rem}.ce-flat-nav{display:none;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 118px);overflow:auto;background:#0d0d0f;box-shadow:0 18px 40px rgba(0,0,0,.44)}.ce-flat-header.is-open .ce-flat-nav{display:block}.ce-flat-links{grid-template-columns:1fr;gap:.25rem;width:min(94vw,680px);padding:.55rem 0 .75rem}.ce-flat-link{min-height:44px;justify-content:flex-start;padding:.72rem .82rem;text-align:left;border-left:4px solid #8d7133;border-radius:7px;font-size:1rem;white-space:normal}.ce-flat-link:after{display:none}.ce-flat-link.is-current{border-left-color:#d4ab56}}
   `;
   document.head.appendChild(style);
 
@@ -82,21 +69,10 @@
     ['Hors cadre','hors-cadre.html','hors-cadre'],
     ['Bibliothèque','bibliotheque.html','bibliotheque']
   ];
-  const socials = [
-    ['YouTube','https://www.youtube.com/channel/UCxzyhABkEwWcGxmLyQvXISA'],
-    ['Instagram','https://www.instagram.com/contre_evidence/'],
-    ['Facebook','https://www.facebook.com/profile.php?id=61592757877017'],
-    ['TikTok','https://www.tiktok.com/@contreevidence']
-  ];
+  const socials = [['YouTube','https://www.youtube.com/channel/UCxzyhABkEwWcGxmLyQvXISA'],['Instagram','https://www.instagram.com/contre_evidence/'],['Facebook','https://www.facebook.com/profile.php?id=61592757877017'],['TikTok','https://www.tiktok.com/@contreevidence']];
 
   header.className = 'ce-flat-header';
-  header.innerHTML = `
-    <div class="ce-flat-shell ce-flat-top">
-      <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260808-1" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>PATRIMOINE · VIE PROFESSIONNELLE · HORS CADRE</small></span></a>
-      <form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search"><input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, formation, immobilier, épargne…" autocomplete="off"><button type="submit">Rechercher</button></form>
-      <div class="ce-flat-actions"><a class="ce-start-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><a class="ce-contact-link" href="${u('contact.html')}">Poser une question</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div>
-    </div>
-    <nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
+  header.innerHTML = `<div class="ce-flat-shell ce-flat-top"><a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260808-1" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>PATRIMOINE · VIE PROFESSIONNELLE · HORS CADRE</small></span></a><form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search"><input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, formation, immobilier, épargne…" autocomplete="off"><button type="submit">Rechercher</button></form><div class="ce-flat-actions"><a class="ce-start-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><a class="ce-contact-link" href="${u('contact.html')}">Poser une question</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div></div><nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
 
   const currentQuery = new URLSearchParams(window.location.search).get('q');
   const searchInput = header.querySelector('.ce-search input');
@@ -104,9 +80,21 @@
   const path = window.location.pathname;
   const current = path.includes('/hors-cadre') ? 'hors-cadre'
     : path.includes('/themes/argent') || path.includes('/parcours-argent') || path.includes('/marches-analyses-avancees') || path.includes('/dossiers/finances-') ? 'patrimoine'
-    : path.includes('/themes/travail') || path.includes('/themes/entreprendre') || path.includes('/parcours-vie-professionnelle') || path.includes('/moins-de-25-ans') ? 'vie-pro'
+    : path.includes('/themes/travail') || path.includes('/themes/entreprendre') || path.includes('/parcours-vie-professionnelle') || path.includes('/moins-de-25-ans') || path.includes('/videos') ? 'vie-pro'
     : path.includes('/bibliotheque') ? 'bibliotheque' : '';
   if (current) header.querySelector(`[data-key="${current}"]`)?.classList.add('is-current');
+
+  if (path.includes('/themes/travail')) {
+    const hero = document.querySelector('.article-hero');
+    const kicker = hero?.querySelector('.kicker');
+    if (kicker) kicker.textContent = 'Vie professionnelle · Salariat & carrière';
+    document.title = document.title.replace('Vie professionnelle', 'Salariat & carrière');
+  }
+  if (path.includes('/themes/entreprendre')) {
+    const hero = document.querySelector('.article-hero');
+    const kicker = hero?.querySelector('.kicker');
+    if (kicker) kicker.textContent = 'Vie professionnelle · Entrepreneuriat';
+  }
 
   const foot = document.querySelector('footer .foot');
   if (foot) {
