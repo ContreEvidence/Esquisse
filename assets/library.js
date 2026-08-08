@@ -2,8 +2,16 @@
   'use strict';
 
   const rawCatalog = Array.isArray(window.CE_LIBRARY_CATALOG) ? window.CE_LIBRARY_CATALOG : [];
-  const upgrades = [{d:'vie-pro',t:'guide',c:'Automatisation',h:'dossiers/automatiser-ou-non-processus.html',n:'Automatiser ou non un processus : calculer le vrai gain',x:'Volume, temps économisé, erreurs, maintenance, dépendances et contrôle humain avant de choisir un outil.',k:'automatisation processus roi seuil rentabilité maintenance erreur workflow ia productivité'}];
-  const retired = new Set(['articles/automatiser-tache-5-minutes-perdre-30.html']);
+  const upgrades = [
+    {d:'vie-pro',t:'guide',c:'Automatisation',h:'dossiers/automatiser-ou-non-processus.html',n:'Automatiser ou non un processus : calculer le vrai gain',x:'Volume, temps économisé, erreurs, maintenance, dépendances et contrôle humain avant de choisir un outil.',k:'automatisation processus roi seuil rentabilité maintenance erreur workflow ia productivité'},
+    {d:'vie-pro',t:'guide',c:'Organisation',h:'dossiers/ameliorer-processus-sans-degrader-service.html',n:'Améliorer une procédure sans dégrader le service',x:'Cartographier le flux, comprendre les contrôles, choisir les bons indicateurs, anticiper les effets pervers et piloter avant de déployer.',k:'processus procédure organisation indicateur management qualité délai reprise incitation pilote amélioration service'}
+  ];
+  const retired = new Set([
+    'articles/automatiser-tache-5-minutes-perdre-30.html',
+    'articles/indicateur-monte-service-se-degrade.html',
+    'articles/regle-absurde-logique-cachee.html',
+    'articles/lancer-activite-probleme-client.html'
+  ]);
   const catalog = [...upgrades, ...rawCatalog.filter(item => !retired.has(item.h))];
   const list = document.querySelector('.articles');
   const tools = document.querySelector('.library-tools');
@@ -25,12 +33,12 @@
   const state = {domain:params.get('domain') || 'all',query:params.get('q') || '',showReferences:params.get('references') === '1'};
   const aliases = {
     emploi:'candidature cv entretien recrutement recruteur travail poste',candidature:'emploi cv recrutement recruteur entretien',reconversion:'formation métier compétences emploi orientation',formation:'reconversion métier diplôme compétences orientation débouchés roi',
-    salaire:'augmentation rémunération négociation responsabilités promotion carrière',augmentation:'salaire rémunération négociation responsabilités promotion',responsabilites:'salaire augmentation promotion périmètre carrière',promotion:'salaire responsabilités augmentation carrière visibilité',manager:'management équipe délégation responsable encadrement feedback',management:'manager équipe délégation responsable encadrement',invisible:'visibilité reconnaissance preuve carrière résultat',visibilite:'reconnaissance preuve carrière résultat invisible',quitter:'emploi stable rester démission mobilité carrière',demission:'quitter emploi stable mobilité carrière',
+    salaire:'augmentation rémunération négociation responsabilités promotion carrière',augmentation:'salaire rémunération négociation responsabilités promotion',responsabilites:'salaire augmentation promotion périmètre carrière',promotion:'salaire responsabilités augmentation carrière visibilité',manager:'management équipe délégation responsable encadrement feedback',management:'manager équipe délégation responsable encadrement processus indicateur',invisible:'visibilité reconnaissance preuve carrière résultat',visibilite:'reconnaissance preuve carrière résultat invisible',quitter:'emploi stable rester démission mobilité carrière',demission:'quitter emploi stable mobilité carrière',
     budget:'dépenses épargne argent finances revenu sécurité',epargne:'budget investissement placement capital livret liquidités réserve',liquidites:'réserve sécurité épargne précaution cash urgence',reserve:'liquidités sécurité épargne précaution urgence',assurance:'protection risque prévoyance franchise patrimoine',prevoyance:'assurance protection revenu risque',
     investir:'investissement allocation etf actions pea placement capital crédit',investissement:'investir allocation etf actions pea placement capital crédit',credit:'dette remboursement emprunt taux investissement',rembourser:'crédit dette remboursement anticipé investir',
     immobilier:'logement résidence locatif crédit acheter louer travaux vendre conserver',logement:'immobilier résidence acheter louer crédit vendre',acheter:'immobilier logement résidence crédit',vendre:'immobilier bien conserver capital rendement',conserver:'immobilier bien vendre capital rendement',
-    prix:'tarif marge rentabilité coût client devis facturer',marge:'prix tarif rentabilité coût point mort entreprise',entreprendre:'entreprise client offre prix marge vente',client:'entreprise offre vente dépendance concentration prospection',concentration:'client dépendance risque chiffre affaires',tresorerie:'cash bfr encaissement délai paiement entreprise',bfr:'trésorerie cash besoin fonds roulement encaissement',planning:'capacité charge occupation mission délai entreprise',capacite:'planning charge occupation mission rentabilité embauche sous-traitance',refuser:'capacité mission planning prix marge',embaucher:'salarié recrutement sous-traiter capacité coût fixe',sous:'traitance embaucher capacité prestataire',
-    automatiser:'automatisation processus workflow roi maintenance productivité',automatisation:'processus workflow roi maintenance productivité temps erreur',workflow:'automatisation processus maintenance productivité',
+    prix:'tarif marge rentabilité coût client devis facturer',marge:'prix tarif rentabilité coût point mort entreprise',entreprendre:'entreprise client offre prix marge vente',client:'entreprise offre vente dépendance concentration prospection problème validation',concentration:'client dépendance risque chiffre affaires',tresorerie:'cash bfr encaissement délai paiement entreprise',bfr:'trésorerie cash besoin fonds roulement encaissement',planning:'capacité charge occupation mission délai entreprise',capacite:'planning charge occupation mission rentabilité embauche sous-traitance',refuser:'capacité mission planning prix marge',embaucher:'salarié recrutement sous-traiter capacité coût fixe',sous:'traitance embaucher capacité prestataire',
+    automatiser:'automatisation processus workflow roi maintenance productivité',automatisation:'processus workflow roi maintenance productivité temps erreur',workflow:'automatisation processus maintenance productivité',processus:'procédure organisation flux qualité délai indicateur amélioration',procedure:'processus organisation flux contrôle indicateur amélioration',indicateur:'mesure cible qualité processus management service',
     ia:'intelligence artificielle chatgpt automatisation vérification source',retraite:'décumulation transmission patrimoine revenus long terme'
   };
 
