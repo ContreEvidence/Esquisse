@@ -4,7 +4,7 @@
   // Nouvelle génération : neutralise aussi les anciennes versions éventuellement en cache.
   if (document.documentElement.dataset.ceNavigation20260808 === '1') return;
   document.documentElement.dataset.ceNavigation20260808 = '1';
-  document.documentElement.dataset.ceFlatNav = '36';
+  document.documentElement.dataset.ceFlatNav = '37';
 
   const header = document.querySelector('header');
   if (!header) return;
@@ -127,7 +127,6 @@
       [path.endsWith('/dossiers/finances-residence-principale.html'),'simulateur-acheter-ou-louer.html','Comparer acheter et louer'],
       [path.endsWith('/dossiers/finances-investissement-locatif.html'),'simulateur-investissement-locatif.html','Tester un projet locatif'],
       [path.endsWith('/dossiers/vendre-ou-conserver-bien-immobilier.html'),'simulateur-vendre-ou-conserver.html','Comparer vendre et conserver'],
-      [path.endsWith('/articles/grosse-entree-argent-que-faire.html'),'outil-repartir-grosse-somme.html','Isoler le capital réellement investissable'],
       [path.endsWith('/dossiers/plan-30-jours-recherche-emploi.html'),'outil-pilotage-recherche-emploi.html','Piloter mes candidatures'],
       [path.endsWith('/articles/competences-transferables.html') || path.endsWith('/articles/competences-invisibles-preuves.html'),'outil-competences-preuves-cv.html','Construire mes preuves'],
       [path.endsWith('/dossiers/formation-vaut-elle-le-cout.html'),'simulateur-cout-formation.html','Calculer le coût réel'],
@@ -138,9 +137,9 @@
     if (toolLink) {
       const bridge = document.createElement('div');
       bridge.className = 'ce-tool-bridge';
-      bridge.innerHTML = `<div><strong>Passer du dossier à votre situation</strong><span>L’outil applique ce raisonnement à vos propres chiffres ou informations, dans votre navigateur.</span></div><a href="${u(toolLink[1])}">${toolLink[2]} →</a>`;
-      const intro = longContent.querySelector('.answer-box, .voice-note, .warning-box');
-      if (intro) intro.insertAdjacentElement('afterend', bridge); else longContent.prepend(bridge);
+      bridge.innerHTML = `<div><strong>Après la lecture : tester votre situation</strong><span>L’outil applique le raisonnement du dossier à vos propres chiffres ou informations, dans votre navigateur.</span></div><a href="${u(toolLink[1])}">${toolLink[2]} →</a>`;
+      const back = longContent.querySelector('a.back');
+      if (back) back.insertAdjacentElement('beforebegin', bridge); else longContent.appendChild(bridge);
     }
 
     const answerTitle = longContent.querySelector('.answer-box h2');
