@@ -4,7 +4,7 @@
   // Nouvelle génération : neutralise aussi les anciennes versions éventuellement en cache.
   if (document.documentElement.dataset.ceNavigation20260808 === '1') return;
   document.documentElement.dataset.ceNavigation20260808 = '1';
-  document.documentElement.dataset.ceFlatNav = '35';
+  document.documentElement.dataset.ceFlatNav = '36';
 
   const header = document.querySelector('header');
   if (!header) return;
@@ -38,10 +38,11 @@
     .ce-breadcrumb{background:#f5f1e7;border-bottom:1px solid rgba(16,24,32,.08)}.ce-breadcrumb-inner{width:min(1180px,92vw);margin:0 auto;display:flex;align-items:center;gap:.42rem;min-height:32px;font-size:.77rem;color:#59646d;white-space:nowrap;overflow:hidden}.ce-breadcrumb a{color:#49545d;text-decoration:none;font-weight:750}.ce-breadcrumb a:hover{text-decoration:underline}.ce-breadcrumb .sep{color:#9b927f}.ce-breadcrumb .current{overflow:hidden;text-overflow:ellipsis;color:#101820;font-weight:750}
     .ce-reading-meta{display:flex;flex-wrap:wrap;gap:.45rem .8rem;margin-top:.65rem;font-size:.8rem;color:#67717a}.ce-reading-meta span{white-space:nowrap}.ce-update-meta{display:flex;flex-wrap:wrap;gap:.4rem .8rem;margin-top:.55rem;font-size:.78rem;color:#75602f;font-weight:750}
     .ce-article-toc{margin:1.25rem 0 1.55rem;padding:.95rem 1.05rem;border:1px solid rgba(16,24,32,.12);border-left:4px solid #d4ab56;border-radius:12px;background:#f8f6f0}.ce-article-toc strong{display:block;margin-bottom:.62rem;font-size:1rem;color:#101820}.ce-article-toc ol{margin:0;padding-left:1.25rem;columns:2;column-gap:2rem}.ce-article-toc li{break-inside:avoid;margin:.28rem 0}.ce-article-toc a{color:#25313a;text-decoration:none;font-weight:720}.ce-article-toc a:hover{text-decoration:underline}.ce-back-toc{display:block;width:max-content;margin:.42rem 0 .95rem;font-size:.79rem;font-weight:800;color:#78612d;text-decoration:none}.ce-back-toc:hover{text-decoration:underline}
+    .ce-tool-bridge{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin:1.2rem 0 1.5rem;padding:1rem 1.05rem;border:1px solid rgba(16,24,32,.13);border-left:4px solid #d4ab56;border-radius:12px;background:#fff8e8}.ce-tool-bridge strong{display:block;color:#101820}.ce-tool-bridge span{display:block;margin-top:.2rem;color:#59646d;font-size:.88rem}.ce-tool-bridge a{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;padding:.62rem .82rem;border-radius:9px;background:#101820;color:#fff;text-decoration:none;font-weight:850}.ce-tool-bridge a:hover{background:#2b3238}
     .ce-reading-progress{position:fixed;left:0;top:0;z-index:7000;height:3px;width:100%;transform:scaleX(0);transform-origin:left center;background:#d4ab56;pointer-events:none}.article-tools,.reading-progress{display:none!important}
     .ce-footer-socials{width:100%;display:flex;flex-wrap:wrap;align-items:center;gap:.45rem .6rem;margin-top:.45rem;padding-top:.8rem;border-top:1px solid rgba(255,255,255,.14)}.ce-footer-socials strong{color:#e8c979;margin-right:.15rem}.ce-footer-socials a{display:inline-flex;align-items:center;min-height:30px;padding:.28rem .55rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:#fff!important;text-decoration:none;font-size:.84rem;font-weight:800}.ce-footer-socials a:hover,.ce-footer-socials a:focus-visible{background:#d4ab56;color:#09090a!important;border-color:#e8c979}
     @media(max-width:1040px) and (min-width:760px){.ce-flat-top{grid-template-columns:auto 1fr}.ce-search{grid-column:1/-1;grid-row:2;max-width:none}.ce-flat-actions{grid-column:2;grid-row:1}.ce-flat-brand-copy small{display:none}.ce-flat-link{font-size:.93rem}}
-    @media(max-width:759px){.ce-flat-top{grid-template-columns:1fr auto;gap:.45rem;padding:.35rem 0 .42rem}.ce-flat-brand img{width:46px;height:46px;flex-basis:46px}.ce-flat-brand{gap:.55rem}.ce-flat-brand-copy strong{font-size:.9rem}.ce-flat-brand-copy small,.ce-start-link{display:none}.ce-flat-actions{justify-self:end}.ce-flat-toggle{display:block}.ce-search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}.ce-search input{height:36px;font-size:.82rem}.ce-search button{min-width:76px;font-size:.8rem}.ce-flat-nav{display:none;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 105px);overflow:auto;background:#0d0d0f;box-shadow:0 18px 40px rgba(0,0,0,.44)}.ce-flat-header.is-open .ce-flat-nav{display:block}.ce-flat-links{grid-template-columns:1fr;gap:.22rem;width:min(94vw,680px);padding:.5rem 0 .7rem}.ce-flat-link{min-height:40px;justify-content:flex-start;padding:.64rem .8rem;text-align:left;border-left:4px solid #8d7133;border-radius:7px;font-size:.96rem;white-space:normal}.ce-flat-link:after{display:none}.ce-flat-link.is-current{border-left-color:#d4ab56}.ce-breadcrumb-inner{font-size:.72rem}.ce-article-toc ol{columns:1}}
+    @media(max-width:759px){.ce-flat-top{grid-template-columns:1fr auto;gap:.45rem;padding:.35rem 0 .42rem}.ce-flat-brand img{width:46px;height:46px;flex-basis:46px}.ce-flat-brand{gap:.55rem}.ce-flat-brand-copy strong{font-size:.9rem}.ce-flat-brand-copy small,.ce-start-link{display:none}.ce-flat-actions{justify-self:end}.ce-flat-toggle{display:block}.ce-search{grid-column:1/-1;grid-row:2;max-width:none;margin:0}.ce-search input{height:36px;font-size:.82rem}.ce-search button{min-width:76px;font-size:.8rem}.ce-flat-nav{display:none;position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 105px);overflow:auto;background:#0d0d0f;box-shadow:0 18px 40px rgba(0,0,0,.44)}.ce-flat-header.is-open .ce-flat-nav{display:block}.ce-flat-links{grid-template-columns:1fr;gap:.22rem;width:min(94vw,680px);padding:.5rem 0 .7rem}.ce-flat-link{min-height:40px;justify-content:flex-start;padding:.64rem .8rem;text-align:left;border-left:4px solid #8d7133;border-radius:7px;font-size:.96rem;white-space:normal}.ce-flat-link:after{display:none}.ce-flat-link.is-current{border-left-color:#d4ab56}.ce-breadcrumb-inner{font-size:.72rem}.ce-article-toc ol{columns:1}.ce-tool-bridge{align-items:stretch;flex-direction:column}.ce-tool-bridge a{width:100%}}
   `;
   document.head.appendChild(style);
 
@@ -91,7 +92,7 @@
 
   const longContent = document.querySelector('article.prose, main .prose');
   if (longContent && !path.includes('/bibliotheque')) {
-    document.querySelectorAll('.article-tools,.reading-progress,.ce-reading-meta,.ce-update-meta,.ce-article-toc,.ce-back-toc,.ce-reading-progress').forEach(el => el.remove());
+    document.querySelectorAll('.article-tools,.reading-progress,.ce-reading-meta,.ce-update-meta,.ce-article-toc,.ce-back-toc,.ce-reading-progress,.ce-tool-bridge').forEach(el => el.remove());
 
     const words = longContent.textContent.trim().split(/\s+/).filter(Boolean).length;
     const minutes = Math.max(1, Math.ceil(words / 220));
@@ -115,6 +116,31 @@
       let og = document.querySelector('meta[property="article:modified_time"]');
       if (!og) { og = document.createElement('meta'); og.setAttribute('property','article:modified_time'); document.head.appendChild(og); }
       og.content = '2026-08-08T13:37:00+02:00';
+    }
+
+    const toolLinks = [
+      [path.endsWith('/dossiers/audit-budget-60-minutes.html'),'outil-audit-financier-personnel.html','Faire mon audit financier'],
+      [path.endsWith('/dossiers/liquidites-reserve-securite.html'),'simulateur-reserve-securite.html','Tester ma réserve de sécurité'],
+      [path.endsWith('/dossiers/finances-allocation-portefeuille.html'),'simulateur-allocation-stress-test.html','Tester mon allocation'],
+      [path.endsWith('/dossiers/rembourser-credit-ou-investir.html'),'simulateur-rembourser-ou-investir.html','Comparer avec mes chiffres'],
+      [path.endsWith('/dossiers/finances-credit-endettement.html'),'simulateur-capacite-emprunt.html','Estimer une capacité d’emprunt'],
+      [path.endsWith('/dossiers/finances-residence-principale.html'),'simulateur-acheter-ou-louer.html','Comparer acheter et louer'],
+      [path.endsWith('/dossiers/finances-investissement-locatif.html'),'simulateur-investissement-locatif.html','Tester un projet locatif'],
+      [path.endsWith('/dossiers/vendre-ou-conserver-bien-immobilier.html'),'simulateur-vendre-ou-conserver.html','Comparer vendre et conserver'],
+      [path.endsWith('/articles/grosse-entree-argent-que-faire.html'),'outil-repartir-grosse-somme.html','Isoler le capital réellement investissable'],
+      [path.endsWith('/dossiers/plan-30-jours-recherche-emploi.html'),'outil-pilotage-recherche-emploi.html','Piloter mes candidatures'],
+      [path.endsWith('/articles/competences-transferables.html') || path.endsWith('/articles/competences-invisibles-preuves.html'),'outil-competences-preuves-cv.html','Construire mes preuves'],
+      [path.endsWith('/dossiers/formation-vaut-elle-le-cout.html'),'simulateur-cout-formation.html','Calculer le coût réel'],
+      [path.endsWith('/dossiers/calculer-prix-minimum-rentable.html'),'simulateur-prix-minimum-rentable.html','Calculer mon prix plancher'],
+      [path.endsWith('/dossiers/tresorerie-bfr-entreprise.html'),'outil-tresorerie-13-semaines.html','Projeter ma trésorerie']
+    ];
+    const toolLink = toolLinks.find(([match]) => match);
+    if (toolLink) {
+      const bridge = document.createElement('div');
+      bridge.className = 'ce-tool-bridge';
+      bridge.innerHTML = `<div><strong>Passer du dossier à votre situation</strong><span>L’outil applique ce raisonnement à vos propres chiffres ou informations, dans votre navigateur.</span></div><a href="${u(toolLink[1])}">${toolLink[2]} →</a>`;
+      const intro = longContent.querySelector('.answer-box, .voice-note, .warning-box');
+      if (intro) intro.insertAdjacentElement('afterend', bridge); else longContent.prepend(bridge);
     }
 
     const answerTitle = longContent.querySelector('.answer-box h2');
