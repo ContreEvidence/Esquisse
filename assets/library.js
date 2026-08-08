@@ -1,129 +1,146 @@
 (() => {
   'use strict';
 
-  const featured = [
-    {domain:'patrimoine',theme:'argent',type:'guide',chip:'Budget',title:'Où part votre argent ? Faire l’audit de son budget en 60 minutes',desc:'Trois mois de relevés, quatre nombres et trois corrections maximum pour rendre le budget pilotable.',tags:'budget dépenses épargne audit sécurité financière',href:'dossiers/audit-budget-60-minutes.html'},
-    {domain:'patrimoine',theme:'argent',type:'guide',chip:'Sécurité financière',title:'Combien garder en liquidités ? Construire une réserve de sécurité',desc:'Dimensionner la réserve selon revenus, charges incompressibles, dette, projets et risques réels.',tags:'liquidités réserve sécurité épargne précaution urgence cash dépenses revenu',href:'dossiers/liquidites-reserve-securite.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Protection',title:'Quels risques assurer et lesquels absorber soi-même ?',desc:'Arbitrer entre assurance, franchise et réserve selon fréquence, gravité et capacité financière à absorber le choc.',tags:'assurance prévoyance risque franchise protection autoassurance patrimoine revenu',href:'dossiers/assurer-ou-autoassurer-risques.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Stratégie patrimoniale',title:'Construire sa stratégie financière avant de choisir ses placements',desc:'Bilan, flux, horizons, capacité de risque, concentration et règles de décision avant les produits.',tags:'patrimoine stratégie bilan flux risque objectifs investissement',href:'dossiers/finances-cadre-global.html'},
-    {domain:'patrimoine',theme:'argent',type:'guide',chip:'Allocation',title:'Construire une allocation patrimoniale robuste',desc:'Capacité de risque, drawdown, corrélations, concentration, scénarios de stress et rééquilibrage.',tags:'allocation portefeuille diversification risque corrélation drawdown investissement',href:'dossiers/finances-allocation-portefeuille.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Crédit & investissement',title:'Rembourser son crédit ou investir ?',desc:'Comparer coût certain de la dette, rendement net espéré, liquidité, fiscalité, levier et solution hybride.',tags:'rembourser crédit investir dette taux rendement liquidité remboursement anticipé',href:'dossiers/rembourser-credit-ou-investir.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Immobilier',title:'Immobilier et patrimoine : raisonner sur le coût, le risque et la concentration',desc:'Résidence principale, locatif, dette, rendement net, liquidité et poids de la pierre dans le patrimoine global.',tags:'immobilier résidence principale locatif crédit patrimoine rendement',href:'dossiers/finances-immobilier-patrimoine.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Résidence principale',title:'Acheter ou louer sa résidence principale : comparer le coût complet',desc:'Durée de détention, frais, financement, coût d’opportunité, mobilité et scénarios de sortie.',tags:'acheter louer logement résidence principale crédit frais mobilité',href:'dossiers/finances-residence-principale.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Investissement locatif',title:'Investissement locatif : rendement, cash-flow et stress tests',desc:'Prix total, rendement net, couverture de dette, vacance, travaux, fiscalité et concentration.',tags:'immobilier locatif rendement cash flow vacance travaux dette',href:'dossiers/finances-investissement-locatif.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Enveloppes',title:'PEA, assurance-vie, CTO, PER : choisir l’enveloppe après la stratégie',desc:'Comparer disponibilité, fiscalité, supports, frais et horizon sans confondre enveloppe et placement.',tags:'pea assurance vie cto per fiscalité enveloppe investissement',href:'dossiers/finances-enveloppes-fiscalite.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Crédit',title:'Crédit et endettement : utiliser la dette sans fragiliser le patrimoine',desc:'Coût total, durée, levier, capacité de remboursement, liquidité et scénario dégradé.',tags:'crédit dette endettement levier taux mensualité patrimoine',href:'dossiers/finances-credit-endettement.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Retraite',title:'Retraite et décumulation : transformer un patrimoine en revenus',desc:'Dépenses, revenus garantis, risque de séquence, inflation, longévité et règles de retrait.',tags:'retraite décumulation revenus patrimoine inflation longévité',href:'dossiers/finances-retraite-decumulation.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Transmission',title:'Transmission du patrimoine : préparer sans improviser',desc:'Objectifs, propriété, liquidité, bénéficiaires, partage et coordination civile et fiscale.',tags:'transmission succession donation bénéficiaire patrimoine notaire',href:'dossiers/finances-transmission-patrimoine.html'},
-    {domain:'vie-pro',theme:'travail',type:'guide',chip:'Recherche d’emploi',title:'30 jours pour relancer une recherche d’emploi qui tourne en rond',desc:'Segmenter le marché, construire les preuves, mesurer les conversions et traiter le risque perçu en entretien.',tags:'emploi cv candidature recrutement entretien recherche chômage',href:'dossiers/plan-30-jours-recherche-emploi.html'},
-    {domain:'vie-pro',theme:'travail',type:'guide',chip:'Salaire & responsabilités',title:'Négocier salaire et responsabilités sans improviser',desc:'Périmètre réel, preuves, fourchette, cible, plancher, alternatives et date de revue.',tags:'salaire augmentation négociation responsabilités promotion rémunération carrière manager',href:'dossiers/negocier-salaire-responsabilites.html'},
-    {domain:'vie-pro',theme:'entreprendre',type:'guide',chip:'Prix & marge',title:'Quel prix minimum facturer pour gagner réellement de l’argent ?',desc:'Capacité facturable, coûts, marge contributive, point mort, coût d’opportunité et concentration client.',tags:'prix tarif marge rentabilité point mort entreprise devis client',href:'dossiers/calculer-prix-minimum-rentable.html'},
-    {domain:'vie-pro',theme:'entreprendre',type:'guide',chip:'Trésorerie',title:'Une activité peut être rentable et manquer de trésorerie',desc:'Cycle de cash, BFR, délais clients, acomptes, prévisionnel 13 semaines et risque de croissance.',tags:'trésorerie cash bfr besoin fonds roulement encaissement client délai paiement entreprise',href:'dossiers/tresorerie-bfr-entreprise.html'},
-    {domain:'vie-pro',theme:'entreprendre',type:'dossier',chip:'Risque client',title:'Un client représente 60 % du chiffre d’affaires : mesurer et réduire la dépendance',desc:'Concentration en CA, marge et temps, scénarios de rupture, trésorerie et plan de diversification.',tags:'gros client dépendance concentration chiffre affaires marge trésorerie contrat prospection',href:'dossiers/dependance-gros-client.html'},
-    {domain:'vie-pro patrimoine',theme:'ia',type:'guide',chip:'IA appliquée',title:'Avant de croire une réponse IA : le protocole de vérification en 10 minutes',desc:'Classer le risque, isoler le fait central, hiérarchiser les sources et chercher la contradiction.',tags:'ia intelligence artificielle source vérifier hallucination chatgpt',href:'dossiers/protocole-verifier-reponse-ia.html'},
-    {domain:'vie-pro patrimoine',theme:'decisions',type:'guide',chip:'Décision',title:'Prendre une décision importante sans tourner en rond',desc:'Taux de base, coût d’erreur, valeur de l’option, coûts irrécupérables, effets de second ordre et pré-mortem.',tags:'décision choix matrice risque option biais pré mortem',href:'dossiers/decider-sans-tourner-en-rond.html'},
-    {domain:'vie-pro',theme:'systemes',type:'guide',chip:'Démarches',title:'Démarche bloquée : comment sortir d’une boucle administrative',desc:'Chronologie, preuve équivalente, motif écrit, interlocuteur compétent et escalade propre.',tags:'administratif démarche blocage justificatif recours procédure',href:'dossiers/debloquer-demarche-administrative.html'},
-    {domain:'vie-pro',theme:'travail',type:'dossier',chip:'Recherche d’emploi',title:'50 candidatures, zéro réponse : avant d’en envoyer 50 de plus',desc:'Quand presque rien ne revient, diagnostiquer le ciblage, le CV et les preuves avant de multiplier les envois.',tags:'emploi candidature cv recrutement réponse',href:'articles/50-candidatures-zero-reponse.html'},
-    {domain:'vie-pro',theme:'travail',type:'dossier',chip:'Entretien',title:'Vous décrochez des entretiens mais jamais le poste : où ça bloque ?',desc:'Si le CV ouvre la porte, chercher le doute précis qui reste dans la tête du recruteur.',tags:'emploi entretien recruteur candidature risque',href:'articles/entretien-rate-ce-qui-bloque.html'},
-    {domain:'patrimoine',theme:'argent',type:'dossier',chip:'Épargne',title:'Vous avez 50 000 € de côté mais vous n’osez rien en faire',desc:'Séparer sécurité, projets proches et capital réellement disponible à long terme avant de chercher un placement.',tags:'épargne investir placement allocation livret 50000',href:'articles/50000-euros-livret-peur-investir.html'},
-    {domain:'vie-pro',theme:'entreprendre',type:'dossier',chip:'Offre & clients',title:'Tout le monde trouve votre idée intéressante, mais personne n’achète',desc:'Un compliment ne valide pas un marché : tester une offre, un prix et un vrai sacrifice client.',tags:'entreprise client offre vente marché prix',href:'articles/clients-interesses-personne-nachete.html'}
-  ];
+  const catalog = [
+    // Guides et dossiers prioritaires — Patrimoine
+    {d:'patrimoine',t:'guide',c:'Budget',h:'dossiers/audit-budget-60-minutes.html',n:'Où part votre argent ? Faire l’audit de son budget en 60 minutes',x:'Trois mois de relevés, quatre nombres et trois corrections maximum pour rendre le budget pilotable.',k:'budget dépenses épargne audit sécurité financière'},
+    {d:'patrimoine',t:'guide',c:'Sécurité financière',h:'dossiers/liquidites-reserve-securite.html',n:'Combien garder en liquidités ? Construire une réserve de sécurité',x:'Dimensionner la réserve selon revenus, charges incompressibles, dette, projets et risques réels.',k:'liquidités réserve sécurité épargne précaution urgence cash dépenses revenu'},
+    {d:'patrimoine',t:'dossier',c:'Protection',h:'dossiers/assurer-ou-autoassurer-risques.html',n:'Quels risques assurer et lesquels absorber soi-même ?',x:'Arbitrer entre assurance, franchise et réserve selon fréquence, gravité et capacité financière à absorber le choc.',k:'assurance prévoyance risque franchise protection autoassurance patrimoine revenu'},
+    {d:'patrimoine',t:'dossier',c:'Stratégie patrimoniale',h:'dossiers/finances-cadre-global.html',n:'Construire sa stratégie financière avant de choisir ses placements',x:'Bilan, flux, horizons, capacité de risque, concentration et règles de décision avant les produits.',k:'patrimoine stratégie bilan flux risque objectifs investissement'},
+    {d:'patrimoine',t:'guide',c:'Allocation',h:'dossiers/finances-allocation-portefeuille.html',n:'Construire une allocation patrimoniale robuste',x:'Capacité de risque, drawdown, corrélations, concentration, scénarios de stress et rééquilibrage.',k:'allocation portefeuille diversification risque corrélation drawdown investissement'},
+    {d:'patrimoine',t:'dossier',c:'Crédit & investissement',h:'dossiers/rembourser-credit-ou-investir.html',n:'Rembourser son crédit ou investir ?',x:'Comparer coût certain de la dette, rendement net espéré, liquidité, fiscalité, levier et solution hybride.',k:'rembourser crédit investir dette taux rendement liquidité remboursement anticipé'},
+    {d:'patrimoine',t:'dossier',c:'Immobilier',h:'dossiers/finances-immobilier-patrimoine.html',n:'Immobilier et patrimoine : raisonner sur le coût, le risque et la concentration',x:'Résidence principale, locatif, dette, rendement net, liquidité et poids de la pierre dans le patrimoine global.',k:'immobilier résidence principale locatif crédit patrimoine rendement'},
+    {d:'patrimoine',t:'dossier',c:'Résidence principale',h:'dossiers/finances-residence-principale.html',n:'Acheter ou louer sa résidence principale : comparer le coût complet',x:'Durée de détention, frais, financement, coût d’opportunité, mobilité et scénarios de sortie.',k:'acheter louer logement résidence principale crédit frais mobilité'},
+    {d:'patrimoine',t:'dossier',c:'Investissement locatif',h:'dossiers/finances-investissement-locatif.html',n:'Investissement locatif : rendement, cash-flow et stress tests',x:'Prix total, rendement net, couverture de dette, vacance, travaux, fiscalité et concentration.',k:'immobilier locatif rendement cash flow vacance travaux dette'},
+    {d:'patrimoine',t:'dossier',c:'Crédit',h:'dossiers/finances-credit-endettement.html',n:'Crédit et endettement : utiliser la dette sans fragiliser son patrimoine',x:'Coût total, durée, levier, capacité de remboursement, liquidité et scénario dégradé.',k:'crédit dette endettement levier taux mensualité patrimoine'},
+    {d:'patrimoine',t:'dossier',c:'Enveloppes',h:'dossiers/finances-enveloppes-fiscalite.html',n:'PEA, assurance-vie, CTO, PER : choisir l’enveloppe après la stratégie',x:'Comparer disponibilité, fiscalité, supports, frais et horizon sans confondre enveloppe et placement.',k:'pea assurance vie cto per fiscalité enveloppe investissement'},
+    {d:'patrimoine',t:'dossier',c:'Classes d’actifs',h:'dossiers/finances-classes-actifs.html',n:'Comprendre ce que chaque classe d’actifs apporte réellement',x:'Liquidités, obligations, actions, immobilier et actifs alternatifs : fonctions, risques et limites.',k:'cash obligations actions immobilier or actifs diversification'},
+    {d:'patrimoine',t:'dossier',c:'Retraite',h:'dossiers/finances-retraite-decumulation.html',n:'Retraite et décumulation : transformer un patrimoine en revenus',x:'Dépenses, revenus garantis, risque de séquence, inflation, longévité et règles de retrait.',k:'retraite décumulation revenus patrimoine inflation longévité'},
+    {d:'patrimoine',t:'dossier',c:'Transmission',h:'dossiers/finances-transmission-patrimoine.html',n:'Transmission du patrimoine : préparer sans improviser',x:'Objectifs, propriété, liquidité, bénéficiaires, partage et coordination civile et fiscale.',k:'transmission succession donation bénéficiaire patrimoine notaire'},
+    {d:'patrimoine',t:'dossier',c:'Épargne',h:'articles/50000-euros-livret-peur-investir.html',n:'Vous avez 50 000 € de côté mais vous n’osez rien en faire',x:'Séparer sécurité, projets proches et capital réellement disponible à long terme avant de chercher un placement.',k:'épargne investir placement allocation livret 50000'},
+    {d:'patrimoine',t:'dossier',c:'Entrée d’argent',h:'articles/grosse-entree-argent-que-faire.html',n:'Vous recevez une grosse somme d’argent : que faire pendant les 90 premiers jours ?',x:'Sécuriser, isoler les sommes déjà affectées, construire les poches et seulement ensuite investir.',k:'héritage vente indemnité prime grosse somme argent 90 jours'},
+    {d:'patrimoine',t:'dossier',c:'Épargne',h:'articles/construire-epargne-de-zero.html',n:'Construire son épargne à partir de zéro : dans quel ordre avancer ?',x:'Budget, réserve de sécurité, projets puis investissement : respecter l’ordre des décisions.',k:'épargne budget réserve sécurité débutant investissement'},
+    {d:'patrimoine',t:'dossier',c:'Budget',h:'articles/gagner-plus-epargner-moins.html',n:'Vous gagnez plus qu’avant mais vous n’épargnez toujours rien',x:'Repérer les dépenses récurrentes qui absorbent progressivement les hausses de revenus.',k:'revenu salaire dépenses épargne train de vie budget'},
+    {d:'patrimoine',t:'dossier',c:'Produits sécurisés',h:'articles/comparatif-produits-bancaires.html',n:'Livrets, compte à terme, PEL, fonds en euros : quel produit pour quel besoin ?',x:'Comparer disponibilité, garantie, horizon et rôle dans le patrimoine.',k:'livret compte terme pel fonds euros sécurité épargne'},
+    {d:'patrimoine',t:'dossier',c:'Enveloppes',h:'articles/comparatif-enveloppes-pea-assurance-vie-cto-per.html',n:'PEA, assurance-vie, compte-titres ou PER : quelle enveloppe choisir ?',x:'Une comparaison simple des usages, contraintes et horizons avant d’entrer dans le dossier complet.',k:'pea assurance vie cto per fiscalité'},
+    {d:'patrimoine',t:'dossier',c:'Supports',h:'articles/comparatif-supports-epargne-investissement.html',n:'Cash, obligations, actions, ETF : comprendre les supports avant d’investir',x:'Chaque support combine rendement potentiel, risque de perte, horizon et disponibilité.',k:'cash obligations actions etf supports investissement'},
+    {d:'patrimoine',t:'dossier',c:'Allocation',h:'articles/construire-allocation-debutant.html',n:'Construire une allocation simple quand on débute',x:'Transformer objectifs et horizons en répartition concrète sans multiplier les produits.',k:'allocation débutant portefeuille diversification investissement'},
+    {d:'patrimoine',t:'dossier',c:'Mise en œuvre',h:'articles/investir-grosse-somme-dun-coup-ou-progressivement.html',n:'Investir une grosse somme d’un coup ou progressivement ?',x:'Distinguer allocation cible, calendrier d’entrée, risque de marché et risque comportemental.',k:'lump sum dca progressif investissement grosse somme'},
+    {d:'patrimoine',t:'dossier',c:'ETF',h:'articles/choisir-etf-mondial-debutant.html',n:'Choisir un ETF diversifié : les critères essentiels',x:'Indice, frais, suivi, réplication, enveloppe, concentration et qualité d’exécution.',k:'etf indice monde frais réplication tracking diversification'},
+    {d:'patrimoine',t:'dossier',c:'Rendement net',h:'articles/frais-fiscalite-rendement-net.html',n:'Frais et fiscalité : pourquoi le rendement affiché n’est pas celui que vous gardez',x:'Identifier les couches de coûts qui séparent rendement brut et résultat réellement conservé.',k:'frais fiscalité inflation rendement net investissement'},
+    {d:'patrimoine',t:'dossier',c:'Protection',h:'articles/checklist-avant-placement-conseiller.html',n:'Avant de placer une grosse somme : la checklist contre les erreurs et les arnaques',x:'Vérifier interlocuteur, organisme, produit, transaction, frais, risques et liquidité.',k:'arnaque placement conseiller frais risque grosse somme'},
+    {d:'patrimoine',t:'dossier',c:'Allocation',h:'articles/exemples-allocation-250000-500000-1000000.html',n:'Exemples d’allocation pour 250 000 €, 500 000 € et 1 000 000 €',x:'Des architectures pédagogiques pour séparer sécurité, projets et capital de long terme.',k:'250000 500000 1000000 allocation patrimoine'},
+    {d:'patrimoine',t:'dossier',c:'Actions',h:'articles/bonne-entreprise-mauvais-investissement.html',n:'Pourquoi une bonne entreprise peut être un mauvais investissement',x:'La qualité d’une société ne suffit pas : le prix payé modifie le rendement futur.',k:'action entreprise valorisation prix rendement investissement'},
+    {d:'patrimoine',t:'dossier',c:'Consommation',h:'articles/promotion-bonne-affaire.html',n:'Pourquoi une promotion peut vous faire dépenser plus que prévu',x:'Une remise baisse le prix, pas forcément le coût total ni la pertinence de l’achat.',k:'promotion réduction achat dépense budget'},
+    {d:'patrimoine',t:'dossier',c:'Consommation',h:'articles/reconnaitre-bonne-affaire.html',n:'Comment savoir si une « bonne affaire » en est vraiment une',x:'Comparer besoin, durée d’usage, coûts cachés et alternative avant de regarder la remise.',k:'bonne affaire prix achat coût total'},
 
-  const conceptPaths = new Set([
-    'articles/portes-fermees.html','articles/majorite-peut-se-tromper.html','articles/bonnes-questions.html','articles/comprendre-avant-agir.html','articles/biais-confirmation.html','articles/penser-en-probabilites.html','articles/effet-de-cadrage.html','articles/modeles-mentaux.html','articles/decisions-reversibles-irreversibles.html','articles/risque-incertitude.html','articles/taux-de-base.html','articles/asymetrie.html','articles/strategie-barbell.html','articles/effets-second-ordre.html','articles/incitations-gouvernent.html','articles/boucles-retroaction.html','articles/mesure-devient-cible.html','articles/dependance-au-sentier.html','articles/probleme-symptome-cause.html','articles/contraintes-innovation.html','articles/information-comprehension.html','articles/simplifier-sans-trahir.html','articles/effets-de-reseau.html','articles/effet-de-levier.html','articles/couts-irrecuperables.html','articles/marge-de-securite.html','articles/rendements-decroissants.html','articles/valeur-des-options.html','articles/optimisation-locale.html','articles/biais-du-survivant.html','articles/cout-opportunite.html','articles/applications-captent-attention.html'
-  ]);
-  const legacyPaths = new Set(['articles/changer-metier-sans-zero.html','articles/demarche-bloquee.html','articles/decision-difficile-options-imparfaites.html']);
-  const dualDomainPaths = new Set([
-    'articles/majorite-peut-se-tromper.html','articles/bonnes-questions.html','articles/comprendre-avant-agir.html','articles/biais-confirmation.html','articles/penser-en-probabilites.html','articles/effet-de-cadrage.html','articles/modeles-mentaux.html','articles/decisions-reversibles-irreversibles.html','articles/risque-incertitude.html','articles/taux-de-base.html','articles/information-comprehension.html','articles/simplifier-sans-trahir.html','articles/continuer-parce-quon-a-deja-trop-investi.html','articles/hesiter-trois-semaines-deux-options.html','articles/ia-reponse-convaincante-fausse.html','dossiers/protocole-verifier-reponse-ia.html','dossiers/decider-sans-tourner-en-rond.html'
-  ]);
+    // Guides et dossiers prioritaires — Vie professionnelle
+    {d:'vie-pro',t:'guide',c:'Recherche d’emploi',h:'dossiers/plan-30-jours-recherche-emploi.html',n:'30 jours pour relancer une recherche d’emploi qui tourne en rond',x:'Segmenter le marché, construire les preuves, mesurer les conversions et traiter le risque perçu en entretien.',k:'emploi cv candidature recrutement entretien recherche chômage'},
+    {d:'vie-pro',t:'guide',c:'Salaire & responsabilités',h:'dossiers/negocier-salaire-responsabilites.html',n:'Négocier salaire et responsabilités sans improviser',x:'Périmètre réel, preuves, fourchette, cible, plancher, alternatives et date de revue.',k:'salaire augmentation négociation responsabilités promotion rémunération carrière manager'},
+    {d:'vie-pro',t:'guide',c:'Prix & marge',h:'dossiers/calculer-prix-minimum-rentable.html',n:'Quel prix minimum facturer pour gagner réellement de l’argent ?',x:'Capacité facturable, coûts, marge contributive, point mort et coût d’opportunité.',k:'prix tarif marge rentabilité point mort entreprise devis client'},
+    {d:'vie-pro',t:'guide',c:'Trésorerie',h:'dossiers/tresorerie-bfr-entreprise.html',n:'Une activité peut être rentable et manquer de trésorerie',x:'Cycle de cash, BFR, délais clients, acomptes, prévisionnel 13 semaines et risque de croissance.',k:'trésorerie cash bfr encaissement délai paiement entreprise'},
+    {d:'vie-pro',t:'dossier',c:'Risque client',h:'dossiers/dependance-gros-client.html',n:'Un client représente 60 % du chiffre d’affaires : mesurer et réduire la dépendance',x:'Concentration en CA, marge et temps, scénarios de rupture, trésorerie et plan de diversification.',k:'gros client dépendance concentration chiffre affaires marge trésorerie contrat prospection'},
+    {d:'vie-pro',t:'dossier',c:'Recherche d’emploi',h:'articles/50-candidatures-zero-reponse.html',n:'50 candidatures, zéro réponse : avant d’en envoyer 50 de plus',x:'Diagnostiquer ciblage, CV et preuves avant de multiplier les envois identiques.',k:'emploi candidature cv recrutement réponse'},
+    {d:'vie-pro',t:'dossier',c:'Entretien',h:'articles/entretien-rate-ce-qui-bloque.html',n:'Vous décrochez des entretiens mais jamais le poste : où ça bloque ?',x:'Si le CV ouvre la porte, identifier le doute précis qui subsiste chez le recruteur.',k:'emploi entretien recruteur candidature risque'},
+    {d:'vie-pro',t:'dossier',c:'Première chance',h:'articles/premiere-chance-sans-experience.html',n:'Obtenir une première chance quand personne ne veut prendre le risque',x:'Réduire le risque perçu par l’employeur avec des preuves et un essai crédible.',k:'premier emploi expérience débutant preuve employeur'},
+    {d:'vie-pro',t:'dossier',c:'Preuves',h:'articles/competences-invisibles-preuves.html',n:'Vous ne manquez peut-être pas de compétences. Vous manquez de preuves.',x:'Transformer une compétence déclarée en éléments observables qui rassurent un recruteur ou un client.',k:'compétence preuve cv recrutement résultat'},
+    {d:'vie-pro',t:'dossier',c:'Reconversion',h:'articles/reconversion-ne-commence-pas-formation.html',n:'Une reconversion ne commence pas par une formation',x:'Tester le métier réel, les contraintes et les débouchés avant d’acheter une formation longue.',k:'reconversion formation métier débouchés test'},
+    {d:'vie-pro',t:'dossier',c:'Reconversion',h:'articles/tester-metier-avant-investir.html',n:'Tester un métier avant d’investir plusieurs mois de formation',x:'Construire un test réaliste des tâches, rythmes, contraintes et débouchés.',k:'reconversion formation métier immersion test débouchés'},
+    {d:'vie-pro',t:'dossier',c:'Diplôme',h:'articles/sans-diplome-chemins-alternatifs.html',n:'Sans le diplôme attendu : chercher les autres chemins d’accès',x:'Distinguer obligation légale, filtre de recrutement et signal de compétence avant de chercher une passerelle.',k:'diplôme vae équivalence reconversion passerelle emploi'},
+    {d:'vie-pro',t:'dossier',c:'Compétences',h:'articles/competences-transferables.html',n:'Comment identifier ses compétences réellement transférables',x:'Passer des intitulés de postes aux problèmes résolus, méthodes, responsabilités et résultats.',k:'compétences transférables reconversion verbes offres'},
+    {d:'vie-pro',t:'dossier',c:'Transition',h:'articles/repartir-sans-recommencer-zero.html',n:'Repartir sans recommencer complètement à zéro',x:'Conserver les actifs utiles du parcours tout en acceptant d’être débutant sur la technique qui manque.',k:'reconversion transition expérience capital professionnel'},
+    {d:'vie-pro',t:'dossier',c:'Transition',h:'articles/transition-temporaire-sans-abandonner-projet.html',n:'Accepter une transition temporaire sans en faire une destination',x:'Utiliser un emploi ou une mission comme pont vers un projet plus durable.',k:'emploi temporaire transition projet carrière'},
+    {d:'vie-pro',t:'dossier',c:'Retour à l’emploi',h:'articles/retrouver-emploi-apres-interruption.html',n:'Retrouver un emploi après une longue interruption',x:'Reconstruire une candidature crédible après une période éloignée du marché du travail.',k:'chômage interruption emploi retour candidature'},
+    {d:'vie-pro',t:'dossier',c:'Parcours',h:'articles/expliquer-parcours-accidente.html',n:'Expliquer un parcours accidenté sans se justifier en permanence',x:'Présenter ruptures et détours comme une trajectoire lisible sans inventer une fausse linéarité.',k:'parcours trou cv rupture entretien carrière'},
+    {d:'vie-pro',t:'dossier',c:'Après 50 ans',h:'articles/reconversion-apres-50-ans.html',n:'Se reconvertir après 50 ans : expérience, coût perçu et stratégie de preuve',x:'Utiliser l’expérience sans laisser l’employeur l’interpréter comme rigidité ou surcoût.',k:'50 ans senior reconversion emploi expérience'},
+    {d:'vie-pro',t:'dossier',c:'Surqualification',h:'articles/surqualification-rassurer-employeur.html',n:'Surqualifié : comment rassurer sans effacer son expérience',x:'Répondre aux craintes de départ rapide, d’ennui, de hiérarchie ou de salaire incompatible.',k:'surqualifié emploi salaire expérience recruteur'},
+    {d:'vie-pro',t:'dossier',c:'Santé & travail',h:'articles/sante-oblige-changer-metier.html',n:'Quand la santé oblige à changer de métier',x:'Reconstruire une trajectoire à partir des capacités durables et des contraintes réelles.',k:'santé métier reconversion capacité travail'},
+    {d:'vie-pro',t:'dossier',c:'Choix d’emploi',h:'articles/accepter-nimporte-quel-premier-emploi.html',n:'Faut-il accepter n’importe quel premier emploi ?',x:'Arbitrer entre revenu immédiat, apprentissage, santé et risque d’enfermement.',k:'premier emploi accepter salaire expérience'},
+    {d:'vie-pro',t:'dossier',c:'Choix d’emploi',h:'articles/accepter-nimporte-quel-poste-retour-emploi.html',n:'Quand on veut retravailler vite : faut-il accepter n’importe quel poste ?',x:'Donner au poste imparfait une fonction et une durée, puis mesurer ce qu’il ouvre ou ferme.',k:'emploi poste imparfait revenu transition opportunité'},
+    {d:'vie-pro',t:'dossier',c:'Offre & clients',h:'articles/clients-interesses-personne-nachete.html',n:'Tout le monde trouve votre idée intéressante, mais personne n’achète',x:'Un compliment ne valide pas un marché : tester offre, prix et vrai sacrifice client.',k:'entreprise client offre vente marché prix'},
+    {d:'vie-pro',t:'dossier',c:'Offre & clients',h:'articles/lancer-activite-probleme-client.html',n:'Lancer une activité : commencer par le problème du client',x:'Vérifier le problème, son coût et le comportement actuel avant de perfectionner la solution.',k:'entreprise client problème offre marché validation'},
+    {d:'vie-pro',t:'dossier',c:'Prix & marge',h:'articles/travailler-beaucoup-gagner-peu-prix.html',n:'Vous travaillez beaucoup mais il ne reste presque rien',x:'Diagnostiquer temps invisible, coûts directs, petites prestations et clients qui détruisent la marge.',k:'prix marge temps client rentabilité entreprise'},
+    {d:'vie-pro',t:'dossier',c:'Automatisation',h:'articles/automatiser-tache-5-minutes-perdre-30.html',n:'Vous avez passé 30 minutes à automatiser une tâche de 5 minutes',x:'Comparer coût de mise en place, fréquence, stabilité et maintenance avant d’automatiser.',k:'automatisation ia temps productivité entreprise'},
+    {d:'vie-pro patrimoine',t:'guide',c:'IA appliquée',h:'dossiers/protocole-verifier-reponse-ia.html',n:'Avant de croire une réponse IA : le protocole de vérification en 10 minutes',x:'Classer le risque, isoler le fait central, hiérarchiser les sources et chercher la contradiction.',k:'ia intelligence artificielle source vérifier hallucination chatgpt'},
+    {d:'vie-pro patrimoine',t:'dossier',c:'IA appliquée',h:'articles/ia-reponse-convaincante-fausse.html',n:'L’IA vous répond avec aplomb… et se trompe',x:'Reconnaître les réponses qui paraissent solides avant de vérifier les faits qui changent la décision.',k:'ia hallucination vérifier source réponse'},
+    {d:'vie-pro',t:'dossier',c:'IA & travail',h:'articles/ia-gagner-temps-jugement.html',n:'Utiliser l’IA pour gagner du temps sans lui abandonner votre jugement',x:'Déléguer préparation et reformulation tout en gardant le contrôle des faits et de la décision.',k:'ia travail productivité jugement'},
+    {d:'vie-pro',t:'dossier',c:'IA & métiers',h:'articles/ia-remplace-t-elle-le-codage.html',n:'L’intelligence artificielle remplace-t-elle vraiment le codage ?',x:'L’écriture du code se banalise, tandis que formulation du problème, architecture et contrôle gagnent en valeur.',k:'ia codage développeur métier carrière'},
+    {d:'vie-pro',t:'guide',c:'Démarches',h:'dossiers/debloquer-demarche-administrative.html',n:'Démarche bloquée : comment sortir d’une boucle administrative',x:'Chronologie, preuve équivalente, motif écrit, interlocuteur compétent et escalade propre.',k:'administratif démarche blocage justificatif recours procédure'},
+    {d:'vie-pro',t:'dossier',c:'Démarches',h:'articles/justificatif-impossible-procedure-bloquee.html',n:'On vous demande un document que vous ne pouvez pas fournir : que faire ?',x:'Identifier la règle, la preuve attendue, l’équivalent possible et la personne qui peut réellement décider.',k:'administratif justificatif document blocage procédure'},
+    {d:'vie-pro',t:'dossier',c:'Management',h:'articles/indicateur-monte-service-se-degrade.html',n:'Le compteur monte, le service se dégrade',x:'Repérer quand un indicateur s’améliore parce que les comportements contournent l’objectif réel.',k:'management indicateur performance objectif service'},
+    {d:'vie-pro',t:'dossier',c:'Organisation',h:'articles/regle-absurde-logique-cachee.html',n:'Cette règle paraît absurde : avant de la contourner, cherchez ce qu’elle protège',x:'Identifier responsabilité, sécurité, traçabilité ou budget avant de proposer une alternative.',k:'règle procédure organisation management système'},
+    {d:'vie-pro patrimoine',t:'guide',c:'Décision',h:'dossiers/decider-sans-tourner-en-rond.html',n:'Prendre une décision importante sans tourner en rond',x:'Taux de base, coût d’erreur, valeur de l’option, coûts irrécupérables, effets de second ordre et pré-mortem.',k:'décision choix matrice risque option biais pré mortem'},
+    {d:'vie-pro patrimoine',t:'dossier',c:'Décision',h:'articles/hesiter-trois-semaines-deux-options.html',n:'Vous hésitez depuis trois semaines entre deux options presque équivalentes',x:'Distinguer information manquante et certitude impossible, puis décider selon réversibilité et coût d’attente.',k:'décision hésiter options réversibilité'},
+    {d:'vie-pro patrimoine',t:'dossier',c:'Décision',h:'articles/continuer-parce-quon-a-deja-trop-investi.html',n:'Vous continuez surtout parce que vous avez déjà trop investi',x:'Décider à partir des coûts et bénéfices futurs plutôt que des sommes déjà perdues.',k:'coût irrécupérable sunk cost décision investir temps argent'},
+
+    // Références : utiles en appui, masquées par défaut
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/portes-fermees.html',n:'Une porte fermée ne prouve pas qu’il n’y a pas d’issue',x:'Distinguer l’objectif réel de la voie particulière qui vient d’être bloquée.',k:'obstacle voie alternative contrainte'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/majorite-peut-se-tromper.html',n:'Pourquoi la majorité peut se tromper',x:'Un consensus n’est pas équivalent à plusieurs sources indépendantes.',k:'majorité consensus indépendance information'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/bonnes-questions.html',n:'Les bonnes questions changent les réponses',x:'Une question mal formulée peut fermer le champ des possibles avant même l’analyse.',k:'question cadrage problème décision'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/comprendre-avant-agir.html',n:'Comprendre avant d’agir — sans attendre de tout savoir',x:'Trouver le niveau d’analyse suffisant avant de tester une action.',k:'analyse action décision information'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/biais-confirmation.html',n:'Le biais de confirmation',x:'Chercher activement les éléments qui pourraient invalider une conviction.',k:'biais confirmation contradiction conviction'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/penser-en-probabilites.html',n:'Penser en probabilités plutôt qu’en certitudes',x:'Séparer possible, probable et supportable lorsque l’avenir reste incertain.',k:'probabilité incertitude scénario décision'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/effet-de-cadrage.html',n:'L’effet de cadrage',x:'La manière de présenter un choix peut modifier le jugement sans changer les faits.',k:'cadrage biais décision présentation'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/modeles-mentaux.html',n:'Les modèles mentaux : des cartes utiles, jamais le territoire',x:'Utiliser un modèle pour simplifier sans oublier ce qu’il laisse de côté.',k:'modèle mental simplification décision'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/decisions-reversibles-irreversibles.html',n:'Décisions réversibles et irréversibles',x:'Adapter le temps d’analyse au coût réel d’un retour en arrière.',k:'réversible irréversible option décision'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/risque-incertitude.html',n:'Risque et incertitude : quand les probabilités ne suffisent plus',x:'Distinguer risque probabilisable et situations où les scénarios eux-mêmes restent incomplets.',k:'risque incertitude probabilité scénario'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/taux-de-base.html',n:'Les taux de base : commencer par ce qui arrive habituellement',x:'Comparer un cas particulier à la fréquence habituelle du phénomène.',k:'taux base statistique probabilité décision'},
+    {d:'patrimoine',t:'reference',c:'Notion d’appui',h:'articles/asymetrie.html',n:'L’asymétrie : rechercher plus de potentiel que de perte',x:'Comparer non seulement la probabilité de réussite mais aussi l’ampleur du gain et de la perte.',k:'asymétrie gain perte risque investissement'},
+    {d:'patrimoine',t:'reference',c:'Notion d’appui',h:'articles/strategie-barbell.html',n:'La stratégie en haltère',x:'Protéger l’essentiel et réserver une petite poche aux expériences plus risquées.',k:'barbell haltère sécurité risque portefeuille'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/effets-second-ordre.html',n:'Les effets de second ordre',x:'Regarder ce qui arrive après le résultat immédiat et comment les comportements s’adaptent.',k:'second ordre conséquences adaptation décision'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/incitations-gouvernent.html',n:'Les incitations gouvernent plus que les intentions',x:'Observer ce que le système récompense réellement plutôt que ce qu’il affirme vouloir.',k:'incitation management système récompense'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/boucles-retroaction.html',n:'Les boucles de rétroaction',x:'Comprendre comment un résultat revient renforcer ou freiner le mécanisme initial.',k:'feedback boucle système organisation'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/mesure-devient-cible.html',n:'Quand une mesure devient une cible, elle cesse souvent de bien mesurer',x:'Un indicateur peut être optimisé au détriment du résultat réel.',k:'goodhart indicateur cible management'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/dependance-au-sentier.html',n:'La dépendance au sentier',x:'Comprendre pourquoi une décision ancienne continue à limiter les options présentes.',k:'path dependence passé option système'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/probleme-symptome-cause.html',n:'Le problème n’est presque jamais le problème',x:'Distinguer symptôme visible, mécanisme et cause avant d’intensifier l’effort.',k:'cause symptôme problème système'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/contraintes-innovation.html',n:'Les contraintes peuvent créer l’innovation',x:'Une limite peut forcer un test plus simple ou révéler un chemin moins coûteux.',k:'contrainte innovation entreprise test'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/information-comprehension.html',n:'L’information n’est pas la compréhension',x:'Accumuler des faits n’améliore pas forcément la capacité à expliquer ou décider.',k:'information compréhension décision ia'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/simplifier-sans-trahir.html',n:'Simplifier sans trahir',x:'Retirer le bruit sans supprimer les mécanismes qui changent la conclusion.',k:'simplification explication décision ia'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/effets-de-reseau.html',n:'Les effets de réseau',x:'Comprendre quand chaque utilisateur supplémentaire modifie la valeur du système.',k:'réseau plateforme technologie système'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/effet-de-levier.html',n:'Le bon levier vaut mieux que mille efforts',x:'Chercher l’endroit où une petite modification produit un grand effet.',k:'levier efficacité entreprise effort'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/couts-irrecuperables.html',n:'Les coûts irrécupérables',x:'Ce qui est déjà dépensé ne doit pas dicter la décision future.',k:'sunk cost coût irrécupérable décision'},
+    {d:'patrimoine',t:'reference',c:'Notion d’appui',h:'articles/marge-de-securite.html',n:'La marge de sécurité',x:'Conserver de l’espace pour l’erreur, le retard et l’imprévu.',k:'marge sécurité risque patrimoine'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/rendements-decroissants.html',n:'Les rendements décroissants',x:'Davantage d’effort finit parfois par rapporter moins et augmenter les reprises.',k:'rendement décroissant travail productivité'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/valeur-des-options.html',n:'La valeur des options',x:'Dans l’incertitude, préserver le droit de changer d’avis peut avoir une valeur économique.',k:'option flexibilité décision incertitude'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/optimisation-locale.html',n:'Optimiser une partie peut dégrader l’ensemble',x:'Une amélioration locale peut déplacer l’attente, le coût ou la fragilité ailleurs.',k:'optimisation locale système entreprise flux'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/biais-du-survivant.html',n:'Le biais du survivant',x:'Étudier aussi les échecs invisibles avant de copier les réussites visibles.',k:'survivant biais entreprise réussite'},
+    {d:'vie-pro patrimoine',t:'reference',c:'Notion d’appui',h:'articles/cout-opportunite.html',n:'Le coût d’opportunité',x:'Chaque choix consomme de l’argent, du temps ou de l’attention qui ne peut plus servir ailleurs.',k:'coût opportunité arbitrage décision'},
+    {d:'vie-pro',t:'reference',c:'Notion d’appui',h:'articles/applications-captent-attention.html',n:'Pourquoi certaines applications captent votre attention plus longtemps que prévu',x:'Notifications, défilement continu et récompenses variables modifient le comportement.',k:'attention application technologie psychologie'}
+  ];
 
   const list = document.querySelector('.articles');
   const tools = document.querySelector('.library-tools');
   if (!list || !tools) return;
 
-  document.querySelector('.ce-search-strip')?.remove();
-  document.querySelector('.video-library-callout')?.closest('section')?.remove();
-  document.querySelector('.library-expert-gateway')?.remove();
-  document.querySelector('.format-gateway')?.remove();
-
-  const hero = document.querySelector('.article-hero');
-  if (hero) {
-    const h1 = hero.querySelector('h1');
-    const p = hero.querySelector('p');
-    if (h1) h1.textContent = 'Trouvez le dossier qui répond à votre situation.';
-    if (p) p.textContent = 'Recherchez un problème concret ou choisissez un domaine. Les guides et dossiers applicables passent avant les références théoriques.';
-  }
-
-  [...list.querySelectorAll('.filter-card')].forEach(card => {
-    const href = card.querySelector('a[href]')?.getAttribute('href') || '';
-    if (legacyPaths.has(href)) card.remove();
-  });
-
-  const existing = new Set([...list.querySelectorAll('a[href]')].map(a => a.getAttribute('href')));
-  const fresh = featured.filter(item => !existing.has(item.href));
-  if (fresh.length) {
-    list.insertAdjacentHTML('afterbegin', fresh.map(item => `<article class="article-card filter-card" data-theme="${item.theme}" data-domain="${item.domain}" data-content-type="${item.type}" data-tags="${item.tags}"><div><div class="card-meta"><span class="level-badge">${item.type === 'guide' ? 'Guide pratique' : 'Dossier'}</span><span class="theme-chip">${item.chip}</span></div><h3>${item.title}</h3><p>${item.desc}</p></div><a href="${item.href}">${item.type === 'guide' ? 'Ouvrir le guide' : 'Lire le dossier'} →</a></article>`).join(''));
-  }
-
   const normalise = value => (value || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9€]+/g,' ').trim();
-  const cards = [...list.querySelectorAll('.filter-card')];
+  const seen = new Set();
+  const items = catalog.filter(item => item.h && !seen.has(item.h) && seen.add(item.h));
 
-  cards.forEach((card,index) => {
-    card.dataset.originalOrder = String(index);
-    const href = card.querySelector('a[href]')?.getAttribute('href') || '';
-    const theme = card.dataset.theme || '';
-    if (!card.dataset.domain) {
-      if (theme === 'argent') card.dataset.domain = 'patrimoine';
-      else if (theme === 'travail' || theme === 'entreprendre') card.dataset.domain = 'vie-pro';
-      else if (dualDomainPaths.has(href)) card.dataset.domain = 'vie-pro patrimoine';
-      else card.dataset.domain = 'vie-pro';
-    }
-    if (conceptPaths.has(href)) card.dataset.contentType = 'reference';
-    else if (!card.dataset.contentType) card.dataset.contentType = 'dossier';
+  list.innerHTML = items.map((item,index) => `<article class="article-card filter-card${item.t === 'reference' ? ' support-note' : ''}" data-domain="${item.d}" data-content-type="${item.t}" data-tags="${item.k || ''}" data-original-order="${index}"><div><div class="card-meta"><span class="level-badge">${item.t === 'guide' ? 'Guide pratique' : item.t === 'reference' ? 'Référence' : 'Dossier'}</span><span class="theme-chip">${item.c}</span></div><h3>${item.n}</h3><p>${item.x}</p></div><a href="${item.h}">${item.t === 'guide' ? 'Ouvrir le guide' : item.t === 'reference' ? 'Approfondir' : 'Lire le dossier'} →</a></article>`).join('');
 
-    const badge = card.querySelector('.level-badge');
-    const chip = card.querySelector('.theme-chip');
-    const link = card.querySelector(':scope > a[href], div + a[href]') || card.querySelector('a[href]');
-    if (card.dataset.contentType === 'reference') {
-      card.classList.add('support-note');
-      if (badge) badge.textContent = 'Référence';
-      if (chip) chip.textContent = 'Notion d’appui';
-      if (link) link.textContent = 'Approfondir →';
-    } else if (card.dataset.contentType === 'guide') {
-      if (badge) badge.textContent = 'Guide pratique';
-      if (link) link.textContent = 'Ouvrir le guide →';
-    } else {
-      if (badge) badge.textContent = 'Dossier';
-      if (link) link.textContent = 'Lire le dossier →';
-    }
-  });
-
-  tools.innerHTML = `<label class="library-search"><span class="filter-label">Rechercher :</span><input type="search" placeholder="Ex. acheter un logement, changer de métier, fixer mes prix…" aria-label="Rechercher dans la bibliothèque"></label><div class="filter-group domain-filters"><span class="filter-label">Domaine :</span><button aria-pressed="true" class="filter-btn" data-domain="all">Tous</button><button aria-pressed="false" class="filter-btn" data-domain="patrimoine">Patrimoine</button><button aria-pressed="false" class="filter-btn" data-domain="vie-pro">Vie professionnelle</button></div><div class="library-reference-control"><button type="button" class="filter-btn reference-toggle" aria-pressed="false">Afficher les références et notions</button><span>Les guides et dossiers restent prioritaires.</span></div><div class="results-count" data-results-count></div>`;
+  tools.innerHTML = `<label class="library-search"><span class="filter-label">Rechercher :</span><input type="search" placeholder="Ex. acheter un logement, augmentation, trésorerie…" aria-label="Rechercher dans la bibliothèque"></label><div class="filter-group domain-filters"><span class="filter-label">Domaine :</span><button aria-pressed="true" class="filter-btn" data-domain="all">Tous</button><button aria-pressed="false" class="filter-btn" data-domain="patrimoine">Patrimoine</button><button aria-pressed="false" class="filter-btn" data-domain="vie-pro">Vie professionnelle</button></div><div class="library-reference-control"><button type="button" class="filter-btn reference-toggle" aria-pressed="false">Afficher les références et notions</button><span>Les guides et dossiers restent prioritaires.</span></div><div class="results-count" data-results-count></div>`;
 
   const style = document.createElement('style');
-  style.textContent = `.library-tools{display:grid;gap:.75rem}.library-tools .library-search{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}.library-tools .library-search input{min-width:min(540px,82vw);padding:.72rem .82rem;border:1px solid rgba(16,24,32,.2);border-radius:10px;font:inherit}.library-reference-control{display:flex;align-items:center;gap:.65rem;flex-wrap:wrap}.library-reference-control span{font-size:.82rem;color:#657078}.filter-card.is-hidden{display:none!important}.filter-card.support-note{background:#faf9f5}.results-count{font-weight:800;color:#657078}`;
+  style.textContent = `.library-tools{display:grid;gap:.75rem;margin-bottom:1.2rem}.library-search{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}.library-search input{min-width:min(560px,82vw);padding:.72rem .82rem;border:1px solid rgba(16,24,32,.2);border-radius:10px;font:inherit}.library-reference-control{display:flex;align-items:center;gap:.65rem;flex-wrap:wrap}.library-reference-control span{font-size:.82rem;color:#657078}.filter-card.is-hidden{display:none!important}.filter-card.support-note{background:#faf9f5}.results-count{font-weight:800;color:#657078}`;
   document.head.appendChild(style);
 
-  const state = {
-    domain: new URLSearchParams(location.search).get('domain') || 'all',
-    query: new URLSearchParams(location.search).get('q') || '',
-    showReferences: new URLSearchParams(location.search).get('references') === '1'
-  };
-
+  const params = new URLSearchParams(location.search);
+  const state = {domain:params.get('domain') || 'all',query:params.get('q') || '',showReferences:params.get('references') === '1'};
   const aliases = {
-    emploi:'candidature cv entretien recrutement recruteur travail poste', candidature:'emploi cv recrutement recruteur entretien', reconversion:'formation métier compétences emploi orientation', formation:'reconversion métier diplôme compétences orientation',
-    salaire:'augmentation rémunération négociation responsabilités promotion carrière', augmentation:'salaire rémunération négociation responsabilités promotion', responsabilites:'salaire augmentation promotion périmètre carrière', promotion:'salaire responsabilités augmentation carrière',
-    budget:'dépenses épargne argent finances revenu sécurité', epargne:'budget investissement placement capital livret liquidités réserve', liquidites:'réserve sécurité épargne précaution cash urgence', reserve:'liquidités sécurité épargne précaution urgence', assurance:'protection risque prévoyance franchise patrimoine', prevoyance:'assurance protection revenu risque',
-    investir:'investissement allocation etf actions pea placement capital crédit', investissement:'investir allocation etf actions pea placement capital crédit', credit:'dette remboursement emprunt taux investissement', rembourser:'crédit dette remboursement anticipé investir',
-    immobilier:'logement résidence locatif crédit acheter louer travaux', logement:'immobilier résidence acheter louer crédit', acheter:'immobilier logement résidence crédit',
-    prix:'tarif marge rentabilité coût client devis facturer', marge:'prix tarif rentabilité coût point mort entreprise', entreprendre:'entreprise client offre prix marge vente', client:'entreprise offre vente dépendance concentration prospection', concentration:'client dépendance risque chiffre affaires', tresorerie:'cash bfr encaissement délai paiement entreprise', bfr:'trésorerie cash besoin fonds roulement encaissement',
-    ia:'intelligence artificielle chatgpt automatisation vérification source', retraite:'décumulation transmission patrimoine revenus long terme'
+    emploi:'candidature cv entretien recrutement recruteur travail poste',candidature:'emploi cv recrutement recruteur entretien',reconversion:'formation métier compétences emploi orientation',formation:'reconversion métier diplôme compétences orientation',
+    salaire:'augmentation rémunération négociation responsabilités promotion carrière',augmentation:'salaire rémunération négociation responsabilités promotion',responsabilites:'salaire augmentation promotion périmètre carrière',promotion:'salaire responsabilités augmentation carrière',
+    budget:'dépenses épargne argent finances revenu sécurité',epargne:'budget investissement placement capital livret liquidités réserve',liquidites:'réserve sécurité épargne précaution cash urgence',reserve:'liquidités sécurité épargne précaution urgence',assurance:'protection risque prévoyance franchise patrimoine',prevoyance:'assurance protection revenu risque',
+    investir:'investissement allocation etf actions pea placement capital crédit',investissement:'investir allocation etf actions pea placement capital crédit',credit:'dette remboursement emprunt taux investissement',rembourser:'crédit dette remboursement anticipé investir',
+    immobilier:'logement résidence locatif crédit acheter louer travaux',logement:'immobilier résidence acheter louer crédit',acheter:'immobilier logement résidence crédit',
+    prix:'tarif marge rentabilité coût client devis facturer',marge:'prix tarif rentabilité coût point mort entreprise',entreprendre:'entreprise client offre prix marge vente',client:'entreprise offre vente dépendance concentration prospection',concentration:'client dépendance risque chiffre affaires',tresorerie:'cash bfr encaissement délai paiement entreprise',bfr:'trésorerie cash besoin fonds roulement encaissement',
+    ia:'intelligence artificielle chatgpt automatisation vérification source',retraite:'décumulation transmission patrimoine revenus long terme'
   };
 
   const search = tools.querySelector('input[type="search"]');
   const domainButtons = [...tools.querySelectorAll('[data-domain]')];
   const referenceButton = tools.querySelector('.reference-toggle');
   const count = tools.querySelector('[data-results-count]');
+  const cards = [...list.querySelectorAll('.filter-card')];
   search.value = state.query;
 
   const queryTokens = query => {
@@ -131,49 +148,21 @@
     base.forEach(token => { if (aliases[token]) expanded.push(...normalise(aliases[token]).split(/\s+/)); });
     return [...new Set(expanded)];
   };
-
   function scoreCard(card,query) {
     if (!query.trim()) return 0;
-    const title = normalise(card.querySelector('h3')?.textContent), chip = normalise(card.querySelector('.theme-chip')?.textContent), desc = normalise(card.querySelector('p')?.textContent), tags = normalise(card.dataset.tags), phrase = normalise(query), tokens = queryTokens(query);
-    let score = 0;
-    if (title === phrase) score += 180; else if (title.startsWith(phrase)) score += 130; else if (title.includes(phrase)) score += 90;
-    if (chip.includes(phrase)) score += 45; if (tags.includes(phrase)) score += 45; if (desc.includes(phrase)) score += 30;
-    tokens.forEach(token => { if (title.includes(token)) score += 24; if (chip.includes(token)) score += 12; if (tags.includes(token)) score += 14; if (desc.includes(token)) score += 7; });
-    if (card.dataset.contentType === 'guide') score += 20; else if (card.dataset.contentType === 'dossier') score += 9; else score -= 12;
+    const title=normalise(card.querySelector('h3')?.textContent),chip=normalise(card.querySelector('.theme-chip')?.textContent),desc=normalise(card.querySelector('p')?.textContent),tags=normalise(card.dataset.tags),phrase=normalise(query),tokens=queryTokens(query);
+    let score=0;
+    if(title===phrase)score+=180;else if(title.startsWith(phrase))score+=130;else if(title.includes(phrase))score+=90;
+    if(chip.includes(phrase))score+=45;if(tags.includes(phrase))score+=45;if(desc.includes(phrase))score+=30;
+    tokens.forEach(token=>{if(title.includes(token))score+=24;if(chip.includes(token))score+=12;if(tags.includes(token))score+=14;if(desc.includes(token))score+=7;});
+    if(card.dataset.contentType==='guide')score+=20;else if(card.dataset.contentType==='dossier')score+=9;else score-=12;
     return score;
   }
-
-  function sync() {
-    domainButtons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.domain === state.domain)));
-    referenceButton.setAttribute('aria-pressed', String(state.showReferences));
-    referenceButton.textContent = state.showReferences ? 'Masquer les références et notions' : 'Afficher les références et notions';
-  }
-
-  function updateURL() {
-    const next = new URLSearchParams();
-    if (state.domain !== 'all') next.set('domain',state.domain);
-    if (state.query.trim()) next.set('q',state.query.trim());
-    if (state.showReferences) next.set('references','1');
-    history.replaceState(null,'',next.toString() ? `?${next}` : location.pathname);
-  }
-
-  function apply() {
-    const hasQuery = Boolean(state.query.trim());
-    let visible = 0;
-    const ranked = [];
-    cards.forEach(card => {
-      const domains = (card.dataset.domain || '').split(/\s+/), domainOK = state.domain === 'all' || domains.includes(state.domain), isReference = card.dataset.contentType === 'reference', score = scoreCard(card,state.query), queryOK = !hasQuery || score > 0, referenceOK = !isReference || state.showReferences || hasQuery, show = domainOK && queryOK && referenceOK;
-      card.classList.toggle('is-hidden',!show);
-      if (show) { visible++; ranked.push({card,score,typePriority:card.dataset.contentType === 'guide' ? 0 : card.dataset.contentType === 'dossier' ? 1 : 2,order:Number(card.dataset.originalOrder || 0)}); }
-    });
-    ranked.sort((a,b) => hasQuery ? (b.score-a.score || a.typePriority-b.typePriority || a.order-b.order) : (a.typePriority-b.typePriority || a.order-b.order));
-    ranked.forEach(x => list.appendChild(x.card));
-    count.textContent = `${visible} contenu${visible > 1 ? 's' : ''}`;
-    sync(); updateURL();
-  }
-
-  domainButtons.forEach(b => b.addEventListener('click',() => { state.domain = b.dataset.domain; apply(); }));
-  referenceButton.addEventListener('click',() => { state.showReferences = !state.showReferences; apply(); });
-  search.addEventListener('input',() => { state.query = search.value; apply(); });
-  sync(); apply();
+  function sync(){domainButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.domain===state.domain)));referenceButton.setAttribute('aria-pressed',String(state.showReferences));referenceButton.textContent=state.showReferences?'Masquer les références et notions':'Afficher les références et notions';}
+  function updateURL(){const next=new URLSearchParams();if(state.domain!=='all')next.set('domain',state.domain);if(state.query.trim())next.set('q',state.query.trim());if(state.showReferences)next.set('references','1');history.replaceState(null,'',next.toString()?`?${next}`:location.pathname);}
+  function apply(){const hasQuery=Boolean(state.query.trim());let visible=0;const ranked=[];cards.forEach(card=>{const domains=(card.dataset.domain||'').split(/\s+/),domainOK=state.domain==='all'||domains.includes(state.domain),isReference=card.dataset.contentType==='reference',score=scoreCard(card,state.query),queryOK=!hasQuery||score>0,referenceOK=!isReference||state.showReferences||hasQuery,show=domainOK&&queryOK&&referenceOK;card.classList.toggle('is-hidden',!show);if(show){visible++;ranked.push({card,score,typePriority:card.dataset.contentType==='guide'?0:card.dataset.contentType==='dossier'?1:2,order:Number(card.dataset.originalOrder||0)});}});ranked.sort((a,b)=>hasQuery?(b.score-a.score||a.typePriority-b.typePriority||a.order-b.order):(a.typePriority-b.typePriority||a.order-b.order));ranked.forEach(x=>list.appendChild(x.card));count.textContent=`${visible} contenu${visible>1?'s':''}`;sync();updateURL();}
+  domainButtons.forEach(b=>b.addEventListener('click',()=>{state.domain=b.dataset.domain;apply();}));
+  referenceButton.addEventListener('click',()=>{state.showReferences=!state.showReferences;apply();});
+  search.addEventListener('input',()=>{state.query=search.value;apply();});
+  apply();
 })();
