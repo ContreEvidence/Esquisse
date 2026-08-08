@@ -91,3 +91,8 @@
   .article-toc nav,.decision-grid{grid-template-columns:1fr}
   .article-tools{padding:.9rem}
 }
+
+/* Les simulateurs prolongent le dossier : ils apparaissent après la lecture. */
+.prose:has(> .ce-tool-bridge){display:flex;flex-direction:column}
+.prose>.ce-tool-bridge{order:90;margin-top:1.8rem}
+.prose>p:has(>a.back){order:100}
