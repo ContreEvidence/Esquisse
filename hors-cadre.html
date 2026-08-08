@@ -1,181 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Fenêtres — une pause dans Contre-évidence</title>
-  <meta name="description" content="Fenêtres : musique, histoires, cuisine, images et petites parenthèses pour faire une vraie pause au milieu de Contre-évidence."/>
-  <meta name="theme-color" content="#0b0f12"/>
-  <link href="assets/logo.png" rel="icon" type="image/png"/>
-  <link href="assets/style.css" rel="stylesheet"/>
-  <link href="assets/navigation.css" rel="stylesheet"/>
-  <link href="assets/brand.css?v=20260808-15" rel="stylesheet"/>
-  <link href="assets/hors-cadre.css?v=20260808-15" rel="stylesheet"/>
-  <style>
-    .pause-page{background:#f1eee6;color:#15191d}.pause-page main{overflow:hidden}
-    .pause-hero{position:relative;padding:5.7rem 0 5.2rem;color:#fff;background:radial-gradient(circle at 82% 18%,rgba(212,171,86,.23),transparent 28%),radial-gradient(circle at 18% 82%,rgba(95,130,145,.15),transparent 30%),linear-gradient(135deg,#07090b 0%,#111820 58%,#08090b 100%);border-bottom:3px solid #d4ab56}
-    .pause-hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(290px,.8fr);gap:3rem;align-items:center}
-    .pause-kicker{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;color:#e8c979;font-size:.76rem;font-weight:950;letter-spacing:.17em;text-transform:uppercase}.pause-kicker:before{content:'';width:42px;height:3px;background:#d4ab56}
-    .pause-hero h1{max-width:850px;margin:0 0 1.2rem;font-size:clamp(3rem,6.6vw,6.6rem);line-height:.9;letter-spacing:-.055em}.pause-hero h1 em{display:block;color:#d4ab56;font-style:normal}
-    .pause-hero .lead{max-width:730px;margin:0 0 1.65rem;color:#d9e0e4;font-size:1.13rem;line-height:1.72}
-    .pause-times{display:flex;flex-wrap:wrap;gap:.65rem}.pause-times a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:.58rem .92rem;border:1px solid rgba(232,201,121,.45);border-radius:999px;color:#fff;text-decoration:none;font-weight:850;background:rgba(255,255,255,.045)}.pause-times a:hover{background:#d4ab56;color:#090b0d}
-    .pause-window{position:relative;min-height:360px;border:1px solid rgba(232,201,121,.5);border-radius:150px 150px 18px 18px;overflow:hidden;background:linear-gradient(180deg,#1c2c36 0%,#587580 45%,#e6bd74 46%,#1b1410 100%);box-shadow:0 30px 70px rgba(0,0,0,.32)}
-    .pause-window:before{content:'';position:absolute;left:50%;top:0;bottom:0;width:6px;transform:translateX(-50%);background:#0b0f12;box-shadow:0 0 0 1px rgba(255,255,255,.08)}.pause-window:after{content:'';position:absolute;left:0;right:0;top:46%;height:6px;background:#0b0f12}
-    .pause-moon{position:absolute;right:18%;top:16%;width:52px;height:52px;border-radius:50%;background:#fff2bd;box-shadow:0 0 36px rgba(255,242,189,.55)}
-    .pause-window-copy{position:absolute;z-index:2;left:1.3rem;right:1.3rem;bottom:1.25rem;padding:1rem 1.05rem;border-radius:14px;background:rgba(6,8,10,.74);backdrop-filter:blur(8px)}.pause-window-copy strong{display:block;color:#e8c979;font-size:1.02rem}.pause-window-copy span{display:block;margin-top:.28rem;color:#f4f5f5;line-height:1.45}
-    .pause-intro{padding:4.4rem 0 1.2rem}.pause-intro .section-head{max-width:780px}.pause-intro .section-head h2{font-size:clamp(2rem,4vw,3.7rem);letter-spacing:-.04em}.pause-intro .section-head p{font-size:1.06rem;line-height:1.7;color:#4d5961}
-    .pause-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1rem 1.1rem;padding-bottom:4rem}.pause-card{position:relative;overflow:hidden;min-height:280px;padding:1.7rem;border-radius:24px;text-decoration:none;color:#fff;box-shadow:0 16px 38px rgba(16,24,32,.12);border:1px solid rgba(255,255,255,.12);transition:transform .22s ease,box-shadow .22s ease}.pause-card:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(16,24,32,.19)}
-    .pause-card .meta{display:flex;justify-content:space-between;gap:.8rem;margin-bottom:1.1rem;color:#efd991;font-size:.74rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.pause-card h3{max-width:620px;margin:.15rem 0 .7rem;font-size:clamp(1.65rem,3vw,2.6rem);line-height:1.02;letter-spacing:-.035em}.pause-card p{max-width:650px;margin:0;color:#dce2e5;line-height:1.6}.pause-card .go{display:inline-block;margin-top:1.2rem;color:#f4dda0;font-weight:900}.pause-card.large{grid-column:span 7;min-height:390px}.pause-card.medium{grid-column:span 5;min-height:390px}.pause-card.third{grid-column:span 4}.pause-card.story{background:radial-gradient(circle at 86% 18%,rgba(206,105,45,.35),transparent 27%),linear-gradient(135deg,#26140e,#10151a 68%)}.pause-card.music{background:radial-gradient(circle at 78% 20%,rgba(130,112,185,.38),transparent 27%),linear-gradient(145deg,#171325,#090d11 70%)}.pause-card.food{background:radial-gradient(circle at 80% 16%,rgba(208,164,71,.32),transparent 30%),linear-gradient(145deg,#342316,#111417 72%)}.pause-card.play{background:radial-gradient(circle at 75% 18%,rgba(73,145,166,.36),transparent 28%),linear-gradient(145deg,#0e2630,#0b1014 72%)}.pause-card.gallery{background:radial-gradient(circle at 80% 18%,rgba(212,171,86,.28),transparent 28%),linear-gradient(145deg,#15131d,#0a0d10 72%)}
-    .story-body{max-width:980px;margin:0 auto 4rem;padding:2.2rem;border-radius:24px;background:#fff;border:1px solid #ded8cb;box-shadow:0 16px 38px rgba(16,24,32,.07)}.story-body .eyebrow{color:#966f26;font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:.75rem}.story-body h2{margin:.45rem 0 1rem;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.035em}.story-body p{font-size:1.04rem;line-height:1.78;color:#3f4a52}.story-body .pull{margin:1.5rem 0;padding:1.2rem 1.35rem;border-left:4px solid #d4ab56;background:#f7f2e6;color:#1b2024;font-size:1.15rem;font-weight:800}.story-body small{color:#6c7479}
-    .recipe{display:grid;grid-template-columns:.85fr 1.15fr;gap:2rem;align-items:start}.recipe ul{margin:.5rem 0 0;padding-left:1.2rem}.recipe li{margin:.35rem 0;color:#3f4a52}.recipe ol{margin:.5rem 0 0;padding-left:1.3rem}.recipe ol li{margin:.62rem 0;line-height:1.6}
-    .micro-pause{margin-bottom:4.5rem;padding:2.5rem;border-radius:26px;text-align:center;color:#fff;background:linear-gradient(135deg,#0b1115,#161d22);border:1px solid rgba(212,171,86,.42);box-shadow:0 20px 50px rgba(16,24,32,.16)}.micro-pause span{display:block;color:#e8c979;font-size:.76rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.micro-pause h2{margin:.55rem auto .7rem;max-width:760px;font-size:clamp(2rem,4vw,3.6rem);letter-spacing:-.04em}.micro-pause p{max-width:680px;margin:0 auto;color:#ccd4d8;line-height:1.65}.micro-pause button{margin-top:1.25rem;padding:.8rem 1.1rem;border:0;border-radius:999px;background:#d4ab56;color:#0b0d0e;font:inherit;font-weight:900;cursor:pointer}.micro-pause button:hover{background:#e8c979}.micro-result{min-height:54px;margin:1rem auto 0;max-width:680px;color:#fff;font-size:1.12rem;font-weight:750;line-height:1.5}
-    .pause-footnote{padding:0 0 4.5rem;text-align:center;color:#58636a}.pause-footnote strong{color:#8a6724}
-    @media(max-width:900px){.pause-hero-grid{grid-template-columns:1fr}.pause-window{min-height:300px;max-width:520px}.pause-card.large,.pause-card.medium,.pause-card.third{grid-column:span 12}.recipe{grid-template-columns:1fr}}
-    @media(max-width:540px){.pause-hero{padding-top:3.5rem}.pause-hero h1{font-size:3.6rem}.pause-card{padding:1.4rem}.story-body,.micro-pause{padding:1.5rem}.pause-window{min-height:270px}}
-  </style>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Fenêtres — une pause dans Contre-évidence</title>
+<meta name="description" content="Fenêtres : cuisine, histoires, personnages, musique et images pour faire une vraie pause au milieu de Contre-évidence."/>
+<meta name="theme-color" content="#0b0f12"/>
+<link href="assets/logo.png" rel="icon" type="image/png"/>
+<link href="assets/style.css" rel="stylesheet"/>
+<link href="assets/navigation.css" rel="stylesheet"/>
+<link href="assets/brand.css?v=20260808-15" rel="stylesheet"/>
+<link href="assets/hors-cadre.css?v=20260808-15" rel="stylesheet"/>
+<style>
+.pause-page{background:#f1eee6;color:#15191d}.pause-hero{padding:5.7rem 0 5.1rem;color:#fff;background:radial-gradient(circle at 82% 18%,rgba(212,171,86,.23),transparent 28%),radial-gradient(circle at 18% 82%,rgba(95,130,145,.15),transparent 30%),linear-gradient(135deg,#07090b,#111820 58%,#08090b);border-bottom:3px solid #d4ab56}.pause-hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}.pause-kicker{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;color:#e8c979;font-size:.76rem;font-weight:950;letter-spacing:.17em;text-transform:uppercase}.pause-kicker:before{content:'';width:42px;height:3px;background:#d4ab56}.pause-hero h1{max-width:850px;margin:0 0 1.2rem;font-size:clamp(3rem,6.6vw,6.6rem);line-height:.9;letter-spacing:-.055em}.pause-hero h1 em{display:block;color:#d4ab56;font-style:normal}.pause-hero .lead{max-width:730px;margin:0;color:#d9e0e4;font-size:1.13rem;line-height:1.72}.pause-window{position:relative;min-height:360px;border:1px solid rgba(232,201,121,.5);border-radius:150px 150px 18px 18px;overflow:hidden;background:linear-gradient(180deg,#1c2c36 0%,#587580 45%,#e6bd74 46%,#1b1410 100%);box-shadow:0 30px 70px rgba(0,0,0,.32)}.pause-window:before{content:'';position:absolute;left:50%;top:0;bottom:0;width:6px;transform:translateX(-50%);background:#0b0f12}.pause-window:after{content:'';position:absolute;left:0;right:0;top:46%;height:6px;background:#0b0f12}.pause-moon{position:absolute;right:18%;top:16%;width:52px;height:52px;border-radius:50%;background:#fff2bd;box-shadow:0 0 36px rgba(255,242,189,.55)}.pause-window-copy{position:absolute;z-index:2;left:1.3rem;right:1.3rem;bottom:1.25rem;padding:1rem 1.05rem;border-radius:14px;background:rgba(6,8,10,.76)}.pause-window-copy strong{display:block;color:#e8c979}.pause-window-copy span{display:block;margin-top:.28rem;color:#f4f5f5;line-height:1.45}.pause-intro{padding:4.2rem 0 1.3rem}.pause-intro h2{margin:.25rem 0 .65rem;font-size:clamp(2rem,4vw,3.6rem);letter-spacing:-.04em}.pause-intro p{max-width:820px;color:#4d5961;font-size:1.04rem;line-height:1.7}.pause-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1rem 1.1rem;padding-bottom:4.4rem}.pause-card{position:relative;overflow:hidden;min-height:290px;padding:1.75rem;border-radius:24px;text-decoration:none;color:#fff;box-shadow:0 16px 38px rgba(16,24,32,.12);border:1px solid rgba(255,255,255,.12);transition:.22s}.pause-card:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(16,24,32,.19)}.pause-card .meta{display:flex;justify-content:space-between;gap:.8rem;margin-bottom:1.2rem;color:#efd991;font-size:.74rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.pause-card h3{max-width:650px;margin:.2rem 0 .7rem;font-size:clamp(1.75rem,3vw,2.8rem);line-height:1.02;letter-spacing:-.035em}.pause-card p{max-width:650px;margin:0;color:#dce2e5;line-height:1.62}.pause-card .go{display:inline-block;margin-top:1.25rem;color:#f4dda0;font-weight:900}.pause-card.big{grid-column:span 6;min-height:390px}.pause-card.third{grid-column:span 4}.pause-card.food{background:radial-gradient(circle at 80% 16%,rgba(208,164,71,.32),transparent 30%),linear-gradient(145deg,#342316,#111417 72%)}.pause-card.people{background:radial-gradient(circle at 83% 18%,rgba(80,129,154,.36),transparent 30%),linear-gradient(145deg,#10232d,#0b1014 72%)}.pause-card.music{background:radial-gradient(circle at 78% 20%,rgba(130,112,185,.38),transparent 27%),linear-gradient(145deg,#171325,#090d11 70%)}.pause-card.play{background:radial-gradient(circle at 75% 18%,rgba(73,145,166,.36),transparent 28%),linear-gradient(145deg,#0e2630,#0b1014 72%)}.pause-card.gallery{background:radial-gradient(circle at 80% 18%,rgba(212,171,86,.28),transparent 28%),linear-gradient(145deg,#15131d,#0a0d10 72%)}.big-word{position:absolute;right:-.4rem;bottom:-1rem;color:rgba(255,255,255,.045);font-size:6.8rem;font-weight:950;letter-spacing:-.08em;pointer-events:none}.micro{margin-bottom:4.4rem;padding:2.4rem;border-radius:26px;text-align:center;color:#fff;background:linear-gradient(135deg,#0b1115,#161d22);border:1px solid rgba(212,171,86,.42);box-shadow:0 20px 50px rgba(16,24,32,.16)}.micro span{display:block;color:#e8c979;font-size:.76rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.micro h2{margin:.55rem auto .7rem;max-width:760px;font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.04em}.micro p{max-width:680px;margin:0 auto;color:#ccd4d8;line-height:1.65}.micro button{margin-top:1.2rem;padding:.8rem 1.1rem;border:0;border-radius:999px;background:#d4ab56;color:#0b0d0e;font:inherit;font-weight:900;cursor:pointer}.micro-result{min-height:50px;margin:1rem auto 0;max-width:680px;color:#fff;font-size:1.08rem;font-weight:750;line-height:1.5}.manifesto{padding:0 0 4.5rem;text-align:center;color:#58636a}.manifesto strong{color:#8a6724}@media(max-width:900px){.pause-hero-grid{grid-template-columns:1fr}.pause-window{min-height:300px;max-width:520px}.pause-card.big,.pause-card.third{grid-column:span 12}}@media(max-width:540px){.pause-hero{padding-top:3.5rem}.pause-hero h1{font-size:3.6rem}.pause-card{padding:1.4rem}.pause-window{min-height:270px}.big-word{font-size:5rem}}
+</style>
 </head>
 <body class="pause-page hors-cadre-page">
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header id="site-header"></header>
 <main id="contenu">
-  <section class="pause-hero">
-    <div class="container pause-hero-grid">
-      <div>
-        <div class="pause-kicker">Hors cadre · Fenêtres</div>
-        <h1>Ici, rien à <em>optimiser.</em></h1>
-        <p class="lead">Vous avez assez réfléchi pour l’instant. Prenez deux, cinq ou quinze minutes. Écoutez quelque chose. Lisez une histoire. Cuisinez. Regardez ailleurs. Cette page n’a rien à vous vendre et aucune décision à vous faire prendre.</p>
-        <div class="pause-times"><a href="#deux-minutes">J’ai 2 minutes</a><a href="#cinq-minutes">J’ai 5 minutes</a><a href="#quinze-minutes">J’ai 15 minutes</a></div>
-      </div>
-      <aside class="pause-window" aria-label="Fenêtre stylisée sur la nuit">
-        <span class="pause-moon"></span>
-        <div class="pause-window-copy"><strong>FERMER LES ONGLETS.</strong><span>En ouvrir un autre, juste pour le plaisir.</span></div>
-      </aside>
-    </div>
-  </section>
-
-  <section class="pause-intro">
-    <div class="container">
-      <div class="section-head"><div class="kicker">Choisissez votre parenthèse</div><h2>Pas un autre dossier à lire.</h2><p>Une bonne fenêtre ne vous apprend pas forcément quelque chose d’utile. Elle vous fait simplement passer quelques minutes ailleurs.</p></div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container pause-grid">
-      <a class="pause-card large story" id="cinq-minutes" href="#histoire">
-        <div class="meta"><span>Une histoire</span><span>≈ 4 min</span></div>
-        <h3>Le jour où l’Australie a déclaré la guerre… aux émeus.</h3>
-        <p>Des soldats, deux mitrailleuses, des milliers d’oiseaux très rapides et une opération militaire qui tourne à la comédie nationale.</p>
-        <span class="go">Lire l’histoire ↓</span>
-      </a>
-
-      <a class="pause-card medium music" href="https://www.youtube.com/watch?v=eMnxjdGTK4w" target="_blank" rel="noopener">
-        <div class="meta"><span>Écouter</span><span>≈ 3 min</span></div>
-        <h3>Trois minutes avec Erik Satie.</h3>
-        <p><em>Gymnopédie n°1.</em> Rien à comprendre. Aucun résumé. Montez juste un peu le son.</p>
-        <span class="go">Écouter sur YouTube ↗</span>
-      </a>
-
-      <a class="pause-card third food" id="quinze-minutes" href="#cuisine">
-        <div class="meta"><span>Cuisiner</span><span>≈ 15 min</span></div>
-        <h3>Pâtes au citron.</h3>
-        <p>Cinq ingrédients, une poêle, et quelque chose de vraiment bon avant d’avoir le temps de commander.</p>
-        <span class="go">Voir la recette ↓</span>
-      </a>
-
-      <a class="pause-card third play" id="deux-minutes" href="#minute">
-        <div class="meta"><span>Décrocher</span><span>≈ 1 min</span></div>
-        <h3>Une minute, au hasard.</h3>
-        <p>Pas de score, pas de performance, pas de compte à rebours. Juste une petite consigne inutile.</p>
-        <span class="go">Tirer une pause ↓</span>
-      </a>
-
-      <a class="pause-card third gallery" href="hors-cadre-images.html">
-        <div class="meta"><span>Regarder</span><span>À votre rythme</span></div>
-        <h3>La galerie.</h3>
-        <p>Les visuels Contre-évidence restent ici, mais ils ne sont plus seuls dans la pièce.</p>
-        <span class="go">Parcourir la galerie →</span>
-      </a>
-    </div>
-  </section>
-
-  <section id="histoire">
-    <div class="container">
-      <article class="story-body">
-        <div class="eyebrow">Une histoire · Australie, 1932</div>
-        <h2>Deux mitrailleuses contre vingt mille émeus.</h2>
-        <p>Après la Première Guerre mondiale, d’anciens soldats australiens deviennent agriculteurs en Australie-Occidentale. Puis arrivent les émeus. Beaucoup d’émeus. Les oiseaux traversent les terres cultivées, dévorent les récoltes et endommagent les clôtures. Les fermiers demandent de l’aide.</p>
-        <p>La réponse est assez extraordinaire : en novembre 1932, l’armée envoie le major G. P. W. Meredith, deux soldats et deux mitrailleuses Lewis. Sur le papier, l’affaire semble vite réglée. Dans les champs, beaucoup moins.</p>
-        <div class="pull">Un émeu peut courir autour de 50 km/h. Et, détail gênant, un groupe d’émeus ne se comporte pas comme une unité militaire qui attend sagement d’être visée.</div>
-        <p>Les oiseaux se dispersent, changent de direction, disparaissent dans le terrain. Une mitrailleuse s’enraye. Les tirs sont difficiles. Après plusieurs opérations et des milliers de cartouches, le bilan est suffisamment mauvais pour que la campagne soit interrompue. La presse s’en amuse et l’épisode entrera dans l’histoire sous le surnom de « guerre des émeus ».</p>
-        <p>Les émeus, eux, n’ont évidemment signé aucun traité de paix.</p>
-        <small>Parenthèse historique : l’épisode est réel ; le terme « guerre » est le surnom populaire donné à l’opération militaire.</small>
-      </article>
-    </div>
-  </section>
-
-  <section id="cuisine">
-    <div class="container">
-      <article class="story-body recipe">
-        <div>
-          <div class="eyebrow">Cuisine · 15 minutes</div>
-          <h2>Pâtes au citron.</h2>
-          <p>Le genre de recette qui donne l’impression d’avoir fait davantage que ce qu’on a réellement fait.</p>
-          <h3>Pour 2 personnes</h3>
-          <ul>
-            <li>200 g de pâtes</li>
-            <li>1 citron non traité</li>
-            <li>35 g de beurre</li>
-            <li>40 g de parmesan</li>
-            <li>Poivre noir</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Le seul point important : garder l’eau des pâtes.</h3>
-          <ol>
-            <li>Faites cuire les pâtes dans une eau bien salée. Avant de les égoutter, gardez une grande tasse d’eau de cuisson.</li>
-            <li>Dans une grande poêle à feu doux, faites fondre le beurre avec le zeste fin du citron.</li>
-            <li>Ajoutez les pâtes, un peu d’eau de cuisson et mélangez vivement. L’amidon de l’eau va lier la sauce.</li>
-            <li>Coupez le feu. Ajoutez le parmesan, encore un peu d’eau si nécessaire, puis le jus d’un demi-citron.</li>
-            <li>Poivrez généreusement. Goûtez. Ajoutez du citron seulement si vous en avez envie.</li>
-          </ol>
-          <p><strong>Le piège :</strong> faire bouillir le parmesan. Il préfère fondre tranquillement hors du feu plutôt que devenir une poignée de petits grumeaux vexés.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="minute">
-    <div class="container">
-      <div class="micro-pause">
-        <span>Une minute inutile</span>
-        <h2>Vous n’avez rien à réussir ici.</h2>
-        <p>Cliquez. La page vous donnera une seule petite parenthèse. Puis retournez à ce que vous faisiez — ou pas.</p>
-        <button id="pauseButton" type="button">Ouvrir une fenêtre</button>
-        <div class="micro-result" id="pauseResult" aria-live="polite"></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="container pause-footnote"><strong>Fenêtres</strong> changera régulièrement. Le principe, lui, reste le même : tout ne mérite pas d’être transformé en objectif.</div>
+<section class="pause-hero"><div class="container pause-hero-grid"><div><div class="pause-kicker">Hors cadre · Fenêtres</div><h1>Ici, rien à <em>optimiser.</em></h1><p class="lead">Vous avez assez réfléchi pour l’instant. Cuisinez quelque chose. Rencontrez quelqu’un. Écoutez trois minutes de musique. Regardez ailleurs. Cette partie du site n’a aucune décision à vous faire prendre.</p></div><aside class="pause-window" aria-label="Fenêtre stylisée"><span class="pause-moon"></span><div class="pause-window-copy"><strong>FERMER LES ONGLETS.</strong><span>En ouvrir un autre, juste pour le plaisir.</span></div></aside></div></section>
+<section class="pause-intro"><div class="container"><div class="kicker">Choisissez votre parenthèse</div><h2>Une rubrique où l’on peut vraiment rester.</h2><p>Fenêtres n’est plus une case vide ni une galerie isolée. Elle commence à devenir un petit lieu à part : des recettes, des personnages, des histoires, de la musique et des choses simplement agréables à regarder.</p></div></section>
+<section><div class="container pause-grid">
+<a class="pause-card big food" href="hors-cadre-cuisine.html"><span class="big-word">CUISINE</span><div class="meta"><span>Le carnet personnel</span><span>4 recettes + 2 à l’atelier</span></div><h3>Des recettes qui ont déjà une histoire.</h3><p>Pâtes calabraises à la ’nduja, linguine au bleu, lasagnes champignons–gorgonzola, rôti de porc aux champignons et sauce au fromage… Pas une collection générique : le carnet réellement travaillé ici.</p><span class="go">Entrer en cuisine →</span></a>
+<a class="pause-card big people" href="hors-cadre-decouvertes.html"><span class="big-word">RÉCITS</span><div class="meta"><span>Histoires & personnages</span><span>4 rencontres</span></div><h3>Des gens intéressants sans leur construire une statue.</h3><p>Naval Ravikant, Shane Parrish, Morgan Housel, Ali Abdaal : leurs trajectoires, une idée à garder et, à chaque fois, un contrepoint.</p><span class="go">Rencontrer les personnages →</span></a>
+<a class="pause-card third music" href="https://www.youtube.com/watch?v=eMnxjdGTK4w" target="_blank" rel="noopener"><div class="meta"><span>Écouter</span><span>≈ 3 min</span></div><h3>Erik Satie.</h3><p><em>Gymnopédie n°1.</em> Rien à comprendre, rien à retenir. Juste trois minutes.</p><span class="go">Écouter ↗</span></a>
+<a class="pause-card third play" href="#minute"><div class="meta"><span>Décrocher</span><span>≈ 1 min</span></div><h3>Une minute inutile.</h3><p>Une toute petite consigne tirée au hasard. Aucun score, aucune performance.</p><span class="go">Tirer une pause ↓</span></a>
+<a class="pause-card third gallery" href="hors-cadre-images.html"><div class="meta"><span>Regarder</span><span>À votre rythme</span></div><h3>La galerie.</h3><p>Les visuels Contre-évidence restent ici, mais ils ne portent plus la rubrique à eux seuls.</p><span class="go">Parcourir la galerie →</span></a>
+</div></section>
+<section id="minute"><div class="container micro"><span>Une minute inutile</span><h2>Faites quelque chose qui ne servira à rien.</h2><p>Le bouton choisit pour vous. Vous pouvez aussi ne rien faire, ce qui est parfaitement conforme au règlement de cette page.</p><button type="button" id="pause-button">Tirer une pause</button><div class="micro-result" id="pause-result" aria-live="polite"></div></div></section>
+<div class="container manifesto"><strong>Fenêtres.</strong> Une respiration n’a pas besoin de justification.</div>
 </main>
 <footer><div class="container foot"><span>© <span data-year></span> Contre-évidence</span><span><a href="methode-sources.html">Méthode & sources</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="mentions.html">Mentions</a></span></div></footer>
 <script src="assets/navigation-v3.js?v=20260808-15"></script>
-<script>
-  (()=>{
-    const ideas=[
-      'Regardez par la fenêtre jusqu’à trouver quelque chose qui bouge. Suivez-le des yeux sans sortir votre téléphone.',
-      'Écoutez pendant une minute le son le plus lointain que vous arrivez à entendre.',
-      'Choisissez un objet banal près de vous et imaginez la personne qui l’a dessiné pour la première fois.',
-      'Levez-vous, buvez un verre d’eau et ne faites absolument rien d’autre pendant que vous le buvez.',
-      'Trouvez dans la pièce trois choses que vous n’aviez pas vraiment regardées aujourd’hui.',
-      'Fermez les yeux. Essayez de reconstituer de mémoire la façade de votre maison ou de votre immeuble.',
-      'Mettez un morceau que vous aimiez il y a dix ans. Pas celui que l’algorithme vous propose.',
-      'Pendant une minute, interdiction d’être efficace. Voilà. C’est déjà presque fini.'
-    ];
-    const b=document.getElementById('pauseButton'),r=document.getElementById('pauseResult');
-    if(!b||!r)return;
-    b.addEventListener('click',()=>{let i=Math.floor(Math.random()*ideas.length);if(r.dataset.last==i)i=(i+1)%ideas.length;r.dataset.last=i;r.textContent=ideas[i];});
-  })();
-</script>
+<script>const pauses=["Regardez par une vraie fenêtre pendant une minute. Pas votre téléphone.","Mettez un morceau que vous connaissez par cœur et écoutez seulement le début.","Allez boire un verre d’eau sans emporter d’écran.","Choisissez au hasard un objet près de vous et souvenez-vous depuis quand vous l’avez.","Fermez les yeux trente secondes. C’est déjà beaucoup plus long qu’on ne croit.","Écrivez sur un papier le nom d’un plat que vous aimeriez manger cette semaine.","Ne faites absolument rien pendant une minute. Oui, c’est la consigne."];document.getElementById('pause-button')?.addEventListener('click',()=>{document.getElementById('pause-result').textContent=pauses[Math.floor(Math.random()*pauses.length)]});</script>
 </body>
 </html>
