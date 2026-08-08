@@ -64,8 +64,8 @@
   if (q) header.querySelector('.ce-search input').value = q;
 
   let current = path.includes('/hors-cadre') ? 'hors-cadre'
-    : path.includes('/themes/argent') || path.includes('/parcours-argent') || path.includes('/marches-analyses-avancees') || path.includes('/dossiers/finances-') || path.includes('/dossiers/audit-budget') ? 'patrimoine'
-    : path.includes('/themes/travail') || path.includes('/themes/entreprendre') || path.includes('/parcours-vie-professionnelle') || path.includes('/moins-de-25-ans') || path.includes('/videos') || path.includes('/dossiers/plan-30-jours') || path.includes('/dossiers/calculer-prix') || path.includes('/dossiers/debloquer') ? 'vie-pro'
+    : path.includes('/themes/argent') || path.includes('/parcours-argent') || path.includes('/marches-analyses-avancees') || path.includes('/dossiers/finances-') || path.includes('/dossiers/audit-budget') || path.includes('/dossiers/liquidites-reserve') || path.includes('/dossiers/rembourser-credit') || path.includes('/dossiers/assurer-ou-autoassurer') ? 'patrimoine'
+    : path.includes('/themes/travail') || path.includes('/themes/entreprendre') || path.includes('/parcours-vie-professionnelle') || path.includes('/moins-de-25-ans') || path.includes('/videos') || path.includes('/dossiers/plan-30-jours') || path.includes('/dossiers/calculer-prix') || path.includes('/dossiers/debloquer') || path.includes('/dossiers/negocier-salaire') || path.includes('/dossiers/dependance-gros-client') || path.includes('/dossiers/tresorerie-bfr') ? 'vie-pro'
     : '';
 
   if (!current) {
@@ -103,7 +103,7 @@
       heroContainer.appendChild(reading);
     }
 
-    const updated = /\/dossiers\/finances-|\/dossiers\/(audit-budget|calculer-prix-minimum-rentable|plan-30-jours|protocole-verifier-reponse-ia|decider-sans-tourner-en-rond|debloquer-demarche-administrative)|\/(articles)\/(reconversion-ne-commence-pas-formation|tester-metier-avant-investir|sans-diplome-chemins-alternatifs|competences-transferables|competences-invisibles-preuves|premiere-chance-sans-experience|retrouver-emploi-apres-interruption|repartir-sans-recommencer-zero|grosse-entree-argent-que-faire|construire-epargne-de-zero|clients-interesses-personne-nachete|travailler-beaucoup-gagner-peu-prix)\.html/.test(path);
+    const updated = /\/dossiers\/finances-|\/dossiers\/(audit-budget|liquidites-reserve-securite|rembourser-credit-ou-investir|assurer-ou-autoassurer-risques|calculer-prix-minimum-rentable|plan-30-jours|negocier-salaire-responsabilites|dependance-gros-client|tresorerie-bfr-entreprise|protocole-verifier-reponse-ia|decider-sans-tourner-en-rond|debloquer-demarche-administrative)|\/(articles)\/(reconversion-ne-commence-pas-formation|tester-metier-avant-investir|sans-diplome-chemins-alternatifs|competences-transferables|competences-invisibles-preuves|premiere-chance-sans-experience|retrouver-emploi-apres-interruption|repartir-sans-recommencer-zero|grosse-entree-argent-que-faire|construire-epargne-de-zero|clients-interesses-personne-nachete|travailler-beaucoup-gagner-peu-prix)\.html/.test(path);
     if (updated && heroContainer) {
       const update = document.createElement('div');
       update.className = 'ce-update-meta';
@@ -114,7 +114,7 @@
       meta.content = '2026-08-08';
       let og = document.querySelector('meta[property="article:modified_time"]');
       if (!og) { og = document.createElement('meta'); og.setAttribute('property','article:modified_time'); document.head.appendChild(og); }
-      og.content = '2026-08-08T13:24:00+02:00';
+      og.content = '2026-08-08T13:37:00+02:00';
     }
 
     const answerTitle = longContent.querySelector('.answer-box h2');
