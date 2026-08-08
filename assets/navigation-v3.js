@@ -9,15 +9,15 @@
     document.head.appendChild(analytics);
   }
 
-  if (document.documentElement.dataset.ceFlatNav === '32') return;
-  document.documentElement.dataset.ceFlatNav = '32';
+  if (document.documentElement.dataset.ceFlatNav === '33') return;
+  document.documentElement.dataset.ceFlatNav = '33';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '32';
+  style.dataset.ceFlatNav = '33';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.34);box-shadow:0 5px 18px rgba(0,0,0,.28);font-family:inherit}
@@ -69,10 +69,11 @@
   const socials = [['YouTube','https://www.youtube.com/channel/UCxzyhABkEwWcGxmLyQvXISA'],['Instagram','https://www.instagram.com/contre_evidence/'],['Facebook','https://www.facebook.com/profile.php?id=61592757877017'],['TikTok','https://www.tiktok.com/@contreevidence']];
 
   header.className = 'ce-flat-header';
-  header.innerHTML = `<div class="ce-flat-shell ce-flat-top"><a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260808-3" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>PATRIMOINE · VIE PROFESSIONNELLE · HORS CADRE</small></span></a><form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search"><input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, formation, immobilier, épargne…" autocomplete="off"><button type="submit">Rechercher</button></form><div class="ce-flat-actions"><a class="ce-start-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div></div><nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
+  header.innerHTML = `<div class="ce-flat-shell ce-flat-top"><a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260808-4" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>PATRIMOINE · VIE PROFESSIONNELLE · HORS CADRE</small></span></a><form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search"><input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, formation, immobilier, épargne…" autocomplete="off"><button type="submit">Rechercher</button></form><div class="ce-flat-actions"><a class="ce-start-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div></div><nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
 
   const path = window.location.pathname;
-  const currentQuery = new URLSearchParams(window.location.search).get('q');
+  const params = new URLSearchParams(window.location.search);
+  const currentQuery = params.get('q');
   const searchInput = header.querySelector('.ce-search input');
   if (currentQuery && searchInput) searchInput.value = currentQuery;
 
@@ -89,6 +90,14 @@
   if (path.includes('/themes/entreprendre')) {
     const kicker = document.querySelector('.article-hero .kicker');
     if (kicker) kicker.textContent = 'Vie professionnelle · Entrepreneuriat';
+  }
+
+  if (path.includes('/bibliotheque')) {
+    document.querySelector('.library-editorial-note')?.remove();
+    if (!params.has('level')) {
+      const depthLabel = [...document.querySelectorAll('.library-tools .filter-label')].find(el => el.textContent.trim().startsWith('Profondeur'));
+      depthLabel?.closest('.filter-group')?.remove();
+    }
   }
 
   if (!/\/(index\.html)?$/.test(path)) {
