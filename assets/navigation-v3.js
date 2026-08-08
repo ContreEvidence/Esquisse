@@ -9,15 +9,15 @@
     document.head.appendChild(analytics);
   }
 
-  if (document.documentElement.dataset.ceFlatNav === '33') return;
-  document.documentElement.dataset.ceFlatNav = '33';
+  if (document.documentElement.dataset.ceFlatNav === '34') return;
+  document.documentElement.dataset.ceFlatNav = '34';
 
   const header = document.querySelector('header');
   if (!header) return;
 
   document.querySelectorAll('style[data-ce-flat-nav]').forEach(node => node.remove());
   const style = document.createElement('style');
-  style.dataset.ceFlatNav = '33';
+  style.dataset.ceFlatNav = '34';
   style.textContent = `
     .ce-flat-header,.ce-flat-header *{box-sizing:border-box}
     .ce-flat-header{position:sticky!important;top:0;z-index:5000;width:100%;background:#080809!important;color:#fff;border-bottom:1px solid rgba(232,201,121,.34);box-shadow:0 5px 18px rgba(0,0,0,.28);font-family:inherit}
@@ -69,7 +69,7 @@
   const socials = [['YouTube','https://www.youtube.com/channel/UCxzyhABkEwWcGxmLyQvXISA'],['Instagram','https://www.instagram.com/contre_evidence/'],['Facebook','https://www.facebook.com/profile.php?id=61592757877017'],['TikTok','https://www.tiktok.com/@contreevidence']];
 
   header.className = 'ce-flat-header';
-  header.innerHTML = `<div class="ce-flat-shell ce-flat-top"><a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260808-4" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>PATRIMOINE · VIE PROFESSIONNELLE · HORS CADRE</small></span></a><form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search"><input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, formation, immobilier, épargne…" autocomplete="off"><button type="submit">Rechercher</button></form><div class="ce-flat-actions"><a class="ce-start-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div></div><nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
+  header.innerHTML = `<div class="ce-flat-shell ce-flat-top"><a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260808-5" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>PATRIMOINE · VIE PROFESSIONNELLE · HORS CADRE</small></span></a><form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search"><input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, formation, immobilier, épargne…" autocomplete="off"><button type="submit">Rechercher</button></form><div class="ce-flat-actions"><a class="ce-start-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div></div><nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,path,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(path)}">${label}</a>`).join('')}</div></nav>`;
 
   const path = window.location.pathname;
   const params = new URLSearchParams(window.location.search);
@@ -77,10 +77,20 @@
   const searchInput = header.querySelector('.ce-search input');
   if (currentQuery && searchInput) searchInput.value = currentQuery;
 
-  const current = path.includes('/hors-cadre') ? 'hors-cadre'
+  let current = path.includes('/hors-cadre') ? 'hors-cadre'
     : path.includes('/themes/argent') || path.includes('/parcours-argent') || path.includes('/marches-analyses-avancees') || path.includes('/dossiers/finances-') || path.includes('/dossiers/audit-budget') ? 'patrimoine'
     : path.includes('/themes/travail') || path.includes('/themes/entreprendre') || path.includes('/parcours-vie-professionnelle') || path.includes('/moins-de-25-ans') || path.includes('/videos') || path.includes('/dossiers/plan-30-jours') || path.includes('/dossiers/calculer-prix') ? 'vie-pro'
     : '';
+
+  if (!current) {
+    const themeHref = document.querySelector('.theme-link')?.getAttribute('href') || '';
+    const kickerText = document.querySelector('.article-hero .kicker')?.textContent || '';
+    const backHref = document.querySelector('a.back')?.getAttribute('href') || '';
+    const signals = `${themeHref} ${kickerText} ${backHref}`.toLowerCase();
+    if (/argent|finance|patrimoine|immobilier|investissement|retraite|transmission/.test(signals)) current = 'patrimoine';
+    else if (/travail|vie professionnelle|entreprendre|entrepreneuriat|emploi|carrière|formation|reconversion/.test(signals)) current = 'vie-pro';
+  }
+
   if (current) header.querySelector(`[data-key="${current}"]`)?.classList.add('is-current');
 
   if (path.includes('/themes/travail')) {
