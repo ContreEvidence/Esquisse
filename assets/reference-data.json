@@ -1,6 +1,6 @@
 {
   "meta": {
-    "schemaVersion": 2,
+    "schemaVersion": 3,
     "lastChecked": "2026-08-08",
     "country": "FR",
     "note": "Données de référence centralisées pour les simulateurs Contre-évidence. Les taux de marché sont des repères statistiques et restent modifiables par l'utilisateur.",
@@ -25,6 +25,17 @@
       "sourceLabel": "Banque de France — Crédits aux particuliers, mai 2026",
       "reuseTerms": "https://www.banque-france.fr/fr/infos-legales",
       "reuseBasis": "La Banque de France autorise, sauf spécification contraire, la réutilisation de ses données dont elle est l’unique source, sous réserve notamment de préserver l’intégrité des données et de faire apparaître la source et la date de mise à jour."
+    }
+  },
+  "regulatedSavings": {
+    "livretA": {
+      "annualRate": 0.017,
+      "effectiveSince": "2026-08-01",
+      "publishedAt": "2026-07-15",
+      "scope": "Taux annuel du Livret A en vigueur à compter du 1er août 2026",
+      "source": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/livret-comment-ca-marche",
+      "sourceLabel": "Ministère de l’Économie — Livret A : comment ça marche ?",
+      "reuseBasis": "Information publique officielle ; la source et la date d’effet sont conservées."
     }
   }
 }
