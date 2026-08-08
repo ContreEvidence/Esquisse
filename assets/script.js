@@ -14,13 +14,16 @@
     document.head.appendChild(analytics);
   }
 
-  // Compatibilité avec les anciennes pages : toujours charger la navigation courante.
-  if (!document.documentElement.dataset.ceNavLoader20260808) {
-    document.documentElement.dataset.ceNavLoader20260808 = '1';
+  const loadCurrentNavigation = suffix => {
     const nav = document.createElement('script');
-    nav.src = new URL('navigation-v3.js?v=20260808-10', currentScript?.src || window.location.href).href;
+    nav.src = new URL(`navigation-v3.js?v=20260808-10${suffix || ''}`, currentScript?.src || window.location.href).href;
     nav.defer = true;
     document.head.appendChild(nav);
+  };
+
+  if (!document.documentElement.dataset.ceNavLoader20260808) {
+    document.documentElement.dataset.ceNavLoader20260808 = '1';
+    loadCurrentNavigation('');
   }
 
   if (/\/bibliotheque\.html$/.test(path) && !document.documentElement.dataset.ceLibraryReload20260808) {
@@ -28,7 +31,6 @@
     document.title = 'Bibliothèque — Patrimoine et vie professionnelle | Contre-évidence';
     const description = document.querySelector('meta[name="description"]');
     if (description) description.content = 'Recherchez les guides, dossiers et références de Contre-évidence par problème concret, en Patrimoine ou Vie professionnelle.';
-    // L'ancien HTML appelle encore une version antérieure : la version courante repasse après.
     setTimeout(() => {
       const library = document.createElement('script');
       library.src = new URL('library.js?v=20260808-10', currentScript?.src || window.location.href).href;
@@ -49,4 +51,21 @@
   });
 
   document.documentElement.dataset.ceArticleUi = 'navigation-v3';
+
+  // Si un ancien article-v3.js est encore présent dans le cache du navigateur,
+  // il peut recréer ses outils après le nouveau moteur et renommer les ancres.
+  // On ne recharge le moteur courant que lorsqu'une régression est réellement détectée.
+  window.addEventListener('load', () => {
+    const legacy = document.querySelector('.article-tools, .reading-progress');
+    const toc = document.querySelector('.ce-article-toc');
+    const brokenToc = toc && [...toc.querySelectorAll('a[href^="#"]')].some(a => {
+      const id = decodeURIComponent(a.getAttribute('href').slice(1));
+      return id && !document.getElementById(id);
+    });
+    if (legacy || brokenToc) {
+      document.querySelectorAll('.article-tools, .reading-progress').forEach(el => el.remove());
+      delete document.documentElement.dataset.ceNavigation20260808;
+      loadCurrentNavigation('&repair=1');
+    }
+  }, {once:true});
 })();
