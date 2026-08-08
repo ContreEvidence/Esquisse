@@ -3,8 +3,6 @@
 
   const contentCatalog = Array.isArray(window.CE_LIBRARY_CATALOG) ? window.CE_LIBRARY_CATALOG : [];
   const toolsCatalog = Array.isArray(window.CE_TOOLS_CATALOG) ? window.CE_TOOLS_CATALOG : [];
-  // La bibliothèque reste éditoriale par défaut : guides et dossiers gardent leur ordre de curation.
-  // Les outils sont accessibles par filtre et remontent lorsqu'une recherche les rend pertinents.
   const catalog = [...contentCatalog, ...toolsCatalog];
   const list = document.querySelector('.articles');
   const tools = document.querySelector('.library-tools');
@@ -18,14 +16,14 @@
 
   list.innerHTML = items.map((item,index) => `<article class="article-card filter-card" data-domain="${item.d}" data-content-type="${item.t}" data-tags="${item.k || ''}" data-original-order="${index}"><div><div class="card-meta"><span class="level-badge">${typeLabel(item.t)}</span><span class="theme-chip">${item.c}</span></div><h3>${item.n}</h3><p>${item.x}</p></div><a href="${item.h}">${actionLabel(item.t)} →</a></article>`).join('');
 
-  tools.innerHTML = `<label class="library-search"><span class="filter-label">Rechercher :</span><input type="search" placeholder="Ex. intérêts composés, capacité d’emprunt, formation rentable…" aria-label="Rechercher dans la bibliothèque"></label><div class="filter-group domain-filters"><span class="filter-label">Domaine :</span><button aria-pressed="true" class="filter-btn" data-domain="all">Tous</button><button aria-pressed="false" class="filter-btn" data-domain="patrimoine">Patrimoine</button><button aria-pressed="false" class="filter-btn" data-domain="vie-pro">Vie professionnelle</button></div><div class="filter-group type-filters"><span class="filter-label">Format :</span><button aria-pressed="true" class="filter-btn" data-type="all">Tous</button><button aria-pressed="false" class="filter-btn" data-type="outil">Outils</button><button aria-pressed="false" class="filter-btn" data-type="guide">Guides</button><button aria-pressed="false" class="filter-btn" data-type="dossier">Dossiers</button></div><div class="results-count" data-results-count></div>`;
+  tools.innerHTML = `<label class="library-search"><span class="filter-label">Rechercher :</span><input type="search" placeholder="Ex. allocation, reconversion, immobilier, prix rentable…" aria-label="Rechercher dans la bibliothèque"></label><div class="filter-group domain-filters"><span class="filter-label">Domaine :</span><button aria-pressed="true" class="filter-btn" data-domain="all">Tous</button><button aria-pressed="false" class="filter-btn" data-domain="patrimoine">Patrimoine</button><button aria-pressed="false" class="filter-btn" data-domain="vie-pro">Vie professionnelle</button></div><div class="filter-group type-filters"><span class="filter-label">Format :</span><button aria-pressed="true" class="filter-btn" data-type="editorial">Guides & dossiers</button><button aria-pressed="false" class="filter-btn" data-type="outil">Outils</button><button aria-pressed="false" class="filter-btn" data-type="all">Tous</button><button aria-pressed="false" class="filter-btn" data-type="guide">Guides</button><button aria-pressed="false" class="filter-btn" data-type="dossier">Dossiers</button></div><div class="results-count" data-results-count></div>`;
 
   const style = document.createElement('style');
   style.textContent = `.library-tools{display:grid;gap:.75rem;margin-bottom:1.2rem}.library-search{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}.library-search input{min-width:min(560px,82vw);padding:.72rem .82rem;border:1px solid rgba(16,24,32,.2);border-radius:10px;font:inherit}.filter-group{display:flex;gap:.45rem;align-items:center;flex-wrap:wrap}.filter-card.is-hidden{display:none!important}.results-count{font-weight:800;color:#657078}`;
   document.head.appendChild(style);
 
   const params = new URLSearchParams(location.search);
-  const state = {domain:params.get('domain') || 'all',type:params.get('type') || 'all',query:params.get('q') || ''};
+  const state = {domain:params.get('domain') || 'all',type:params.get('type') || (params.get('q') ? 'all' : 'editorial'),query:params.get('q') || ''};
   const aliases = {
     emploi:'candidature cv entretien recrutement recruteur travail poste',candidature:'emploi cv recrutement recruteur entretien',reconversion:'formation métier compétences emploi orientation immersion',formation:'reconversion métier diplôme compétences orientation débouchés roi vae',vae:'diplôme certification expérience formation compétences référentiel',diplome:'formation vae certification filtre recrutement qualification',
     salaire:'augmentation rémunération négociation responsabilités promotion carrière surqualification',augmentation:'salaire rémunération négociation responsabilités promotion',responsabilites:'salaire augmentation promotion périmètre carrière',promotion:'salaire responsabilités augmentation carrière visibilité',manager:'management équipe délégation responsable encadrement feedback',management:'manager équipe délégation responsable encadrement processus indicateur',invisible:'visibilité reconnaissance preuve carrière résultat',visibilite:'reconnaissance preuve carrière résultat invisible',quitter:'emploi stable rester démission mobilité carrière',demission:'quitter emploi stable mobilité carrière',senior:'50 ans expérience surqualification recruteur adaptation',surqualifie:'expérience salaire stabilité hiérarchie recruteur 50 ans',surqualification:'expérience salaire stabilité hiérarchie recruteur 50 ans',
@@ -61,16 +59,16 @@
     if(title===phrase)score+=180;else if(title.startsWith(phrase))score+=130;else if(title.includes(phrase))score+=90;
     if(chip.includes(phrase))score+=45;if(tags.includes(phrase))score+=45;if(desc.includes(phrase))score+=30;
     tokens.forEach(token=>{if(title.includes(token))score+=24;if(chip.includes(token))score+=12;if(tags.includes(token))score+=14;if(desc.includes(token))score+=7;});
-    if(card.dataset.contentType==='outil')score+=24;else if(card.dataset.contentType==='guide')score+=20;else score+=9;
+    if(card.dataset.contentType==='guide')score+=24;else if(card.dataset.contentType==='dossier')score+=20;else score+=8;
     return score;
   }
 
-  function typePriority(card){return card.dataset.contentType==='outil'?0:card.dataset.contentType==='guide'?1:2;}
+  function typePriority(card){return card.dataset.contentType==='guide'?0:card.dataset.contentType==='dossier'?1:2;}
   function sync(){domainButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.domain===state.domain)));typeButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.type===state.type)));}
-  function updateURL(){const next=new URLSearchParams();if(state.domain!=='all')next.set('domain',state.domain);if(state.type!=='all')next.set('type',state.type);if(state.query.trim())next.set('q',state.query.trim());history.replaceState(null,'',next.toString()?`?${next}`:location.pathname);}
+  function updateURL(){const next=new URLSearchParams();if(state.domain!=='all')next.set('domain',state.domain);if(state.type!=='editorial')next.set('type',state.type);if(state.query.trim())next.set('q',state.query.trim());history.replaceState(null,'',next.toString()?`?${next}`:location.pathname);}
   function apply(){
     const hasQuery=Boolean(state.query.trim());let visible=0;const ranked=[];
-    cards.forEach(card=>{const domains=(card.dataset.domain||'').split(/\s+/),domainOK=state.domain==='all'||domains.includes(state.domain),typeOK=state.type==='all'||card.dataset.contentType===state.type,score=scoreCard(card,state.query),queryOK=!hasQuery||score>0,show=domainOK&&typeOK&&queryOK;card.classList.toggle('is-hidden',!show);if(show){visible++;ranked.push({card,score,typePriority:typePriority(card),order:Number(card.dataset.originalOrder||0)});}});
+    cards.forEach(card=>{const domains=(card.dataset.domain||'').split(/\s+/),domainOK=state.domain==='all'||domains.includes(state.domain),typeOK=state.type==='editorial'?card.dataset.contentType!=='outil':state.type==='all'||card.dataset.contentType===state.type,score=scoreCard(card,state.query),queryOK=!hasQuery||score>0,show=domainOK&&typeOK&&queryOK;card.classList.toggle('is-hidden',!show);if(show){visible++;ranked.push({card,score,typePriority:typePriority(card),order:Number(card.dataset.originalOrder||0)});}});
     ranked.sort((a,b)=>hasQuery?(b.score-a.score||a.typePriority-b.typePriority||a.order-b.order):(a.order-b.order));
     ranked.forEach(x=>list.appendChild(x.card));
     count.textContent=`${visible} contenu${visible>1?'s':''}`;
