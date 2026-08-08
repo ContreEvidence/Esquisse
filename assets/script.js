@@ -5,6 +5,17 @@
   const path = window.location.pathname;
   const nested = /\/(articles|themes|dossiers)\//.test(path);
   const prefix = nested ? '../' : '';
+  const version = '20260808-16';
+
+  // Compatibilité pour les anciennes pages seulement : les pages modernes chargent
+  // navigation-v3.js directement. On évite donc tout double chargement.
+  const hasScript = name => [...document.scripts].some(s => (s.getAttribute('src') || '').includes(name));
+  const loadScript = name => {
+    const s = document.createElement('script');
+    s.src = new URL(`${name}?v=${version}`, currentScript?.src || window.location.href).href;
+    s.defer = true;
+    document.head.appendChild(s);
+  };
 
   if (!document.querySelector('script[data-cf-beacon]')) {
     const analytics = document.createElement('script');
@@ -14,34 +25,22 @@
     document.head.appendChild(analytics);
   }
 
-  const loadCurrentNavigation = suffix => {
-    const nav = document.createElement('script');
-    nav.src = new URL(`navigation-v3.js?v=20260808-10${suffix || ''}`, currentScript?.src || window.location.href).href;
-    nav.defer = true;
-    document.head.appendChild(nav);
-  };
-
-  if (!document.documentElement.dataset.ceNavLoader20260808) {
-    document.documentElement.dataset.ceNavLoader20260808 = '1';
-    loadCurrentNavigation('');
+  if (!hasScript('navigation-v3.js') && !document.documentElement.dataset.ceNavigation20260808) {
+    loadScript('navigation-v3.js');
   }
 
-  if (/\/bibliotheque\.html$/.test(path) && !document.documentElement.dataset.ceLibraryReload20260808) {
-    document.documentElement.dataset.ceLibraryReload20260808 = '1';
-    document.title = 'Bibliothèque — Patrimoine et vie professionnelle | Contre-évidence';
-    const description = document.querySelector('meta[name="description"]');
-    if (description) description.content = 'Recherchez les guides, dossiers et références de Contre-évidence par problème concret, en Patrimoine ou Vie professionnelle.';
-    setTimeout(() => {
-      const library = document.createElement('script');
-      library.src = new URL('library.js?v=20260808-10', currentScript?.src || window.location.href).href;
-      document.body.appendChild(library);
-    }, 0);
+  // Anciennes versions de la Bibliothèque pouvaient dépendre de script.js.
+  // La Bibliothèque actuelle charge son catalogue et son moteur directement.
+  if (/\/bibliotheque\.html$/.test(path)) {
+    if (!hasScript('library-catalog.js')) loadScript('library-catalog.js');
+    if (!hasScript('library.js')) loadScript('library.js');
   }
 
   document.querySelectorAll('[data-year]').forEach(el => {
     el.textContent = new Date().getFullYear();
   });
 
+  // Remplace seulement les anciens logos encore présents dans des pages historiques.
   document.querySelectorAll('img').forEach(image => {
     const src = image.getAttribute('src') || '';
     if (/logo-ce|logo\.svg|avatar\.svg/.test(src)) {
@@ -51,21 +50,4 @@
   });
 
   document.documentElement.dataset.ceArticleUi = 'navigation-v3';
-
-  // Si un ancien article-v3.js est encore présent dans le cache du navigateur,
-  // il peut recréer ses outils après le nouveau moteur et renommer les ancres.
-  // On ne recharge le moteur courant que lorsqu'une régression est réellement détectée.
-  window.addEventListener('load', () => {
-    const legacy = document.querySelector('.article-tools, .reading-progress');
-    const toc = document.querySelector('.ce-article-toc');
-    const brokenToc = toc && [...toc.querySelectorAll('a[href^="#"]')].some(a => {
-      const id = decodeURIComponent(a.getAttribute('href').slice(1));
-      return id && !document.getElementById(id);
-    });
-    if (legacy || brokenToc) {
-      document.querySelectorAll('.article-tools, .reading-progress').forEach(el => el.remove());
-      delete document.documentElement.dataset.ceNavigation20260808;
-      loadCurrentNavigation('&repair=1');
-    }
-  }, {once:true});
 })();
