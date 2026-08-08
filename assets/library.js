@@ -14,7 +14,8 @@
     'articles/lancer-activite-probleme-client.html',
     'articles/gagner-plus-epargner-moins.html',
     'articles/reconversion-apres-50-ans.html',
-    'articles/surqualification-rassurer-employeur.html'
+    'articles/surqualification-rassurer-employeur.html',
+    'articles/sante-oblige-changer-metier.html'
   ]);
   const catalog = [...upgrades, ...rawCatalog.filter(item => !retired.has(item.h))];
   const list = document.querySelector('.articles');
@@ -24,7 +25,6 @@
   const normalise = value => (value || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9€]+/g,' ').trim();
   const seen = new Set();
   const items = catalog.filter(item => item.h && !seen.has(item.h) && seen.add(item.h));
-
   list.innerHTML = items.map((item,index) => `<article class="article-card filter-card${item.t === 'reference' ? ' support-note' : ''}" data-domain="${item.d}" data-content-type="${item.t}" data-tags="${item.k || ''}" data-original-order="${index}"><div><div class="card-meta"><span class="level-badge">${item.t === 'guide' ? 'Guide pratique' : item.t === 'reference' ? 'Référence' : 'Dossier'}</span><span class="theme-chip">${item.c}</span></div><h3>${item.n}</h3><p>${item.x}</p></div><a href="${item.h}">${item.t === 'guide' ? 'Ouvrir le guide' : item.t === 'reference' ? 'Approfondir' : 'Lire le dossier'} →</a></article>`).join('');
 
   tools.innerHTML = `<label class="library-search"><span class="filter-label">Rechercher :</span><input type="search" placeholder="Ex. formation rentable, vendre un bien, manager une équipe…" aria-label="Rechercher dans la bibliothèque"></label><div class="filter-group domain-filters"><span class="filter-label">Domaine :</span><button aria-pressed="true" class="filter-btn" data-domain="all">Tous</button><button aria-pressed="false" class="filter-btn" data-domain="patrimoine">Patrimoine</button><button aria-pressed="false" class="filter-btn" data-domain="vie-pro">Vie professionnelle</button></div><div class="library-reference-control"><button type="button" class="filter-btn reference-toggle" aria-pressed="false">Afficher les références</button><span>Les guides et dossiers restent prioritaires.</span></div><div class="results-count" data-results-count></div>`;
@@ -52,30 +52,10 @@
   const count = tools.querySelector('[data-results-count]');
   const cards = [...list.querySelectorAll('.filter-card')];
   search.value = state.query;
-
-  const queryTokens = query => {
-    const base = normalise(query).split(/\s+/).filter(Boolean), expanded = [...base];
-    base.forEach(token => { if (aliases[token]) expanded.push(...normalise(aliases[token]).split(/\s+/)); });
-    return [...new Set(expanded)];
-  };
-
-  function scoreCard(card,query) {
-    if (!query.trim()) return 0;
-    const title=normalise(card.querySelector('h3')?.textContent),chip=normalise(card.querySelector('.theme-chip')?.textContent),desc=normalise(card.querySelector('p')?.textContent),tags=normalise(card.dataset.tags),phrase=normalise(query),tokens=queryTokens(query);
-    let score=0;
-    if(title===phrase)score+=180;else if(title.startsWith(phrase))score+=130;else if(title.includes(phrase))score+=90;
-    if(chip.includes(phrase))score+=45;if(tags.includes(phrase))score+=45;if(desc.includes(phrase))score+=30;
-    tokens.forEach(token=>{if(title.includes(token))score+=24;if(chip.includes(token))score+=12;if(tags.includes(token))score+=14;if(desc.includes(token))score+=7;});
-    if(card.dataset.contentType==='guide')score+=20;else if(card.dataset.contentType==='dossier')score+=9;else score-=12;
-    return score;
-  }
-
+  const queryTokens = query => { const base = normalise(query).split(/\s+/).filter(Boolean), expanded=[...base]; base.forEach(token=>{if(aliases[token]) expanded.push(...normalise(aliases[token]).split(/\s+/));}); return [...new Set(expanded)]; };
+  function scoreCard(card,query){if(!query.trim())return 0;const title=normalise(card.querySelector('h3')?.textContent),chip=normalise(card.querySelector('.theme-chip')?.textContent),desc=normalise(card.querySelector('p')?.textContent),tags=normalise(card.dataset.tags),phrase=normalise(query),tokens=queryTokens(query);let score=0;if(title===phrase)score+=180;else if(title.startsWith(phrase))score+=130;else if(title.includes(phrase))score+=90;if(chip.includes(phrase))score+=45;if(tags.includes(phrase))score+=45;if(desc.includes(phrase))score+=30;tokens.forEach(token=>{if(title.includes(token))score+=24;if(chip.includes(token))score+=12;if(tags.includes(token))score+=14;if(desc.includes(token))score+=7;});if(card.dataset.contentType==='guide')score+=20;else if(card.dataset.contentType==='dossier')score+=9;else score-=12;return score;}
   function sync(){domainButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.domain===state.domain)));referenceButton.setAttribute('aria-pressed',String(state.showReferences));referenceButton.textContent=state.showReferences?'Masquer les références':'Afficher les références';}
   function updateURL(){const next=new URLSearchParams();if(state.domain!=='all')next.set('domain',state.domain);if(state.query.trim())next.set('q',state.query.trim());if(state.showReferences)next.set('references','1');history.replaceState(null,'',next.toString()?`?${next}`:location.pathname);}
   function apply(){const hasQuery=Boolean(state.query.trim());let visible=0;const ranked=[];cards.forEach(card=>{const domains=(card.dataset.domain||'').split(/\s+/),domainOK=state.domain==='all'||domains.includes(state.domain),isReference=card.dataset.contentType==='reference',score=scoreCard(card,state.query),queryOK=!hasQuery||score>0,referenceOK=!isReference||state.showReferences||hasQuery,show=domainOK&&queryOK&&referenceOK;card.classList.toggle('is-hidden',!show);if(show){visible++;ranked.push({card,score,typePriority:card.dataset.contentType==='guide'?0:card.dataset.contentType==='dossier'?1:2,order:Number(card.dataset.originalOrder||0)});}});ranked.sort((a,b)=>hasQuery?(b.score-a.score||a.typePriority-b.typePriority||a.order-b.order):(a.typePriority-b.typePriority||a.order-b.order));ranked.forEach(x=>list.appendChild(x.card));count.textContent=`${visible} contenu${visible>1?'s':''}`;sync();updateURL();}
-
-  domainButtons.forEach(b=>b.addEventListener('click',()=>{state.domain=b.dataset.domain;apply();}));
-  referenceButton.addEventListener('click',()=>{state.showReferences=!state.showReferences;apply();});
-  search.addEventListener('input',()=>{state.query=search.value;apply();});
-  apply();
+  domainButtons.forEach(b=>b.addEventListener('click',()=>{state.domain=b.dataset.domain;apply();})); referenceButton.addEventListener('click',()=>{state.showReferences=!state.showReferences;apply();}); search.addEventListener('input',()=>{state.query=search.value;apply();}); apply();
 })();
