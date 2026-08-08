@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "lastChecked": "2026-08-08",
+    "country": "FR",
+    "note": "Données de référence centralisées pour les simulateurs Contre-évidence. Les taux de marché sont des repères statistiques et restent modifiables par l'utilisateur."
+  },
+  "mortgage": {
+    "hcsf": {
+      "maxEffortRate": 0.35,
+      "maxMaturityYears": 25,
+      "flexibilityShare": 0.20,
+      "effectiveSince": "2022-01-01",
+      "source": "https://www.economie.gouv.fr/files/files/directions_services/hcsf/HCSF_Rapport%20annuel_2025.pdf",
+      "sourceLabel": "HCSF — Rapport annuel 2025"
+    },
+    "marketReference": {
+      "housingLoanAverageRate": 0.0321,
+      "period": "2026-05",
+      "publishedAt": "2026-07-08",
+      "scope": "Nouveaux crédits à l'habitat hors renégociations, toutes durées, hors frais et assurance",
+      "source": "https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2026-05",
+      "sourceLabel": "Banque de France — Crédits aux particuliers, mai 2026"
+    }
+  }
+}
