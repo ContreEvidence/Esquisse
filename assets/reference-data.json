@@ -1,9 +1,10 @@
 {
   "meta": {
-    "schemaVersion": 1,
+    "schemaVersion": 2,
     "lastChecked": "2026-08-08",
     "country": "FR",
-    "note": "Données de référence centralisées pour les simulateurs Contre-évidence. Les taux de marché sont des repères statistiques et restent modifiables par l'utilisateur."
+    "note": "Données de référence centralisées pour les simulateurs Contre-évidence. Les taux de marché sont des repères statistiques et restent modifiables par l'utilisateur.",
+    "reusePolicy": "Privilégier les sources officielles, open data, API ou données dont les conditions autorisent explicitement la réutilisation. Ne pas aspirer automatiquement des bases commerciales ou privées. Conserver source, date, périmètre et conditions de réutilisation."
   },
   "mortgage": {
     "hcsf": {
@@ -11,8 +12,9 @@
       "maxMaturityYears": 25,
       "flexibilityShare": 0.20,
       "effectiveSince": "2022-01-01",
-      "source": "https://www.economie.gouv.fr/files/files/directions_services/hcsf/HCSF_Rapport%20annuel_2025.pdf",
-      "sourceLabel": "HCSF — Rapport annuel 2025"
+      "source": "https://www.economie.gouv.fr/hcsf/mesures/mesure-relative-loctroi-de-credits-immobiliers",
+      "sourceLabel": "HCSF — Mesure relative à l’octroi de crédits immobiliers",
+      "reuseBasis": "Information publique officielle ; citation de la source et vérification de la version en vigueur."
     },
     "marketReference": {
       "housingLoanAverageRate": 0.0321,
@@ -20,7 +22,9 @@
       "publishedAt": "2026-07-08",
       "scope": "Nouveaux crédits à l'habitat hors renégociations, toutes durées, hors frais et assurance",
       "source": "https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2026-05",
-      "sourceLabel": "Banque de France — Crédits aux particuliers, mai 2026"
+      "sourceLabel": "Banque de France — Crédits aux particuliers, mai 2026",
+      "reuseTerms": "https://www.banque-france.fr/fr/infos-legales",
+      "reuseBasis": "La Banque de France autorise, sauf spécification contraire, la réutilisation de ses données dont elle est l’unique source, sous réserve notamment de préserver l’intégrité des données et de faire apparaître la source et la date de mise à jour."
     }
   }
 }
