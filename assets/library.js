@@ -3,6 +3,7 @@
 
   const rawCatalog = Array.isArray(window.CE_LIBRARY_CATALOG) ? window.CE_LIBRARY_CATALOG : [];
   const upgrades = [
+    {d:'vie-pro',t:'guide',c:'Expérience & recrutement',h:'dossiers/experience-devient-risque-recruteur.html',n:'Quand votre expérience inquiète le recruteur',x:'Âge, surqualification, salaire, hiérarchie, stabilité et adaptation : identifier le risque perçu et préparer les preuves qui y répondent.',k:'50 ans senior surqualifié surqualification expérience recruteur salaire hiérarchie stabilité adaptation emploi'},
     {d:'vie-pro',t:'guide',c:'Automatisation',h:'dossiers/automatiser-ou-non-processus.html',n:'Automatiser ou non un processus : calculer le vrai gain',x:'Volume, temps économisé, erreurs, maintenance, dépendances et contrôle humain avant de choisir un outil.',k:'automatisation processus roi seuil rentabilité maintenance erreur workflow ia productivité'},
     {d:'vie-pro',t:'guide',c:'Organisation',h:'dossiers/ameliorer-processus-sans-degrader-service.html',n:'Améliorer une procédure sans dégrader le service',x:'Cartographier le flux, comprendre les contrôles, choisir les bons indicateurs, anticiper les effets pervers et piloter avant de déployer.',k:'processus procédure organisation indicateur management qualité délai reprise incitation pilote amélioration service'}
   ];
@@ -11,7 +12,9 @@
     'articles/indicateur-monte-service-se-degrade.html',
     'articles/regle-absurde-logique-cachee.html',
     'articles/lancer-activite-probleme-client.html',
-    'articles/gagner-plus-epargner-moins.html'
+    'articles/gagner-plus-epargner-moins.html',
+    'articles/reconversion-apres-50-ans.html',
+    'articles/surqualification-rassurer-employeur.html'
   ]);
   const catalog = [...upgrades, ...rawCatalog.filter(item => !retired.has(item.h))];
   const list = document.querySelector('.articles');
@@ -34,7 +37,7 @@
   const state = {domain:params.get('domain') || 'all',query:params.get('q') || '',showReferences:params.get('references') === '1'};
   const aliases = {
     emploi:'candidature cv entretien recrutement recruteur travail poste',candidature:'emploi cv recrutement recruteur entretien',reconversion:'formation métier compétences emploi orientation',formation:'reconversion métier diplôme compétences orientation débouchés roi',
-    salaire:'augmentation rémunération négociation responsabilités promotion carrière',augmentation:'salaire rémunération négociation responsabilités promotion',responsabilites:'salaire augmentation promotion périmètre carrière',promotion:'salaire responsabilités augmentation carrière visibilité',manager:'management équipe délégation responsable encadrement feedback',management:'manager équipe délégation responsable encadrement processus indicateur',invisible:'visibilité reconnaissance preuve carrière résultat',visibilite:'reconnaissance preuve carrière résultat invisible',quitter:'emploi stable rester démission mobilité carrière',demission:'quitter emploi stable mobilité carrière',
+    salaire:'augmentation rémunération négociation responsabilités promotion carrière surqualification',augmentation:'salaire rémunération négociation responsabilités promotion',responsabilites:'salaire augmentation promotion périmètre carrière',promotion:'salaire responsabilités augmentation carrière visibilité',manager:'management équipe délégation responsable encadrement feedback',management:'manager équipe délégation responsable encadrement processus indicateur',invisible:'visibilité reconnaissance preuve carrière résultat',visibilite:'reconnaissance preuve carrière résultat invisible',quitter:'emploi stable rester démission mobilité carrière',demission:'quitter emploi stable mobilité carrière',senior:'50 ans expérience surqualification recruteur adaptation',surqualifie:'expérience salaire stabilité hiérarchie recruteur 50 ans',surqualification:'expérience salaire stabilité hiérarchie recruteur 50 ans',
     budget:'dépenses épargne argent finances revenu sécurité',epargne:'budget investissement placement capital livret liquidités réserve',liquidites:'réserve sécurité épargne précaution cash urgence',reserve:'liquidités sécurité épargne précaution urgence',assurance:'protection risque prévoyance franchise patrimoine',prevoyance:'assurance protection revenu risque',
     investir:'investissement allocation etf actions pea placement capital crédit',investissement:'investir allocation etf actions pea placement capital crédit',credit:'dette remboursement emprunt taux investissement',rembourser:'crédit dette remboursement anticipé investir',
     immobilier:'logement résidence locatif crédit acheter louer travaux vendre conserver',logement:'immobilier résidence acheter louer crédit vendre',acheter:'immobilier logement résidence crédit',vendre:'immobilier bien conserver capital rendement',conserver:'immobilier bien vendre capital rendement',
