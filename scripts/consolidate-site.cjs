@@ -54,6 +54,11 @@ function ensureDescription(html, desc) {
   if (/<meta\s+name="description"[^>]*>/i.test(html)) return html;
   return html.replace(/<\/head>/i, `<meta name="description" content="${esc(desc)}"/></head>`);
 }
+function frDate(iso) {
+  const [y,m,d] = String(iso).split('-');
+  const months=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+  return `${Number(d)} ${months[Number(m)-1] || m} ${y}`;
+}
 
 function enrichSeo(rel, item) {
   const file = path.join(ROOT, rel);
@@ -67,10 +72,8 @@ function enrichSeo(rel, item) {
   const isTool = item.t === 'outil';
   const domain = domainInfo(item.d);
 
-  // Les contenus éditoriaux de référence s'auto-canonisent. Les outils conservent leur canonical éditorial éventuel.
   if (!isTool && editorialPaths.has(rel)) html = ensureCanonical(html, url);
   html = ensureDescription(html, desc);
-
   html = replaceMeta(html, /<meta\s+(?:property|name)="(?:og:[^"]+|twitter:[^"]+|dateModified|article:published_time|article:modified_time|article:section)"[^>]*>\s*/gi);
   html = replaceMeta(html, /<script\s+type="application\/ld\+json"\s+data-ce-seo="[^"]+">[\s\S]*?<\/script>\s*/gi);
 
@@ -147,11 +150,16 @@ const structural = [
 function enrichStructural(rel) {
   const file=path.join(ROOT,rel); let html=fs.readFileSync(file,'utf8');
   if (!/<head[\s>]/i.test(html) || /<meta\s+name="robots"\s+content="[^"]*noindex/i.test(html)) return;
+  const dates=gitDates(rel);
   const url=rel==='index.html'?BASE:abs(rel);
   html=ensureCanonical(html,url);
   const title=stripTags(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || 'Contre-Évidence');
   const desc=html.match(/<meta\s+name="description"\s+content="([^"]+)"/i)?.[1] || 'Contre-Évidence : des dossiers concrets pour comprendre, comparer et décider.';
   html=ensureDescription(html,desc);
+  html=html.replace(/<meta\s+name="dateModified"[^>]*>\s*/gi,'');
+  html=html.replace(/<\/head>/i,`<meta name="dateModified" content="${dates.modified}"/></head>`);
+  html=html.replace(/"dateModified"\s*:\s*"\d{4}-\d{2}-\d{2}"/g,`"dateModified":"${dates.modified}"`);
+  if(rel==='methode-sources.html') html=html.replace(/Cadre éditorial mis à jour le [^<]+/i,`Cadre éditorial mis à jour le ${frDate(dates.modified)}`);
   if(!/property="og:title"/i.test(html)){
     const og=`<meta property="og:type" content="website"/><meta property="og:title" content="${esc(title)}"/><meta property="og:description" content="${esc(desc)}"/><meta property="og:url" content="${url}"/><meta property="og:image" content="${SOCIAL_IMAGE}"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="${esc(title)}"/><meta name="twitter:description" content="${esc(desc)}"/><meta name="twitter:image" content="${SOCIAL_IMAGE}"/>`;
     html=html.replace(/<\/head>/i,`${og}</head>`);
