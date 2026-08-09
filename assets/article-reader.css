@@ -25,7 +25,7 @@
 }
 .ce-reader-status{color:#bfc9cf;font-size:.84rem}
 .ce-reader-controls{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:.55rem}
-.ce-reader-btn,.ce-reader-speed select{
+.ce-reader-btn,.ce-reader-choice select{
   appearance:none;
   border:1px solid rgba(212,171,86,.65);
   border-radius:999px;
@@ -36,21 +36,28 @@
 }
 .ce-reader-btn{padding:.66rem .92rem;cursor:pointer;transition:transform .15s ease,background .15s ease,border-color .15s ease}
 .ce-reader-btn:hover:not(:disabled){background:#24313a;border-color:#d4ab56;transform:translateY(-1px)}
-.ce-reader-btn:focus-visible,.ce-reader-speed select:focus-visible{outline:3px solid rgba(212,171,86,.35);outline-offset:2px}
-.ce-reader-btn:disabled{opacity:.42;cursor:not-allowed}
+.ce-reader-btn:focus-visible,.ce-reader-choice select:focus-visible{outline:3px solid rgba(212,171,86,.35);outline-offset:2px}
+.ce-reader-btn:disabled,.ce-reader-choice select:disabled{opacity:.42;cursor:not-allowed}
 .ce-reader-play{background:#d4ab56;color:#111820;border-color:#d4ab56}
 .ce-reader-play:hover:not(:disabled){background:#e1bd70}
-.ce-reader-speed{display:flex;align-items:center;gap:.4rem;color:#cfd7dc;font-size:.82rem;font-weight:800}
-.ce-reader-speed select{padding:.58rem 2rem .58rem .72rem;cursor:pointer}
-@media(max-width:760px){
-  .ce-article-reader{padding:.9rem 0}
+.ce-reader-test{background:transparent;color:#f0d58f}
+.ce-reader-choice{display:flex;align-items:center;gap:.4rem;color:#cfd7dc;font-size:.82rem;font-weight:800}
+.ce-reader-choice select{padding:.58rem 2rem .58rem .72rem;cursor:pointer;max-width:270px}
+.ce-reader-voice{min-width:210px}
+@media(max-width:900px){
   .ce-reader-inner{align-items:flex-start;flex-direction:column}
   .ce-reader-controls{width:100%;justify-content:flex-start}
+}
+@media(max-width:760px){
+  .ce-article-reader{padding:.9rem 0}
   .ce-reader-btn{flex:1 1 auto}
+  .ce-reader-choice{flex:1 1 100%;justify-content:space-between}
+  .ce-reader-choice select{max-width:min(70vw,300px)}
 }
 @media(max-width:480px){
   .ce-reader-controls{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
   .ce-reader-play{grid-column:1/-1}
-  .ce-reader-speed{grid-column:1/-1;justify-content:space-between}
-  .ce-reader-speed select{min-width:110px}
+  .ce-reader-choice{grid-column:1/-1;justify-content:space-between}
+  .ce-reader-choice select{min-width:0;width:68%;max-width:none}
+  .ce-reader-test{grid-column:1/-1}
 }
