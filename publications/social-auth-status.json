@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "checkedAt": "2026-08-09T19:21:36.616Z",
+  "version": 4,
+  "checkedAt": "2026-08-09T19:22:49.204Z",
   "meta": false,
   "instagramId": false,
   "tiktok": false,
@@ -8,13 +8,5 @@
   "youtubeValid": false,
   "youtubeHttpStatus": 401,
   "youtubeError": "unauthorized_client",
-  "youtubeErrorDescription": "Unauthorized",
-  "youtubeCredentialShapes": {
-    "clientIdLooksValid": true,
-    "clientSecretLooksValid": true,
-    "refreshTokenLooksValid": true,
-    "clientIdLength": 72,
-    "clientSecretLength": 35,
-    "refreshTokenLength": 103
-  }
+  "youtubeErrorDescription": "Unauthorized"
 }
