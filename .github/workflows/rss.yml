@@ -16,6 +16,7 @@ on:
       - 'assets/editorial-data.json'
       - 'assets/follow.js'
       - 'assets/home.css'
+      - 'scripts/clean-legacy-pages.cjs'
       - 'scripts/consolidate-site.cjs'
       - 'scripts/audit-site.cjs'
       - 'scripts/generate-rss.cjs'
@@ -48,6 +49,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+
+      - name: Nettoyer et archiver les anciennes pages
+        run: node scripts/clean-legacy-pages.cjs
 
       - name: Consolider SEO dates sitemap et navigation de secours
         run: node scripts/consolidate-site.cjs
@@ -137,5 +141,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Pipeline unique : contenu -> consolidation SEO/dates/sitemap -> RSS -> audit -> brouillons/media -> diffusion.
+# Pipeline unique : pages historiques -> consolidation SEO/dates/sitemap -> RSS -> audit -> brouillons/media -> diffusion.
 # Les anciens workflows d enrichissement par vagues ont ete retires du pipeline courant.
