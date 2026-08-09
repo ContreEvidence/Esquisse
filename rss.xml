@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Sun, 09 Aug 2026 12:38:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 12:44:49 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss.xml" rel="self" type="application/rss+xml"/>
@@ -370,7 +370,8 @@
       <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html</guid>
       <pubDate>Sat, 08 Aug 2026 09:20:06 GMT</pubDate>
       <category>Guide</category>
-      <category>vie-pro patrimoine</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
       <category>Décision</category>
       <description>Taux de base, coût d’erreur, valeur de l’option, coûts irrécupérables, effets de second ordre et pré-mortem.</description>
     </item>
@@ -380,7 +381,8 @@
       <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/protocole-verifier-reponse-ia.html</guid>
       <pubDate>Sat, 08 Aug 2026 09:17:04 GMT</pubDate>
       <category>Guide</category>
-      <category>vie-pro patrimoine</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
       <category>IA appliquée</category>
       <description>Classer le risque, isoler le fait central, hiérarchiser les sources et chercher la contradiction.</description>
     </item>
