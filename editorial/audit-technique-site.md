@@ -1,6 +1,6 @@
 # Audit technique automatique — Contre-Évidence
 
-Généré le 2026-08-09T14:09:27.740Z
+Généré le 2026-08-09T14:12:53.209Z
 
 ## Erreurs critiques (90)
 - PREVIEW-MENU.html: lien/ressource introuvable → ${u('index.html')}
@@ -94,15 +94,13 @@ Généré le 2026-08-09T14:09:27.740Z
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/themes/entreprendre.html (articles/effet-de-levier.html et themes/entreprendre.html)
 - Confidentialité: Cloudflare Web Analytics déclaré mais aucun script détecté
 
-## Avertissements (131)
+## Avertissements (129)
 - PREVIEW-LOGO.html: meta description absente
 - PREVIEW-LOGO.html: canonical absent
 - PREVIEW-MENU.html: meta description absente
 - PREVIEW-MENU.html: canonical absent
 - PREVIEW-VIDEOS.html: meta description absente
 - PREVIEW-VIDEOS.html: canonical absent
-- PREVIEW.html: meta description absente
-- PREVIEW.html: canonical absent
 - articles/accepter-nimporte-quel-premier-emploi.html: meta description absente
 - articles/applications-captent-attention.html: meta description absente
 - articles/applications-captent-attention.html: canonical absent
