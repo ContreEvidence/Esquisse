@@ -11,19 +11,36 @@
       "asOf": "2026-07-31",
       "constituents": 1282,
       "top10WeightPct": 26.43,
-      "annualizedVolatility10yPct": 14.86,
+      "annualizedVolatility10yPct": 14.89,
       "maxDrawdownPct": 57.82,
       "maxDrawdownPeriod": "2007-10-31 / 2009-03-09",
       "topConstituents": [
-        {"name":"NVIDIA","weightPct":5.18},
-        {"name":"Apple","weightPct":5.07},
-        {"name":"Microsoft","weightPct":3.66},
-        {"name":"Amazon","weightPct":2.94},
-        {"name":"Alphabet A","weightPct":2.32}
+        {
+          "name": "NVIDIA",
+          "weightPct": 5.18
+        },
+        {
+          "name": "Apple",
+          "weightPct": 5.07
+        },
+        {
+          "name": "Microsoft",
+          "weightPct": 3.66
+        },
+        {
+          "name": "Amazon",
+          "weightPct": 2.94
+        },
+        {
+          "name": "Alphabet A",
+          "weightPct": 2.32
+        }
       ],
       "source": "https://www.msci.com/indexes/index/990100/msci-world-index",
       "sourceLabel": "MSCI — MSCI World Index",
-      "status": "observed"
+      "status": "observed",
+      "riskAsOf": "2026-06-30",
+      "constituentsRiskSnapshot": 1283
     },
     "spivaEurope": {
       "globalEquityEurUnderperformed2025Pct": 71,
@@ -46,9 +63,24 @@
     "yomoni": {
       "providerReported": true,
       "performance": {
-        "P3": {"equitySharePct":20,"2023Pct":6.1,"2024Pct":5.7,"2025Pct":4.0},
-        "P6": {"equitySharePct":50,"2023Pct":11.7,"2024Pct":10.6,"2025Pct":6.0},
-        "P10": {"equitySharePct":100,"2023Pct":19.0,"2024Pct":19.6,"2025Pct":11.1}
+        "P3": {
+          "equitySharePct": 20,
+          "2023Pct": 6.1,
+          "2024Pct": 5.7,
+          "2025Pct": 4
+        },
+        "P6": {
+          "equitySharePct": 50,
+          "2023Pct": 11.7,
+          "2024Pct": 10.6,
+          "2025Pct": 6
+        },
+        "P10": {
+          "equitySharePct": 100,
+          "2023Pct": 19,
+          "2024Pct": 19.6,
+          "2025Pct": 11.1
+        }
       },
       "fees": {
         "mandateMaxPct": 0.7,
@@ -66,8 +98,18 @@
     "nalo": {
       "providerReported": true,
       "performancePageAsOf": "2026-07-24",
-      "fundEuro": {"2023Pct":2.95,"2024Pct":2.90,"2025Pct":2.90},
-      "fees": {"minPct":0.85,"maxPct":1.65,"insurerPct":0.85,"mandatePct":0.55,"etfApproxPct":0.25},
+      "fundEuro": {
+        "2023Pct": 2.95,
+        "2024Pct": 2.9,
+        "2025Pct": 2.9
+      },
+      "fees": {
+        "minPct": 0.85,
+        "maxPct": 1.65,
+        "insurerPct": 0.85,
+        "mandatePct": 0.55,
+        "etfApproxPct": 0.25
+      },
       "note": "Nalo ne publie pas de profils génériques fixes : les performances sont affichées selon la part d'actions. Comparer seulement à exposition et période comparables.",
       "sources": [
         "https://www.nalo.fr/performances",
@@ -81,16 +123,57 @@
       "example": {
         "portfolio": "Essential Standard",
         "riskLevel": "10/10 Dynamique",
-        "2024Pct":27.12,
-        "2025Pct":5.66,
-        "2026YtdPct":9.67,
-        "fiveYearCumulativePct":81.36,
-        "fiveYearAnnualizedPct":12.64
+        "2024Pct": 27.12,
+        "2025Pct": 5.66,
+        "2026YtdPct": 9.67,
+        "fiveYearCumulativePct": 81.36,
+        "fiveYearAnnualizedPct": 12.64
       },
-      "fees": {"managementRangePct":"1.0-1.4","note":"hors frais des supports selon la page produit"},
+      "fees": {
+        "managementRangePct": "1.0-1.4",
+        "note": "hors frais des supports selon la page produit"
+      },
       "source": "https://www.ramify.fr/performances",
       "sourceLabel": "Ramify — Performances",
       "status": "provider-reported"
     }
+  },
+  "savings": {
+    "asOf": "2026-08-01",
+    "livretA": {
+      "annualRatePct": 1.7,
+      "ceilingEur": 22950,
+      "tax": "exempt",
+      "source": "https://presse.economie.gouv.fr/epargne-reglementee-le-livret-a-passe-a-17-et-le-lep-se-maintient-a-25-a-compter-du-1er-aout-2026/",
+      "status": "observed"
+    },
+    "ldds": {
+      "annualRatePct": 1.7,
+      "tax": "exempt",
+      "status": "observed"
+    },
+    "lep": {
+      "annualRatePct": 2.5,
+      "ceilingEur": 10000,
+      "tax": "exempt",
+      "eligibility": "income-tested",
+      "source": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/livret-depargne-populaire-lep-comment-ca-marche",
+      "status": "observed"
+    },
+    "pel2026": {
+      "annualRateGrossPct": 2,
+      "openingFrom": "2026-01-01",
+      "withdrawalBefore4Years": "closure in principle",
+      "source": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/plan-epargne-logement-pel-comment-ca-marche",
+      "status": "observed"
+    }
+  },
+  "credit": {
+    "asOf": "2026-05",
+    "housingNewLoansExRenegotiationPct": 3.21,
+    "consumerAmortizingLoansPct": 6.53,
+    "scope": "Taux effectif au sens étroit, moyennes pondérées par les flux, hors frais et assurance pour habitat",
+    "source": "https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2026-05",
+    "status": "observed"
   }
 }

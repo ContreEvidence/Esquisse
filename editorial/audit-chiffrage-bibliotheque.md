@@ -32,11 +32,11 @@ Aucune moyenne historique ne doit devenir une promesse. Aucune performance comme
 
 ## B — enrichissement prioritaire
 
-- `dossiers/finances-allocation-portefeuille.html` — ajouter historiques de volatilité, drawdowns et concentration d’indices mondiaux.
+- `dossiers/finances-allocation-portefeuille.html` — **enrichi le 9 août 2026** : volatilité 10 ans et drawdown historique MSCI World, avec exemple de perte/récupération.
 - `articles/choisir-etf-mondial-debutant.html` — ajouter photographie réelle d’un indice mondial : nombre de titres, poids des principales lignes, concentration.
 - `articles/frais-fiscalite-rendement-net.html` — ajouter structures de frais réelles de contrats et impact composé sur 10/20 ans.
-- `articles/comparatif-produits-bancaires.html` — taux réglementés, fonds euros, comptes à terme et conditions datées.
-- `dossiers/finances-credit-endettement.html` — taux moyens Banque de France, coût d’un crédit selon durée et taux.
+- `articles/comparatif-produits-bancaires.html` — **enrichi le 9 août 2026** : Livret A, LDDS, LEP et PEL 2026 avec taux, plafonds et exemple en euros. Reste à documenter davantage comptes à terme et fonds euros.
+- `dossiers/finances-credit-endettement.html` — **enrichi le 9 août 2026** : taux Banque de France mai 2026 et exemples de coût à 20/25 ans et crédit consommation.
 - `dossiers/finances-residence-principale.html` — frais d’acquisition, financement, durée de détention et exemples de point mort.
 - `dossiers/finances-immobilier-patrimoine.html` — rendements, concentration, liquidité et coût du levier.
 - `dossiers/finances-enveloppes-fiscalite.html` — fiscalité chiffrée à jour par scénario PEA / AV / CTO / PER.
