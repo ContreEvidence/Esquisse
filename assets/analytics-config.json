@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "provider": "cloudflare-web-analytics",
+  "token": "",
+  "note": "Activer uniquement après création du site dans Cloudflare Web Analytics et ajout du token public correspondant."
+}
