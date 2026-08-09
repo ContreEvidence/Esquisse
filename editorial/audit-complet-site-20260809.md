@@ -6,85 +6,46 @@ Audit automatique du dépôt **ContreEvidence/Esquisse**, complété par une lec
 
 | Indicateur | Valeur |
 | --- | --- |
-| Fichiers du dépôt | 347 |
-| Pages HTML | 180 |
+| Fichiers du dépôt | 338 |
+| Pages HTML | 172 |
 | Pages articles/dossiers | 131 |
-| URLs sitemap | 68 |
+| URLs sitemap | 69 |
 | Entrées bibliothèque principale | 49 |
 | Entrées bibliothèque quotidienne | 0 |
 | Outils catalogués | 15 |
 | Articles/dossiers avec au moins une source externe | 29/131 |
 | Articles/dossiers avec cas chiffré ou marqueur de données | 50/131 |
-| Pages déclarant le RSS | 2/180 |
-| Pages chargeant le système Suivre | 180/180 |
-| Longueur moyenne brute des pages | 610 mots |
+| Pages déclarant le RSS | 2/172 |
+| Pages chargeant le système Suivre | 172/172 |
+| Longueur moyenne brute des pages | 637 mots |
 | Référentiel éditorial lastChecked/asOf | non détecté |
 ## 2. Synthèse par gravité
 
 ### Critique
-- 42 référence(s) interne(s) pointent vers un fichier absent.
+- 3 référence(s) interne(s) pointent vers un fichier absent.
 
 ### Élevée
 - 37 ancre(s) interne(s) sont introuvables.
-- Problèmes de canonical détectés (manquants 25, hors domaine 0, doublons 27).
-- 142 page(s) n'ont pas un jeu Open Graph complet.
+- Problèmes de canonical détectés (manquants 18, hors domaine 0, doublons 26).
+- 77 page(s) n'ont pas un jeu Open Graph complet.
 
 ### Moyenne
-- 39 image(s) Open Graph utilisent une URL relative.
-- 49 page(s) indexables ne figurent pas dans le sitemap.
-- 23 page(s) contiennent du CSS inline ou beaucoup de styles inline, source de dérive visuelle.
+- 36 image(s) Open Graph utilisent une URL relative.
+- 40 page(s) indexables ne figurent pas dans le sitemap.
+- 18 page(s) contiennent du CSS inline ou beaucoup de styles inline, source de dérive visuelle.
 - 26 contenu(s) longs n'ont aucun lien externe source détecté.
 
 ### Faible
-- 178 page(s) ne déclarent pas le flux RSS dans leur <head>.
+- 170 page(s) ne déclarent pas le flux RSS dans leur <head>.
 
 ## 3. Intégrité des liens
 
 ### Fichiers internes absents
 | Depuis | Lien | Cible résolue |
 | --- | --- | --- |
-| PREVIEW-MENU.html | ${u( | ${u( |
-| PREVIEW-MENU.html | ${u( | ${u( |
-| PREVIEW-MENU.html | ${u(path)} | ${u(path)} |
-| bonne-entreprise-mauvais-investissement.html | ../assets/logo.svg | ../assets/logo.svg |
-| bonne-entreprise-mauvais-investissement.html | ../assets/style.css | ../assets/style.css |
-| bonne-entreprise-mauvais-investissement.html | ../index.html | ../index.html |
-| bonne-entreprise-mauvais-investissement.html | ../assets/logo.svg | ../assets/logo.svg |
-| bonne-entreprise-mauvais-investissement.html | ../index.html#articles | ../index.html |
-| bonne-entreprise-mauvais-investissement.html | ../index.html#methode | ../index.html |
-| bonne-entreprise-mauvais-investissement.html | ../index.html#newsletter | ../index.html |
-| bonne-entreprise-mauvais-investissement.html | ../a-propos.html | ../a-propos.html |
-| bonne-entreprise-mauvais-investissement.html | ../index.html#articles | ../index.html |
-| bonne-entreprise-mauvais-investissement.html | ../confidentialite.html | ../confidentialite.html |
-| bonne-entreprise-mauvais-investissement.html | ../mentions.html | ../mentions.html |
-| bonne-entreprise-mauvais-investissement.html | ../assets/script.js | ../assets/script.js |
-| ia-remplace-t-elle-le-codage.html | ../assets/logo.svg | ../assets/logo.svg |
-| ia-remplace-t-elle-le-codage.html | ../assets/style.css | ../assets/style.css |
-| ia-remplace-t-elle-le-codage.html | ../index.html | ../index.html |
-| ia-remplace-t-elle-le-codage.html | ../assets/logo.svg | ../assets/logo.svg |
-| ia-remplace-t-elle-le-codage.html | ../index.html#articles | ../index.html |
-| ia-remplace-t-elle-le-codage.html | ../index.html#methode | ../index.html |
-| ia-remplace-t-elle-le-codage.html | ../index.html#newsletter | ../index.html |
-| ia-remplace-t-elle-le-codage.html | ../a-propos.html | ../a-propos.html |
-| ia-remplace-t-elle-le-codage.html | ../index.html#articles | ../index.html |
-| ia-remplace-t-elle-le-codage.html | ../confidentialite.html | ../confidentialite.html |
-| ia-remplace-t-elle-le-codage.html | ../mentions.html | ../mentions.html |
-| ia-remplace-t-elle-le-codage.html | ../assets/script.js | ../assets/script.js |
-| portes-fermees.html | ../assets/logo.svg | ../assets/logo.svg |
-| portes-fermees.html | ../assets/style.css | ../assets/style.css |
-| portes-fermees.html | ../index.html | ../index.html |
-| portes-fermees.html | ../assets/logo.svg | ../assets/logo.svg |
-| portes-fermees.html | ../index.html#articles | ../index.html |
-| portes-fermees.html | ../index.html#methode | ../index.html |
-| portes-fermees.html | ../index.html#newsletter | ../index.html |
-| portes-fermees.html | ../a-propos.html | ../a-propos.html |
-| portes-fermees.html | ../index.html#articles | ../index.html |
-| portes-fermees.html | ../confidentialite.html | ../confidentialite.html |
-| portes-fermees.html | ../mentions.html | ../mentions.html |
-| portes-fermees.html | ../assets/script.js | ../assets/script.js |
 | simulateur-capacite-emprunt.html | ${reference.rateSource} | ${reference.rateSource} |
-
-_2 lignes supplémentaires non affichées._
+| simulateur-capacite-emprunt.html | ${reference.hcsfSource} | ${reference.hcsfSource} |
+| simulateur-capitalisation-comparateur.html | ${x.source} | ${x.source} |
 
 ### Ancres introuvables
 | Depuis | Lien | Cible | Ancre |
@@ -136,10 +97,6 @@ _Aucun._
 _Aucun._
 
 ### Pages indexables absentes du sitemap
-- PREVIEW-LOGO.html
-- PREVIEW-MENU.html
-- PREVIEW-VIDEOS.html
-- PREVIEW.html
 - articles/applications-captent-attention.html
 - articles/biais-du-survivant.html
 - articles/bonne-entreprise-mauvais-investissement.html
@@ -166,13 +123,17 @@ _Aucun._
 - articles/optimisation-locale.html
 - articles/penser-en-probabilites.html
 - articles/premier-logement-autonomie.html
-- … 19 autre(s)
+- articles/premiers-contrats-abonnements-credit.html
+- articles/promotion-bonne-affaire.html
+- articles/reconnaitre-bonne-affaire.html
+- articles/repartir-sans-recommencer-zero.html
+- … 10 autre(s)
 
 ### Contenus du catalogue éditorial absents du sitemap
 _Aucun._
 
 ### Articles/dossiers du sitemap absents du catalogue éditorial
-- dossiers/education-financiere-consommation.html
+- dossiers/inflation-comprendre-histoire-pouvoir-achat.html
 - dossiers/cout-reel-voiture-achat-credit-loa-lld.html
 - dossiers/depenses-recurrentes-abonnements-assurances.html
 - dossiers/gestion-pilotee-comparer-performances.html
@@ -181,8 +142,8 @@ _Aucun._
 
 ### Métadonnées manquantes
 - Titres manquants : **0**
-- Descriptions manquantes : **37**
-- Canonicals manquants : **25**
+- Descriptions manquantes : **33**
+- Canonicals manquants : **18**
 - Langue manquante : **0**
 - Viewport manquant : **0**
 
@@ -233,7 +194,7 @@ _Aucun._
 | articles/premiers-contrats-abonnements-credit.html | 101 | Premiers contrats, abonnements et crédits : éviter les engagements qui coûtent cher — Contre-évidence |
 | articles/promotion-bonne-affaire.html | 80 | Pourquoi une promotion peut vous faire dépenser plus que prévu — Contre-évidence |
 
-_53 lignes supplémentaires non affichées._
+_50 lignes supplémentaires non affichées._
 
 ### Descriptions longues (>165 caractères)
 | Page | Longueur |
@@ -251,46 +212,29 @@ _53 lignes supplémentaires non affichées._
 | dossiers/methode-analyse-complete.html | 167 |
 | dossiers/quitter-emploi-stable-ou-rester.html | 175 |
 | dossiers/vendre-ou-conserver-bien-immobilier.html | 169 |
-| portes-fermees.html | 167 |
 | simulateur-prix-minimum-rentable.html | 173 |
 | themes/argent.html | 186 |
 
 ### Doublons de titres
 | Titre | Pages |
 | --- | --- |
-| Vidéos — Contre-évidence | PREVIEW-VIDEOS.html, videos.html |
-| Pourquoi une bonne entreprise peut être un mauvais investissement — Contre-évidence | articles/bonne-entreprise-mauvais-investissement.html, bonne-entreprise-mauvais-investissement.html |
-| L’intelligence artificielle remplace-t-elle vraiment le codage ? — Contre-évidence | articles/ia-remplace-t-elle-le-codage.html, ia-remplace-t-elle-le-codage.html |
-| Une porte fermée ne prouve pas qu’il n’y a pas d’issue — Contre-évidence | articles/portes-fermees.html, portes-fermees.html |
 | Par où commencer ? — Contre-évidence | debuter.html, moins-de-25-ans.html, parcours-de-vie.html |
 
 ### Doublons de descriptions
 | Description | Pages |
 | --- | --- |
-| Une entreprise admirable peut produire un rendement médiocre si son prix intègre déjà trop de perfection. | articles/bonne-entreprise-mauvais-investissement.html, bonne-entreprise-mauvais-investissement.html |
-| L’IA réduit le coût d’écriture du code. Elle augmente simultanément la valeur de la conception, du contrôle et du jugement. | articles/ia-remplace-t-elle-le-codage.html, ia-remplace-t-elle-le-codage.html |
 | Ce sujet est désormais traité dans le dossier complet sur l’amélioration des procédures sans dégrader le service. | articles/indicateur-monte-service-se-degrade.html, articles/regle-absurde-logique-cachee.html |
 
 ### Open Graph incomplet
 - 404.html
-- PREVIEW-LOGO.html
-- PREVIEW-MENU.html
-- PREVIEW-VIDEOS.html
-- PREVIEW.html
 - a-propos.html
-- articles/50-candidatures-zero-reponse.html
 - articles/50000-euros-livret-peur-investir.html
-- articles/accepter-nimporte-quel-poste-retour-emploi.html
 - articles/accepter-nimporte-quel-premier-emploi.html
 - articles/asymetrie.html
 - articles/automatiser-tache-5-minutes-perdre-30.html
 - articles/biais-confirmation.html
 - articles/boucles-retroaction.html
-- articles/checklist-avant-placement-conseiller.html
-- articles/choisir-etf-mondial-debutant.html
 - articles/choisir-orientation-sans-se-fermer.html
-- articles/clients-interesses-personne-nachete.html
-- articles/comparatif-produits-bancaires.html
 - articles/continuer-parce-quon-a-deja-trop-investi.html
 - articles/contraintes-innovation.html
 - articles/cout-opportunite.html
@@ -299,10 +243,20 @@ _53 lignes supplémentaires non affichées._
 - articles/dependance-au-sentier.html
 - articles/effet-de-levier.html
 - articles/effets-second-ordre.html
-- articles/entretien-rate-ce-qui-bloque.html
 - articles/expliquer-parcours-accidente.html
-- articles/frais-fiscalite-rendement-net.html
-- … 112 autre(s)
+- articles/gagner-plus-epargner-moins.html
+- articles/hesiter-trois-semaines-deux-options.html
+- articles/ia-reponse-convaincante-fausse.html
+- articles/incitations-gouvernent.html
+- articles/indicateur-monte-service-se-degrade.html
+- articles/information-comprehension.html
+- articles/justificatif-impossible-procedure-bloquee.html
+- articles/lancer-activite-probleme-client.html
+- articles/majorite-peut-se-tromper.html
+- articles/marge-de-securite.html
+- articles/mesure-devient-cible.html
+- articles/modeles-mentaux.html
+- … 47 autre(s)
 
 ### Images OG relatives
 | Page | og:image |
@@ -341,16 +295,13 @@ _53 lignes supplémentaires non affichées._
 | articles/strategie-barbell.html | ../assets/og-cover.svg |
 | articles/tester-metier-avant-investir.html | ../assets/og-cover-brand.png |
 | articles/travailler-plus-avancer-moins.html | ../assets/og-cover.svg |
-| bonne-entreprise-mauvais-investissement.html | ../assets/og-cover.svg |
-| ia-remplace-t-elle-le-codage.html | ../assets/og-cover.svg |
 | parcours-vie-professionnelle.html | assets/og-cover-brand.png |
-| portes-fermees.html | ../assets/og-cover.svg |
 | themes/travail.html | ../assets/og-cover-brand.png |
 
 ## 6. Accessibilité statique
 
-- Pages sans lien d’évitement détecté : **27**
-- Pages sans conteneur de navigation #site-header : **31**
+- Pages sans lien d’évitement détecté : **23**
+- Pages sans conteneur de navigation #site-header : **25**
 - Pages avec image(s) sans alt : **0**
 
 _Aucun._
@@ -364,85 +315,85 @@ _Aucun._
 ### Contenus longs (≥900 mots) sans source externe détectée
 | Page | Mots |
 | --- | --- |
-| articles/accepter-nimporte-quel-poste-retour-emploi.html | 1358 |
-| articles/clients-interesses-personne-nachete.html | 968 |
-| articles/competences-invisibles-preuves.html | 1051 |
-| articles/entretien-rate-ce-qui-bloque.html | 1040 |
+| articles/accepter-nimporte-quel-poste-retour-emploi.html | 1378 |
+| articles/clients-interesses-personne-nachete.html | 988 |
+| articles/competences-invisibles-preuves.html | 1058 |
+| articles/entretien-rate-ce-qui-bloque.html | 1060 |
 | articles/exemples-allocation-250000-500000-1000000.html | 1406 |
-| articles/premiere-chance-sans-experience.html | 1019 |
-| articles/retrouver-emploi-apres-interruption.html | 1078 |
-| dossiers/ameliorer-processus-sans-degrader-service.html | 1635 |
-| dossiers/audit-budget-60-minutes.html | 1513 |
-| dossiers/automatiser-ou-non-processus.html | 1096 |
-| dossiers/calculer-prix-minimum-rentable.html | 1639 |
-| dossiers/capacite-refuser-travail-rentabilite.html | 1062 |
-| dossiers/competent-mais-invisible-travail.html | 1079 |
-| dossiers/cout-reel-voiture-achat-credit-loa-lld.html | 1200 |
-| dossiers/debloquer-demarche-administrative.html | 1359 |
-| dossiers/decider-sans-tourner-en-rond.html | 1655 |
-| dossiers/dependance-gros-client.html | 1329 |
-| dossiers/depenses-recurrentes-abonnements-assurances.html | 1120 |
-| dossiers/devenir-manager-premiere-fois.html | 1331 |
-| dossiers/finances-cadre-global.html | 907 |
-| dossiers/liquidites-reserve-securite.html | 1077 |
-| dossiers/methode-analyse-complete.html | 2265 |
-| dossiers/plan-30-jours-recherche-emploi.html | 1979 |
-| dossiers/protocole-verifier-reponse-ia.html | 1524 |
-| dossiers/rembourser-credit-ou-investir.html | 1107 |
-| dossiers/vendre-ou-conserver-bien-immobilier.html | 1255 |
+| articles/premiere-chance-sans-experience.html | 1026 |
+| articles/retrouver-emploi-apres-interruption.html | 1085 |
+| dossiers/ameliorer-processus-sans-degrader-service.html | 1655 |
+| dossiers/audit-budget-60-minutes.html | 1533 |
+| dossiers/automatiser-ou-non-processus.html | 1116 |
+| dossiers/calculer-prix-minimum-rentable.html | 1659 |
+| dossiers/capacite-refuser-travail-rentabilite.html | 1082 |
+| dossiers/competent-mais-invisible-travail.html | 1099 |
+| dossiers/cout-reel-voiture-achat-credit-loa-lld.html | 1207 |
+| dossiers/debloquer-demarche-administrative.html | 1379 |
+| dossiers/decider-sans-tourner-en-rond.html | 1675 |
+| dossiers/dependance-gros-client.html | 1349 |
+| dossiers/depenses-recurrentes-abonnements-assurances.html | 1127 |
+| dossiers/devenir-manager-premiere-fois.html | 1351 |
+| dossiers/finances-cadre-global.html | 927 |
+| dossiers/liquidites-reserve-securite.html | 1097 |
+| dossiers/methode-analyse-complete.html | 2272 |
+| dossiers/plan-30-jours-recherche-emploi.html | 1999 |
+| dossiers/protocole-verifier-reponse-ia.html | 1544 |
+| dossiers/rembourser-credit-ou-investir.html | 1127 |
+| dossiers/vendre-ou-conserver-bien-immobilier.html | 1275 |
 
 ### Pages minces (<350 mots)
 | Page | Mots |
 | --- | --- |
-| PREVIEW-LOGO.html | 29 |
-| PREVIEW-MENU.html | 43 |
-| PREVIEW.html | 18 |
-| articles/50000-euros-livret-peur-investir.html | 175 |
-| articles/accepter-nimporte-quel-premier-emploi.html | 82 |
-| articles/asymetrie.html | 35 |
-| articles/automatiser-tache-5-minutes-perdre-30.html | 84 |
-| articles/biais-confirmation.html | 40 |
-| articles/boucles-retroaction.html | 44 |
-| articles/contraintes-innovation.html | 43 |
-| articles/cout-opportunite.html | 38 |
-| articles/couts-irrecuperables.html | 40 |
-| articles/decisions-reversibles-irreversibles.html | 45 |
-| articles/dependance-au-sentier.html | 43 |
-| articles/effet-de-levier.html | 41 |
-| articles/effets-second-ordre.html | 39 |
-| articles/expliquer-parcours-accidente.html | 85 |
-| articles/incitations-gouvernent.html | 36 |
-| articles/indicateur-monte-service-se-degrade.html | 74 |
-| articles/information-comprehension.html | 40 |
-| articles/lancer-activite-probleme-client.html | 74 |
-| articles/majorite-peut-se-tromper.html | 37 |
-| articles/marge-de-securite.html | 44 |
-| articles/mesure-devient-cible.html | 42 |
-| articles/modeles-mentaux.html | 44 |
-| articles/portes-fermees.html | 59 |
-| articles/premier-logement-autonomie.html | 308 |
-| articles/premiers-contrats-abonnements-credit.html | 321 |
-| articles/probleme-symptome-cause.html | 42 |
-| articles/reconversion-apres-50-ans.html | 72 |
-| articles/reconversion-ne-commence-pas-formation.html | 138 |
-| articles/regle-absurde-logique-cachee.html | 77 |
-| articles/rendements-decroissants.html | 43 |
-| articles/reseaux-sociaux-comparaison-pression.html | 348 |
-| articles/risque-incertitude.html | 46 |
-| articles/surqualification-rassurer-employeur.html | 71 |
-| articles/taux-de-base.html | 36 |
-| articles/transition-temporaire-sans-abandonner-projet.html | 73 |
-| articles/valeur-des-options.html | 39 |
-| assets/PREVIEW-MENU.html | 50 |
+| articles/50000-euros-livret-peur-investir.html | 182 |
+| articles/accepter-nimporte-quel-premier-emploi.html | 89 |
+| articles/asymetrie.html | 42 |
+| articles/automatiser-tache-5-minutes-perdre-30.html | 91 |
+| articles/biais-confirmation.html | 47 |
+| articles/boucles-retroaction.html | 51 |
+| articles/contraintes-innovation.html | 50 |
+| articles/cout-opportunite.html | 45 |
+| articles/couts-irrecuperables.html | 47 |
+| articles/decisions-reversibles-irreversibles.html | 52 |
+| articles/dependance-au-sentier.html | 50 |
+| articles/effet-de-levier.html | 48 |
+| articles/effets-second-ordre.html | 46 |
+| articles/expliquer-parcours-accidente.html | 92 |
+| articles/incitations-gouvernent.html | 43 |
+| articles/indicateur-monte-service-se-degrade.html | 81 |
+| articles/information-comprehension.html | 47 |
+| articles/lancer-activite-probleme-client.html | 81 |
+| articles/majorite-peut-se-tromper.html | 44 |
+| articles/marge-de-securite.html | 51 |
+| articles/mesure-devient-cible.html | 49 |
+| articles/modeles-mentaux.html | 51 |
+| articles/portes-fermees.html | 66 |
+| articles/premier-logement-autonomie.html | 315 |
+| articles/premiers-contrats-abonnements-credit.html | 328 |
+| articles/probleme-symptome-cause.html | 49 |
+| articles/reconversion-apres-50-ans.html | 79 |
+| articles/reconversion-ne-commence-pas-formation.html | 145 |
+| articles/regle-absurde-logique-cachee.html | 84 |
+| articles/rendements-decroissants.html | 50 |
+| articles/risque-incertitude.html | 53 |
+| articles/surqualification-rassurer-employeur.html | 78 |
+| articles/taux-de-base.html | 43 |
+| articles/transition-temporaire-sans-abandonner-projet.html | 80 |
+| articles/valeur-des-options.html | 46 |
+| bibliotheque.html | 62 |
+| contact.html | 150 |
+| debuter.html | 53 |
+| dossiers/allocation-risque-portefeuille.html | 55 |
+| dossiers/analyse-fondamentale.html | 54 |
 
-_35 lignes supplémentaires non affichées._
+_29 lignes supplémentaires non affichées._
 
 ## 8. Cohérence technique et dette CSS/JS
 
 ### Références CSS les plus utilisées
 | Référence | Pages |
 | --- | --- |
-| ../assets/style.css | 14 |
+| ../assets/style.css | 11 |
 | assets/style.css | 9 |
 | ../assets/navigation.css | 9 |
 | assets/navigation.css | 8 |
@@ -460,7 +411,6 @@ _35 lignes supplémentaires non affichées._
 | assets/brand.css?v=20260808-16 | 2 |
 | assets/finance.css?v=20260808-22 | 2 |
 | assets/tools.css?v=20260808-22 | 2 |
-| assets/brand.css | 1 |
 | ../assets/finance.css?v=20260807-2 | 1 |
 | assets/brand.css?v=20260808-21 | 1 |
 | assets/brand.css?v=20260807-18 | 1 |
@@ -472,8 +422,8 @@ _35 lignes supplémentaires non affichées._
 | Référence | Pages |
 | --- | --- |
 | ../assets/follow.js?v=20260809-1 | 137 |
-| ./assets/follow.js?v=20260809-1 | 41 |
-| ../assets/script.js | 38 |
+| ../assets/script.js | 35 |
+| ./assets/follow.js?v=20260809-1 | 34 |
 | ../assets/article-v3.js | 28 |
 | ../assets/navigation-v3.js?v=20260808-16 | 27 |
 | ../assets/navigation-v3.js | 22 |
@@ -492,24 +442,19 @@ _35 lignes supplémentaires non affichées._
 | ../assets/script.js?v=20260807-18 | 4 |
 | ../assets/navigation-v3.js?v=20260807-18 | 4 |
 | ../assets/script.js?v=20260808-6 | 4 |
-| ./follow.js?v=20260809-1 | 4 |
 | ../assets/navigation-v3.js?v=20260808-6 | 3 |
-| assets/navigation-v3.js | 2 |
 | ../assets/script.js?v=20260808-16 | 2 |
 | ../assets/navigation-v3.js?v=20260808-13 | 2 |
 | assets/navigation-v3.js?v=20260809-03 | 2 |
-| assets/script.js?v=20260806-12 | 1 |
-| assets/navigation-v3.js?v=20260806-12 | 1 |
 | ../assets/navigation-v3.js?v=20260808-24 | 1 |
+| ../assets/script.js?v=20260806-12 | 1 |
+| ../assets/navigation-v3.js?v=20260806-12 | 1 |
+| assets/library-catalog.js?v=20260808-22 | 1 |
+| assets/library-daily-money.js?v=20260809-2 | 1 |
 
 ### Pages avec CSS inline / styles inline nombreux
 | Page | Blocs <style> | Attributs style |
 | --- | --- | --- |
-| PREVIEW-LOGO.html | 1 | 2 |
-| PREVIEW-MENU.html | 1 | 1 |
-| PREVIEW-VIDEOS.html | 1 | 0 |
-| PREVIEW.html | 1 | 2 |
-| assets/PREVIEW-MENU.html | 1 | 0 |
 | contact.html | 1 | 1 |
 | dossiers/cout-reel-voiture-achat-credit-loa-lld.html | 1 | 0 |
 | dossiers/depenses-recurrentes-abonnements-assurances.html | 1 | 1 |
@@ -531,15 +476,11 @@ _35 lignes supplémentaires non affichées._
 
 ## 9. RSS et suivi
 
-- Déclaration RSS : **2/180 pages**
-- Script de suivi : **180/180 pages**
+- Déclaration RSS : **2/172 pages**
+- Script de suivi : **172/172 pages**
 
 ### Pages sans autodétection RSS
 - 404.html
-- PREVIEW-LOGO.html
-- PREVIEW-MENU.html
-- PREVIEW-VIDEOS.html
-- PREVIEW.html
 - a-propos.html
 - articles/50-candidatures-zero-reponse.html
 - articles/50000-euros-livret-peur-investir.html
@@ -565,7 +506,11 @@ _35 lignes supplémentaires non affichées._
 - articles/competences-transferables.html
 - articles/comprendre-avant-agir.html
 - articles/construire-allocation-debutant.html
-- … 148 autre(s)
+- articles/construire-epargne-de-zero.html
+- articles/continuer-parce-quon-a-deja-trop-investi.html
+- articles/contraintes-innovation.html
+- articles/cout-opportunite.html
+- … 140 autre(s)
 
 ## 10. Domaines de sources externes les plus cités
 

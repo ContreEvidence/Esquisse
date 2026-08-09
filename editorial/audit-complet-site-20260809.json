@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-09T14:08:21.038Z",
+  "generatedAt": "2026-08-09T14:19:09.117Z",
   "counts": {
-    "files": 347,
-    "html": 180,
+    "files": 338,
+    "html": 172,
     "assets": 108,
-    "sitemap": 68,
+    "sitemap": 69,
     "library": 49,
     "daily": 0,
     "tools": 15,
@@ -12,224 +12,29 @@
     "sourcedArticlePages": 29,
     "numericEnriched": 50,
     "rssPages": 2,
-    "followPages": 180,
-    "avgWords": 610
+    "followPages": 172,
+    "avgWords": 637
   },
   "severity": {
     "critical": [
-      "42 référence(s) interne(s) pointent vers un fichier absent."
+      "3 référence(s) interne(s) pointent vers un fichier absent."
     ],
     "high": [
       "37 ancre(s) interne(s) sont introuvables.",
-      "Problèmes de canonical détectés (manquants 25, hors domaine 0, doublons 27).",
-      "142 page(s) n'ont pas un jeu Open Graph complet."
+      "Problèmes de canonical détectés (manquants 18, hors domaine 0, doublons 26).",
+      "77 page(s) n'ont pas un jeu Open Graph complet."
     ],
     "medium": [
-      "39 image(s) Open Graph utilisent une URL relative.",
-      "49 page(s) indexables ne figurent pas dans le sitemap.",
-      "23 page(s) contiennent du CSS inline ou beaucoup de styles inline, source de dérive visuelle.",
+      "36 image(s) Open Graph utilisent une URL relative.",
+      "40 page(s) indexables ne figurent pas dans le sitemap.",
+      "18 page(s) contiennent du CSS inline ou beaucoup de styles inline, source de dérive visuelle.",
       "26 contenu(s) longs n'ont aucun lien externe source détecté."
     ],
     "low": [
-      "178 page(s) ne déclarent pas le flux RSS dans leur <head>."
+      "170 page(s) ne déclarent pas le flux RSS dans leur <head>."
     ]
   },
   "broken": [
-    {
-      "from": "PREVIEW-MENU.html",
-      "url": "${u(",
-      "target": "${u("
-    },
-    {
-      "from": "PREVIEW-MENU.html",
-      "url": "${u(",
-      "target": "${u("
-    },
-    {
-      "from": "PREVIEW-MENU.html",
-      "url": "${u(path)}",
-      "target": "${u(path)}"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../assets/logo.svg",
-      "target": "../assets/logo.svg"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../assets/style.css",
-      "target": "../assets/style.css"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../index.html",
-      "target": "../index.html"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../assets/logo.svg",
-      "target": "../assets/logo.svg"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../index.html#articles",
-      "target": "../index.html"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../index.html#methode",
-      "target": "../index.html"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../index.html#newsletter",
-      "target": "../index.html"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../a-propos.html",
-      "target": "../a-propos.html"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../index.html#articles",
-      "target": "../index.html"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../confidentialite.html",
-      "target": "../confidentialite.html"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../mentions.html",
-      "target": "../mentions.html"
-    },
-    {
-      "from": "bonne-entreprise-mauvais-investissement.html",
-      "url": "../assets/script.js",
-      "target": "../assets/script.js"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../assets/logo.svg",
-      "target": "../assets/logo.svg"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../assets/style.css",
-      "target": "../assets/style.css"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../index.html",
-      "target": "../index.html"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../assets/logo.svg",
-      "target": "../assets/logo.svg"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../index.html#articles",
-      "target": "../index.html"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../index.html#methode",
-      "target": "../index.html"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../index.html#newsletter",
-      "target": "../index.html"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../a-propos.html",
-      "target": "../a-propos.html"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../index.html#articles",
-      "target": "../index.html"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../confidentialite.html",
-      "target": "../confidentialite.html"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../mentions.html",
-      "target": "../mentions.html"
-    },
-    {
-      "from": "ia-remplace-t-elle-le-codage.html",
-      "url": "../assets/script.js",
-      "target": "../assets/script.js"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../assets/logo.svg",
-      "target": "../assets/logo.svg"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../assets/style.css",
-      "target": "../assets/style.css"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../index.html",
-      "target": "../index.html"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../assets/logo.svg",
-      "target": "../assets/logo.svg"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../index.html#articles",
-      "target": "../index.html"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../index.html#methode",
-      "target": "../index.html"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../index.html#newsletter",
-      "target": "../index.html"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../a-propos.html",
-      "target": "../a-propos.html"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../index.html#articles",
-      "target": "../index.html"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../confidentialite.html",
-      "target": "../confidentialite.html"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../mentions.html",
-      "target": "../mentions.html"
-    },
-    {
-      "from": "portes-fermees.html",
-      "url": "../assets/script.js",
-      "target": "../assets/script.js"
-    },
     {
       "from": "simulateur-capacite-emprunt.html",
       "url": "${reference.rateSource}",
@@ -473,10 +278,6 @@
   "missingCatalogLinks": [],
   "sitemapMissing": [],
   "htmlNotInSitemap": [
-    "PREVIEW-LOGO.html",
-    "PREVIEW-MENU.html",
-    "PREVIEW-VIDEOS.html",
-    "PREVIEW.html",
     "articles/applications-captent-attention.html",
     "articles/biais-du-survivant.html",
     "articles/bonne-entreprise-mauvais-investissement.html",
@@ -513,19 +314,14 @@
     "articles/strategie-barbell.html",
     "articles/travailler-beaucoup-gagner-peu-prix.html",
     "articles/travailler-plus-avancer-moins.html",
-    "assets/PREVIEW-MENU.html",
-    "bonne-entreprise-mauvais-investissement.html",
     "confidentialite.html",
-    "contact.html",
+    "dossiers/education-financiere-consommation.html",
     "dossiers/finances-situations-de-vie.html",
-    "dossiers/inflation-comprendre-histoire-pouvoir-achat.html",
-    "ia-remplace-t-elle-le-codage.html",
-    "mentions.html",
-    "portes-fermees.html"
+    "mentions.html"
   ],
   "catalogNotSitemap": [],
   "sitemapContentNotCatalog": [
-    "dossiers/education-financiere-consommation.html",
+    "dossiers/inflation-comprendre-histoire-pouvoir-achat.html",
     "dossiers/cout-reel-voiture-achat-credit-loa-lld.html",
     "dossiers/depenses-recurrentes-abonnements-assurances.html",
     "dossiers/gestion-pilotee-comparer-performances.html"
@@ -533,9 +329,6 @@
   "missingTitle": [],
   "missingDesc": [
     "404.html",
-    "PREVIEW-LOGO.html",
-    "PREVIEW-MENU.html",
-    "PREVIEW.html",
     "articles/accepter-nimporte-quel-premier-emploi.html",
     "articles/asymetrie.html",
     "articles/biais-confirmation.html",
@@ -562,7 +355,6 @@
     "articles/taux-de-base.html",
     "articles/transition-temporaire-sans-abandonner-projet.html",
     "articles/valeur-des-options.html",
-    "assets/PREVIEW-MENU.html",
     "debuter.html",
     "dossiers/allocation-risque-portefeuille.html",
     "dossiers/analyse-fondamentale.html",
@@ -572,14 +364,9 @@
   ],
   "missingCanonical": [
     "404.html",
-    "PREVIEW-LOGO.html",
-    "PREVIEW-MENU.html",
-    "PREVIEW.html",
     "articles/bonne-entreprise-mauvais-investissement.html",
     "articles/ia-remplace-t-elle-le-codage.html",
     "articles/reconversion-ne-commence-pas-formation.html",
-    "assets/PREVIEW-MENU.html",
-    "bonne-entreprise-mauvais-investissement.html",
     "debuter.html",
     "dossiers/allocation-risque-portefeuille.html",
     "dossiers/analyse-fondamentale.html",
@@ -590,9 +377,7 @@
     "hors-cadre-decouvertes.html",
     "hors-cadre-images.html",
     "hors-cadre.html",
-    "ia-remplace-t-elle-le-codage.html",
     "merci.html",
-    "portes-fermees.html",
     "themes/decisions.html",
     "themes/ia.html",
     "themes/systemes.html"
@@ -601,34 +386,6 @@
   "badH1": [],
   "pagesMissingAlt": [],
   "titleDup": [
-    {
-      "value": "Vidéos — Contre-évidence",
-      "files": [
-        "PREVIEW-VIDEOS.html",
-        "videos.html"
-      ]
-    },
-    {
-      "value": "Pourquoi une bonne entreprise peut être un mauvais investissement — Contre-évidence",
-      "files": [
-        "articles/bonne-entreprise-mauvais-investissement.html",
-        "bonne-entreprise-mauvais-investissement.html"
-      ]
-    },
-    {
-      "value": "L’intelligence artificielle remplace-t-elle vraiment le codage ? — Contre-évidence",
-      "files": [
-        "articles/ia-remplace-t-elle-le-codage.html",
-        "ia-remplace-t-elle-le-codage.html"
-      ]
-    },
-    {
-      "value": "Une porte fermée ne prouve pas qu’il n’y a pas d’issue — Contre-évidence",
-      "files": [
-        "articles/portes-fermees.html",
-        "portes-fermees.html"
-      ]
-    },
     {
       "value": "Par où commencer ? — Contre-évidence",
       "files": [
@@ -640,20 +397,6 @@
   ],
   "descDup": [
     {
-      "value": "Une entreprise admirable peut produire un rendement médiocre si son prix intègre déjà trop de perfection.",
-      "files": [
-        "articles/bonne-entreprise-mauvais-investissement.html",
-        "bonne-entreprise-mauvais-investissement.html"
-      ]
-    },
-    {
-      "value": "L’IA réduit le coût d’écriture du code. Elle augmente simultanément la valeur de la conception, du contrôle et du jugement.",
-      "files": [
-        "articles/ia-remplace-t-elle-le-codage.html",
-        "ia-remplace-t-elle-le-codage.html"
-      ]
-    },
-    {
       "value": "Ce sujet est désormais traité dans le dossier complet sur l’amélioration des procédures sans dégrader le service.",
       "files": [
         "articles/indicateur-monte-service-se-degrade.html",
@@ -662,13 +405,6 @@
     }
   ],
   "canonicalDup": [
-    {
-      "value": "https://contreevidence.github.io/Esquisse/videos.html",
-      "files": [
-        "PREVIEW-VIDEOS.html",
-        "videos.html"
-      ]
-    },
     {
       "value": "https://contreevidence.github.io/Esquisse/parcours-argent.html",
       "files": [
@@ -1126,11 +862,6 @@
       "title": "Pourquoi travailler plus peut vous faire avancer moins — Contre-évidence"
     },
     {
-      "file": "bonne-entreprise-mauvais-investissement.html",
-      "n": 83,
-      "title": "Pourquoi une bonne entreprise peut être un mauvais investissement — Contre-évidence"
-    },
-    {
       "file": "dossiers/ameliorer-processus-sans-degrader-service.html",
       "n": 66,
       "title": "Améliorer une procédure sans dégrader le service | Contre-évidence"
@@ -1311,11 +1042,6 @@
       "title": "Vendre ou conserver un bien immobilier ? Décider avec rendement, risque et alternatives — Contre-évidence"
     },
     {
-      "file": "ia-remplace-t-elle-le-codage.html",
-      "n": 82,
-      "title": "L’intelligence artificielle remplace-t-elle vraiment le codage ? — Contre-évidence"
-    },
-    {
       "file": "outil-repartir-grosse-somme.html",
       "n": 74,
       "title": "Héritage ou grosse somme : structurer l’allocation | Outil Contre-évidence"
@@ -1331,37 +1057,12 @@
       "title": "Vie professionnelle — formation, carrière, entrepreneuriat | Contre-évidence"
     },
     {
-      "file": "portes-fermees.html",
-      "n": 72,
-      "title": "Une porte fermée ne prouve pas qu’il n’y a pas d’issue — Contre-évidence"
-    },
-    {
       "file": "themes/argent.html",
       "n": 81,
       "title": "Patrimoine — budget, consommation, immobilier et investissement | Contre-évidence"
     }
   ],
   "shortTitles": [
-    {
-      "file": "PREVIEW-MENU.html",
-      "n": 18,
-      "title": "Aperçu menu simple"
-    },
-    {
-      "file": "PREVIEW-VIDEOS.html",
-      "n": 24,
-      "title": "Vidéos — Contre-évidence"
-    },
-    {
-      "file": "PREVIEW.html",
-      "n": 14,
-      "title": "Aperçu Pack 13"
-    },
-    {
-      "file": "assets/PREVIEW-MENU.html",
-      "n": 17,
-      "title": "Aperçu menu final"
-    },
     {
       "file": "videos.html",
       "n": 24,
@@ -1420,10 +1121,6 @@
     {
       "file": "dossiers/vendre-ou-conserver-bien-immobilier.html",
       "n": 169
-    },
-    {
-      "file": "portes-fermees.html",
-      "n": 167
     },
     {
       "file": "simulateur-prix-minimum-rentable.html",
@@ -1518,24 +1215,14 @@
   ],
   "noOG": [
     "404.html",
-    "PREVIEW-LOGO.html",
-    "PREVIEW-MENU.html",
-    "PREVIEW-VIDEOS.html",
-    "PREVIEW.html",
     "a-propos.html",
-    "articles/50-candidatures-zero-reponse.html",
     "articles/50000-euros-livret-peur-investir.html",
-    "articles/accepter-nimporte-quel-poste-retour-emploi.html",
     "articles/accepter-nimporte-quel-premier-emploi.html",
     "articles/asymetrie.html",
     "articles/automatiser-tache-5-minutes-perdre-30.html",
     "articles/biais-confirmation.html",
     "articles/boucles-retroaction.html",
-    "articles/checklist-avant-placement-conseiller.html",
-    "articles/choisir-etf-mondial-debutant.html",
     "articles/choisir-orientation-sans-se-fermer.html",
-    "articles/clients-interesses-personne-nachete.html",
-    "articles/comparatif-produits-bancaires.html",
     "articles/continuer-parce-quon-a-deja-trop-investi.html",
     "articles/contraintes-innovation.html",
     "articles/cout-opportunite.html",
@@ -1544,16 +1231,13 @@
     "articles/dependance-au-sentier.html",
     "articles/effet-de-levier.html",
     "articles/effets-second-ordre.html",
-    "articles/entretien-rate-ce-qui-bloque.html",
     "articles/expliquer-parcours-accidente.html",
-    "articles/frais-fiscalite-rendement-net.html",
     "articles/gagner-plus-epargner-moins.html",
     "articles/hesiter-trois-semaines-deux-options.html",
     "articles/ia-reponse-convaincante-fausse.html",
     "articles/incitations-gouvernent.html",
     "articles/indicateur-monte-service-se-degrade.html",
     "articles/information-comprehension.html",
-    "articles/investir-grosse-somme-dun-coup-ou-progressivement.html",
     "articles/justificatif-impossible-procedure-bloquee.html",
     "articles/lancer-activite-probleme-client.html",
     "articles/majorite-peut-se-tromper.html",
@@ -1575,56 +1259,19 @@
     "articles/transition-temporaire-sans-abandonner-projet.html",
     "articles/travailler-beaucoup-gagner-peu-prix.html",
     "articles/valeur-des-options.html",
-    "assets/PREVIEW-MENU.html",
     "bibliotheque.html",
     "confidentialite.html",
     "contact.html",
     "debuter.html",
     "dossiers/allocation-risque-portefeuille.html",
-    "dossiers/ameliorer-processus-sans-degrader-service.html",
     "dossiers/analyse-fondamentale.html",
     "dossiers/analyse-macro-regimes.html",
     "dossiers/analyse-technique-marche.html",
-    "dossiers/assurer-ou-autoassurer-risques.html",
-    "dossiers/audit-budget-60-minutes.html",
-    "dossiers/automatiser-ou-non-processus.html",
-    "dossiers/calculer-prix-minimum-rentable.html",
-    "dossiers/capacite-refuser-travail-rentabilite.html",
-    "dossiers/competent-mais-invisible-travail.html",
-    "dossiers/cout-reel-voiture-achat-credit-loa-lld.html",
-    "dossiers/debloquer-demarche-administrative.html",
-    "dossiers/decider-sans-tourner-en-rond.html",
-    "dossiers/dependance-gros-client.html",
-    "dossiers/depenses-recurrentes-abonnements-assurances.html",
-    "dossiers/devenir-manager-premiere-fois.html",
     "dossiers/education-financiere-consommation.html",
-    "dossiers/embaucher-ou-sous-traiter.html",
-    "dossiers/experience-devient-risque-recruteur.html",
-    "dossiers/finances-allocation-portefeuille.html",
-    "dossiers/finances-cadre-global.html",
     "dossiers/finances-classes-actifs.html",
-    "dossiers/finances-credit-endettement.html",
-    "dossiers/finances-enveloppes-fiscalite.html",
     "dossiers/finances-immobilier-indirect.html",
-    "dossiers/finances-immobilier-patrimoine.html",
-    "dossiers/finances-investissement-locatif.html",
-    "dossiers/finances-residence-principale.html",
-    "dossiers/finances-retraite-decumulation.html",
     "dossiers/finances-situations-de-vie.html",
-    "dossiers/finances-transmission-patrimoine.html",
-    "dossiers/formation-vaut-elle-le-cout.html",
-    "dossiers/gestion-pilotee-comparer-performances.html",
-    "dossiers/inflation-comprendre-histoire-pouvoir-achat.html",
-    "dossiers/liquidites-reserve-securite.html",
-    "dossiers/methode-analyse-complete.html",
-    "dossiers/negocier-salaire-responsabilites.html",
-    "dossiers/plan-30-jours-recherche-emploi.html",
-    "dossiers/protocole-verifier-reponse-ia.html",
-    "dossiers/quitter-emploi-stable-ou-rester.html",
-    "dossiers/rembourser-credit-ou-investir.html",
-    "dossiers/tresorerie-bfr-entreprise.html",
     "dossiers/valorisation-entreprise.html",
-    "dossiers/vendre-ou-conserver-bien-immobilier.html",
     "hors-cadre-cuisine.html",
     "hors-cadre-decouvertes.html",
     "hors-cadre-images.html",
@@ -1634,24 +1281,9 @@
     "merci.html",
     "methode-sources.html",
     "moins-de-25-ans.html",
-    "outil-audit-financier-personnel.html",
-    "outil-competences-preuves-cv.html",
-    "outil-pilotage-recherche-emploi.html",
-    "outil-repartir-grosse-somme.html",
-    "outil-tresorerie-13-semaines.html",
     "parcours-argent.html",
     "parcours-de-vie.html",
     "parcours-vie-professionnelle.html",
-    "simulateur-acheter-ou-louer.html",
-    "simulateur-allocation-stress-test.html",
-    "simulateur-capacite-emprunt.html",
-    "simulateur-capitalisation-comparateur.html",
-    "simulateur-cout-formation.html",
-    "simulateur-investissement-locatif.html",
-    "simulateur-prix-minimum-rentable.html",
-    "simulateur-rembourser-ou-investir.html",
-    "simulateur-reserve-securite.html",
-    "simulateur-vendre-ou-conserver.html",
     "themes/argent.html",
     "themes/decisions.html",
     "themes/entreprendre.html",
@@ -1798,20 +1430,8 @@
       "ogImage": "../assets/og-cover.svg"
     },
     {
-      "file": "bonne-entreprise-mauvais-investissement.html",
-      "ogImage": "../assets/og-cover.svg"
-    },
-    {
-      "file": "ia-remplace-t-elle-le-codage.html",
-      "ogImage": "../assets/og-cover.svg"
-    },
-    {
       "file": "parcours-vie-professionnelle.html",
       "ogImage": "assets/og-cover-brand.png"
-    },
-    {
-      "file": "portes-fermees.html",
-      "ogImage": "../assets/og-cover.svg"
     },
     {
       "file": "themes/travail.html",
@@ -1820,10 +1440,6 @@
   ],
   "noRSS": [
     "404.html",
-    "PREVIEW-LOGO.html",
-    "PREVIEW-MENU.html",
-    "PREVIEW-VIDEOS.html",
-    "PREVIEW.html",
     "a-propos.html",
     "articles/50-candidatures-zero-reponse.html",
     "articles/50000-euros-livret-peur-investir.html",
@@ -1911,8 +1527,6 @@
     "articles/travailler-beaucoup-gagner-peu-prix.html",
     "articles/travailler-plus-avancer-moins.html",
     "articles/valeur-des-options.html",
-    "assets/PREVIEW-MENU.html",
-    "bonne-entreprise-mauvais-investissement.html",
     "confidentialite.html",
     "contact.html",
     "debuter.html",
@@ -1965,7 +1579,6 @@
     "hors-cadre-decouvertes.html",
     "hors-cadre-images.html",
     "hors-cadre.html",
-    "ia-remplace-t-elle-le-codage.html",
     "marches-analyses-avancees.html",
     "mentions.html",
     "merci.html",
@@ -1979,7 +1592,6 @@
     "parcours-argent.html",
     "parcours-de-vie.html",
     "parcours-vie-professionnelle.html",
-    "portes-fermees.html",
     "simulateur-acheter-ou-louer.html",
     "simulateur-allocation-stress-test.html",
     "simulateur-capacite-emprunt.html",
@@ -2001,19 +1613,19 @@
   "lowSourceLongPages": [
     {
       "file": "articles/accepter-nimporte-quel-poste-retour-emploi.html",
-      "words": 1358
+      "words": 1378
     },
     {
       "file": "articles/clients-interesses-personne-nachete.html",
-      "words": 968
+      "words": 988
     },
     {
       "file": "articles/competences-invisibles-preuves.html",
-      "words": 1051
+      "words": 1058
     },
     {
       "file": "articles/entretien-rate-ce-qui-bloque.html",
-      "words": 1040
+      "words": 1060
     },
     {
       "file": "articles/exemples-allocation-250000-500000-1000000.html",
@@ -2021,417 +1633,368 @@
     },
     {
       "file": "articles/premiere-chance-sans-experience.html",
-      "words": 1019
+      "words": 1026
     },
     {
       "file": "articles/retrouver-emploi-apres-interruption.html",
-      "words": 1078
+      "words": 1085
     },
     {
       "file": "dossiers/ameliorer-processus-sans-degrader-service.html",
-      "words": 1635
-    },
-    {
-      "file": "dossiers/audit-budget-60-minutes.html",
-      "words": 1513
-    },
-    {
-      "file": "dossiers/automatiser-ou-non-processus.html",
-      "words": 1096
-    },
-    {
-      "file": "dossiers/calculer-prix-minimum-rentable.html",
-      "words": 1639
-    },
-    {
-      "file": "dossiers/capacite-refuser-travail-rentabilite.html",
-      "words": 1062
-    },
-    {
-      "file": "dossiers/competent-mais-invisible-travail.html",
-      "words": 1079
-    },
-    {
-      "file": "dossiers/cout-reel-voiture-achat-credit-loa-lld.html",
-      "words": 1200
-    },
-    {
-      "file": "dossiers/debloquer-demarche-administrative.html",
-      "words": 1359
-    },
-    {
-      "file": "dossiers/decider-sans-tourner-en-rond.html",
       "words": 1655
     },
     {
+      "file": "dossiers/audit-budget-60-minutes.html",
+      "words": 1533
+    },
+    {
+      "file": "dossiers/automatiser-ou-non-processus.html",
+      "words": 1116
+    },
+    {
+      "file": "dossiers/calculer-prix-minimum-rentable.html",
+      "words": 1659
+    },
+    {
+      "file": "dossiers/capacite-refuser-travail-rentabilite.html",
+      "words": 1082
+    },
+    {
+      "file": "dossiers/competent-mais-invisible-travail.html",
+      "words": 1099
+    },
+    {
+      "file": "dossiers/cout-reel-voiture-achat-credit-loa-lld.html",
+      "words": 1207
+    },
+    {
+      "file": "dossiers/debloquer-demarche-administrative.html",
+      "words": 1379
+    },
+    {
+      "file": "dossiers/decider-sans-tourner-en-rond.html",
+      "words": 1675
+    },
+    {
       "file": "dossiers/dependance-gros-client.html",
-      "words": 1329
+      "words": 1349
     },
     {
       "file": "dossiers/depenses-recurrentes-abonnements-assurances.html",
-      "words": 1120
+      "words": 1127
     },
     {
       "file": "dossiers/devenir-manager-premiere-fois.html",
-      "words": 1331
+      "words": 1351
     },
     {
       "file": "dossiers/finances-cadre-global.html",
-      "words": 907
+      "words": 927
     },
     {
       "file": "dossiers/liquidites-reserve-securite.html",
-      "words": 1077
+      "words": 1097
     },
     {
       "file": "dossiers/methode-analyse-complete.html",
-      "words": 2265
+      "words": 2272
     },
     {
       "file": "dossiers/plan-30-jours-recherche-emploi.html",
-      "words": 1979
+      "words": 1999
     },
     {
       "file": "dossiers/protocole-verifier-reponse-ia.html",
-      "words": 1524
+      "words": 1544
     },
     {
       "file": "dossiers/rembourser-credit-ou-investir.html",
-      "words": 1107
+      "words": 1127
     },
     {
       "file": "dossiers/vendre-ou-conserver-bien-immobilier.html",
-      "words": 1255
+      "words": 1275
     }
   ],
   "thinPages": [
     {
-      "file": "PREVIEW-LOGO.html",
-      "words": 29
-    },
-    {
-      "file": "PREVIEW-MENU.html",
-      "words": 43
-    },
-    {
-      "file": "PREVIEW.html",
-      "words": 18
-    },
-    {
       "file": "articles/50000-euros-livret-peur-investir.html",
-      "words": 175
+      "words": 182
     },
     {
       "file": "articles/accepter-nimporte-quel-premier-emploi.html",
-      "words": 82
+      "words": 89
     },
     {
       "file": "articles/asymetrie.html",
-      "words": 35
+      "words": 42
     },
     {
       "file": "articles/automatiser-tache-5-minutes-perdre-30.html",
-      "words": 84
+      "words": 91
     },
     {
       "file": "articles/biais-confirmation.html",
-      "words": 40
-    },
-    {
-      "file": "articles/boucles-retroaction.html",
-      "words": 44
-    },
-    {
-      "file": "articles/contraintes-innovation.html",
-      "words": 43
-    },
-    {
-      "file": "articles/cout-opportunite.html",
-      "words": 38
-    },
-    {
-      "file": "articles/couts-irrecuperables.html",
-      "words": 40
-    },
-    {
-      "file": "articles/decisions-reversibles-irreversibles.html",
-      "words": 45
-    },
-    {
-      "file": "articles/dependance-au-sentier.html",
-      "words": 43
-    },
-    {
-      "file": "articles/effet-de-levier.html",
-      "words": 41
-    },
-    {
-      "file": "articles/effets-second-ordre.html",
-      "words": 39
-    },
-    {
-      "file": "articles/expliquer-parcours-accidente.html",
-      "words": 85
-    },
-    {
-      "file": "articles/incitations-gouvernent.html",
-      "words": 36
-    },
-    {
-      "file": "articles/indicateur-monte-service-se-degrade.html",
-      "words": 74
-    },
-    {
-      "file": "articles/information-comprehension.html",
-      "words": 40
-    },
-    {
-      "file": "articles/lancer-activite-probleme-client.html",
-      "words": 74
-    },
-    {
-      "file": "articles/majorite-peut-se-tromper.html",
-      "words": 37
-    },
-    {
-      "file": "articles/marge-de-securite.html",
-      "words": 44
-    },
-    {
-      "file": "articles/mesure-devient-cible.html",
-      "words": 42
-    },
-    {
-      "file": "articles/modeles-mentaux.html",
-      "words": 44
-    },
-    {
-      "file": "articles/portes-fermees.html",
-      "words": 59
-    },
-    {
-      "file": "articles/premier-logement-autonomie.html",
-      "words": 308
-    },
-    {
-      "file": "articles/premiers-contrats-abonnements-credit.html",
-      "words": 321
-    },
-    {
-      "file": "articles/probleme-symptome-cause.html",
-      "words": 42
-    },
-    {
-      "file": "articles/reconversion-apres-50-ans.html",
-      "words": 72
-    },
-    {
-      "file": "articles/reconversion-ne-commence-pas-formation.html",
-      "words": 138
-    },
-    {
-      "file": "articles/regle-absurde-logique-cachee.html",
-      "words": 77
-    },
-    {
-      "file": "articles/rendements-decroissants.html",
-      "words": 43
-    },
-    {
-      "file": "articles/reseaux-sociaux-comparaison-pression.html",
-      "words": 348
-    },
-    {
-      "file": "articles/risque-incertitude.html",
-      "words": 46
-    },
-    {
-      "file": "articles/surqualification-rassurer-employeur.html",
-      "words": 71
-    },
-    {
-      "file": "articles/taux-de-base.html",
-      "words": 36
-    },
-    {
-      "file": "articles/transition-temporaire-sans-abandonner-projet.html",
-      "words": 73
-    },
-    {
-      "file": "articles/valeur-des-options.html",
-      "words": 39
-    },
-    {
-      "file": "assets/PREVIEW-MENU.html",
-      "words": 50
-    },
-    {
-      "file": "bibliotheque.html",
-      "words": 55
-    },
-    {
-      "file": "contact.html",
-      "words": 143
-    },
-    {
-      "file": "debuter.html",
-      "words": 46
-    },
-    {
-      "file": "dossiers/allocation-risque-portefeuille.html",
-      "words": 48
-    },
-    {
-      "file": "dossiers/analyse-fondamentale.html",
       "words": 47
     },
     {
-      "file": "dossiers/analyse-macro-regimes.html",
-      "words": 53
+      "file": "articles/boucles-retroaction.html",
+      "words": 51
     },
     {
-      "file": "dossiers/analyse-technique-marche.html",
-      "words": 52
-    },
-    {
-      "file": "dossiers/finances-classes-actifs.html",
-      "words": 75
-    },
-    {
-      "file": "dossiers/finances-immobilier-indirect.html",
-      "words": 35
-    },
-    {
-      "file": "dossiers/valorisation-entreprise.html",
+      "file": "articles/contraintes-innovation.html",
       "words": 50
     },
     {
-      "file": "hors-cadre-images.html",
-      "words": 217
+      "file": "articles/cout-opportunite.html",
+      "words": 45
     },
     {
-      "file": "hors-cadre.html",
-      "words": 285
+      "file": "articles/couts-irrecuperables.html",
+      "words": 47
     },
     {
-      "file": "index.html",
-      "words": 314
+      "file": "articles/decisions-reversibles-irreversibles.html",
+      "words": 52
     },
     {
-      "file": "marches-analyses-avancees.html",
-      "words": 222
+      "file": "articles/dependance-au-sentier.html",
+      "words": 50
     },
     {
-      "file": "mentions.html",
-      "words": 283
+      "file": "articles/effet-de-levier.html",
+      "words": 48
     },
     {
-      "file": "merci.html",
-      "words": 40
+      "file": "articles/effets-second-ordre.html",
+      "words": 46
     },
     {
-      "file": "moins-de-25-ans.html",
+      "file": "articles/expliquer-parcours-accidente.html",
+      "words": 92
+    },
+    {
+      "file": "articles/incitations-gouvernent.html",
+      "words": 43
+    },
+    {
+      "file": "articles/indicateur-monte-service-se-degrade.html",
+      "words": 81
+    },
+    {
+      "file": "articles/information-comprehension.html",
+      "words": 47
+    },
+    {
+      "file": "articles/lancer-activite-probleme-client.html",
+      "words": 81
+    },
+    {
+      "file": "articles/majorite-peut-se-tromper.html",
+      "words": 44
+    },
+    {
+      "file": "articles/marge-de-securite.html",
+      "words": 51
+    },
+    {
+      "file": "articles/mesure-devient-cible.html",
+      "words": 49
+    },
+    {
+      "file": "articles/modeles-mentaux.html",
+      "words": 51
+    },
+    {
+      "file": "articles/portes-fermees.html",
+      "words": 66
+    },
+    {
+      "file": "articles/premier-logement-autonomie.html",
+      "words": 315
+    },
+    {
+      "file": "articles/premiers-contrats-abonnements-credit.html",
+      "words": 328
+    },
+    {
+      "file": "articles/probleme-symptome-cause.html",
+      "words": 49
+    },
+    {
+      "file": "articles/reconversion-apres-50-ans.html",
+      "words": 79
+    },
+    {
+      "file": "articles/reconversion-ne-commence-pas-formation.html",
+      "words": 145
+    },
+    {
+      "file": "articles/regle-absurde-logique-cachee.html",
+      "words": 84
+    },
+    {
+      "file": "articles/rendements-decroissants.html",
+      "words": 50
+    },
+    {
+      "file": "articles/risque-incertitude.html",
+      "words": 53
+    },
+    {
+      "file": "articles/surqualification-rassurer-employeur.html",
+      "words": 78
+    },
+    {
+      "file": "articles/taux-de-base.html",
+      "words": 43
+    },
+    {
+      "file": "articles/transition-temporaire-sans-abandonner-projet.html",
+      "words": 80
+    },
+    {
+      "file": "articles/valeur-des-options.html",
+      "words": 46
+    },
+    {
+      "file": "bibliotheque.html",
+      "words": 62
+    },
+    {
+      "file": "contact.html",
+      "words": 150
+    },
+    {
+      "file": "debuter.html",
+      "words": 53
+    },
+    {
+      "file": "dossiers/allocation-risque-portefeuille.html",
+      "words": 55
+    },
+    {
+      "file": "dossiers/analyse-fondamentale.html",
+      "words": 54
+    },
+    {
+      "file": "dossiers/analyse-macro-regimes.html",
+      "words": 60
+    },
+    {
+      "file": "dossiers/analyse-technique-marche.html",
+      "words": 59
+    },
+    {
+      "file": "dossiers/finances-classes-actifs.html",
+      "words": 82
+    },
+    {
+      "file": "dossiers/finances-immobilier-indirect.html",
       "words": 42
     },
     {
-      "file": "outil-audit-financier-personnel.html",
-      "words": 273
+      "file": "dossiers/valorisation-entreprise.html",
+      "words": 57
     },
     {
-      "file": "outil-competences-preuves-cv.html",
-      "words": 285
+      "file": "hors-cadre-images.html",
+      "words": 224
     },
     {
-      "file": "outil-pilotage-recherche-emploi.html",
-      "words": 264
+      "file": "hors-cadre.html",
+      "words": 292
     },
     {
-      "file": "outil-tresorerie-13-semaines.html",
+      "file": "index.html",
+      "words": 321
+    },
+    {
+      "file": "marches-analyses-avancees.html",
+      "words": 229
+    },
+    {
+      "file": "mentions.html",
       "words": 290
     },
     {
+      "file": "merci.html",
+      "words": 47
+    },
+    {
+      "file": "moins-de-25-ans.html",
+      "words": 49
+    },
+    {
+      "file": "outil-audit-financier-personnel.html",
+      "words": 280
+    },
+    {
+      "file": "outil-competences-preuves-cv.html",
+      "words": 292
+    },
+    {
+      "file": "outil-pilotage-recherche-emploi.html",
+      "words": 271
+    },
+    {
+      "file": "outil-tresorerie-13-semaines.html",
+      "words": 297
+    },
+    {
       "file": "parcours-argent.html",
-      "words": 310
+      "words": 317
     },
     {
       "file": "parcours-de-vie.html",
-      "words": 235
+      "words": 242
     },
     {
       "file": "parcours-vie-professionnelle.html",
-      "words": 245
-    },
-    {
-      "file": "simulateur-acheter-ou-louer.html",
-      "words": 345
+      "words": 252
     },
     {
       "file": "simulateur-allocation-stress-test.html",
-      "words": 261
+      "words": 268
     },
     {
       "file": "simulateur-investissement-locatif.html",
-      "words": 239
+      "words": 246
     },
     {
       "file": "simulateur-rembourser-ou-investir.html",
-      "words": 313
+      "words": 320
     },
     {
       "file": "simulateur-reserve-securite.html",
-      "words": 227
+      "words": 234
     },
     {
       "file": "simulateur-vendre-ou-conserver.html",
-      "words": 332
+      "words": 339
     },
     {
       "file": "themes/decisions.html",
-      "words": 94
+      "words": 101
     },
     {
       "file": "themes/entreprendre.html",
-      "words": 258
+      "words": 265
     },
     {
       "file": "themes/ia.html",
-      "words": 118
+      "words": 125
     },
     {
       "file": "themes/systemes.html",
-      "words": 129
+      "words": 136
     },
     {
       "file": "themes/travail.html",
-      "words": 285
+      "words": 292
     }
   ],
   "heavyInline": [
-    {
-      "file": "PREVIEW-LOGO.html",
-      "styleBlocks": 1,
-      "styleAttrs": 2
-    },
-    {
-      "file": "PREVIEW-MENU.html",
-      "styleBlocks": 1,
-      "styleAttrs": 1
-    },
-    {
-      "file": "PREVIEW-VIDEOS.html",
-      "styleBlocks": 1,
-      "styleAttrs": 0
-    },
-    {
-      "file": "PREVIEW.html",
-      "styleBlocks": 1,
-      "styleAttrs": 2
-    },
-    {
-      "file": "assets/PREVIEW-MENU.html",
-      "styleBlocks": 1,
-      "styleAttrs": 0
-    },
     {
       "file": "contact.html",
       "styleBlocks": 1,
@@ -2527,7 +2090,7 @@
     "css": [
       [
         "../assets/style.css",
-        14
+        11
       ],
       [
         "assets/style.css",
@@ -2598,10 +2161,6 @@
         2
       ],
       [
-        "assets/brand.css",
-        1
-      ],
-      [
         "../assets/finance.css?v=20260807-2",
         1
       ],
@@ -2632,12 +2191,12 @@
         137
       ],
       [
-        "./assets/follow.js?v=20260809-1",
-        41
+        "../assets/script.js",
+        35
       ],
       [
-        "../assets/script.js",
-        38
+        "./assets/follow.js?v=20260809-1",
+        34
       ],
       [
         "../assets/article-v3.js",
@@ -2712,16 +2271,8 @@
         4
       ],
       [
-        "./follow.js?v=20260809-1",
-        4
-      ],
-      [
         "../assets/navigation-v3.js?v=20260808-6",
         3
-      ],
-      [
-        "assets/navigation-v3.js",
-        2
       ],
       [
         "../assets/script.js?v=20260808-16",
@@ -2734,14 +2285,6 @@
       [
         "assets/navigation-v3.js?v=20260809-03",
         2
-      ],
-      [
-        "assets/script.js?v=20260806-12",
-        1
-      ],
-      [
-        "assets/navigation-v3.js?v=20260806-12",
-        1
       ],
       [
         "../assets/navigation-v3.js?v=20260808-24",
