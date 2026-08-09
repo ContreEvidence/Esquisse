@@ -257,5 +257,91 @@
       "status": "observed",
       "source": "https://www.insee.fr/fr/statistiques/9022797"
     }
+  },
+  "tax2026": {
+    "status": "official-current",
+    "pea": {
+      "depositCeilingEur": 150000,
+      "peaPlusPeaPmeCeilingEur": 225000,
+      "pfuBefore5YearsPct": 31.4,
+      "socialLeviesAfter5YearsPct": 18.6,
+      "source": "https://www.impots.gouv.fr/particulier/questions/jai-un-plan-depargne-en-actions-pea-les-retraits-sont-ils-imposables"
+    },
+    "lifeInsurance": {
+      "abatementAfter8YearsSingleEur": 4600,
+      "abatementAfter8YearsCoupleEur": 9200,
+      "socialLeviesPct": 17.2,
+      "source": "https://www.impots.gouv.fr/particulier/lassurance-vie-et-le-pea-0"
+    },
+    "cto": {
+      "pfuPct": 31.4,
+      "incomeTaxPct": 12.8,
+      "socialLeviesPct": 18.6,
+      "source": "https://www.impots.gouv.fr/particulier/questions/jai-des-valeurs-mobilieres-comment-sont-elles-imposees"
+    },
+    "per": {
+      "contributionsAfter70Deductible": false,
+      "capitalGainsGlobalRatePct": 31.4,
+      "source": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/comment-fonctionne-le-plan-depargne-retraite-individuel"
+    }
+  },
+  "retirement2026": {
+    "lifeExpectancyAt65_2025": {
+      "menYears": 20,
+      "womenYears": 23.6,
+      "status": "observed-provisional",
+      "source": "https://www.insee.fr/fr/statistiques/2416631"
+    },
+    "inflationJune2026YoYPct": 1.8,
+    "inflationSource": "https://www.insee.fr/fr/statistiques/9021808"
+  },
+  "transmission2026": {
+    "parentChildDonationAllowanceEur": 100000,
+    "renewalYears": 15,
+    "familyCashGiftAllowanceEur": 31865,
+    "temporaryHousingGift": {
+      "maxPerDonorDoneeEur": 100000,
+      "maxPerRecipientEur": 300000,
+      "endDate": "2026-12-31"
+    },
+    "lifeInsuranceBefore70AllowancePerBeneficiaryEur": 152500,
+    "lifeInsuranceAfter70GlobalAllowanceEur": 30500,
+    "sources": [
+      "https://www.service-public.fr/particuliers/vosdroits/F36656",
+      "https://www.impots.gouv.fr/particulier/questions/je-suis-beneficiaire-dune-assurance-vie-comment-la-declarer"
+    ]
+  },
+  "training2026": {
+    "cpfMandatoryContributionEur": 150,
+    "effectiveSince": "2026-04-01",
+    "skillsAssessmentCpfCapEur": 1600,
+    "specificRegistryCpfCapEur": 1500,
+    "source": "https://www.moncompteformation.gouv.fr/espace-public/une-participation-financiere-pourquoi-et-comment"
+  },
+  "wages2024": {
+    "privateSectorNetMonthlyAverageEqtpEur": 2730,
+    "privateSectorNetMonthlyMedianEqtpEur": 2190,
+    "decile1Eur": 1492,
+    "decile9Eur": 4334,
+    "under10EmployeesAverageEur": 2190,
+    "over5000EmployeesAverageEur": 3260,
+    "status": "observed",
+    "sources": [
+      "https://www.insee.fr/fr/statistiques/8733089?sommaire=8733125",
+      "https://www.insee.fr/fr/statistiques/8733091?sommaire=8733125"
+    ]
+  },
+  "business2026": {
+    "paymentTerms": {
+      "defaultDays": 30,
+      "maxNegotiatedDays": 60,
+      "alternative": "45 days end of month",
+      "collectionIndemnityEur": 40,
+      "status": "regulatory-current",
+      "sources": [
+        "https://www.economie.gouv.fr/entreprises/gerer-sa-comptabilite-et-ses-demarches/entreprises-quels-sont-les-delais-de-paiement",
+        "https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/conditions-generales-de-vente-quelles-mentions-sont-obligatoires"
+      ]
+    }
   }
 }

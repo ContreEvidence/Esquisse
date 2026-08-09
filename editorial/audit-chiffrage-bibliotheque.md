@@ -129,3 +129,19 @@ Toute donnée susceptible de changer porte :
 - date de dernière vérification.
 
 Les données éditoriales centralisées sont stockées dans `assets/editorial-data.json` afin d’éviter les chiffres contradictoires entre dossiers.
+
+
+<!-- CE_DATA_WAVE2B_20260809:AUDIT -->
+## Vague exécutée — 9 août 2026 · fiscalité, retraite, transmission et vie pro
+
+- `dossiers/finances-enveloppes-fiscalite.html` — PEA, assurance-vie, CTO et PER : taux, plafonds et exemples fiscaux 2026.
+- `dossiers/finances-retraite-decumulation.html` — espérance de vie à 65 ans, inflation et trajectoire de dépenses sur 10/20/30 ans.
+- `dossiers/finances-transmission-patrimoine.html` — abattements de donation, don familial, exonération temporaire 2026 et assurance-vie avant/après 70 ans.
+- `dossiers/formation-vaut-elle-le-cout.html` — participation CPF 2026 et plafonds de mobilisation sur certaines actions.
+- `dossiers/negocier-salaire-responsabilites.html` — moyenne, médiane, déciles et effet de taille d'entreprise sur les rémunérations du privé.
+
+Toutes les valeurs sont stockées dans `assets/editorial-data.json` avec leur source et leur statut.
+
+
+<!-- CE_DATA_WAVE2C_20260809:AUDIT -->
+- `dossiers/tresorerie-bfr-entreprise.html` — enrichi le 9 août 2026 avec délais B2B 30/45/60 jours, indemnité de 40 € et impact chiffré sur le BFR.
