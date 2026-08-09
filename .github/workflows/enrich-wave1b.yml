@@ -1,0 +1,39 @@
+name: Enrichir les dossiers chiffres wave 1b
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/enrich-wave1b-20260809.cjs'
+      - '.github/workflows/enrich-wave1b.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le depot
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Appliquer les reperes chiffres
+        run: node scripts/enrich-wave1b-20260809.cjs
+      - name: Publier les enrichissements
+        shell: bash
+        run: |
+          if git diff --quiet -- articles/comparatif-produits-bancaires.html dossiers/finances-credit-endettement.html dossiers/finances-allocation-portefeuille.html assets/editorial-data.json editorial/audit-chiffrage-bibliotheque.md; then
+            echo "Aucun enrichissement a publier."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add articles/comparatif-produits-bancaires.html dossiers/finances-credit-endettement.html dossiers/finances-allocation-portefeuille.html assets/editorial-data.json editorial/audit-chiffrage-bibliotheque.md
+          git commit -m "Enrichir epargne credit et allocation avec des donnees datees"
+          git push
