@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T14:04:38.244Z",
+  "generatedAt": "2026-08-09T14:05:04.031Z",
   "counts": {
     "files": 346,
     "html": 180,
@@ -25,9 +25,9 @@
       "142 page(s) n'ont pas un jeu Open Graph complet."
     ],
     "medium": [
-      "40 image(s) Open Graph utilisent une URL relative.",
+      "39 image(s) Open Graph utilisent une URL relative.",
       "49 page(s) indexables ne figurent pas dans le sitemap.",
-      "24 page(s) contiennent du CSS inline ou beaucoup de styles inline, source de dérive visuelle.",
+      "23 page(s) contiennent du CSS inline ou beaucoup de styles inline, source de dérive visuelle.",
       "26 contenu(s) longs n'ont aucun lien externe source détecté."
     ],
     "low": [
@@ -1806,10 +1806,6 @@
       "ogImage": "../assets/og-cover.svg"
     },
     {
-      "file": "index.html",
-      "ogImage": "assets/og-cover-brand.png"
-    },
-    {
       "file": "parcours-vie-professionnelle.html",
       "ogImage": "assets/og-cover-brand.png"
     },
@@ -2319,7 +2315,7 @@
     },
     {
       "file": "index.html",
-      "words": 214
+      "words": 314
     },
     {
       "file": "marches-analyses-avancees.html",
@@ -2478,11 +2474,6 @@
     },
     {
       "file": "hors-cadre.html",
-      "styleBlocks": 1,
-      "styleAttrs": 0
-    },
-    {
-      "file": "index.html",
       "styleBlocks": 1,
       "styleAttrs": 0
     },

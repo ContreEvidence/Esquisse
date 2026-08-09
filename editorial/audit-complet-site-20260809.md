@@ -30,9 +30,9 @@ Audit automatique du dépôt **ContreEvidence/Esquisse**, complété par une lec
 - 142 page(s) n'ont pas un jeu Open Graph complet.
 
 ### Moyenne
-- 40 image(s) Open Graph utilisent une URL relative.
+- 39 image(s) Open Graph utilisent une URL relative.
 - 49 page(s) indexables ne figurent pas dans le sitemap.
-- 24 page(s) contiennent du CSS inline ou beaucoup de styles inline, source de dérive visuelle.
+- 23 page(s) contiennent du CSS inline ou beaucoup de styles inline, source de dérive visuelle.
 - 26 contenu(s) longs n'ont aucun lien externe source détecté.
 
 ### Faible
@@ -343,7 +343,6 @@ _53 lignes supplémentaires non affichées._
 | articles/travailler-plus-avancer-moins.html | ../assets/og-cover.svg |
 | bonne-entreprise-mauvais-investissement.html | ../assets/og-cover.svg |
 | ia-remplace-t-elle-le-codage.html | ../assets/og-cover.svg |
-| index.html | assets/og-cover-brand.png |
 | parcours-vie-professionnelle.html | assets/og-cover-brand.png |
 | portes-fermees.html | ../assets/og-cover.svg |
 | themes/travail.html | ../assets/og-cover-brand.png |
@@ -520,7 +519,6 @@ _35 lignes supplémentaires non affichées._
 | hors-cadre-cuisine.html | 1 | 0 |
 | hors-cadre-decouvertes.html | 1 | 0 |
 | hors-cadre.html | 1 | 0 |
-| index.html | 1 | 0 |
 | merci.html | 1 | 0 |
 | outil-repartir-grosse-somme.html | 1 | 1 |
 | parcours-argent.html | 1 | 1 |
