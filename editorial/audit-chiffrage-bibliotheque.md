@@ -26,7 +26,7 @@ Aucune moyenne historique ne doit devenir une promesse. Aucune performance comme
 - `dossiers/cout-reel-voiture-achat-credit-loa-lld.html` — comparaison complète achat / crédit / LOA / LLD.
 - `dossiers/depenses-recurrentes-abonnements-assurances.html` — coûts mensuels/annuels et audit chiffré.
 - `dossiers/audit-budget-60-minutes.html` — méthode directement calculable à partir des relevés.
-- `dossiers/finances-investissement-locatif.html` — rendement, cash-flow, dette et stress tests.
+- `dossiers/finances-investissement-locatif.html` — **déjà chiffré et enrichi le 9 août 2026** avec IRL T2 2026 et exemples de revalorisation en euros.
 - `dossiers/vendre-ou-conserver-bien-immobilier.html` — capital libérable, dette et scénarios.
 - `dossiers/rembourser-credit-ou-investir.html` — rendement d’équilibre et coût certain de la dette.
 
@@ -37,7 +37,7 @@ Aucune moyenne historique ne doit devenir une promesse. Aucune performance comme
 - `articles/frais-fiscalite-rendement-net.html` — ajouter structures de frais réelles de contrats et impact composé sur 10/20 ans.
 - `articles/comparatif-produits-bancaires.html` — **enrichi le 9 août 2026** : Livret A, LDDS, LEP et PEL 2026 avec taux, plafonds et exemple en euros. Comptes à terme et fonds euros ajoutés le 9 août 2026 à partir de la Banque de France et de l’ACPR.
 - `dossiers/finances-credit-endettement.html` — **enrichi le 9 août 2026** : taux Banque de France mai 2026 et exemples de coût à 20/25 ans et crédit consommation.
-- `dossiers/finances-residence-principale.html` — frais d’acquisition, financement, durée de détention et exemples de point mort.
+- `dossiers/finances-residence-principale.html` — **enrichi le 9 août 2026** : prix Notaires–Insee T1 2026, volume de transactions et règles HCSF 35 % / 25 ans. Reste à approfondir frais d’acquisition et exemples de point mort.
 - `dossiers/finances-immobilier-patrimoine.html` — rendements, concentration, liquidité et coût du levier.
 - `dossiers/finances-enveloppes-fiscalite.html` — fiscalité chiffrée à jour par scénario PEA / AV / CTO / PER.
 - `dossiers/finances-retraite-decumulation.html` — inflation, espérance de vie, risque de séquence et simulations de retrait.

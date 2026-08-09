@@ -232,5 +232,30 @@
       "status": "observed",
       "source": "https://www.insee.fr/fr/statistiques/8733041?sommaire=8733125"
     }
+  },
+  "realEstate": {
+    "asOf": "2026-Q1",
+    "oldHousingFrance": {
+      "quarterlyChangePct": 0.2,
+      "annualChangePct": 0.1,
+      "apartmentsAnnualPct": 0.6,
+      "housesAnnualPct": -0.2,
+      "transactions12mEndMarch2026": 952000,
+      "status": "observed-provisional",
+      "source": "https://www.insee.fr/fr/statistiques/8995299"
+    },
+    "mortgageRules": {
+      "maxEffortRatePct": 35,
+      "maxMaturityYears": 25,
+      "bankFlexibilitySharePct": 20,
+      "status": "regulatory-current",
+      "source": "https://www.economie.gouv.fr/hcsf/mesures/mesure-relative-loctroi-de-credits-immobiliers"
+    },
+    "irl2026Q2": {
+      "index": 148.37,
+      "annualChangePct": 1.15,
+      "status": "observed",
+      "source": "https://www.insee.fr/fr/statistiques/9022797"
+    }
   }
 }
