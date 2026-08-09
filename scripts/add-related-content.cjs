@@ -38,7 +38,6 @@ for (const item of enriched) {
   if (!fs.existsSync(file)) continue;
   let html = fs.readFileSync(file,'utf8');
   html = html.replace(/<section class="ce-related" data-ce-related="1">[\s\S]*?<\/section>\s*/gi,'');
-  if (!/<\/article>/i.test(html)) { fs.writeFileSync(file,html,'utf8'); continue; }
 
   const ranked = enriched.filter(other => other.h !== item.h).map(other => {
     const sameDomain = [...item._domains].some(d => other._domains.has(d));
@@ -50,8 +49,14 @@ for (const item of enriched) {
 
   if (!ranked.length) { fs.writeFileSync(file,html,'utf8'); continue; }
   const links = ranked.map(({other}) => `<a href="${esc(hrefFrom(item.h,other.h))}"><strong>${esc(other.n)}</strong><span>→</span></a>`).join('');
-  const block = `<section class="ce-related" data-ce-related="1" aria-label="Pour continuer"><div class="kicker">Pour continuer</div><h2>Trois dossiers liés à cette décision.</h2><div class="ce-related-list">${links}</div></section>`;
-  html = html.replace(/<\/article>/i,`${block}</article>`);
+  const inner = `<div class="kicker">Pour continuer</div><h2>Trois dossiers liés à cette décision.</h2><div class="ce-related-list">${links}</div>`;
+  const articleBlock = `<section class="ce-related" data-ce-related="1" aria-label="Pour continuer">${inner}</section>`;
+  const mainBlock = `<section class="ce-related" data-ce-related="1" aria-label="Pour continuer"><div class="container">${inner}</div></section>`;
+
+  if (/<\/article>/i.test(html)) html = html.replace(/<\/article>/i,`${articleBlock}</article>`);
+  else if (/<\/main>/i.test(html)) html = html.replace(/<\/main>/i,`${mainBlock}</main>`);
+  else { fs.writeFileSync(file,html,'utf8'); continue; }
+
   fs.writeFileSync(file,html,'utf8');
   count++;
 }
