@@ -21,6 +21,7 @@ on:
       - 'scripts/enrich-wave1d-secure-employment-20260809.cjs'
       - 'scripts/enrich-wave2a-immobilier-20260809.cjs'
       - 'scripts/enrich-wave2b-tax-retirement-work-20260809.cjs'
+      - 'scripts/enrich-wave2c-bfr-20260809.cjs'
       - 'scripts/build-social-package.cjs'
       - 'scripts/publish-social.cjs'
       - 'publications/social-config.json'
@@ -55,6 +56,7 @@ jobs:
           node scripts/enrich-wave1d-secure-employment-20260809.cjs
           node scripts/enrich-wave2a-immobilier-20260809.cjs
           node scripts/enrich-wave2b-tax-retirement-work-20260809.cjs
+          node scripts/enrich-wave2c-bfr-20260809.cjs
 
       - name: Generer les flux RSS et le module Suivre
         run: node scripts/generate-rss.cjs
