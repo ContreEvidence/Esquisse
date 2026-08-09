@@ -6,7 +6,7 @@ Audit automatique du dépôt **ContreEvidence/Esquisse**, complété par une lec
 
 | Indicateur | Valeur |
 | --- | --- |
-| Fichiers du dépôt | 346 |
+| Fichiers du dépôt | 348 |
 | Pages HTML | 180 |
 | Pages articles/dossiers | 131 |
 | URLs sitemap | 68 |
@@ -17,7 +17,7 @@ Audit automatique du dépôt **ContreEvidence/Esquisse**, complété par une lec
 | Articles/dossiers avec cas chiffré ou marqueur de données | 50/131 |
 | Pages déclarant le RSS | 2/180 |
 | Pages chargeant le système Suivre | 180/180 |
-| Longueur moyenne brute des pages | 609 mots |
+| Longueur moyenne brute des pages | 610 mots |
 | Référentiel éditorial lastChecked/asOf | non détecté |
 ## 2. Synthèse par gravité
 
@@ -492,8 +492,8 @@ _35 lignes supplémentaires non affichées._
 | ../assets/script.js?v=20260807-18 | 4 |
 | ../assets/navigation-v3.js?v=20260807-18 | 4 |
 | ../assets/script.js?v=20260808-6 | 4 |
+| ./follow.js?v=20260809-1 | 4 |
 | ../assets/navigation-v3.js?v=20260808-6 | 3 |
-| ./follow.js?v=20260809-1 | 3 |
 | assets/navigation-v3.js | 2 |
 | ../assets/script.js?v=20260808-16 | 2 |
 | ../assets/navigation-v3.js?v=20260808-13 | 2 |

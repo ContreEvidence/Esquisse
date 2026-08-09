@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-09T14:05:04.031Z",
+  "generatedAt": "2026-08-09T14:07:52.312Z",
   "counts": {
-    "files": 346,
+    "files": 348,
     "html": 180,
     "assets": 109,
     "sitemap": 68,
@@ -13,7 +13,7 @@
     "numericEnriched": 50,
     "rssPages": 2,
     "followPages": 180,
-    "avgWords": 609
+    "avgWords": 610
   },
   "severity": {
     "critical": [
@@ -1505,7 +1505,7 @@
     },
     {
       "file": "mentions.html",
-      "n": 59
+      "n": 72
     },
     {
       "file": "merci.html",
@@ -2323,7 +2323,7 @@
     },
     {
       "file": "mentions.html",
-      "words": 174
+      "words": 283
     },
     {
       "file": "merci.html",
@@ -2712,11 +2712,11 @@
         4
       ],
       [
-        "../assets/navigation-v3.js?v=20260808-6",
-        3
+        "./follow.js?v=20260809-1",
+        4
       ],
       [
-        "./follow.js?v=20260809-1",
+        "../assets/navigation-v3.js?v=20260808-6",
         3
       ],
       [
