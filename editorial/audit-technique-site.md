@@ -1,11 +1,8 @@
 # Audit technique automatique — Contre-Évidence
 
-Généré le 2026-08-09T14:12:53.209Z
+Généré le 2026-08-09T14:13:48.547Z
 
-## Erreurs critiques (90)
-- PREVIEW-MENU.html: lien/ressource introuvable → ${u('index.html')}
-- PREVIEW-MENU.html: lien/ressource introuvable → ${u('assets/logo-ce-512.png')}
-- PREVIEW-MENU.html: lien/ressource introuvable → ${u(path)}
+## Erreurs critiques (51)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/articles/accepter-nimporte-quel-poste-retour-emploi.html (articles/accepter-nimporte-quel-poste-retour-emploi.html et articles/accepter-nimporte-quel-premier-emploi.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/biais-confirmation.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/articles/clients-interesses-personne-nachete.html (articles/clients-interesses-personne-nachete.html et articles/contraintes-innovation.html)
@@ -28,18 +25,6 @@ Généré le 2026-08-09T14:12:53.209Z
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/taux-de-base.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/articles/accepter-nimporte-quel-poste-retour-emploi.html (articles/accepter-nimporte-quel-poste-retour-emploi.html et articles/transition-temporaire-sans-abandonner-projet.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/valeur-des-options.html)
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../assets/logo.svg
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../assets/style.css
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../index.html
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../assets/logo.svg
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../index.html#articles
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../index.html#methode
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../index.html#newsletter
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../a-propos.html
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../index.html#articles
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../confidentialite.html
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../mentions.html
-- bonne-entreprise-mauvais-investissement.html: lien/ressource introuvable → ../assets/script.js
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/ameliorer-processus-sans-degrader-service.html (articles/boucles-retroaction.html et dossiers/ameliorer-processus-sans-degrader-service.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/automatiser-ou-non-processus.html (articles/automatiser-tache-5-minutes-perdre-30.html et dossiers/automatiser-ou-non-processus.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/capacite-refuser-travail-rentabilite.html (articles/rendements-decroissants.html et dossiers/capacite-refuser-travail-rentabilite.html)
@@ -48,36 +33,12 @@ Généré le 2026-08-09T14:12:53.209Z
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/experience-devient-risque-recruteur.html (articles/reconversion-apres-50-ans.html et dossiers/experience-devient-risque-recruteur.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/finances-allocation-portefeuille.html (dossiers/finances-allocation-portefeuille.html et dossiers/finances-classes-actifs.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/liquidites-reserve-securite.html (articles/marge-de-securite.html et dossiers/liquidites-reserve-securite.html)
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../assets/logo.svg
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../assets/style.css
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../index.html
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../assets/logo.svg
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../index.html#articles
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../index.html#methode
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../index.html#newsletter
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../a-propos.html
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../index.html#articles
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../confidentialite.html
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../mentions.html
-- ia-remplace-t-elle-le-codage.html: lien/ressource introuvable → ../assets/script.js
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/audit-budget-60-minutes.html (dossiers/audit-budget-60-minutes.html et outil-audit-financier-personnel.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/plan-30-jours-recherche-emploi.html (dossiers/plan-30-jours-recherche-emploi.html et outil-pilotage-recherche-emploi.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/tresorerie-bfr-entreprise.html (dossiers/tresorerie-bfr-entreprise.html et outil-tresorerie-13-semaines.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/parcours-argent.html (articles/50000-euros-livret-peur-investir.html et parcours-argent.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/parcours-de-vie.html (moins-de-25-ans.html et parcours-de-vie.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/parcours-vie-professionnelle.html (articles/portes-fermees.html et parcours-vie-professionnelle.html)
-- portes-fermees.html: lien/ressource introuvable → ../assets/logo.svg
-- portes-fermees.html: lien/ressource introuvable → ../assets/style.css
-- portes-fermees.html: lien/ressource introuvable → ../index.html
-- portes-fermees.html: lien/ressource introuvable → ../assets/logo.svg
-- portes-fermees.html: lien/ressource introuvable → ../index.html#articles
-- portes-fermees.html: lien/ressource introuvable → ../index.html#methode
-- portes-fermees.html: lien/ressource introuvable → ../index.html#newsletter
-- portes-fermees.html: lien/ressource introuvable → ../a-propos.html
-- portes-fermees.html: lien/ressource introuvable → ../index.html#articles
-- portes-fermees.html: lien/ressource introuvable → ../confidentialite.html
-- portes-fermees.html: lien/ressource introuvable → ../mentions.html
-- portes-fermees.html: lien/ressource introuvable → ../assets/script.js
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/finances-residence-principale.html (dossiers/finances-residence-principale.html et simulateur-acheter-ou-louer.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/finances-allocation-portefeuille.html (dossiers/finances-allocation-portefeuille.html et simulateur-allocation-stress-test.html)
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/finances-credit-endettement.html (dossiers/finances-credit-endettement.html et simulateur-capacite-emprunt.html)
@@ -94,13 +55,7 @@ Généré le 2026-08-09T14:12:53.209Z
 - Canonical dupliqué: https://contreevidence.github.io/Esquisse/themes/entreprendre.html (articles/effet-de-levier.html et themes/entreprendre.html)
 - Confidentialité: Cloudflare Web Analytics déclaré mais aucun script détecté
 
-## Avertissements (129)
-- PREVIEW-LOGO.html: meta description absente
-- PREVIEW-LOGO.html: canonical absent
-- PREVIEW-MENU.html: meta description absente
-- PREVIEW-MENU.html: canonical absent
-- PREVIEW-VIDEOS.html: meta description absente
-- PREVIEW-VIDEOS.html: canonical absent
+## Avertissements (120)
 - articles/accepter-nimporte-quel-premier-emploi.html: meta description absente
 - articles/applications-captent-attention.html: meta description absente
 - articles/applications-captent-attention.html: canonical absent
@@ -196,7 +151,6 @@ Généré le 2026-08-09T14:12:53.209Z
 - articles/valeur-des-options.html: meta description absente
 - assets/PREVIEW-MENU.html: meta description absente
 - assets/PREVIEW-MENU.html: canonical absent
-- bonne-entreprise-mauvais-investissement.html: canonical absent
 - debuter.html: meta description absente
 - debuter.html: canonical absent
 - dossiers/allocation-risque-portefeuille.html: meta description absente
@@ -218,8 +172,6 @@ Généré le 2026-08-09T14:12:53.209Z
 - hors-cadre-decouvertes.html: canonical absent
 - hors-cadre-images.html: canonical absent
 - hors-cadre.html: canonical absent
-- ia-remplace-t-elle-le-codage.html: canonical absent
-- portes-fermees.html: canonical absent
 - themes/decisions.html: canonical absent
 - themes/ia.html: canonical absent
 - themes/systemes.html: canonical absent
