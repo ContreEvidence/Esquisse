@@ -9,13 +9,14 @@ const SOCIAL_IMAGE = `${BASE}assets/og-cover-brand.png`;
 const ctx = { window: {} };
 vm.createContext(ctx);
 
-for (const rel of ['assets/library-catalog.js','assets/library-inflation.js','assets/library-daily-money.js','assets/tools-catalog.js']) {
+for (const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/tools-catalog.js']) {
   if (!fs.existsSync(path.join(ROOT, rel))) continue;
   vm.runInContext(fs.readFileSync(path.join(ROOT, rel), 'utf8'), ctx, { filename: rel });
 }
 
 const editorial = Array.isArray(ctx.window.CE_LIBRARY_CATALOG) ? ctx.window.CE_LIBRARY_CATALOG : [];
 const tools = Array.isArray(ctx.window.CE_TOOLS_CATALOG) ? ctx.window.CE_TOOLS_CATALOG : [];
+const editorialPaths = new Set(editorial.map(x => x.h).filter(Boolean));
 const byHref = new Map();
 for (const item of [...editorial, ...tools]) if (item?.h && item?.n) byHref.set(item.h, item);
 const items = [...byHref.values()];
@@ -43,8 +44,17 @@ function domainInfo(d='') {
   if (domains.includes('vie-pro') && !domains.includes('patrimoine')) return { name:'Vie professionnelle', href:'parcours-vie-professionnelle.html' };
   return { name:'Bibliothèque', href:'bibliotheque.html' };
 }
-
+function stripTags(s='') { return String(s).replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim(); }
 function replaceMeta(html, regex) { return html.replace(regex, ''); }
+function ensureCanonical(html, url) {
+  if (/<link\s+rel="canonical"[^>]*>/i.test(html)) return html.replace(/<link\s+rel="canonical"[^>]*>/i, `<link rel="canonical" href="${url}"/>`);
+  return html.replace(/<\/head>/i, `<link rel="canonical" href="${url}"/></head>`);
+}
+function ensureDescription(html, desc) {
+  if (/<meta\s+name="description"[^>]*>/i.test(html)) return html;
+  return html.replace(/<\/head>/i, `<meta name="description" content="${esc(desc)}"/></head>`);
+}
+
 function enrichSeo(rel, item) {
   const file = path.join(ROOT, rel);
   if (!fs.existsSync(file)) return false;
@@ -56,6 +66,10 @@ function enrichSeo(rel, item) {
   const url = abs(rel);
   const isTool = item.t === 'outil';
   const domain = domainInfo(item.d);
+
+  // Les contenus éditoriaux de référence s'auto-canonisent. Les outils conservent leur canonical éditorial éventuel.
+  if (!isTool && editorialPaths.has(rel)) html = ensureCanonical(html, url);
+  html = ensureDescription(html, desc);
 
   html = replaceMeta(html, /<meta\s+(?:property|name)="(?:og:[^"]+|twitter:[^"]+|dateModified|article:published_time|article:modified_time|article:section)"[^>]*>\s*/gi);
   html = replaceMeta(html, /<script\s+type="application\/ld\+json"\s+data-ce-seo="[^"]+">[\s\S]*?<\/script>\s*/gi);
@@ -85,8 +99,7 @@ function enrichSeo(rel, item) {
     datePublished:dates.published,dateModified:dates.modified,
     author:{'@type':'Organization',name:'Contre-Évidence',url:BASE},
     publisher:{'@type':'Organization',name:'Contre-Évidence',url:BASE,logo:{'@type':'ImageObject',url:`${BASE}assets/logo.png`}},
-    articleSection:item.c || undefined,
-    isAccessibleForFree:true
+    articleSection:item.c || undefined,isAccessibleForFree:true
   };
   const breadcrumb = {
     '@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[
@@ -102,7 +115,6 @@ function enrichSeo(rel, item) {
     const note = `<div class="ce-update-meta" data-ce-review="1"><span>Mis à jour le ${dates.modified.split('-').reverse().join('/')} · Sources et hypothèses précisées dans le dossier</span></div>`;
     html = html.replace(/<\/div><\/section><article/i, `${note}</div></section><article`);
   }
-
   fs.writeFileSync(file, html, 'utf8');
   return true;
 }
@@ -126,16 +138,33 @@ function ensureFallbackHeader(rel) {
   html=html.replace('<header id="site-header"></header>',fallback); fs.writeFileSync(file,html,'utf8'); return true;
 }
 
-for (const item of items) enrichSeo(item.h,item);
-for (const rel of htmlFiles()) ensureFallbackHeader(rel);
-
 const structural = [
   'index.html','themes/argent.html','parcours-argent.html','marches-analyses-avancees.html','parcours-vie-professionnelle.html',
   'themes/travail.html','themes/entreprendre.html','hors-cadre.html','hors-cadre-cuisine.html','hors-cadre-decouvertes.html','hors-cadre-images.html',
   'bibliotheque.html','parcours-de-vie.html','a-propos.html','methode-sources.html','contact.html'
 ].filter(rel=>fs.existsSync(path.join(ROOT,rel)));
+
+function enrichStructural(rel) {
+  const file=path.join(ROOT,rel); let html=fs.readFileSync(file,'utf8');
+  if (!/<head[\s>]/i.test(html) || /<meta\s+name="robots"\s+content="[^"]*noindex/i.test(html)) return;
+  const url=rel==='index.html'?BASE:abs(rel);
+  html=ensureCanonical(html,url);
+  const title=stripTags(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || 'Contre-Évidence');
+  const desc=html.match(/<meta\s+name="description"\s+content="([^"]+)"/i)?.[1] || 'Contre-Évidence : des dossiers concrets pour comprendre, comparer et décider.';
+  html=ensureDescription(html,desc);
+  if(!/property="og:title"/i.test(html)){
+    const og=`<meta property="og:type" content="website"/><meta property="og:title" content="${esc(title)}"/><meta property="og:description" content="${esc(desc)}"/><meta property="og:url" content="${url}"/><meta property="og:image" content="${SOCIAL_IMAGE}"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="${esc(title)}"/><meta name="twitter:description" content="${esc(desc)}"/><meta name="twitter:image" content="${SOCIAL_IMAGE}"/>`;
+    html=html.replace(/<\/head>/i,`${og}</head>`);
+  }
+  fs.writeFileSync(file,html,'utf8');
+}
+
+for (const item of items) enrichSeo(item.h,item);
+for (const rel of structural) enrichStructural(rel);
+for (const rel of htmlFiles()) ensureFallbackHeader(rel);
+
 const sitemapPaths = [...new Set([...structural, ...editorial.map(x=>x.h).filter(Boolean)])];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map(rel=>`  <url><loc>${abs(rel==='index.html'?'':rel)}</loc><lastmod>${gitDates(rel).modified}</lastmod></url>`).join('\n')}\n</urlset>\n`;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map(rel=>`  <url><loc>${rel==='index.html'?BASE:abs(rel)}</loc><lastmod>${gitDates(rel).modified}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(ROOT,'sitemap.xml'),sitemap,'utf8');
 
 console.log(`Consolidation terminée : ${items.length} contenus enrichis, ${sitemapPaths.length} URLs dans le sitemap.`);
