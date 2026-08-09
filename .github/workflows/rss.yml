@@ -28,6 +28,7 @@ on:
       - 'scripts/generate-rss.cjs'
       - 'scripts/generate-publication-drafts.cjs'
       - 'scripts/build-social-package.cjs'
+      - 'scripts/attribute-acquisition-links.cjs'
       - 'scripts/check-social-auth.cjs'
       - 'scripts/publish-social.cjs'
       - 'publications/social-config.json'
@@ -95,6 +96,9 @@ jobs:
       - name: Construire le prochain media depuis le RSS
         run: node scripts/build-social-package.cjs
 
+      - name: Attribuer les liens de diffusion
+        run: node scripts/attribute-acquisition-links.cjs
+
       - name: Diagnostiquer les autorisations sociales
         env:
           META_USER_ACCESS_TOKEN: ${{ secrets.META_USER_ACCESS_TOKEN }}
@@ -156,5 +160,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> parcours liés -> RSS -> fraîcheur des données -> audit bloquant -> brouillons/media -> diffusion.
+# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> parcours liés -> RSS -> fraîcheur -> audit -> brouillons/media -> attribution UTM -> diffusion.
 # Une nouvelle version annule une consolidation obsolète encore en cours.
