@@ -51,7 +51,7 @@ jobs:
           node scripts/enrich-wave1d-secure-employment-20260809.cjs
           node scripts/enrich-wave2a-immobilier-20260809.cjs
 
-      - name: Generer le flux RSS
+      - name: Generer les flux RSS
         run: node scripts/generate-rss.cjs
 
       - name: Preparer les publications sociales
@@ -78,7 +78,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add rss.xml index.html bibliotheque.html publications/a-publier.md \
+          git add rss*.xml rss-feeds.json index.html bibliotheque.html publications/a-publier.md \
             articles/comparatif-produits-bancaires.html \
             articles/investir-grosse-somme-dun-coup-ou-progressivement.html \
             articles/tester-metier-avant-investir.html \
@@ -134,7 +134,7 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Un seul workflow fait désormais toute la chaine : catalogue -> RSS -> brouillons ->
-# media vertical -> mise a disposition publique -> envoi API -> anti-doublon.
+# Un seul workflow fait désormais toute la chaine : catalogue -> RSS général + flux thématiques ->
+# brouillons -> media vertical -> mise a disposition publique -> envoi API -> anti-doublon.
 # Si aucun secret de compte social n'est present, le media est tout de meme genere
 # et aucune tentative de publication externe n'est effectuee.
