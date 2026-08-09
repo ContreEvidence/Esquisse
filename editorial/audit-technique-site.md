@@ -1,140 +1,20 @@
 # Audit technique automatique — Contre-Évidence
 
-Généré le 2026-08-09T14:14:59.167Z
+Généré le 2026-08-09T14:19:43.435Z
 
-## Erreurs critiques (45)
-- articles/applications-captent-attention.html: ancre introuvable → ../index.html#methode
-- articles/biais-du-survivant.html: ancre introuvable → ../index.html#articles
-- articles/biais-du-survivant.html: ancre introuvable → ../index.html#methode
-- articles/bonne-entreprise-mauvais-investissement.html: ancre introuvable → ../index.html#articles
-- articles/bonne-entreprise-mauvais-investissement.html: ancre introuvable → ../index.html#methode
-- articles/bonne-entreprise-mauvais-investissement.html: ancre introuvable → ../index.html#newsletter
-- articles/bonne-entreprise-mauvais-investissement.html: ancre introuvable → ../index.html#articles
-- articles/bonnes-questions.html: ancre introuvable → ../index.html#articles
-- articles/bonnes-questions.html: ancre introuvable → ../index.html#methode
-- articles/changer-metier-sans-zero.html: ancre introuvable → ../index.html#methode
-- articles/clients-interesses-personne-nachete.html: ancre introuvable → ../themes/entreprendre.html#offre
-- articles/competences-invisibles-preuves.html: contenu éditorial de référence sans canonical
-- articles/competences-transferables.html: contenu éditorial de référence sans canonical
-- articles/comprendre-avant-agir.html: ancre introuvable → ../index.html#articles
-- articles/comprendre-avant-agir.html: ancre introuvable → ../index.html#methode
-- articles/construire-epargne-de-zero.html: contenu éditorial de référence sans canonical
-- articles/decision-difficile-options-imparfaites.html: ancre introuvable → ../index.html#methode
-- articles/demarche-bloquee.html: ancre introuvable → ../index.html#methode
-- articles/dire-oui-coute-cher.html: ancre introuvable → ../index.html#methode
-- articles/effet-de-cadrage.html: ancre introuvable → ../index.html#articles
-- articles/effet-de-cadrage.html: ancre introuvable → ../index.html#methode
-- articles/effets-de-reseau.html: ancre introuvable → ../index.html#articles
-- articles/effets-de-reseau.html: ancre introuvable → ../index.html#methode
-- articles/grosse-entree-argent-que-faire.html: contenu éditorial de référence sans canonical
-- articles/ia-gagner-temps-jugement.html: ancre introuvable → ../index.html#methode
-- articles/ia-remplace-t-elle-le-codage.html: ancre introuvable → ../index.html#articles
-- articles/ia-remplace-t-elle-le-codage.html: ancre introuvable → ../index.html#methode
-- articles/ia-remplace-t-elle-le-codage.html: ancre introuvable → ../index.html#newsletter
-- articles/ia-remplace-t-elle-le-codage.html: ancre introuvable → ../index.html#articles
-- articles/optimisation-locale.html: ancre introuvable → ../index.html#articles
-- articles/optimisation-locale.html: ancre introuvable → ../index.html#methode
-- articles/penser-en-probabilites.html: ancre introuvable → ../index.html#articles
-- articles/penser-en-probabilites.html: ancre introuvable → ../index.html#methode
-- articles/premiere-chance-sans-experience.html: contenu éditorial de référence sans canonical
-- articles/promotion-bonne-affaire.html: ancre introuvable → ../index.html#methode
-- articles/reconnaitre-bonne-affaire.html: ancre introuvable → ../index.html#methode
-- articles/retrouver-emploi-apres-interruption.html: contenu éditorial de référence sans canonical
-- articles/sans-diplome-chemins-alternatifs.html: contenu éditorial de référence sans canonical
-- articles/simplifier-sans-trahir.html: ancre introuvable → ../index.html#articles
-- articles/simplifier-sans-trahir.html: ancre introuvable → ../index.html#methode
-- articles/strategie-barbell.html: ancre introuvable → ../index.html#articles
-- articles/strategie-barbell.html: ancre introuvable → ../index.html#methode
-- articles/tester-metier-avant-investir.html: contenu éditorial de référence sans canonical
-- articles/travailler-beaucoup-gagner-peu-prix.html: ancre introuvable → ../themes/entreprendre.html#marge
-- articles/travailler-plus-avancer-moins.html: ancre introuvable → ../index.html#methode
+## Erreurs critiques (0)
+- Aucune.
 
-## Avertissements (78)
-- articles/applications-captent-attention.html: meta description absente
-- articles/applications-captent-attention.html: canonical absent
-- articles/biais-du-survivant.html: meta description absente
-- articles/biais-du-survivant.html: canonical absent
-- articles/bonne-entreprise-mauvais-investissement.html: canonical absent
-- articles/bonnes-questions.html: meta description absente
-- articles/bonnes-questions.html: canonical absent
-- articles/changer-metier-sans-zero.html: meta description absente
-- articles/changer-metier-sans-zero.html: canonical absent
-- articles/comparatif-enveloppes-pea-assurance-vie-cto-per.html: meta description absente
-- articles/comparatif-enveloppes-pea-assurance-vie-cto-per.html: canonical absent
-- articles/comparatif-supports-epargne-investissement.html: meta description absente
-- articles/comparatif-supports-epargne-investissement.html: canonical absent
-- articles/competences-invisibles-preuves.html: meta description absente
-- articles/competences-invisibles-preuves.html: canonical absent
-- articles/competences-transferables.html: meta description absente
-- articles/competences-transferables.html: canonical absent
-- articles/comprendre-avant-agir.html: meta description absente
-- articles/comprendre-avant-agir.html: canonical absent
-- articles/construire-allocation-debutant.html: meta description absente
-- articles/construire-allocation-debutant.html: canonical absent
-- articles/construire-epargne-de-zero.html: meta description absente
-- articles/construire-epargne-de-zero.html: canonical absent
-- articles/decision-difficile-options-imparfaites.html: meta description absente
-- articles/decision-difficile-options-imparfaites.html: canonical absent
-- articles/demarche-bloquee.html: meta description absente
-- articles/demarche-bloquee.html: canonical absent
-- articles/dire-oui-coute-cher.html: meta description absente
-- articles/dire-oui-coute-cher.html: canonical absent
-- articles/effet-de-cadrage.html: meta description absente
-- articles/effet-de-cadrage.html: canonical absent
-- articles/effets-de-reseau.html: meta description absente
-- articles/effets-de-reseau.html: canonical absent
-- articles/exemples-allocation-250000-500000-1000000.html: meta description absente
-- articles/exemples-allocation-250000-500000-1000000.html: canonical absent
-- articles/grosse-entree-argent-que-faire.html: meta description absente
-- articles/grosse-entree-argent-que-faire.html: canonical absent
-- articles/ia-gagner-temps-jugement.html: meta description absente
-- articles/ia-gagner-temps-jugement.html: canonical absent
-- articles/ia-remplace-t-elle-le-codage.html: canonical absent
-- articles/optimisation-locale.html: meta description absente
-- articles/optimisation-locale.html: canonical absent
-- articles/penser-en-probabilites.html: meta description absente
-- articles/penser-en-probabilites.html: canonical absent
-- articles/premiere-chance-sans-experience.html: meta description absente
-- articles/premiere-chance-sans-experience.html: canonical absent
-- articles/promotion-bonne-affaire.html: meta description absente
-- articles/promotion-bonne-affaire.html: canonical absent
-- articles/reconnaitre-bonne-affaire.html: meta description absente
-- articles/reconnaitre-bonne-affaire.html: canonical absent
-- articles/repartir-sans-recommencer-zero.html: meta description absente
-- articles/repartir-sans-recommencer-zero.html: canonical absent
-- articles/retrouver-emploi-apres-interruption.html: meta description absente
-- articles/retrouver-emploi-apres-interruption.html: canonical absent
-- articles/sans-diplome-chemins-alternatifs.html: meta description absente
-- articles/sans-diplome-chemins-alternatifs.html: canonical absent
-- articles/sante-oblige-changer-metier.html: meta description absente
-- articles/sante-oblige-changer-metier.html: canonical absent
-- articles/simplifier-sans-trahir.html: meta description absente
-- articles/simplifier-sans-trahir.html: canonical absent
-- articles/strategie-barbell.html: meta description absente
-- articles/strategie-barbell.html: canonical absent
-- articles/tester-metier-avant-investir.html: meta description absente
-- articles/tester-metier-avant-investir.html: canonical absent
-- articles/travailler-plus-avancer-moins.html: meta description absente
-- articles/travailler-plus-avancer-moins.html: canonical absent
-- assets/PREVIEW-MENU.html: meta description absente
-- assets/PREVIEW-MENU.html: canonical absent
-- dossiers/ameliorer-processus-sans-degrader-service.html: contenu chiffré sans lien de source externe détecté
-- dossiers/automatiser-ou-non-processus.html: contenu chiffré sans lien de source externe détecté
-- dossiers/decider-sans-tourner-en-rond.html: contenu chiffré sans lien de source externe détecté
-- dossiers/dependance-gros-client.html: contenu chiffré sans lien de source externe détecté
-- dossiers/devenir-manager-premiere-fois.html: contenu chiffré sans lien de source externe détecté
-- hors-cadre-cuisine.html: canonical absent
-- hors-cadre-decouvertes.html: canonical absent
-- hors-cadre-images.html: canonical absent
-- hors-cadre.html: canonical absent
-- themes/travail.html: canonical absent
+## Avertissements (0)
+- Aucun.
 
 ## Contrôles validés
-- Des erreurs critiques restent à corriger.
+- Aucune erreur critique détectée dans les liens, catalogues, canonicals de référence et sitemap.
 
 ## Règles
 - les pages éditoriales du catalogue sont les références indexables ;
 - les anciennes pages en noindex peuvent conserver un canonical vers un dossier principal ;
 - les outils peuvent volontairement canoniser vers le dossier qui explique le raisonnement ;
 - les variables JavaScript ne sont pas interprétées comme des liens ;
+- un exemple chiffré illustratif n'est pas obligé d'avoir une source externe ;
 - les liens, ancres, fichiers du catalogue et URLs du sitemap sont contrôlés.
