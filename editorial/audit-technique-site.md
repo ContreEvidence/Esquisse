@@ -1,72 +1,62 @@
 # Audit technique automatique — Contre-Évidence
 
-Généré le 2026-08-09T14:13:48.547Z
+Généré le 2026-08-09T14:14:59.167Z
 
-## Erreurs critiques (51)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/articles/accepter-nimporte-quel-poste-retour-emploi.html (articles/accepter-nimporte-quel-poste-retour-emploi.html et articles/accepter-nimporte-quel-premier-emploi.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/biais-confirmation.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/articles/clients-interesses-personne-nachete.html (articles/clients-interesses-personne-nachete.html et articles/contraintes-innovation.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/cout-opportunite.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/couts-irrecuperables.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/decisions-reversibles-irreversibles.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/dependance-au-sentier.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/effets-second-ordre.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/ameliorer-processus-sans-degrader-service.html (articles/boucles-retroaction.html et articles/incitations-gouvernent.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/ameliorer-processus-sans-degrader-service.html (articles/boucles-retroaction.html et articles/indicateur-monte-service-se-degrade.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/information-comprehension.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/articles/clients-interesses-personne-nachete.html (articles/clients-interesses-personne-nachete.html et articles/lancer-activite-probleme-client.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/majorite-peut-se-tromper.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/ameliorer-processus-sans-degrader-service.html (articles/boucles-retroaction.html et articles/mesure-devient-cible.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/modeles-mentaux.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/ameliorer-processus-sans-degrader-service.html (articles/boucles-retroaction.html et articles/probleme-symptome-cause.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/ameliorer-processus-sans-degrader-service.html (articles/boucles-retroaction.html et articles/regle-absurde-logique-cachee.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/risque-incertitude.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/experience-devient-risque-recruteur.html (articles/reconversion-apres-50-ans.html et articles/surqualification-rassurer-employeur.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/taux-de-base.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/articles/accepter-nimporte-quel-poste-retour-emploi.html (articles/accepter-nimporte-quel-poste-retour-emploi.html et articles/transition-temporaire-sans-abandonner-projet.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et articles/valeur-des-options.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/ameliorer-processus-sans-degrader-service.html (articles/boucles-retroaction.html et dossiers/ameliorer-processus-sans-degrader-service.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/automatiser-ou-non-processus.html (articles/automatiser-tache-5-minutes-perdre-30.html et dossiers/automatiser-ou-non-processus.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/capacite-refuser-travail-rentabilite.html (articles/rendements-decroissants.html et dossiers/capacite-refuser-travail-rentabilite.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/decider-sans-tourner-en-rond.html (articles/asymetrie.html et dossiers/decider-sans-tourner-en-rond.html)
-- dossiers/depenses-recurrentes-abonnements-assurances.html: lien/ressource introuvable → '+url+'
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/experience-devient-risque-recruteur.html (articles/reconversion-apres-50-ans.html et dossiers/experience-devient-risque-recruteur.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/finances-allocation-portefeuille.html (dossiers/finances-allocation-portefeuille.html et dossiers/finances-classes-actifs.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/liquidites-reserve-securite.html (articles/marge-de-securite.html et dossiers/liquidites-reserve-securite.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/audit-budget-60-minutes.html (dossiers/audit-budget-60-minutes.html et outil-audit-financier-personnel.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/plan-30-jours-recherche-emploi.html (dossiers/plan-30-jours-recherche-emploi.html et outil-pilotage-recherche-emploi.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/tresorerie-bfr-entreprise.html (dossiers/tresorerie-bfr-entreprise.html et outil-tresorerie-13-semaines.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/parcours-argent.html (articles/50000-euros-livret-peur-investir.html et parcours-argent.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/parcours-de-vie.html (moins-de-25-ans.html et parcours-de-vie.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/parcours-vie-professionnelle.html (articles/portes-fermees.html et parcours-vie-professionnelle.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/finances-residence-principale.html (dossiers/finances-residence-principale.html et simulateur-acheter-ou-louer.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/finances-allocation-portefeuille.html (dossiers/finances-allocation-portefeuille.html et simulateur-allocation-stress-test.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/finances-credit-endettement.html (dossiers/finances-credit-endettement.html et simulateur-capacite-emprunt.html)
-- simulateur-capacite-emprunt.html: lien/ressource introuvable → ${reference.rateSource}
-- simulateur-capacite-emprunt.html: lien/ressource introuvable → ${reference.hcsfSource}
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/articles/frais-fiscalite-rendement-net.html (articles/frais-fiscalite-rendement-net.html et simulateur-capitalisation-comparateur.html)
-- simulateur-capitalisation-comparateur.html: lien/ressource introuvable → ${x.source}
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/formation-vaut-elle-le-cout.html (dossiers/formation-vaut-elle-le-cout.html et simulateur-cout-formation.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/finances-investissement-locatif.html (dossiers/finances-investissement-locatif.html et simulateur-investissement-locatif.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/calculer-prix-minimum-rentable.html (dossiers/calculer-prix-minimum-rentable.html et simulateur-prix-minimum-rentable.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/rembourser-credit-ou-investir.html (dossiers/rembourser-credit-ou-investir.html et simulateur-rembourser-ou-investir.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/liquidites-reserve-securite.html (articles/marge-de-securite.html et simulateur-reserve-securite.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/dossiers/vendre-ou-conserver-bien-immobilier.html (dossiers/vendre-ou-conserver-bien-immobilier.html et simulateur-vendre-ou-conserver.html)
-- Canonical dupliqué: https://contreevidence.github.io/Esquisse/themes/entreprendre.html (articles/effet-de-levier.html et themes/entreprendre.html)
-- Confidentialité: Cloudflare Web Analytics déclaré mais aucun script détecté
+## Erreurs critiques (45)
+- articles/applications-captent-attention.html: ancre introuvable → ../index.html#methode
+- articles/biais-du-survivant.html: ancre introuvable → ../index.html#articles
+- articles/biais-du-survivant.html: ancre introuvable → ../index.html#methode
+- articles/bonne-entreprise-mauvais-investissement.html: ancre introuvable → ../index.html#articles
+- articles/bonne-entreprise-mauvais-investissement.html: ancre introuvable → ../index.html#methode
+- articles/bonne-entreprise-mauvais-investissement.html: ancre introuvable → ../index.html#newsletter
+- articles/bonne-entreprise-mauvais-investissement.html: ancre introuvable → ../index.html#articles
+- articles/bonnes-questions.html: ancre introuvable → ../index.html#articles
+- articles/bonnes-questions.html: ancre introuvable → ../index.html#methode
+- articles/changer-metier-sans-zero.html: ancre introuvable → ../index.html#methode
+- articles/clients-interesses-personne-nachete.html: ancre introuvable → ../themes/entreprendre.html#offre
+- articles/competences-invisibles-preuves.html: contenu éditorial de référence sans canonical
+- articles/competences-transferables.html: contenu éditorial de référence sans canonical
+- articles/comprendre-avant-agir.html: ancre introuvable → ../index.html#articles
+- articles/comprendre-avant-agir.html: ancre introuvable → ../index.html#methode
+- articles/construire-epargne-de-zero.html: contenu éditorial de référence sans canonical
+- articles/decision-difficile-options-imparfaites.html: ancre introuvable → ../index.html#methode
+- articles/demarche-bloquee.html: ancre introuvable → ../index.html#methode
+- articles/dire-oui-coute-cher.html: ancre introuvable → ../index.html#methode
+- articles/effet-de-cadrage.html: ancre introuvable → ../index.html#articles
+- articles/effet-de-cadrage.html: ancre introuvable → ../index.html#methode
+- articles/effets-de-reseau.html: ancre introuvable → ../index.html#articles
+- articles/effets-de-reseau.html: ancre introuvable → ../index.html#methode
+- articles/grosse-entree-argent-que-faire.html: contenu éditorial de référence sans canonical
+- articles/ia-gagner-temps-jugement.html: ancre introuvable → ../index.html#methode
+- articles/ia-remplace-t-elle-le-codage.html: ancre introuvable → ../index.html#articles
+- articles/ia-remplace-t-elle-le-codage.html: ancre introuvable → ../index.html#methode
+- articles/ia-remplace-t-elle-le-codage.html: ancre introuvable → ../index.html#newsletter
+- articles/ia-remplace-t-elle-le-codage.html: ancre introuvable → ../index.html#articles
+- articles/optimisation-locale.html: ancre introuvable → ../index.html#articles
+- articles/optimisation-locale.html: ancre introuvable → ../index.html#methode
+- articles/penser-en-probabilites.html: ancre introuvable → ../index.html#articles
+- articles/penser-en-probabilites.html: ancre introuvable → ../index.html#methode
+- articles/premiere-chance-sans-experience.html: contenu éditorial de référence sans canonical
+- articles/promotion-bonne-affaire.html: ancre introuvable → ../index.html#methode
+- articles/reconnaitre-bonne-affaire.html: ancre introuvable → ../index.html#methode
+- articles/retrouver-emploi-apres-interruption.html: contenu éditorial de référence sans canonical
+- articles/sans-diplome-chemins-alternatifs.html: contenu éditorial de référence sans canonical
+- articles/simplifier-sans-trahir.html: ancre introuvable → ../index.html#articles
+- articles/simplifier-sans-trahir.html: ancre introuvable → ../index.html#methode
+- articles/strategie-barbell.html: ancre introuvable → ../index.html#articles
+- articles/strategie-barbell.html: ancre introuvable → ../index.html#methode
+- articles/tester-metier-avant-investir.html: contenu éditorial de référence sans canonical
+- articles/travailler-beaucoup-gagner-peu-prix.html: ancre introuvable → ../themes/entreprendre.html#marge
+- articles/travailler-plus-avancer-moins.html: ancre introuvable → ../index.html#methode
 
-## Avertissements (120)
-- articles/accepter-nimporte-quel-premier-emploi.html: meta description absente
+## Avertissements (78)
 - articles/applications-captent-attention.html: meta description absente
 - articles/applications-captent-attention.html: canonical absent
-- articles/asymetrie.html: meta description absente
-- articles/biais-confirmation.html: meta description absente
 - articles/biais-du-survivant.html: meta description absente
 - articles/biais-du-survivant.html: canonical absent
 - articles/bonne-entreprise-mauvais-investissement.html: canonical absent
 - articles/bonnes-questions.html: meta description absente
 - articles/bonnes-questions.html: canonical absent
-- articles/boucles-retroaction.html: meta description absente
 - articles/changer-metier-sans-zero.html: meta description absente
 - articles/changer-metier-sans-zero.html: canonical absent
 - articles/comparatif-enveloppes-pea-assurance-vie-cto-per.html: meta description absente
@@ -83,23 +73,16 @@ Généré le 2026-08-09T14:13:48.547Z
 - articles/construire-allocation-debutant.html: canonical absent
 - articles/construire-epargne-de-zero.html: meta description absente
 - articles/construire-epargne-de-zero.html: canonical absent
-- articles/contraintes-innovation.html: meta description absente
-- articles/cout-opportunite.html: meta description absente
-- articles/couts-irrecuperables.html: meta description absente
 - articles/decision-difficile-options-imparfaites.html: meta description absente
 - articles/decision-difficile-options-imparfaites.html: canonical absent
-- articles/decisions-reversibles-irreversibles.html: meta description absente
 - articles/demarche-bloquee.html: meta description absente
 - articles/demarche-bloquee.html: canonical absent
-- articles/dependance-au-sentier.html: meta description absente
 - articles/dire-oui-coute-cher.html: meta description absente
 - articles/dire-oui-coute-cher.html: canonical absent
 - articles/effet-de-cadrage.html: meta description absente
 - articles/effet-de-cadrage.html: canonical absent
-- articles/effet-de-levier.html: meta description absente
 - articles/effets-de-reseau.html: meta description absente
 - articles/effets-de-reseau.html: canonical absent
-- articles/effets-second-ordre.html: meta description absente
 - articles/exemples-allocation-250000-500000-1000000.html: meta description absente
 - articles/exemples-allocation-250000-500000-1000000.html: canonical absent
 - articles/grosse-entree-argent-que-faire.html: meta description absente
@@ -107,32 +90,20 @@ Généré le 2026-08-09T14:13:48.547Z
 - articles/ia-gagner-temps-jugement.html: meta description absente
 - articles/ia-gagner-temps-jugement.html: canonical absent
 - articles/ia-remplace-t-elle-le-codage.html: canonical absent
-- articles/incitations-gouvernent.html: meta description absente
-- articles/information-comprehension.html: meta description absente
-- articles/majorite-peut-se-tromper.html: meta description absente
-- articles/marge-de-securite.html: meta description absente
-- articles/mesure-devient-cible.html: meta description absente
-- articles/modeles-mentaux.html: meta description absente
 - articles/optimisation-locale.html: meta description absente
 - articles/optimisation-locale.html: canonical absent
 - articles/penser-en-probabilites.html: meta description absente
 - articles/penser-en-probabilites.html: canonical absent
-- articles/portes-fermees.html: meta description absente
 - articles/premiere-chance-sans-experience.html: meta description absente
 - articles/premiere-chance-sans-experience.html: canonical absent
-- articles/probleme-symptome-cause.html: meta description absente
 - articles/promotion-bonne-affaire.html: meta description absente
 - articles/promotion-bonne-affaire.html: canonical absent
 - articles/reconnaitre-bonne-affaire.html: meta description absente
 - articles/reconnaitre-bonne-affaire.html: canonical absent
-- articles/reconversion-apres-50-ans.html: meta description absente
-- articles/reconversion-ne-commence-pas-formation.html: canonical absent
-- articles/rendements-decroissants.html: meta description absente
 - articles/repartir-sans-recommencer-zero.html: meta description absente
 - articles/repartir-sans-recommencer-zero.html: canonical absent
 - articles/retrouver-emploi-apres-interruption.html: meta description absente
 - articles/retrouver-emploi-apres-interruption.html: canonical absent
-- articles/risque-incertitude.html: meta description absente
 - articles/sans-diplome-chemins-alternatifs.html: meta description absente
 - articles/sans-diplome-chemins-alternatifs.html: canonical absent
 - articles/sante-oblige-changer-metier.html: meta description absente
@@ -141,50 +112,29 @@ Généré le 2026-08-09T14:13:48.547Z
 - articles/simplifier-sans-trahir.html: canonical absent
 - articles/strategie-barbell.html: meta description absente
 - articles/strategie-barbell.html: canonical absent
-- articles/surqualification-rassurer-employeur.html: meta description absente
-- articles/taux-de-base.html: meta description absente
 - articles/tester-metier-avant-investir.html: meta description absente
 - articles/tester-metier-avant-investir.html: canonical absent
-- articles/transition-temporaire-sans-abandonner-projet.html: meta description absente
 - articles/travailler-plus-avancer-moins.html: meta description absente
 - articles/travailler-plus-avancer-moins.html: canonical absent
-- articles/valeur-des-options.html: meta description absente
 - assets/PREVIEW-MENU.html: meta description absente
 - assets/PREVIEW-MENU.html: canonical absent
-- debuter.html: meta description absente
-- debuter.html: canonical absent
-- dossiers/allocation-risque-portefeuille.html: meta description absente
-- dossiers/allocation-risque-portefeuille.html: canonical absent
 - dossiers/ameliorer-processus-sans-degrader-service.html: contenu chiffré sans lien de source externe détecté
-- dossiers/analyse-fondamentale.html: meta description absente
-- dossiers/analyse-fondamentale.html: canonical absent
-- dossiers/analyse-macro-regimes.html: meta description absente
-- dossiers/analyse-macro-regimes.html: canonical absent
-- dossiers/analyse-technique-marche.html: meta description absente
-- dossiers/analyse-technique-marche.html: canonical absent
 - dossiers/automatiser-ou-non-processus.html: contenu chiffré sans lien de source externe détecté
 - dossiers/decider-sans-tourner-en-rond.html: contenu chiffré sans lien de source externe détecté
 - dossiers/dependance-gros-client.html: contenu chiffré sans lien de source externe détecté
 - dossiers/devenir-manager-premiere-fois.html: contenu chiffré sans lien de source externe détecté
-- dossiers/valorisation-entreprise.html: meta description absente
-- dossiers/valorisation-entreprise.html: canonical absent
 - hors-cadre-cuisine.html: canonical absent
 - hors-cadre-decouvertes.html: canonical absent
 - hors-cadre-images.html: canonical absent
 - hors-cadre.html: canonical absent
-- themes/decisions.html: canonical absent
-- themes/ia.html: canonical absent
-- themes/systemes.html: canonical absent
 - themes/travail.html: canonical absent
 
 ## Contrôles validés
 - Des erreurs critiques restent à corriger.
 
-## Périmètre
-- existence des fichiers du catalogue ;
-- liens et ressources locales ;
-- titres, descriptions et canonicals ;
-- doublons de canonical ;
-- présence des contenus éditoriaux dans le sitemap ;
-- cohérence de la déclaration Analytics ;
-- signalement des contenus chiffrés sans source détectable.
+## Règles
+- les pages éditoriales du catalogue sont les références indexables ;
+- les anciennes pages en noindex peuvent conserver un canonical vers un dossier principal ;
+- les outils peuvent volontairement canoniser vers le dossier qui explique le raisonnement ;
+- les variables JavaScript ne sont pas interprétées comme des liens ;
+- les liens, ancres, fichiers du catalogue et URLs du sitemap sont contrôlés.
