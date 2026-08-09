@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Sun, 09 Aug 2026 11:38:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 11:38:42 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,16 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Gestion pilotée : comment comparer les performances sans se faire piéger ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html</guid>
+      <pubDate>Sun, 09 Aug 2026 11:38:16 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Gestion pilotée</category>
+      <description>Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.</description>
+    </item>
     <item>
       <title>Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html</link>

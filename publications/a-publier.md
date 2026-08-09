@@ -8,7 +8,63 @@ Ordre conseillé : ne pas diffuser tous les contenus d’un coup. Choisir un suj
 
 ---
 
-## 1. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
+## 1. Gestion pilotée : comment comparer les performances sans se faire piéger ?
+
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html  
+**Publication du contenu :** Sun, 09 Aug 2026 11:38:16 GMT  
+**Accroche visuelle :** Gestion pilotée : comment comparer les performances sans se faire piéger ?
+
+### Facebook
+
+```text
+Gestion pilotée : comment comparer les performances sans se faire piéger ?
+
+Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.
+
+À lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### Instagram
+
+```text
+Gestion pilotée : comment comparer les performances sans se faire piéger ?
+
+Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.
+
+À retrouver sur Contre-Évidence.
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### TikTok
+
+```text
+Gestion pilotée : comment comparer les performances sans se faire piéger ?
+
+Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### YouTube — post / description courte
+
+```text
+Gestion pilotée : comment comparer les performances sans se faire piéger ?
+
+Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.
+
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+---
+
+## 2. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html  
@@ -64,7 +120,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/d
 
 ---
 
-## 2. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+## 3. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html  
@@ -120,7 +176,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 3. Comparer rendements, frais et intérêts composés
+## 4. Comparer rendements, frais et intérêts composés
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html  
@@ -176,7 +232,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 4. Acheter ou louer : tester plusieurs scénarios
+## 5. Acheter ou louer : tester plusieurs scénarios
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html  
@@ -232,7 +288,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 5. Vendre ou conserver un bien immobilier ?
+## 6. Vendre ou conserver un bien immobilier ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html  
@@ -288,7 +344,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 6. Rembourser son crédit ou investir ?
+## 7. Rembourser son crédit ou investir ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html  
@@ -344,7 +400,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 7. Structurer l’allocation d’un héritage ou d’une grosse somme
+## 8. Structurer l’allocation d’un héritage ou d’une grosse somme
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html  
@@ -400,7 +456,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-repa
 
 ---
 
-## 8. Tester un investissement locatif
+## 9. Tester un investissement locatif
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html  
@@ -456,7 +512,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 9. Tester son allocation patrimoniale
+## 10. Tester son allocation patrimoniale
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html  
@@ -512,7 +568,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 10. Tester sa réserve de sécurité
+## 11. Tester sa réserve de sécurité
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html  
@@ -568,7 +624,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 11. Calculer le coût réel d’une formation
+## 12. Calculer le coût réel d’une formation
 
 **Type :** Outil · Vie professionnelle  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-cout-formation.html  
@@ -618,62 +674,6 @@ Calculer le coût réel d’une formation
 Additionner coûts directs et revenu sacrifié puis tester les revenus futurs que vous saisissez vous-même.
 
 Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-cout-formation.html
-
-#ContreEvidence #Outils #VieProfessionnelle
-```
-
----
-
-## 12. Prévisionnel de trésorerie sur 13 semaines
-
-**Type :** Outil · Vie professionnelle  
-**Lien :** https://contreevidence.github.io/Esquisse/outil-tresorerie-13-semaines.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:20:25 GMT  
-**Accroche visuelle :** Prévisionnel de trésorerie sur 13 semaines
-
-### Facebook
-
-```text
-Prévisionnel de trésorerie sur 13 semaines
-
-Séparer la trajectoire de cash certaine de celle qui inclut les encaissements probables et repérer le point bas prudent.
-
-À lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/outil-tresorerie-13-semaines.html
-
-#ContreEvidence #Outils #VieProfessionnelle
-```
-
-### Instagram
-
-```text
-Prévisionnel de trésorerie sur 13 semaines
-
-Séparer la trajectoire de cash certaine de celle qui inclut les encaissements probables et repérer le point bas prudent.
-
-À retrouver sur Contre-Évidence.
-
-#ContreEvidence #Outils #VieProfessionnelle #Entrepreneuriat
-```
-
-### TikTok
-
-```text
-Prévisionnel de trésorerie sur 13 semaines
-
-Séparer la trajectoire de cash certaine de celle qui inclut les encaissements probables et repérer le point bas prudent.
-
-#ContreEvidence #Outils #VieProfessionnelle #Entrepreneuriat
-```
-
-### YouTube — post / description courte
-
-```text
-Prévisionnel de trésorerie sur 13 semaines
-
-Séparer la trajectoire de cash certaine de celle qui inclut les encaissements probables et repérer le point bas prudent.
-
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-tresorerie-13-semaines.html
 
 #ContreEvidence #Outils #VieProfessionnelle
 ```
