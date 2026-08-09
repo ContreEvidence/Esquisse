@@ -48,3 +48,5 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+# Verification relancee le 2026-08-09 apres regeneration du refresh token YouTube.
