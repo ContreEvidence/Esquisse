@@ -60,7 +60,7 @@ jobs:
         run: node scripts/generate-rss.cjs
 
       - name: Auditer le site
-        run: node scripts/audit-site.cjs --report-only
+        run: node scripts/audit-site.cjs
 
       - name: Preparer les publications sociales
         run: node scripts/generate-publication-drafts.cjs
@@ -141,5 +141,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Pipeline unique : pages historiques -> consolidation SEO/dates/sitemap -> RSS -> audit -> brouillons/media -> diffusion.
+# Pipeline unique : pages historiques -> consolidation SEO/dates/sitemap -> RSS -> audit bloquant -> brouillons/media -> diffusion.
 # Une nouvelle version annule une consolidation obsolète encore en cours.
