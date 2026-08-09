@@ -37,3 +37,5 @@ jobs:
           git add articles/comparatif-produits-bancaires.html dossiers/finances-credit-endettement.html dossiers/finances-allocation-portefeuille.html assets/editorial-data.json editorial/audit-chiffrage-bibliotheque.md
           git commit -m "Enrichir epargne credit et allocation avec des donnees datees"
           git push
+
+# Déclenchement manuel de la vague du 9 août 2026.
