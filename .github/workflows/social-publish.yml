@@ -1,0 +1,92 @@
+name: Publier les nouveaux contenus sur les reseaux
+
+on:
+  workflow_run:
+    workflows: ["Mettre a jour le flux RSS et les publications"]
+    types: [completed]
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer la branche principale
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Installer le moteur d'images
+        run: npm install --no-save sharp
+
+      - name: Verifier ffmpeg
+        shell: bash
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y ffmpeg
+          fi
+          ffmpeg -version | head -n 1
+
+      - name: Construire le prochain media social depuis le RSS
+        run: node scripts/build-social-package.cjs
+
+      - name: Mettre le media a disposition des plateformes
+        shell: bash
+        run: |
+          if git diff --quiet -- publications/social-package.json publications/media; then
+            echo "Le media social est deja a jour."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add publications/social-package.json publications/media
+            git commit -m "Preparer le prochain contenu social"
+            git push
+            sleep 10
+          fi
+
+      - name: Publier sur les comptes autorises
+        env:
+          META_API_VERSION: v23.0
+          META_PAGE_NAME: Contre-Évidence
+          META_USER_ACCESS_TOKEN: ${{ secrets.META_USER_ACCESS_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
+          TIKTOK_PRIVACY_LEVEL: ${{ secrets.TIKTOK_PRIVACY_LEVEL }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_PRIVACY_STATUS: ${{ secrets.YOUTUBE_PRIVACY_STATUS }}
+          YOUTUBE_CATEGORY_ID: ${{ secrets.YOUTUBE_CATEGORY_ID }}
+        run: node scripts/publish-social.cjs
+
+      - name: Enregistrer l'anti-doublon et l'etat d'envoi
+        shell: bash
+        run: |
+          if git diff --quiet -- publications/social-state.json; then
+            echo "Aucun etat de publication a enregistrer."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publications/social-state.json
+          git commit -m "Enregistrer l'etat des publications sociales"
+          git pull --rebase origin main
+          git push
