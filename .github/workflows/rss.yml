@@ -15,7 +15,11 @@ on:
       - 'scripts/generate-publication-drafts.cjs'
       - 'scripts/enrich-wave1b-20260809.cjs'
       - 'scripts/enrich-wave1c-lumpsum-20260809.cjs'
+      - 'scripts/build-social-package.cjs'
+      - 'scripts/publish-social.cjs'
+      - 'publications/social-config.json'
       - '.github/workflows/rss.yml'
+      - '.github/workflows/social-publish.yml'
   workflow_dispatch:
 
 permissions:
@@ -59,4 +63,6 @@ jobs:
           git commit -m "Mettre a jour contenus chiffres RSS et brouillons sociaux"
           git push
 
-# Ce workflow prépare les brouillons sans les publier sur les réseaux.
+# Ce workflow maintient le RSS et les brouillons. Le workflow social-publish.yml
+# prend ensuite le relais pour fabriquer le media, appliquer l'anti-doublon et
+# envoyer le contenu vers les comptes dont les autorisations sont presentes.
