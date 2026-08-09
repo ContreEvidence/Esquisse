@@ -151,3 +151,9 @@ Toutes les valeurs sont stockées dans `assets/editorial-data.json` avec leur so
 - `dossiers/dependance-gros-client.html` — enrichi avec stress-test complet 60 % / -25 % / -50 % / rupture.
 - `dossiers/embaucher-ou-sous-traiter.html` — enrichi avec simulateur Urssaf 2026, seuil de vigilance 5 000 € HT et exemple de seuil en jours.
 - `dossiers/automatiser-ou-non-processus.html` — enrichi avec ROI complet et sensibilité au volume.
+
+## Vague 4 — 9 août 2026
+- `dossiers/quitter-emploi-stable-ou-rester.html` — coût complet d'une mobilité + règles France Travail sur la démission-reconversion.
+- `dossiers/devenir-manager-premiere-fois.html` — quantification du goulot managérial par interruptions et reprises.
+- `dossiers/ameliorer-processus-sans-degrader-service.html` — coût complet avant/après et scénario où la vitesse dégrade le résultat.
+- `dossiers/decider-sans-tourner-en-rond.html` — calcul de valeur de l'information avant engagement irréversible.

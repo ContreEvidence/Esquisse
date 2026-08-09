@@ -377,5 +377,47 @@
     "controlMinutes": 2,
     "subscriptionMonthlyEur": 150,
     "maintenanceHoursMonthly": 3
+  },
+  "careerDecision2026": {
+    "resignationReconversion": {
+      "continuousWorkDaysRequired": 1300,
+      "referencePeriodMonths": 60,
+      "cepBeforeResignation": true,
+      "projectMustBeCertifiedRealSerious": true,
+      "status": "regulatory-current",
+      "source": "https://www.francetravail.fr/candidat/mes-droits-aux-aides-et-allocati/a-chaque-situation-son-allocatio/quelle-est-ma-situation-professi/je-perds-ou-je-quitte-un-emploi/je-veux-demissionner-et-jai-un-p.html"
+    }
+  },
+  "editorialExamplesWave4": {
+    "status": "illustrative-user-replaceable",
+    "jobChange": {
+      "currentNetMonthlyEur": 2400,
+      "newNetMonthlyEur": 2700,
+      "currentVariableAnnualEur": 1500,
+      "currentTransportMonthlyEur": 120,
+      "newTransportMonthlyEur": 360,
+      "newParkingMonthlyEur": 70,
+      "extraCommuteHoursAnnual": 220
+    },
+    "manager": {
+      "directReports": 8,
+      "interruptionsPerPersonPerDay": 2,
+      "minutesPerInterruption": 8,
+      "workingWeeks": 46
+    },
+    "process": {
+      "monthlyCases": 1000,
+      "currentMinutes": 25,
+      "currentReworkPct": 11,
+      "currentReworkMinutes": 12,
+      "improvedMinutes": 20,
+      "improvedReworkPct": 8,
+      "hourlyCostEur": 32
+    },
+    "valueOfInformation": {
+      "commitmentAtRiskEur": 11600,
+      "testCostEur": 440,
+      "breakEvenProbabilityPct": 3.8
+    }
   }
 }
