@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "lastChecked": "2026-08-09",
+    "country": "FR",
+    "principle": "Séparer données observées, performances publiées par les fournisseurs et hypothèses de simulation. Chaque chiffre conserve sa source, sa date et son périmètre.",
+    "refresh": "Les données datées doivent être revérifiées avant toute mise à jour éditoriale importante."
+  },
+  "markets": {
+    "msciWorld": {
+      "asOf": "2026-07-31",
+      "constituents": 1282,
+      "top10WeightPct": 26.43,
+      "annualizedVolatility10yPct": 14.86,
+      "maxDrawdownPct": 57.82,
+      "maxDrawdownPeriod": "2007-10-31 / 2009-03-09",
+      "topConstituents": [
+        {"name":"NVIDIA","weightPct":5.18},
+        {"name":"Apple","weightPct":5.07},
+        {"name":"Microsoft","weightPct":3.66},
+        {"name":"Amazon","weightPct":2.94},
+        {"name":"Alphabet A","weightPct":2.32}
+      ],
+      "source": "https://www.msci.com/indexes/index/990100/msci-world-index",
+      "sourceLabel": "MSCI — MSCI World Index",
+      "status": "observed"
+    },
+    "spivaEurope": {
+      "globalEquityEurUnderperformed2025Pct": 71,
+      "globalEquityEurUnderperformed10yAt2025H1Pct": 98,
+      "persistence": {
+        "sample": 408,
+        "startingCondition": "Fonds Global Equity dans la moitié supérieure sur les cinq ans finissant en 2020",
+        "remainedTopHalfNext5yPct": 16
+      },
+      "sources": [
+        "https://www.spglobal.com/spdji/en/spiva/article/spiva-europe/",
+        "https://www.spglobal.com/spdji/en/spiva/article/spiva-europe-mid-year-2025/",
+        "https://www.spglobal.com/spdji/en/spiva/article/europe-persistence-scorecard/"
+      ],
+      "sourceLabel": "S&P Dow Jones Indices — SPIVA Europe",
+      "status": "observed"
+    }
+  },
+  "managedPortfolios": {
+    "yomoni": {
+      "providerReported": true,
+      "performance": {
+        "P3": {"equitySharePct":20,"2023Pct":6.1,"2024Pct":5.7,"2025Pct":4.0},
+        "P6": {"equitySharePct":50,"2023Pct":11.7,"2024Pct":10.6,"2025Pct":6.0},
+        "P10": {"equitySharePct":100,"2023Pct":19.0,"2024Pct":19.6,"2025Pct":11.1}
+      },
+      "fees": {
+        "mandateMaxPct": 0.7,
+        "insurerMaxPct": 0.6,
+        "etfMaxPct": 0.3,
+        "approxAllInMaxPct": 1.6
+      },
+      "sources": [
+        "https://blog.yomoni.fr/le-bilan-2025-de-la-gestion/",
+        "https://www.yomoni.fr/performances/profils-investissement",
+        "https://www.yomoni.fr/tarifs"
+      ],
+      "status": "provider-reported"
+    },
+    "nalo": {
+      "providerReported": true,
+      "performancePageAsOf": "2026-07-24",
+      "fundEuro": {"2023Pct":2.95,"2024Pct":2.90,"2025Pct":2.90},
+      "fees": {"minPct":0.85,"maxPct":1.65,"insurerPct":0.85,"mandatePct":0.55,"etfApproxPct":0.25},
+      "note": "Nalo ne publie pas de profils génériques fixes : les performances sont affichées selon la part d'actions. Comparer seulement à exposition et période comparables.",
+      "sources": [
+        "https://www.nalo.fr/performances",
+        "https://content.nalo.fr/fr/help/quels-sont-les-frais-de-nalo-patrimoine-nalo-faq?hsLang=fr"
+      ],
+      "status": "provider-reported"
+    },
+    "ramify": {
+      "providerReported": true,
+      "asOf": "2026-06-30",
+      "example": {
+        "portfolio": "Essential Standard",
+        "riskLevel": "10/10 Dynamique",
+        "2024Pct":27.12,
+        "2025Pct":5.66,
+        "2026YtdPct":9.67,
+        "fiveYearCumulativePct":81.36,
+        "fiveYearAnnualizedPct":12.64
+      },
+      "fees": {"managementRangePct":"1.0-1.4","note":"hors frais des supports selon la page produit"},
+      "source": "https://www.ramify.fr/performances",
+      "sourceLabel": "Ramify — Performances",
+      "status": "provider-reported"
+    }
+  }
+}
