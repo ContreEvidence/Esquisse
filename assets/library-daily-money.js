@@ -4,6 +4,15 @@
     {
       d:'patrimoine',
       t:'dossier',
+      c:'Inflation & pouvoir d’achat',
+      h:'dossiers/inflation-comprendre-histoire-pouvoir-achat.html',
+      n:'Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent',
+      x:'Définition, causes, séries historiques depuis 1945, pouvoir d’achat, rendement réel, crédit, taux et placements.',
+      k:'inflation prix pouvoir achat ipc désinflation déflation 1970 1980 épargne cash rendement réel taux crédit histoire économie'
+    },
+    {
+      d:'patrimoine',
+      t:'dossier',
       c:'Automobile',
       h:'dossiers/cout-reel-voiture-achat-credit-loa-lld.html',
       n:'Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?',
@@ -29,7 +38,7 @@
       k:'gestion pilotée assurance vie performance yomoni nalo ramify benchmark frais risque drawdown spiva etf portefeuille rendement'
     }
   ];
-  let pos = 1;
+  let pos = 0;
   for (const item of additions) {
     if (window.CE_LIBRARY_CATALOG.some(existing => existing.h === item.h)) continue;
     window.CE_LIBRARY_CATALOG.splice(pos, 0, item);
