@@ -100,18 +100,18 @@ function specialRecurring(item) {
   const link = item.link;
   return {
     slides: [
-      ['Ton cerveau t’a encore arnaqué !', '9,99 € par mois ? « C’est presque rien. »'],
-      ['9,99 € / mois', '= 119,88 € par an. La mensualité cache l’échelle réelle.'],
-      ['12 prélèvements anodins', '= 3 963,84 € par an dans l’exemple du dossier.'],
-      ['Après l’audit', '1 037,64 € d’économies identifiées sur un an, sans tout supprimer.'],
-      ['Le vrai problème ?', 'Une dépense répétée finit par ne plus être une décision.'],
-      ['Reprendre le contrôle', 'Ramener chaque prélèvement à son coût annuel, puis décider : garder, renégocier ou supprimer.']
+      ['Ton cerveau t’a encore arnaqué !', 'Près de 4 000 € par an peuvent se cacher dans des petites dépenses récurrentes.'],
+      ['3 963,84 € par an', 'C’est le total de 12 prélèvements dans notre exemple. Pas une grosse dépense : une addition de petites lignes.'],
+      ['Le piège du « seulement »', '9,99 € par mois paraît petit. C’est déjà 119,88 € par an.'],
+      ['1 037,64 € récupérables', 'Dans l’exemple, l’audit trouve cette économie annuelle sans supprimer les protections utiles.'],
+      ['Le vrai problème ?', 'Ces dépenses continuent alors qu’on ne les redécide plus vraiment.'],
+      ['Fais le test', 'Passe tes prélèvements en coût annuel : garder, renégocier ou supprimer. Dossier complet sur Contre-Évidence.']
     ],
-    facebook: `9,99 € par mois, ça paraît presque insignifiant.\nSur un an : près de 120 €.\n\nEt quand on additionne téléphone, streaming, cloud, banque, assurances, salle de sport, alarme… les petites lignes deviennent un vrai poste de dépenses.\n\nDans l’exemple du dossier : 3 963,84 €/an.\nAprès audit : 1 037,64 €/an d’économies identifiées.\n\nLe problème des dépenses récurrentes n’est pas qu’elles soient forcément inutiles. C’est qu’au bout d’un moment, on ne les décide plus.\n\nLire le dossier :\n${link}\n\n#ContreEvidence #FinancesPersonnelles #Budget`,
-    instagram: `9,99 € par mois paraît minuscule. Sur un an, c’est près de 120 €. Et quand les prélèvements s’empilent, la facture devient beaucoup moins invisible.\n\nDans l’exemple du dossier : 3 963,84 € par an avant audit, puis 1 037,64 € d’économies identifiées sans supprimer aveuglément les protections utiles.\n\nDossier complet sur Contre-Évidence.\n\n#ContreEvidence #FinancesPersonnelles #Budget #Patrimoine`,
-    tiktok: `Ton cerveau t’a encore arnaqué ! 9,99 €/mois paraît petit. 119,88 €/an l’est déjà moins. Additionne les prélèvements et regarde le coût annuel. #ContreEvidence #FinancesPersonnelles #Budget`,
-    youtubeTitle: `9,99 €/mois : le piège des dépenses récurrentes #Shorts`,
-    youtubeDescription: `9,99 € par mois paraît petit. Le coût annuel raconte une autre histoire.\n\nDans l’exemple du dossier Contre-Évidence : 3 963,84 € de dépenses récurrentes par an, puis 1 037,64 € d’économies identifiées après audit.\n\nLire le dossier : ${link}\n\n#ContreEvidence #FinancesPersonnelles #Budget #Shorts`
+    facebook: `Près de 4 000 € par an de dépenses qui finissent par devenir invisibles.\n\nPas 4 000 € « jetés par la fenêtre » : dans notre exemple, 12 prélèvements récurrents totalisent 3 963,84 € par an. Téléphone, Internet, streaming, cloud, banque, assurances, salle de sport, alarme…\n\nUne fois chaque ligne remise en coût annuel et réellement réexaminée, l’audit identifie 1 037,64 € d’économies par an — sans supprimer aveuglément les assurances ou les services utiles.\n\nLe piège ? 9,99 € par mois semble petit. 119,88 € par an l’est déjà beaucoup moins. Et surtout, une dépense répétée finit par ne plus être une décision.\n\nFaites le test sur vos propres prélèvements :\n${link}\n\n#ContreEvidence #FinancesPersonnelles #Budget`,
+    instagram: `Tu ne dépenses peut-être pas 4 000 € de trop. Mais tu peux avoir près de 4 000 € de dépenses récurrentes que tu ne redécides presque plus.\n\nDans notre exemple : 12 prélèvements = 3 963,84 € par an. Après audit : 1 037,64 € d’économies identifiées, sans supprimer les protections utiles.\n\nLe premier réflexe : arrêter de regarder « seulement 9,99 €/mois » et convertir chaque ligne en coût annuel.\n\nDossier complet sur Contre-Évidence.\n\n#ContreEvidence #FinancesPersonnelles #Budget #Patrimoine`,
+    tiktok: `Ton cerveau t’a encore arnaqué ! Près de 4 000 € par an peuvent se cacher dans 12 petites dépenses récurrentes. Dans notre exemple, l’audit en récupère 1 037,64 €. Passe tout en coût annuel. #ContreEvidence #Budget`,
+    youtubeTitle: `Près de 4 000 € de dépenses invisibles ? Fais l’audit #Shorts`,
+    youtubeDescription: `Tu ne dépenses peut-être pas 4 000 € de trop. Mais des petites dépenses récurrentes peuvent finir par représenter une somme énorme sans être redécidées.\n\nDans l’exemple Contre-Évidence : 12 prélèvements = 3 963,84 € par an. Après audit : 1 037,64 € d’économies identifiées, sans supprimer les protections utiles.\n\nLire le dossier : ${link}\n\n#ContreEvidence #FinancesPersonnelles #Budget #Shorts`
   };
 }
 
