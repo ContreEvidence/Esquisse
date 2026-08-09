@@ -174,7 +174,9 @@
     "ldds": {
       "annualRatePct": 1.7,
       "tax": "exempt",
-      "status": "observed"
+      "status": "observed",
+      "source": "https://presse.economie.gouv.fr/epargne-reglementee-le-livret-a-passe-a-17-et-le-lep-se-maintient-a-25-a-compter-du-1er-aout-2026/",
+      "sourceNote": "Le taux du LDDS est aligné sur celui du Livret A ; la même publication officielle est utilisée pour ce repère."
     },
     "lep": {
       "annualRatePct": 2.5,
@@ -283,7 +285,13 @@
       "contributionsAfter70Deductible": false,
       "capitalGainsGlobalRatePct": 31.4,
       "source": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/comment-fonctionne-le-plan-depargne-retraite-individuel"
-    }
+    },
+    "sources": [
+      "https://www.impots.gouv.fr/particulier/questions/jai-un-plan-depargne-en-actions-pea-les-retraits-sont-ils-imposables",
+      "https://www.impots.gouv.fr/particulier/lassurance-vie-et-le-pea-0",
+      "https://www.impots.gouv.fr/particulier/questions/jai-des-valeurs-mobilieres-comment-sont-elles-imposees",
+      "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/comment-fonctionne-le-plan-depargne-retraite-individuel"
+    ]
   },
   "retirement2026": {
     "lifeExpectancyAt65_2025": {
