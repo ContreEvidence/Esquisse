@@ -75,4 +75,5 @@ async function main() {
   console.log(`Autorisations détectées — Meta: ${status.meta ? 'oui' : 'non'}, TikTok: ${status.tiktok ? 'oui' : 'non'}, YouTube: ${status.youtube ? 'oui' : 'non'}; OAuth YouTube valide: ${status.youtubeValid ? 'oui' : 'non'}.`);
 }
 
+// Probe relancé après mise à jour des identifiants OAuth YouTube.
 main().catch(err => { console.error(err); process.exit(1); });
