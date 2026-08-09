@@ -1,14 +1,29 @@
 (() => {
   if (!Array.isArray(window.CE_LIBRARY_CATALOG)) return;
-  const href = 'dossiers/education-financiere-consommation.html';
-  if (window.CE_LIBRARY_CATALOG.some(item => item.h === href)) return;
-  window.CE_LIBRARY_CATALOG.splice(1, 0, {
-    d:'patrimoine',
-    t:'guide',
-    c:'Éducation financière',
-    h:href,
-    n:'Consommer, acheter, s’endetter : les bases financières du quotidien',
-    x:'Coût réel, mensualités, LOA/LLD, paiement fractionné, abonnements, gaspillage et arbitrage réparer ou remplacer.',
-    k:'éducation financière consommation achat coût total mensualité leasing loa lld crédit paiement fractionné 3x 4x abonnement gaspillage réparer remplacer voiture budget épargne'
-  });
+  const additions = [
+    {
+      d:'patrimoine',
+      t:'dossier',
+      c:'Automobile',
+      h:'dossiers/cout-reel-voiture-achat-credit-loa-lld.html',
+      n:'Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?',
+      x:'Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.',
+      k:'voiture automobile achat crédit loa lld leasing occasion neuf décote assurance entretien kilométrage coût total mensualité revente'
+    },
+    {
+      d:'patrimoine',
+      t:'dossier',
+      c:'Dépenses récurrentes',
+      h:'dossiers/depenses-recurrentes-abonnements-assurances.html',
+      n:'Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?',
+      x:'Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.',
+      k:'abonnement assurance forfait prélèvement récurrent streaming téléphone internet banque logiciel salle sport contrat coût annuel doublon résiliation renégociation budget'
+    }
+  ];
+  let pos = 1;
+  for (const item of additions) {
+    if (window.CE_LIBRARY_CATALOG.some(existing => existing.h === item.h)) continue;
+    window.CE_LIBRARY_CATALOG.splice(pos, 0, item);
+    pos += 1;
+  }
 })();
