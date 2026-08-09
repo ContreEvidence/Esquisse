@@ -1,0 +1,50 @@
+name: Verifier les connexions sociales
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/social-auth-probe.yml'
+      - 'scripts/check-social-auth.cjs'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le depot
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verifier les autorisations sans lire leur contenu
+        env:
+          META_USER_ACCESS_TOKEN: ${{ secrets.META_USER_ACCESS_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: node scripts/check-social-auth.cjs
+
+      - name: Enregistrer uniquement le statut de connexion
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publications/social-auth-status.json
+          if git diff --cached --quiet; then
+            echo "Statut inchangé."
+          else
+            git commit -m "Mettre a jour le statut des connexions sociales"
+            git pull --rebase origin main
+            git push
+          fi
