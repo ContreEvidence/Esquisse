@@ -18,6 +18,15 @@
       n:'Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?',
       x:'Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.',
       k:'abonnement assurance forfait prélèvement récurrent streaming téléphone internet banque logiciel salle sport contrat coût annuel doublon résiliation renégociation budget'
+    },
+    {
+      d:'patrimoine',
+      t:'dossier',
+      c:'Gestion pilotée',
+      h:'dossiers/gestion-pilotee-comparer-performances.html',
+      n:'Gestion pilotée : comment comparer les performances sans se faire piéger ?',
+      x:'Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.',
+      k:'gestion pilotée assurance vie performance yomoni nalo ramify benchmark frais risque drawdown spiva etf portefeuille rendement'
     }
   ];
   let pos = 1;
