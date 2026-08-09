@@ -19,6 +19,7 @@ on:
       - 'scripts/clean-legacy-pages.cjs'
       - 'scripts/consolidate-site.cjs'
       - 'scripts/audit-site.cjs'
+      - 'scripts/check-editorial-data-freshness.cjs'
       - 'scripts/generate-rss.cjs'
       - 'scripts/generate-publication-drafts.cjs'
       - 'scripts/build-social-package.cjs'
@@ -59,6 +60,9 @@ jobs:
       - name: Generer les flux RSS
         run: node scripts/generate-rss.cjs
 
+      - name: Verifier la fraîcheur entre données et dossiers
+        run: node scripts/check-editorial-data-freshness.cjs --report-only
+
       - name: Auditer le site
         run: node scripts/audit-site.cjs
 
@@ -98,7 +102,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A -- '*.html' articles dossiers themes sitemap.xml 'rss*.xml' rss-feeds.json publications/a-publier.md \
-            assets/editorial-data.json editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md
+            assets/editorial-data.json editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/data-freshness.md
           if [ -f publications/social-package.json ]; then git add publications/social-package.json; fi
           if [ -f publications/social-auth-status.json ]; then git add publications/social-auth-status.json; fi
           if [ -d publications/media ]; then git add publications/media; fi
@@ -141,5 +145,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Pipeline unique : pages historiques -> consolidation SEO/dates/sitemap -> RSS -> audit bloquant -> brouillons/media -> diffusion.
+# Pipeline unique : pages historiques -> consolidation SEO/dates/sitemap -> RSS -> fraîcheur des données -> audit bloquant -> brouillons/media -> diffusion.
 # Une nouvelle version annule une consolidation obsolète encore en cours.
