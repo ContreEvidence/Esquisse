@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 9 août 2026 à 13:17.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 9 août 2026 à 13:18.
 
 Ces textes sont des **brouillons prêts à copier** : rien n’est publié automatiquement. Relire avant diffusion et adapter le visuel au réseau.
 
@@ -8,63 +8,119 @@ Ordre conseillé : ne pas diffuser tous les contenus d’un coup. Choisir un suj
 
 ---
 
-## 1. Consommer, acheter, s’endetter : les bases financières du quotidien
+## 1. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
 
-**Type :** Guide · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/dossiers/education-financiere-consommation.html  
-**Publication du contenu :** Sat, 08 Aug 2026 19:50:51 GMT  
-**Accroche visuelle :** Consommer, acheter, s’endetter : les bases financières du quotidien
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html  
+**Publication du contenu :** Sun, 09 Aug 2026 11:17:39 GMT  
+**Accroche visuelle :** Abonnements, assurances, forfaits : combien coûtent les dépenses qui se…
 
 ### Facebook
 
 ```text
-Consommer, acheter, s’endetter : les bases financières du quotidien
+Abonnements, assurances, forfaits : combien coûtent les dépenses qui se…
 
-Coût réel, mensualités, LOA/LLD, paiement fractionné, abonnements, gaspillage et arbitrage réparer ou remplacer.
+Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.
 
 À lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/dossiers/education-financiere-consommation.html
+https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html
 
-#ContreEvidence #Guide #Patrimoine
+#ContreEvidence #Dossier #Patrimoine
 ```
 
 ### Instagram
 
 ```text
-Consommer, acheter, s’endetter : les bases financières du quotidien
+Abonnements, assurances, forfaits : combien coûtent les dépenses qui se…
 
-Coût réel, mensualités, LOA/LLD, paiement fractionné, abonnements, gaspillage et arbitrage réparer ou remplacer.
+Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.
 
 À retrouver sur Contre-Évidence.
 
-#ContreEvidence #Guide #Patrimoine #FinancesPersonnelles
+#ContreEvidence #Dossier #Patrimoine
 ```
 
 ### TikTok
 
 ```text
-Consommer, acheter, s’endetter : les bases financières du quotidien
+Abonnements, assurances, forfaits : combien coûtent les dépenses qui se…
 
-Coût réel, mensualités, LOA/LLD, paiement fractionné, abonnements, gaspillage et arbitrage réparer ou remplacer.
+Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et…
 
-#ContreEvidence #Guide #Patrimoine #FinancesPersonnelles
+#ContreEvidence #Dossier #Patrimoine
 ```
 
 ### YouTube — post / description courte
 
 ```text
-Consommer, acheter, s’endetter : les bases financières du quotidien
+Abonnements, assurances, forfaits : combien coûtent les dépenses qui se…
 
-Coût réel, mensualités, LOA/LLD, paiement fractionné, abonnements, gaspillage et arbitrage réparer ou remplacer.
+Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.
 
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/education-financiere-consommation.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html
 
-#ContreEvidence #Guide #Patrimoine
+#ContreEvidence #Dossier #Patrimoine
 ```
 
 ---
 
-## 2. Comparer rendements, frais et intérêts composés
+## 2. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html  
+**Publication du contenu :** Sun, 09 Aug 2026 11:17:05 GMT  
+**Accroche visuelle :** Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+
+### Facebook
+
+```text
+Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+
+Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.
+
+À lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### Instagram
+
+```text
+Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+
+Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.
+
+À retrouver sur Contre-Évidence.
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### TikTok
+
+```text
+Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+
+Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### YouTube — post / description courte
+
+```text
+Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+
+Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.
+
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+---
+
+## 3. Comparer rendements, frais et intérêts composés
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html  
@@ -120,7 +176,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 3. Acheter ou louer : tester plusieurs scénarios
+## 4. Acheter ou louer : tester plusieurs scénarios
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html  
@@ -176,7 +232,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 4. Vendre ou conserver un bien immobilier ?
+## 5. Vendre ou conserver un bien immobilier ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html  
@@ -232,7 +288,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 5. Rembourser son crédit ou investir ?
+## 6. Rembourser son crédit ou investir ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html  
@@ -288,7 +344,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 6. Structurer l’allocation d’un héritage ou d’une grosse somme
+## 7. Structurer l’allocation d’un héritage ou d’une grosse somme
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html  
@@ -344,7 +400,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-repa
 
 ---
 
-## 7. Tester un investissement locatif
+## 8. Tester un investissement locatif
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html  
@@ -400,7 +456,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 8. Tester son allocation patrimoniale
+## 9. Tester son allocation patrimoniale
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html  
@@ -456,7 +512,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 9. Tester sa réserve de sécurité
+## 10. Tester sa réserve de sécurité
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html  
@@ -512,7 +568,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 10. Calculer le coût réel d’une formation
+## 11. Calculer le coût réel d’une formation
 
 **Type :** Outil · Vie professionnelle  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-cout-formation.html  
@@ -568,7 +624,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 11. Prévisionnel de trésorerie sur 13 semaines
+## 12. Prévisionnel de trésorerie sur 13 semaines
 
 **Type :** Outil · Vie professionnelle  
 **Lien :** https://contreevidence.github.io/Esquisse/outil-tresorerie-13-semaines.html  
@@ -618,62 +674,6 @@ Prévisionnel de trésorerie sur 13 semaines
 Séparer la trajectoire de cash certaine de celle qui inclut les encaissements probables et repérer le point bas prudent.
 
 Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-tresorerie-13-semaines.html
-
-#ContreEvidence #Outils #VieProfessionnelle
-```
-
----
-
-## 12. Matrice compétences → preuves
-
-**Type :** Outil · Vie professionnelle  
-**Lien :** https://contreevidence.github.io/Esquisse/outil-competences-preuves-cv.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:08:33 GMT  
-**Accroche visuelle :** Matrice compétences → preuves
-
-### Facebook
-
-```text
-Matrice compétences → preuves
-
-Transformer les exigences réellement importantes d’une offre en situations, actions, résultats et preuves, sans générer le CV à votre place.
-
-À lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/outil-competences-preuves-cv.html
-
-#ContreEvidence #Outils #VieProfessionnelle
-```
-
-### Instagram
-
-```text
-Matrice compétences → preuves
-
-Transformer les exigences réellement importantes d’une offre en situations, actions, résultats et preuves, sans générer le CV à votre place.
-
-À retrouver sur Contre-Évidence.
-
-#ContreEvidence #Outils #VieProfessionnelle #Emploi
-```
-
-### TikTok
-
-```text
-Matrice compétences → preuves
-
-Transformer les exigences réellement importantes d’une offre en situations, actions, résultats et preuves, sans générer le CV à votre place.
-
-#ContreEvidence #Outils #VieProfessionnelle #Emploi
-```
-
-### YouTube — post / description courte
-
-```text
-Matrice compétences → preuves
-
-Transformer les exigences réellement importantes d’une offre en situations, actions, résultats et preuves, sans générer le CV à votre place.
-
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-competences-preuves-cv.html
 
 #ContreEvidence #Outils #VieProfessionnelle
 ```
