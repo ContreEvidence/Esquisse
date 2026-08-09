@@ -199,5 +199,38 @@
     "scope": "Taux effectif au sens étroit, moyennes pondérées par les flux, hors frais et assurance pour habitat",
     "source": "https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2026-05",
     "status": "observed"
+  },
+  "secureProducts": {
+    "termDepositsMay2026": {
+      "householdsNewContractsUpTo2YearsPct": 2.23,
+      "status": "observed",
+      "source": "https://www.banque-france.fr/fr/statistiques/epargne/taux-de-remuneration-des-depots-bancaires-2026-05"
+    },
+    "euroFunds2025": {
+      "individualAverageRevaluationPct": 2.63,
+      "averageManagementChargePct": 0.63,
+      "scope": "net de prélèvements sur encours, avant prélèvements sociaux",
+      "dispersionCommercialBonusesAtLeastPctPoint": 0.4,
+      "status": "observed-market-average",
+      "source": "https://acpr.banque-france.fr/en/node/1922312"
+    }
+  },
+  "labourMarket": {
+    "france2026": {
+      "recruitmentProjectsM": 2.3,
+      "changeYoYPct": -6.5,
+      "difficultRecruitmentPct": 43.8,
+      "status": "survey-employer-intentions",
+      "source": "https://statistiques.francetravail.org/bmo/bmopub?year=2026"
+    },
+    "seniorEmployment2025": {
+      "employmentRate50to64Pct": 69.2,
+      "change50to64YoYPp": 0.9,
+      "employmentRate60to64Pct": 44.4,
+      "change60to64YoYPp": 2,
+      "shareWorkersAge50PlusPct": 32.8,
+      "status": "observed",
+      "source": "https://www.insee.fr/fr/statistiques/8733041?sommaire=8733125"
+    }
   }
 }

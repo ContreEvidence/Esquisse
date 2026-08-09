@@ -35,7 +35,7 @@ Aucune moyenne historique ne doit devenir une promesse. Aucune performance comme
 - `dossiers/finances-allocation-portefeuille.html` — **enrichi le 9 août 2026** : volatilité 10 ans et drawdown historique MSCI World, avec exemple de perte/récupération.
 - `articles/choisir-etf-mondial-debutant.html` — ajouter photographie réelle d’un indice mondial : nombre de titres, poids des principales lignes, concentration.
 - `articles/frais-fiscalite-rendement-net.html` — ajouter structures de frais réelles de contrats et impact composé sur 10/20 ans.
-- `articles/comparatif-produits-bancaires.html` — **enrichi le 9 août 2026** : Livret A, LDDS, LEP et PEL 2026 avec taux, plafonds et exemple en euros. Reste à documenter davantage comptes à terme et fonds euros.
+- `articles/comparatif-produits-bancaires.html` — **enrichi le 9 août 2026** : Livret A, LDDS, LEP et PEL 2026 avec taux, plafonds et exemple en euros. Comptes à terme et fonds euros ajoutés le 9 août 2026 à partir de la Banque de France et de l’ACPR.
 - `dossiers/finances-credit-endettement.html` — **enrichi le 9 août 2026** : taux Banque de France mai 2026 et exemples de coût à 20/25 ans et crédit consommation.
 - `dossiers/finances-residence-principale.html` — frais d’acquisition, financement, durée de détention et exemples de point mort.
 - `dossiers/finances-immobilier-patrimoine.html` — rendements, concentration, liquidité et coût du levier.
@@ -63,10 +63,10 @@ Aucune moyenne historique ne doit devenir une promesse. Aucune performance comme
 
 ## B — enrichissement prioritaire
 
-- `articles/tester-metier-avant-investir.html` — salaires d’entrée, volumes d’offres, tension du métier, durée/coût des formations.
+- `articles/tester-metier-avant-investir.html` — **enrichi le 9 août 2026** avec BMO France Travail 2026 (volume et difficultés de recrutement). Reste à ajouter salaires d’entrée et données métier/locales dans les dossiers sectoriels.
 - `articles/50-candidatures-zero-reponse.html` — taux de conversion observés uniquement lorsqu’une source robuste existe ; sinon statistiques personnelles de campagne.
 - `articles/entretien-rate-ce-qui-bloque.html` — données de recrutement, temps moyen, rémunération et critères de sélection selon métier.
-- `dossiers/experience-devient-risque-recruteur.html` — taux d’emploi par âge, durée de chômage, écarts de recrutement seniors.
+- `dossiers/experience-devient-risque-recruteur.html` — **enrichi le 9 août 2026** avec taux d’emploi Insee 2025 des 50–64 et 60–64 ans. Reste à documenter durée de recherche et écarts de recrutement avec sources robustes.
 - `articles/accepter-nimporte-quel-poste-retour-emploi.html` — gain net après transport, temps, aides perdues/gagnées et valeur de CV.
 - `dossiers/negocier-salaire-responsabilites.html` — fourchettes réelles, médianes, rémunération totale et coût employeur.
 - `dossiers/quitter-emploi-stable-ou-rester.html` — comparaison chiffrée rémunération/temps/risque et runway financier.
