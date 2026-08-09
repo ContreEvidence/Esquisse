@@ -3,6 +3,7 @@
 
   const contentCatalog = Array.isArray(window.CE_LIBRARY_CATALOG) ? window.CE_LIBRARY_CATALOG : [];
   const toolsCatalog = Array.isArray(window.CE_TOOLS_CATALOG) ? window.CE_TOOLS_CATALOG : [];
+  const fullTextIndex = window.CE_SEARCH_INDEX && typeof window.CE_SEARCH_INDEX === 'object' ? window.CE_SEARCH_INDEX : {};
   const catalog = [...contentCatalog, ...toolsCatalog];
   const list = document.querySelector('.articles');
   const tools = document.querySelector('.library-tools');
@@ -14,9 +15,9 @@
   const typeLabel = type => type === 'outil' ? 'Outil' : type === 'guide' ? 'Guide pratique' : 'Dossier';
   const actionLabel = type => type === 'outil' ? 'Utiliser l’outil' : type === 'guide' ? 'Ouvrir le guide' : 'Lire le dossier';
 
-  list.innerHTML = items.map((item,index) => `<article class="article-card filter-card" data-domain="${item.d}" data-content-type="${item.t}" data-tags="${item.k || ''}" data-original-order="${index}"><div><div class="card-meta"><span class="level-badge">${typeLabel(item.t)}</span><span class="theme-chip">${item.c}</span></div><h3>${item.n}</h3><p>${item.x}</p></div><a href="${item.h}">${actionLabel(item.t)} →</a></article>`).join('');
+  list.innerHTML = items.map((item,index) => `<article class="article-card filter-card" data-domain="${item.d}" data-content-type="${item.t}" data-tags="${item.k || ''}" data-href="${item.h}" data-original-order="${index}"><div><div class="card-meta"><span class="level-badge">${typeLabel(item.t)}</span><span class="theme-chip">${item.c}</span></div><h3>${item.n}</h3><p>${item.x}</p></div><a href="${item.h}">${actionLabel(item.t)} →</a></article>`).join('');
 
-  tools.innerHTML = `<label class="library-search"><span class="filter-label">Rechercher :</span><input type="search" placeholder="Ex. allocation, reconversion, immobilier, prix rentable…" aria-label="Rechercher dans la bibliothèque"></label><div class="filter-group domain-filters"><span class="filter-label">Domaine :</span><button aria-pressed="true" class="filter-btn" data-domain="all">Tous</button><button aria-pressed="false" class="filter-btn" data-domain="patrimoine">Patrimoine</button><button aria-pressed="false" class="filter-btn" data-domain="vie-pro">Vie professionnelle</button></div><div class="filter-group type-filters"><span class="filter-label">Format :</span><button aria-pressed="true" class="filter-btn" data-type="editorial">Guides & dossiers</button><button aria-pressed="false" class="filter-btn" data-type="outil">Outils</button><button aria-pressed="false" class="filter-btn" data-type="all">Tous</button><button aria-pressed="false" class="filter-btn" data-type="guide">Guides</button><button aria-pressed="false" class="filter-btn" data-type="dossier">Dossiers</button></div><div class="results-count" data-results-count></div>`;
+  tools.innerHTML = `<label class="library-search"><span class="filter-label">Rechercher :</span><input type="search" placeholder="Ex. attestation de vigilance, reconversion, franchise, allocation…" aria-label="Rechercher dans la bibliothèque"></label><div class="filter-group domain-filters"><span class="filter-label">Domaine :</span><button aria-pressed="true" class="filter-btn" data-domain="all">Tous</button><button aria-pressed="false" class="filter-btn" data-domain="patrimoine">Patrimoine</button><button aria-pressed="false" class="filter-btn" data-domain="vie-pro">Vie professionnelle</button></div><div class="filter-group type-filters"><span class="filter-label">Format :</span><button aria-pressed="true" class="filter-btn" data-type="editorial">Guides & dossiers</button><button aria-pressed="false" class="filter-btn" data-type="outil">Outils</button><button aria-pressed="false" class="filter-btn" data-type="all">Tous</button><button aria-pressed="false" class="filter-btn" data-type="guide">Guides</button><button aria-pressed="false" class="filter-btn" data-type="dossier">Dossiers</button></div><div class="results-count" data-results-count></div>`;
 
   const style = document.createElement('style');
   style.textContent = `.library-tools{display:grid;gap:.75rem;margin-bottom:1.2rem}.library-search{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}.library-search input{min-width:min(560px,82vw);padding:.72rem .82rem;border:1px solid rgba(16,24,32,.2);border-radius:10px;font:inherit}.filter-group{display:flex;gap:.45rem;align-items:center;flex-wrap:wrap}.filter-card.is-hidden{display:none!important}.results-count{font-weight:800;color:#657078}`;
@@ -54,11 +55,11 @@
 
   function scoreCard(card,query){
     if(!query.trim())return 0;
-    const title=normalise(card.querySelector('h3')?.textContent),chip=normalise(card.querySelector('.theme-chip')?.textContent),desc=normalise(card.querySelector('p')?.textContent),tags=normalise(card.dataset.tags),phrase=normalise(query),tokens=queryTokens(query);
+    const title=normalise(card.querySelector('h3')?.textContent),chip=normalise(card.querySelector('.theme-chip')?.textContent),desc=normalise(card.querySelector('p')?.textContent),tags=normalise(card.dataset.tags),full=normalise(fullTextIndex[card.dataset.href] || ''),phrase=normalise(query),tokens=queryTokens(query);
     let score=0;
     if(title===phrase)score+=180;else if(title.startsWith(phrase))score+=130;else if(title.includes(phrase))score+=90;
-    if(chip.includes(phrase))score+=45;if(tags.includes(phrase))score+=45;if(desc.includes(phrase))score+=30;
-    tokens.forEach(token=>{if(title.includes(token))score+=24;if(chip.includes(token))score+=12;if(tags.includes(token))score+=14;if(desc.includes(token))score+=7;});
+    if(chip.includes(phrase))score+=45;if(tags.includes(phrase))score+=45;if(desc.includes(phrase))score+=30;if(full.includes(phrase))score+=22;
+    tokens.forEach(token=>{if(title.includes(token))score+=24;if(chip.includes(token))score+=12;if(tags.includes(token))score+=14;if(desc.includes(token))score+=7;if(full.includes(token))score+=3;});
     if(card.dataset.contentType==='guide')score+=24;else if(card.dataset.contentType==='dossier')score+=20;else score+=8;
     return score;
   }
