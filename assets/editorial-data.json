@@ -57,6 +57,30 @@
       ],
       "sourceLabel": "S&P Dow Jones Indices — SPIVA Europe",
       "status": "observed"
+    },
+    "lumpSumVsCostAveraging": {
+      "study": "Vanguard 2023",
+      "historicalPeriod": "1976-2022",
+      "equityBenchmark": "MSCI World Index",
+      "costAveraging": "3 equal monthly investments",
+      "horizon": "1 year",
+      "lumpSumBeatsCostAveragingPct": 68,
+      "costAveragingBeatsCashPct": 69,
+      "lumpSumBeatsCashPct": 70,
+      "equityMedian": {
+        "lumpSum": 111940,
+        "costAveraging": 109580
+      },
+      "equity5thPct": {
+        "lumpSum": 82947,
+        "costAveraging": 85906
+      },
+      "equity95thPct": {
+        "lumpSum": 139453,
+        "costAveraging": 131012
+      },
+      "source": "https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf",
+      "status": "observed-historical"
     }
   },
   "managedPortfolios": {

@@ -41,7 +41,7 @@ Aucune moyenne historique ne doit devenir une promesse. Aucune performance comme
 - `dossiers/finances-immobilier-patrimoine.html` — rendements, concentration, liquidité et coût du levier.
 - `dossiers/finances-enveloppes-fiscalite.html` — fiscalité chiffrée à jour par scénario PEA / AV / CTO / PER.
 - `dossiers/finances-retraite-decumulation.html` — inflation, espérance de vie, risque de séquence et simulations de retrait.
-- `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` — données historiques lump sum / investissement progressif.
+- `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` — **enrichi le 9 août 2026** : historique Vanguard 1976–2022, fréquence de surperformance et distribution des résultats immédiat vs étalé.
 - `articles/grosse-entree-argent-que-faire.html` — scénarios de liquidité et coût d’opportunité de l’attente.
 - `articles/construire-epargne-de-zero.html` — ordres de grandeur de réserves et exemples de trajectoires.
 - `dossiers/assurer-ou-autoassurer-risques.html` — franchises, plafonds, fréquence/gravitité quand des statistiques fiables existent.
