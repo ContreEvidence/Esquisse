@@ -1,4 +1,4 @@
-name: Mettre a jour le flux RSS et les publications
+name: Consolider publier et diffuser Contre-Evidence
 
 on:
   push:
@@ -13,15 +13,13 @@ on:
       - 'assets/library-catalog.js'
       - 'assets/library-daily-money.js'
       - 'assets/tools-catalog.js'
+      - 'assets/editorial-data.json'
       - 'assets/follow.js'
+      - 'assets/home.css'
+      - 'scripts/consolidate-site.cjs'
+      - 'scripts/audit-site.cjs'
       - 'scripts/generate-rss.cjs'
       - 'scripts/generate-publication-drafts.cjs'
-      - 'scripts/enrich-wave1b-20260809.cjs'
-      - 'scripts/enrich-wave1c-lumpsum-20260809.cjs'
-      - 'scripts/enrich-wave1d-secure-employment-20260809.cjs'
-      - 'scripts/enrich-wave2a-immobilier-20260809.cjs'
-      - 'scripts/enrich-wave2b-tax-retirement-work-20260809.cjs'
-      - 'scripts/enrich-wave2c-bfr-20260809.cjs'
       - 'scripts/build-social-package.cjs'
       - 'scripts/check-social-auth.cjs'
       - 'scripts/publish-social.cjs'
@@ -33,11 +31,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: rss-et-social
+  group: consolidation-et-diffusion
   cancel-in-progress: false
 
 jobs:
-  rss:
+  build:
+    if: github.event_name == 'workflow_dispatch' || github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Recuperer le depot
@@ -50,17 +49,14 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Appliquer les enrichissements chiffres valides
-        run: |
-          node scripts/enrich-wave1b-20260809.cjs
-          node scripts/enrich-wave1c-lumpsum-20260809.cjs
-          node scripts/enrich-wave1d-secure-employment-20260809.cjs
-          node scripts/enrich-wave2a-immobilier-20260809.cjs
-          node scripts/enrich-wave2b-tax-retirement-work-20260809.cjs
-          node scripts/enrich-wave2c-bfr-20260809.cjs
+      - name: Consolider SEO dates sitemap et navigation de secours
+        run: node scripts/consolidate-site.cjs
 
-      - name: Generer les flux RSS et le module Suivre
+      - name: Generer les flux RSS
         run: node scripts/generate-rss.cjs
+
+      - name: Auditer le site
+        run: node scripts/audit-site.cjs --report-only
 
       - name: Preparer les publications sociales
         run: node scripts/generate-publication-drafts.cjs
@@ -97,24 +93,16 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add -A -- '*.html' articles dossiers themes assets/follow.js 'rss*.xml' rss-feeds.json publications/a-publier.md \
-            assets/editorial-data.json editorial/audit-chiffrage-bibliotheque.md
-
-          if [ -f publications/social-package.json ]; then
-            git add publications/social-package.json
-          fi
-          if [ -f publications/social-auth-status.json ]; then
-            git add publications/social-auth-status.json
-          fi
-          if [ -d publications/media ]; then
-            git add publications/media
-          fi
-
+          git add -A -- '*.html' articles dossiers themes sitemap.xml 'rss*.xml' rss-feeds.json publications/a-publier.md \
+            assets/editorial-data.json editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md
+          if [ -f publications/social-package.json ]; then git add publications/social-package.json; fi
+          if [ -f publications/social-auth-status.json ]; then git add publications/social-auth-status.json; fi
+          if [ -d publications/media ]; then git add publications/media; fi
           if git diff --cached --quiet; then
-            echo "Aucune modification a publier."
+            echo "Aucune modification generee."
           else
-            git commit -m "Mettre a jour contenus RSS et media social"
+            git commit -m "Consolider SEO sitemap RSS et diffusion"
+            git pull --rebase origin main
             git push
             sleep 12
           fi
@@ -135,20 +123,19 @@ jobs:
           YOUTUBE_CATEGORY_ID: ${{ secrets.YOUTUBE_CATEGORY_ID }}
         run: node scripts/publish-social.cjs
 
-      - name: Enregistrer l'anti-doublon et les resultats d'envoi
+      - name: Enregistrer l anti-doublon social
         shell: bash
         run: |
           if git diff --quiet -- publications/social-state.json; then
-            echo "Aucun nouvel etat de publication a enregistrer."
+            echo "Aucun nouvel etat social."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add publications/social-state.json
-          git commit -m "Enregistrer l'etat des publications sociales"
+          git commit -m "Enregistrer l etat des publications sociales"
           git pull --rebase origin main
           git push
 
-# Un seul workflow fait désormais toute la chaine : catalogue -> RSS général + flux thématiques ->
-# diffusion du bouton Suivre -> brouillons -> media vertical -> diagnostic des autorisations ->
-# mise a disposition publique -> envoi API -> anti-doublon. Aucun secret n'est écrit dans le dépôt.
+# Pipeline unique : contenu -> consolidation SEO/dates/sitemap -> RSS -> audit -> brouillons/media -> diffusion.
+# Les anciens workflows d enrichissement par vagues ont ete retires du pipeline courant.
