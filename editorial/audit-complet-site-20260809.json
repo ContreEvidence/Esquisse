@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-08-09T13:30:09.097Z",
+  "generatedAt": "2026-08-09T13:30:58.041Z",
   "counts": {
-    "files": 333,
+    "files": 334,
     "html": 180,
-    "assets": 96,
+    "assets": 97,
     "sitemap": 68,
     "library": 49,
     "daily": 0,
@@ -2789,7 +2789,7 @@
         1
       ],
       [
-        "./assets/follow.js?v=20260809-2",
+        "./assets/follow.js?v=20260809-3",
         1
       ],
       [

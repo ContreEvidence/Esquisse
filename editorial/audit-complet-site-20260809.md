@@ -6,7 +6,7 @@ Audit automatique du dépôt **ContreEvidence/Esquisse**, complété par une lec
 
 | Indicateur | Valeur |
 | --- | --- |
-| Fichiers du dépôt | 333 |
+| Fichiers du dépôt | 334 |
 | Pages HTML | 180 |
 | Pages articles/dossiers | 131 |
 | URLs sitemap | 68 |
