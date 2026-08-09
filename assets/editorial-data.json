@@ -343,5 +343,39 @@
         "https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/conditions-generales-de-vente-quelles-mentions-sont-obligatoires"
       ]
     }
+  },
+  "insurance2025": {
+    "home": {
+      "averagePremiumHtEur": 323,
+      "occupantAveragePremiumHtEur": 351,
+      "nonOccupantAveragePremiumHtEur": 191,
+      "averagePremiumYoYPct": 7.8,
+      "source": "https://www.franceassureurs.fr/nos-chiffres-cles/assurance-de-dommages-et-responsabilite/assurance-habitation-2025/",
+      "status": "market-reported"
+    },
+    "nonLife": {
+      "premiumsYoYPct": 5.6,
+      "autoPremiumsYoYPct": 7,
+      "propertyPremiumsYoYPct": 8,
+      "autoClaimsYoYPct": 10,
+      "autoRepairAverageCostYoYPct": 5.9,
+      "source": "https://acpr.banque-france.fr/fr/publications-et-statistiques/publications/ndeg-181-la-situation-des-assureurs-en-france-fin-2025",
+      "status": "regulator-observed"
+    }
+  },
+  "subcontracting2026": {
+    "vigilanceThresholdHtEur": 5000,
+    "recheckMonths": 6,
+    "source": "https://www.urssaf.fr/accueil/attestation-vigilance.html",
+    "status": "regulatory-current"
+  },
+  "automationExamples": {
+    "status": "illustrative-user-replaceable",
+    "setupEur": 4500,
+    "hourlyCostEur": 30,
+    "manualMinutes": 12,
+    "controlMinutes": 2,
+    "subscriptionMonthlyEur": 150,
+    "maintenanceHoursMonthly": 3
   }
 }

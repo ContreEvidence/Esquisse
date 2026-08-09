@@ -145,3 +145,9 @@ Toutes les valeurs sont stockées dans `assets/editorial-data.json` avec leur so
 
 <!-- CE_DATA_WAVE2C_20260809:AUDIT -->
 - `dossiers/tresorerie-bfr-entreprise.html` — enrichi le 9 août 2026 avec délais B2B 30/45/60 jours, indemnité de 40 € et impact chiffré sur le BFR.
+
+## Vague 3 — 9 août 2026
+- `dossiers/assurer-ou-autoassurer-risques.html` — enrichi avec primes MRH 2025, évolution des primes et règles de résiliation.
+- `dossiers/dependance-gros-client.html` — enrichi avec stress-test complet 60 % / -25 % / -50 % / rupture.
+- `dossiers/embaucher-ou-sous-traiter.html` — enrichi avec simulateur Urssaf 2026, seuil de vigilance 5 000 € HT et exemple de seuil en jours.
+- `dossiers/automatiser-ou-non-processus.html` — enrichi avec ROI complet et sensibilité au volume.
