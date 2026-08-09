@@ -1,5 +1,18 @@
 {
   "version": 1,
   "lastPublicationAt": null,
-  "items": {}
+  "items": {
+    "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html": {
+      "complete": false,
+      "platforms": {
+        "youtube": {
+          "ok": false,
+          "error": "400 Bad Request",
+          "checkedAt": "2026-08-09T18:36:13.202Z"
+        }
+      },
+      "title": "Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?",
+      "pubDate": "Sun, 09 Aug 2026 11:17:39 GMT"
+    }
+  }
 }
