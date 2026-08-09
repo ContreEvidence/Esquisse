@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 9 août 2026 à 16:05.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 9 août 2026 à 16:09.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -8,7 +8,93 @@ Rien n’est envoyé automatiquement aux plateformes tant qu’aucun compte de p
 
 ---
 
-## 1. Gestion pilotée : comment comparer les performances sans se faire piéger ?
+## 1. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html  
+**Publication du contenu :** Sun, 09 Aug 2026 12:58:23 GMT  
+
+### Facebook — post avec lien
+
+```text
+Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+
+Définition, causes, séries historiques depuis 1945, pouvoir d’achat, rendement réel, crédit, taux et placements.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. Qu’est-ce que l’inflation ?
+
+SLIDE 4 — 2. Comment mesure-t-on l’inflation ?
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+
+Définition, causes, séries historiques depuis 1945, pouvoir d’achat, rendement réel, crédit, taux et placements.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Définition, causes, séries historiques depuis 1945, pouvoir d’achat, rendement réel, crédit, taux et placements.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+
+PROBLÈME — Définition, causes, séries historiques depuis 1945, pouvoir d’achat, rendement réel, crédit, taux et placements.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+---
+
+## 2. Gestion pilotée : comment comparer les performances sans se faire piéger ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html  
@@ -94,7 +180,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/g
 
 ---
 
-## 2. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
+## 3. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html  
@@ -203,7 +289,7 @@ Lire le dossier complet : https://contreevidence.github.io/Esquisse/dossiers/dep
 
 ---
 
-## 3. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+## 4. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html  
@@ -297,7 +383,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 4. Comparer rendements, frais et intérêts composés
+## 5. Comparer rendements, frais et intérêts composés
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html  
@@ -383,7 +469,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 5. Acheter ou louer : tester plusieurs scénarios
+## 6. Acheter ou louer : tester plusieurs scénarios
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html  
@@ -469,7 +555,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 6. Vendre ou conserver un bien immobilier ?
+## 7. Vendre ou conserver un bien immobilier ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html  
@@ -555,7 +641,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 7. Rembourser son crédit ou investir ?
+## 8. Rembourser son crédit ou investir ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html  
@@ -641,7 +727,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 8. Structurer l’allocation d’un héritage ou d’une grosse somme
+## 9. Structurer l’allocation d’un héritage ou d’une grosse somme
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html  
@@ -727,7 +813,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-repa
 
 ---
 
-## 9. Tester un investissement locatif
+## 10. Tester un investissement locatif
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html  
@@ -813,7 +899,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 10. Tester son allocation patrimoniale
+## 11. Tester son allocation patrimoniale
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html  
@@ -899,7 +985,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 11. Tester sa réserve de sécurité
+## 12. Tester sa réserve de sécurité
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html  
@@ -981,91 +1067,5 @@ DESCRIPTION
 Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html
 
 #ContreEvidence #Outils #Patrimoine
-```
-
----
-
-## 12. Calculer le coût réel d’une formation
-
-**Type :** Outil · Vie professionnelle  
-**Lien :** https://contreevidence.github.io/Esquisse/simulateur-cout-formation.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:20:58 GMT  
-
-### Facebook — post avec lien
-
-```text
-Calculer le coût réel d’une formation
-
-Additionner coûts directs et revenu sacrifié puis tester les revenus futurs que vous saisissez vous-même.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-cout-formation.html
-
-#ContreEvidence #Outils #VieProfessionnelle
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Calculer le coût réel d’une formation
-
-SLIDE 2 — Coût de la décision
-
-SLIDE 3 — Coût économique
-
-SLIDE 4 — Trois hypothèses à renseigner
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Calculer le coût réel d’une formation
-
-Additionner coûts directs et revenu sacrifié puis tester les revenus futurs que vous saisissez vous-même.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Outils #VieProfessionnelle #Formation
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Calculer le coût réel d’une formation »
-
-IDÉE
-Additionner coûts directs et revenu sacrifié puis tester les revenus futurs que vous saisissez vous-même.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Outils #VieProfessionnelle #Formation
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Calculer le coût réel d’une formation
-
-PROBLÈME — Additionner coûts directs et revenu sacrifié puis tester les revenus futurs que vous saisissez vous-même.
-
-DÉMONSTRATION — Coût de la décision
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-cout-formation.html
-
-#ContreEvidence #Outils #VieProfessionnelle
 ```
 
