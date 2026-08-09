@@ -24,6 +24,7 @@ on:
       - 'scripts/clean-legacy-pages.cjs'
       - 'scripts/consolidate-site.cjs'
       - 'scripts/add-related-content.cjs'
+      - 'scripts/generate-search-index.cjs'
       - 'scripts/add-analytics-loader.cjs'
       - 'scripts/audit-site.cjs'
       - 'scripts/normalize-editorial-data.cjs'
@@ -75,6 +76,9 @@ jobs:
       - name: Ajouter les parcours éditoriaux liés
         run: node scripts/add-related-content.cjs
 
+      - name: Générer l index plein texte
+        run: node scripts/generate-search-index.cjs
+
       - name: Generer les flux RSS
         run: node scripts/generate-rss.cjs
 
@@ -123,14 +127,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A -- '*.html' articles dossiers themes sitemap.xml 'rss*.xml' rss-feeds.json publications/a-publier.md \
-            assets/editorial-data.json editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/data-freshness.md
+            assets/editorial-data.json assets/search-index.js editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/data-freshness.md
           if [ -f publications/social-package.json ]; then git add publications/social-package.json; fi
           if [ -f publications/social-auth-status.json ]; then git add publications/social-auth-status.json; fi
           if [ -d publications/media ]; then git add publications/media; fi
           if git diff --cached --quiet; then
             echo "Aucune modification generee."
           else
-            git commit -m "Consolider SEO parcours sitemap RSS et diffusion"
+            git commit -m "Consolider SEO parcours recherche sitemap RSS et diffusion"
             git pull --rebase origin main
             git push
             sleep 12
@@ -166,5 +170,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> chargeur analytics -> parcours liés -> RSS -> fraîcheur -> audit -> brouillons/media -> attribution UTM -> diffusion.
+# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> chargeur analytics -> parcours liés -> index plein texte -> RSS -> fraîcheur -> audit -> brouillons/media -> attribution UTM -> diffusion.
 # Une nouvelle version annule une consolidation obsolète encore en cours.
