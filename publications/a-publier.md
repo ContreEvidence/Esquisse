@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 9 août 2026 à 17:00.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 9 août 2026 à 17:01.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -22,7 +22,7 @@ Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
 Définition, causes, séries historiques depuis 1945, pouvoir d’achat, rendement réel, crédit, taux et placements.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html
+https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```
@@ -87,7 +87,7 @@ DÉMONSTRATION — En bref
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```
@@ -108,7 +108,7 @@ Gestion pilotée : comment comparer les performances sans se faire piéger ?
 Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html
+https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```
@@ -173,7 +173,7 @@ DÉMONSTRATION — Deux performances ne sont comparables que si leur risque et l
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```
@@ -201,7 +201,7 @@ Après audit : 1 037,64 €/an d’économies identifiées sur un an.
 Le problème des dépenses récurrentes n’est pas qu’elles soient forcément inutiles. C’est qu’au bout d’un moment, on ne les décide plus.
 
 Lire le dossier :
-https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html
+https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```
@@ -282,7 +282,7 @@ SHORT — 35 à 45 s
 32–40 s — « Le vrai problème, c’est qu’une dépense automatique finit par ne plus être une décision. »
 
 DESCRIPTION
-Lire le dossier complet : https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html
+Lire le dossier complet : https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```
@@ -308,7 +308,7 @@ Prix comptant : 30 000 €
 Durée : 48 mois
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html
+https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```
@@ -376,7 +376,7 @@ DÉMONSTRATION — Prix comptant : 30 000 € / Durée : 48 mois
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```
@@ -397,7 +397,7 @@ Comparer rendements, frais et intérêts composés
 Isoler l’effet des frais ou comparer vos propres hypothèses par classe d’actifs. Seul le taux réglementé du Livret A est chargé comme donnée.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html
+https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -462,7 +462,7 @@ DÉMONSTRATION — 1. Cadre commun
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -483,7 +483,7 @@ Acheter ou louer : tester plusieurs scénarios
 Comparer achat et location sous trois hypothèses explicites de prix du logement, loyer et rendement alternatif.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html
+https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -548,7 +548,7 @@ DÉMONSTRATION — 1. Situation à comparer
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -569,7 +569,7 @@ Vendre ou conserver un bien immobilier ?
 Comparer capital libérable et conservation sous plusieurs scénarios, avec extinction réelle de la dette à son échéance.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html
+https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -634,7 +634,7 @@ DÉMONSTRATION — 1. Situation actuelle
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -655,7 +655,7 @@ Rembourser son crédit ou investir ?
 Comparer les positions nettes et calculer le rendement d’équilibre, sans rendement de marché prérempli.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html
+https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -720,7 +720,7 @@ DÉMONSTRATION — Crédit et capital disponible
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -741,7 +741,7 @@ Structurer l’allocation d’un héritage ou d’une grosse somme
 Isoler le capital réellement disponible, mesurer son effet sur le patrimoine existant, proposer une allocation et tester concentration, liquidité et stress.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html
+https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -806,7 +806,7 @@ DÉMONSTRATION — 1. Ce qui est réellement disponible
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -827,7 +827,7 @@ Tester un investissement locatif
 Calculer coût, rendement, cash-flow et dette puis construire vous-même le stress de loyer et de charges.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html
+https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -892,7 +892,7 @@ DÉMONSTRATION — Projet
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -913,7 +913,7 @@ Tester son allocation patrimoniale
 Visualiser la concentration puis appliquer vous-même un choc distinct à chaque classe d’actifs.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html
+https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -978,7 +978,7 @@ DÉMONSTRATION — Synthèse descriptive
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -999,7 +999,7 @@ Tester sa réserve de sécurité
 Mesurer la couverture actuelle puis saisir les durées de réserve que vous voulez réellement tester.
 
 Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html
+https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
@@ -1064,7 +1064,7 @@ DÉMONSTRATION — Votre situation
 CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
