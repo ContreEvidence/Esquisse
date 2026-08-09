@@ -1,6 +1,13 @@
 name: Publier les nouveaux contenus sur les reseaux
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/social-publish.yml'
+      - 'scripts/build-social-package.cjs'
+      - 'scripts/publish-social.cjs'
+      - 'publications/social-config.json'
   workflow_run:
     workflows: ["Mettre a jour le flux RSS et les publications"]
     types: [completed]
