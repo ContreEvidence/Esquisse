@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 9 août 2026 à 12:39.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 9 août 2026 à 13:17.
 
 Ces textes sont des **brouillons prêts à copier** : rien n’est publié automatiquement. Relire avant diffusion et adapter le visuel au réseau.
 
