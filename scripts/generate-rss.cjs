@@ -6,6 +6,7 @@ const { execFileSync } = require('child_process');
 const ROOT = path.resolve(__dirname, '..');
 const BASE_URL = 'https://contreevidence.github.io/Esquisse/';
 const FEED_URL = `${BASE_URL}rss.xml`;
+const AUTODISCOVERY = `<link rel="alternate" type="application/rss+xml" title="Contre-Évidence — nouveautés" href="${FEED_URL}"/>`;
 
 const context = { window: {} };
 vm.createContext(context);
@@ -68,6 +69,20 @@ function domainLabel(domain) {
   return domain || 'Contre-Évidence';
 }
 
+function ensureAutodiscovery(relativePath) {
+  const fullPath = path.join(ROOT, relativePath);
+  let html = fs.readFileSync(fullPath, 'utf8');
+  if (html.includes('type="application/rss+xml"')) return;
+
+  const canonical = /<link\s+rel="canonical"[^>]*\/>/i;
+  if (canonical.test(html)) {
+    html = html.replace(canonical, match => `${match}\n${AUTODISCOVERY}`);
+  } else {
+    html = html.replace('</head>', `${AUTODISCOVERY}\n</head>`);
+  }
+  fs.writeFileSync(fullPath, html, 'utf8');
+}
+
 const byHref = new Map();
 for (const item of [...editorial, ...tools]) {
   if (!item || !item.h || !item.n) continue;
@@ -114,4 +129,7 @@ const rss = `<?xml version="1.0" encoding="UTF-8"?>\n` +
 `</rss>\n`;
 
 fs.writeFileSync(path.join(ROOT, 'rss.xml'), rss, 'utf8');
+ensureAutodiscovery('index.html');
+ensureAutodiscovery('bibliotheque.html');
+
 console.log(`rss.xml généré avec ${items.length} éléments.`);
