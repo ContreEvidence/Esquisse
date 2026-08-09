@@ -122,6 +122,21 @@ footer{background:#0b1218;color:#c3cdd4;padding:34px 0}
   .ce-related{margin-top:2.5rem;padding-top:1.5rem}
   .ce-related a{grid-template-columns:1fr auto;padding:.82rem 0}
 }
+@media(max-width:620px){
+  .article-body .hero{padding:3.15rem 0 2.7rem!important}
+  .article-body .hero h1{font-size:clamp(2.05rem,11vw,2.9rem)!important;line-height:1.03!important}
+  .article-body .hero p{font-size:1rem!important;line-height:1.62!important}
+  .article-body section{padding:2.6rem 0!important}
+  .article-body h2{font-size:clamp(1.72rem,8.2vw,2.45rem)!important;line-height:1.08!important}
+  .article-body .lead{line-height:1.68!important}
+  .article-body .formula{padding:1rem 1.05rem!important;font-size:1.02rem!important}
+  .article-body .callout{padding:1rem 1.05rem!important;border-radius:12px!important}
+  .article-body .questions{gap:.65rem!important}
+  .article-body .questions div{padding:.95rem!important}
+  .article-body .table-wrap{margin-inline:-1vw;padding-bottom:.25rem}
+  .article-body .compare th,.article-body .compare td{padding:.72rem .78rem!important;font-size:.92rem}
+  .article-body .ce-related{padding-top:1.45rem!important}
+}
 @media(max-width:520px){
   .container{width:min(var(--max),90vw)}
   section{padding:48px 0}
