@@ -19,6 +19,7 @@ on:
       - 'scripts/clean-legacy-pages.cjs'
       - 'scripts/consolidate-site.cjs'
       - 'scripts/audit-site.cjs'
+      - 'scripts/normalize-editorial-data.cjs'
       - 'scripts/check-editorial-data-freshness.cjs'
       - 'scripts/generate-rss.cjs'
       - 'scripts/generate-publication-drafts.cjs'
@@ -54,6 +55,9 @@ jobs:
       - name: Nettoyer et archiver les anciennes pages
         run: node scripts/clean-legacy-pages.cjs
 
+      - name: Normaliser les références du référentiel chiffré
+        run: node scripts/normalize-editorial-data.cjs
+
       - name: Consolider SEO dates sitemap et navigation de secours
         run: node scripts/consolidate-site.cjs
 
@@ -61,7 +65,7 @@ jobs:
         run: node scripts/generate-rss.cjs
 
       - name: Verifier la fraîcheur entre données et dossiers
-        run: node scripts/check-editorial-data-freshness.cjs --report-only
+        run: node scripts/check-editorial-data-freshness.cjs
 
       - name: Auditer le site
         run: node scripts/audit-site.cjs
@@ -145,5 +149,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Pipeline unique : pages historiques -> consolidation SEO/dates/sitemap -> RSS -> fraîcheur des données -> audit bloquant -> brouillons/media -> diffusion.
+# Pipeline unique : pages historiques -> référentiel -> consolidation SEO/dates/sitemap -> RSS -> fraîcheur des données -> audit bloquant -> brouillons/media -> diffusion.
 # Une nouvelle version annule une consolidation obsolète encore en cours.
