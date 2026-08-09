@@ -51,3 +51,5 @@ jobs:
           git add rss.xml index.html bibliotheque.html publications/a-publier.md
           git commit -m "Mettre a jour RSS et brouillons sociaux"
           git push
+
+# Ce workflow prépare les brouillons sans les publier sur les réseaux.
