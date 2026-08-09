@@ -1,0 +1,48 @@
+name: Mettre a jour le flux RSS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**'
+      - 'dossiers/**'
+      - 'outil*.html'
+      - 'simulateur*.html'
+      - 'assets/library-catalog.js'
+      - 'assets/library-daily-money.js'
+      - 'assets/tools-catalog.js'
+      - 'scripts/generate-rss.cjs'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le depot
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Generer rss.xml
+        run: node scripts/generate-rss.cjs
+
+      - name: Publier le flux s'il a change
+        shell: bash
+        run: |
+          if git diff --quiet -- rss.xml; then
+            echo "Aucune modification du flux RSS."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rss.xml
+          git commit -m "Mettre a jour le flux RSS"
+          git push
