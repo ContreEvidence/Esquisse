@@ -4,14 +4,23 @@ const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
 const out = path.join(ROOT, 'publications', 'social-auth-status.json');
 
-const present = name => Boolean(String(process.env[name] || '').trim());
+const value = name => String(process.env[name] || '').trim();
+const present = name => Boolean(value(name));
 
 async function validateYouTube() {
-  const clientId = String(process.env.YOUTUBE_CLIENT_ID || '').trim();
-  const clientSecret = String(process.env.YOUTUBE_CLIENT_SECRET || '').trim();
-  const refreshToken = String(process.env.YOUTUBE_REFRESH_TOKEN || '').trim();
+  const clientId = value('YOUTUBE_CLIENT_ID');
+  const clientSecret = value('YOUTUBE_CLIENT_SECRET');
+  const refreshToken = value('YOUTUBE_REFRESH_TOKEN');
+  const shapes = {
+    clientIdLooksValid: clientId.endsWith('.apps.googleusercontent.com'),
+    clientSecretLooksValid: /^GOCSPX-/.test(clientSecret) || clientSecret.length >= 20,
+    refreshTokenLooksValid: /^1\//.test(refreshToken),
+    clientIdLength: clientId.length,
+    clientSecretLength: clientSecret.length,
+    refreshTokenLength: refreshToken.length
+  };
   if (!clientId || !clientSecret || !refreshToken) {
-    return { configured: false, valid: false, error: 'missing_credentials' };
+    return { configured: false, valid: false, error: 'missing_credentials', shapes };
   }
 
   try {
@@ -30,17 +39,18 @@ async function validateYouTube() {
     let data = {};
     try { data = text ? JSON.parse(text) : {}; } catch (_) {}
     if (res.ok && data.access_token) {
-      return { configured: true, valid: true, httpStatus: res.status };
+      return { configured: true, valid: true, httpStatus: res.status, shapes };
     }
     return {
       configured: true,
       valid: false,
       httpStatus: res.status,
       error: String(data.error || 'token_exchange_failed'),
-      errorDescription: String(data.error_description || '').slice(0, 240)
+      errorDescription: String(data.error_description || '').slice(0, 240),
+      shapes
     };
   } catch (err) {
-    return { configured: true, valid: false, error: 'network_error', errorDescription: String(err.message || err).slice(0, 240) };
+    return { configured: true, valid: false, error: 'network_error', errorDescription: String(err.message || err).slice(0, 240), shapes };
   }
 }
 
@@ -48,7 +58,7 @@ async function main() {
   const youtube = present('YOUTUBE_CLIENT_ID') && present('YOUTUBE_CLIENT_SECRET') && present('YOUTUBE_REFRESH_TOKEN');
   const youtubeCheck = await validateYouTube();
   const status = {
-    version: 2,
+    version: 3,
     checkedAt: new Date().toISOString(),
     meta: present('META_USER_ACCESS_TOKEN') || (present('META_PAGE_ID') && present('META_PAGE_ACCESS_TOKEN')),
     instagramId: present('META_IG_USER_ID'),
@@ -57,7 +67,8 @@ async function main() {
     youtubeValid: youtubeCheck.valid,
     youtubeHttpStatus: youtubeCheck.httpStatus || null,
     youtubeError: youtubeCheck.valid ? null : youtubeCheck.error,
-    youtubeErrorDescription: youtubeCheck.valid ? null : (youtubeCheck.errorDescription || null)
+    youtubeErrorDescription: youtubeCheck.valid ? null : (youtubeCheck.errorDescription || null),
+    youtubeCredentialShapes: youtubeCheck.shapes
   };
 
   fs.writeFileSync(out, JSON.stringify(status, null, 2) + '\n', 'utf8');
