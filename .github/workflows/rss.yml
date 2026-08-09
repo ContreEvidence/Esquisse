@@ -33,7 +33,7 @@ permissions:
 
 concurrency:
   group: consolidation-et-diffusion
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -142,4 +142,4 @@ jobs:
           git push
 
 # Pipeline unique : pages historiques -> consolidation SEO/dates/sitemap -> RSS -> audit -> brouillons/media -> diffusion.
-# Les anciens workflows d enrichissement par vagues ont ete retires du pipeline courant.
+# Une nouvelle version annule une consolidation obsolète encore en cours.
