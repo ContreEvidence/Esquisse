@@ -16,8 +16,12 @@ on:
       - 'assets/editorial-data.json'
       - 'assets/follow.js'
       - 'assets/home.css'
+      - 'assets/style.css'
+      - 'assets/brand.css'
+      - 'assets/library.js'
       - 'scripts/clean-legacy-pages.cjs'
       - 'scripts/consolidate-site.cjs'
+      - 'scripts/add-related-content.cjs'
       - 'scripts/audit-site.cjs'
       - 'scripts/normalize-editorial-data.cjs'
       - 'scripts/check-editorial-data-freshness.cjs'
@@ -60,6 +64,9 @@ jobs:
 
       - name: Consolider SEO dates sitemap et navigation de secours
         run: node scripts/consolidate-site.cjs
+
+      - name: Ajouter les parcours éditoriaux liés
+        run: node scripts/add-related-content.cjs
 
       - name: Generer les flux RSS
         run: node scripts/generate-rss.cjs
@@ -113,7 +120,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Aucune modification generee."
           else
-            git commit -m "Consolider SEO sitemap RSS et diffusion"
+            git commit -m "Consolider SEO parcours sitemap RSS et diffusion"
             git pull --rebase origin main
             git push
             sleep 12
@@ -149,5 +156,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Pipeline unique : pages historiques -> référentiel -> consolidation SEO/dates/sitemap -> RSS -> fraîcheur des données -> audit bloquant -> brouillons/media -> diffusion.
+# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> parcours liés -> RSS -> fraîcheur des données -> audit bloquant -> brouillons/media -> diffusion.
 # Une nouvelle version annule une consolidation obsolète encore en cours.
