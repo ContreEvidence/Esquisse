@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 16:52.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 17:02.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -636,9 +636,9 @@ SLIDE 1 — Immobilier et allocation globale : quelle place donner à la pierre 
 
 SLIDE 2 — En bref
 
-SLIDE 3 — 1. Les Français détiennent massivement de l’immobilier
+SLIDE 3 — 1. La pierre est souvent déjà la principale exposition
 
-SLIDE 4 — 2. Lire le patrimoine comme un bilan
+SLIDE 4 — 2. Lire d’abord le bilan brut, puis le patrimoine net
 
 SLIDE 5 — Le dossier complet est sur Contre-Évidence.
 ```
