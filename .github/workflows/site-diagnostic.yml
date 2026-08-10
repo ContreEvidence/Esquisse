@@ -1,0 +1,68 @@
+name: Diagnostiquer le pipeline site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/site-diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Executer tous les controles sans interrompre le diagnostic
+        shell: bash
+        run: |
+          mkdir -p editorial
+          REPORT=editorial/site-diagnostic.md
+          printf '# Diagnostic du pipeline site\n\nExécuté le %s\n\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$REPORT"
+          run_stage() {
+            TITLE="$1"
+            CMD="$2"
+            printf '## %s\n\n' "$TITLE" >> "$REPORT"
+            set +e
+            bash -lc "$CMD" > /tmp/ce-stage.log 2>&1
+            CODE=$?
+            set -e
+            printf -- '- Code de sortie : `%s`\n\n```text\n' "$CODE" >> "$REPORT"
+            tail -n 80 /tmp/ce-stage.log >> "$REPORT"
+            printf '\n```\n\n' >> "$REPORT"
+          }
+          run_stage 'Durcissement initial' 'node scripts/hardening-pass.cjs'
+          run_stage 'Nettoyage historique' 'node scripts/clean-legacy-pages.cjs'
+          run_stage 'Normalisation du référentiel' 'node scripts/normalize-editorial-data.cjs'
+          run_stage 'Consolidation SEO et sitemap' 'node scripts/consolidate-site.cjs'
+          run_stage 'Couche UX' 'node scripts/add-ux-layer.cjs'
+          run_stage 'Mon espace' 'node scripts/add-personal-space.cjs'
+          run_stage 'Durcissement post-build' 'node scripts/hardening-pass.cjs'
+          run_stage 'Syntaxe front' 'node --check assets/personal-space.js && node --check assets/finance-cockpit.js && node --check assets/finance-architecture.js && node --check assets/cockpit-progressive.js && node --check assets/follow.js && node --check assets/navigation-v3.js && node --check assets/longform.js'
+          run_stage 'Garde-fous juridiques' 'node scripts/audit-legal-guardrails.cjs'
+          run_stage 'Chargeur analytics' 'node scripts/add-analytics-loader.cjs'
+          run_stage 'Contenus liés' 'node scripts/add-related-content.cjs'
+          run_stage 'Index plein texte' 'node scripts/generate-search-index.cjs'
+          run_stage 'RSS' 'node scripts/generate-rss.cjs'
+          run_stage 'Fraîcheur' 'node scripts/check-editorial-data-freshness.cjs'
+          run_stage 'Audit technique' 'node scripts/audit-site.cjs --report-only'
+          run_stage 'Audit structurel' 'node scripts/audit-structure-site.cjs'
+          run_stage 'Audit modèle patrimonial' 'node scripts/audit-asset-model.cjs'
+          run_stage 'Audit équilibre' 'node scripts/audit-editorial-balance.cjs'
+          run_stage 'Audit qualité' 'node scripts/audit-editorial-quality.cjs'
+      - name: Publier uniquement le diagnostic
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add editorial/site-diagnostic.md
+          git commit -m "Diagnostiquer le pipeline du site"
+          git pull --rebase origin main
+          git push
