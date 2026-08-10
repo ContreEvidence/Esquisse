@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 10:59.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 11:01.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -8,7 +8,93 @@ Rien n’est envoyé automatiquement aux plateformes tant qu’aucun compte de p
 
 ---
 
-## 1. Combien coûte le fait d’attendre ?
+## 1. Achat immobilier : calculer le coût complet avant de regarder la mensualité
+
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html  
+**Publication du contenu :** Mon, 10 Aug 2026 08:54:51 GMT  
+
+### Facebook — post avec lien
+
+```text
+Achat immobilier : calculer le coût complet avant de regarder la mensualité
+
+Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Achat immobilier : calculer le coût complet avant de regarder la mensualité
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. Le vrai ticket d’entrée
+
+SLIDE 4 — 2. Exemple complet : ce que cache un prix de 300 000 €
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Achat immobilier : calculer le coût complet avant de regarder la mensualité
+
+Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Dossier #Patrimoine #Immobilier
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Dossier #Patrimoine #Immobilier
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Achat immobilier : calculer le coût complet avant de regarder la mensualité
+
+PROBLÈME — Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+---
+
+## 2. Combien coûte le fait d’attendre ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-prix-attendre.html  
@@ -94,7 +180,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 2. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+## 3. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html  
@@ -180,7 +266,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/p
 
 ---
 
-## 3. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+## 4. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html  
@@ -266,7 +352,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/i
 
 ---
 
-## 4. Gestion pilotée : comment comparer les performances sans se faire piéger ?
+## 5. Gestion pilotée : comment comparer les performances sans se faire piéger ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html  
@@ -352,7 +438,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/g
 
 ---
 
-## 5. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
+## 6. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html  
@@ -461,7 +547,7 @@ Lire le dossier complet : https://contreevidence.github.io/Esquisse/dossiers/dep
 
 ---
 
-## 6. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+## 7. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html  
@@ -555,7 +641,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 7. Comparer rendements, frais et intérêts composés
+## 8. Comparer rendements, frais et intérêts composés
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html  
@@ -641,7 +727,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 8. Acheter ou louer : tester plusieurs scénarios
+## 9. Acheter ou louer : tester plusieurs scénarios
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html  
@@ -727,7 +813,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 9. Vendre ou conserver un bien immobilier ?
+## 10. Vendre ou conserver un bien immobilier ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html  
@@ -813,7 +899,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 10. Rembourser son crédit ou investir ?
+## 11. Rembourser son crédit ou investir ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html  
@@ -899,7 +985,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 11. Structurer l’allocation d’un héritage ou d’une grosse somme
+## 12. Structurer l’allocation d’un héritage ou d’une grosse somme
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html  
@@ -979,92 +1065,6 @@ CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
 Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
----
-
-## 12. Tester un investissement locatif
-
-**Type :** Outil · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:33:14 GMT  
-
-### Facebook — post avec lien
-
-```text
-Tester un investissement locatif
-
-Calculer coût, rendement, cash-flow et dette puis construire vous-même le stress de loyer et de charges.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Tester un investissement locatif
-
-SLIDE 2 — Projet
-
-SLIDE 3 — Financement
-
-SLIDE 4 — Stress test facultatif
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Tester un investissement locatif
-
-Calculer coût, rendement, cash-flow et dette puis construire vous-même le stress de loyer et de charges.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Outils #Patrimoine #Immobilier
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Calculer coût, rendement, cash-flow et dette puis construire vous-même le stress de loyer et de charges.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Outils #Patrimoine #Immobilier
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Tester un investissement locatif
-
-PROBLÈME — Calculer coût, rendement, cash-flow et dette puis construire vous-même le stress de loyer et de charges.
-
-DÉMONSTRATION — Projet
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```

@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 08:59:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 09:01:08 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,16 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Achat immobilier : calculer le coût complet avant de regarder la mensualité</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html</guid>
+      <pubDate>Mon, 10 Aug 2026 08:54:51 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.</description>
+    </item>
     <item>
       <title>Combien coûte le fait d’attendre ?</title>
       <link>https://contreevidence.github.io/Esquisse/simulateur-prix-attendre.html</link>
