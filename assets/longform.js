@@ -21,6 +21,27 @@
     toc.insertBefore(button, list);
   }
 
+  function enhanceMobileTables() {
+    document.querySelectorAll('.prose .compare-wrap table').forEach(table => {
+      const wrap = table.closest('.compare-wrap');
+      if (!wrap || wrap.dataset.ceMobileTable === '1') return;
+      const headers = [...table.querySelectorAll('thead th')].map(th => th.textContent.trim());
+      const rows = [...table.querySelectorAll('tbody tr')];
+      if (headers.length < 2 || !rows.length || rows.length > 18) return;
+      const mobile = document.createElement('div');
+      mobile.className = 'ce-mobile-table';
+      rows.forEach(row => {
+        const cells = [...row.children];
+        const card = document.createElement('div');
+        card.className = 'ce-mobile-row';
+        card.innerHTML = cells.map((cell,index) => `<div class="ce-mobile-cell"><strong>${headers[index] || `Colonne ${index+1}`}</strong><span>${cell.innerHTML}</span></div>`).join('');
+        mobile.appendChild(card);
+      });
+      wrap.dataset.ceMobileTable = '1';
+      wrap.appendChild(mobile);
+    });
+  }
+
   function buildArticleBodyLongform() {
     if (!document.body.classList.contains('article-body')) return;
     const main = document.querySelector('main');
@@ -94,6 +115,7 @@
   const run = () => {
     buildArticleBodyLongform();
     document.querySelectorAll('.ce-article-toc').forEach(enhanceToc);
+    enhanceMobileTables();
   };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run, {once:true});
