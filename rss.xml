@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 13:35:11 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 13:36:10 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss.xml" rel="self" type="application/rss+xml"/>
@@ -235,14 +235,14 @@
       <description>Calculer coût, rendement, cash-flow et dette puis construire vous-même le stress de loyer et de charges.</description>
     </item>
     <item>
-      <title>Tester son allocation patrimoniale</title>
+      <title>Stress tester toutes les grandes classes d’actifs</title>
       <link>https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html</guid>
       <pubDate>Sat, 08 Aug 2026 15:32:44 GMT</pubDate>
       <category>Outil</category>
       <category>Patrimoine</category>
       <category>Allocation</category>
-      <description>Visualiser la concentration puis appliquer vous-même un choc distinct à chaque classe d’actifs.</description>
+      <description>Visualiser la concentration puis appliquer un choc distinct aux liquidités, taux, actions, immobilier direct et indirect, non coté, infrastructures, métaux, matières premières, crypto et alternatifs.</description>
     </item>
     <item>
       <title>Tester sa réserve de sécurité</title>
