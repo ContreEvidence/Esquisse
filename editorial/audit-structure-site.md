@@ -1,6 +1,6 @@
 # Audit structurel et UX automatique — Contre-Évidence
 
-Généré le 2026-08-10T20:38:41.651Z
+Généré le 2026-08-10T20:39:16.000Z
 
 Version front attendue : 20260810-12
 
@@ -21,5 +21,6 @@ Version front attendue : 20260810-12
 - retrait de l’ancien système de menus ;
 - cockpit en divulgation progressive et composants patrimoniaux versionnés ensemble ;
 - détail immobilier local, calcul par bien et synchronisation explicite vers les totaux ;
+- portefeuille détaillé multi-lignes par classe, stockage local et synchronisation explicite ;
 - adaptation mobile du grand tableau d’allocation ;
 - vocabulaire non prescriptif des outils patrimoniaux.
