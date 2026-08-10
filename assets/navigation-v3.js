@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '20260810-3';
+  const VERSION = '20260810-4';
   if (document.documentElement.dataset.ceNavigation === VERSION) return;
   document.documentElement.dataset.ceNavigation = VERSION;
 
@@ -9,7 +9,7 @@
   if (!header) return;
 
   const path = window.location.pathname;
-  const nested = /\/(articles|themes|dossiers)\//.test(path);
+  const nested = /\/(articles|themes|dossiers|fiches-metiers)\//.test(path);
   const prefix = nested ? '../' : '';
   const u = p => `${prefix}${p}`;
   const params = new URLSearchParams(window.location.search);
@@ -40,13 +40,13 @@
   let current = isTools ? 'outils'
     : path.includes('/hors-cadre') ? 'hors-cadre'
     : path.includes('/themes/argent') || path.includes('/parcours-argent') || path.includes('/marches-analyses-avancees') || path.includes('/dossiers/finances-') || path.includes('/dossiers/audit-budget') || path.includes('/dossiers/liquidites-reserve') || path.includes('/dossiers/rembourser-credit') || path.includes('/dossiers/assurer-ou-autoassurer') || path.includes('/dossiers/vendre-ou-conserver-bien-immobilier') || path.includes('/dossiers/immobilier-') || path.includes('/dossiers/location-') || path.includes('/dossiers/garages-') || path.includes('/dossiers/classes-actifs') ? 'patrimoine'
-    : path.includes('/themes/travail') || path.includes('/themes/entreprendre') || path.includes('/parcours-vie-professionnelle') || path.includes('/moins-de-25-ans') || path.includes('/videos') || path.includes('/dossiers/plan-30-jours') || path.includes('/dossiers/calculer-prix') || path.includes('/dossiers/debloquer') || path.includes('/dossiers/negocier-salaire') || path.includes('/dossiers/dependance-gros-client') || path.includes('/dossiers/tresorerie-bfr') || path.includes('/dossiers/devenir-manager') || path.includes('/dossiers/competent-mais-invisible') || path.includes('/dossiers/capacite-refuser-travail') || path.includes('/dossiers/formation-vaut-elle-le-cout') || path.includes('/dossiers/quitter-emploi-stable') || path.includes('/dossiers/embaucher-ou-sous-traiter') ? 'vie-pro'
+    : path.includes('/fiches-metiers') || path.includes('/parcours-vie-professionnelle') || path.includes('/themes/travail') || path.includes('/themes/entreprendre') || path.includes('/moins-de-25-ans') || path.includes('/videos') || path.includes('/dossiers/plan-30-jours') || path.includes('/dossiers/calculer-prix') || path.includes('/dossiers/debloquer') || path.includes('/dossiers/negocier-salaire') || path.includes('/dossiers/dependance-gros-client') || path.includes('/dossiers/tresorerie-bfr') || path.includes('/dossiers/devenir-manager') || path.includes('/dossiers/competent-mais-invisible') || path.includes('/dossiers/capacite-refuser-travail') || path.includes('/dossiers/formation-vaut-elle-le-cout') || path.includes('/dossiers/quitter-emploi-stable') || path.includes('/dossiers/embaucher-ou-sous-traiter') || path.includes('/dossiers/competences-qualification-employabilite') || path.includes('/dossiers/metiers-fonctions-organisation-entreprise') || path.includes('/dossiers/apprendre-developper-competences') || path.includes('/dossiers/management-relations-conflits') || path.includes('/dossiers/regles-responsabilites-fautes-travail') || path.includes('/dossiers/prejuges-biais-monde-professionnel') || path.includes('/dossiers/sante-travail-equilibre-vie-pro-perso') ? 'vie-pro'
     : '';
 
   if (!current) {
     const signals = `${document.querySelector('.theme-link')?.getAttribute('href') || ''} ${document.querySelector('.article-hero .kicker')?.textContent || ''} ${document.querySelector('a.back')?.getAttribute('href') || ''} ${document.title}`.toLowerCase();
     if (/argent|finance|patrimoine|immobilier|investissement|retraite|transmission|allocation|etf|pea|assurance-vie/.test(signals)) current = 'patrimoine';
-    else if (/travail|vie professionnelle|entreprendre|entrepreneuriat|emploi|carrière|formation|reconversion|candidature|entretien/.test(signals)) current = 'vie-pro';
+    else if (/travail|vie professionnelle|entreprendre|entrepreneuriat|emploi|carrière|formation|reconversion|candidature|entretien|métier|compétence|management|employabilité/.test(signals)) current = 'vie-pro';
   }
   if (current) header.querySelector(`[data-key="${current}"]`)?.classList.add('is-current');
 
