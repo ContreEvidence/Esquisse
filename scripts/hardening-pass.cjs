@@ -121,6 +121,11 @@ function htmlFiles(dir = ROOT, prefix = '') {
   return out;
 }
 
+const versionedAssets = [
+  'navigation-v3.js','orientation.js','longform.js','follow.js','personal-space.js','personal-space.css','ux-retention.css',
+  'finance-cockpit.js','finance-cockpit.css','finance-architecture.js','finance-architecture.css','cockpit-progressive.js','cockpit-progressive.css'
+];
+
 for (const rel of htmlFiles()) {
   changed += patch(rel, html => {
     const canonical = /<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi;
@@ -134,6 +139,10 @@ for (const rel of htmlFiles()) {
       html = html.replace(/<script\s+type=["']application\/ld\+json["'](?![^>]*data-ce-seo)[^>]*>([\s\S]*?)<\/script>\s*/gi,(match,json)=>{
         return /["']?@type["']?\s*:\s*["'](?:Article|WebApplication)["']/i.test(json) ? '' : match;
       });
+    }
+    for (const asset of versionedAssets) {
+      const escaped=asset.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      html=html.replace(new RegExp(`((?:\\.\\.\\/|\\.\\/)?assets\\/${escaped})(?:\\?v=[^\"']*)?`,'gi'), `$1?v=${SITE_VERSION}`);
     }
     return html;
   }) ? 1 : 0;
