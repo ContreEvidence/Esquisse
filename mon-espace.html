@@ -12,7 +12,7 @@
 <link href="assets/navigation.css" rel="stylesheet"/>
 <link href="assets/brand.css?v=20260810-1" rel="stylesheet"/>
 <link href="assets/personal-space.css?v=20260810-1" rel="stylesheet"/>
-<link href="assets/finance-cockpit.css?v=20260810-1" rel="stylesheet"/>
+<link href="assets/finance-cockpit.css?v=20260810-2" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/ux-retention.css?v=20260810-1"/></head>
 <body class="space-page finance-cockpit">
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -21,12 +21,12 @@
 <section class="space-hero"><div class="container space-hero-grid"><div><div class="kicker">Votre cockpit personnel</div><h1>Ma situation. Mes scénarios. Mes décisions.</h1><p>Renseignez une fois vos flux, vos actifs et vos dettes. Le tableau de bord reconstruit votre situation, suit son évolution et vous permet de tester ce qui se passe si un revenu baisse, si vous investissez davantage ou si vous visez une autre allocation.</p></div><aside class="space-local-note"><strong>Aucun compte nécessaire.</strong><span>Les montants restent dans le stockage local de ce navigateur. Ils ne sont pas envoyés à Contre-évidence. Vous pouvez les exporter ou les effacer à tout moment.</span></aside></div></section>
 
 <div class="fc-shell">
-<section class="fc-intro" aria-label="Présentation du cockpit"><div class="fc-intro-main"><div class="kicker">Pilotage, pas notation</div><h2>Une photographie qui peut devenir un laboratoire.</h2><p>Le but n’est pas d’attribuer une note à votre patrimoine. Les indicateurs rendent visibles les concentrations, les marges, les dépendances et l’effet des hypothèses. Les dossiers du site expliquent ensuite ce que ces chiffres signifient.</p><div class="fc-intro-actions"><button class="fc-btn gold" type="button" data-fin-snapshot>Enregistrer la photo du jour</button><span class="fc-save-state" data-fin-save-state>Enregistrement automatique</span></div></div><aside class="fc-intro-side"><strong>Pour essayer sans vos données</strong><p>Chargez un exemple fictif, testez les scénarios puis effacez-le. Les valeurs d’exemple ne constituent ni une allocation recommandée ni une prévision.</p><div class="fc-actions"><button class="fc-btn" type="button" data-fin-example>Charger un exemple</button><button class="fc-btn subtle" type="button" data-fin-clear>Tout remettre à zéro</button></div></aside></section>
+<section class="fc-intro" aria-label="Présentation du cockpit"><div class="fc-intro-main"><div class="kicker">Pilotage, pas notation</div><h2>Une photographie qui peut devenir un laboratoire.</h2><p>Le but n’est pas d’attribuer une note à votre patrimoine. Les indicateurs rendent visibles les concentrations, les marges, les dépendances et l’effet des hypothèses. Les dossiers du site expliquent ensuite ce que ces chiffres signifient.</p><div class="fc-intro-actions"><button class="fc-btn gold" type="button" data-fin-snapshot>Enregistrer la photo du jour</button><span class="fc-save-state" data-fin-save-state>Enregistrement automatique</span></div></div><aside class="fc-intro-side"><strong>Classer l’exposition, pas l’enveloppe</strong><p>PEA, assurance-vie, PER ou CTO ne sont pas des classes d’actifs. Une action détenue dans un PEA reste une action ; une SCPI logée dans une assurance-vie reste une exposition immobilière. Compter les deux ferait un doublon.</p><div class="fc-actions"><button class="fc-btn" type="button" data-fin-example>Charger un exemple</button><a class="fc-btn subtle" href="dossiers/classes-actifs-allocation-patrimoine.html">Voir toutes les classes</a><button class="fc-btn subtle" type="button" data-fin-clear>Tout remettre à zéro</button></div></aside></section>
 
 <section class="fc-kpis" aria-label="Indicateurs principaux">
 <div class="fc-kpi"><span>Patrimoine net</span><strong data-fin-kpi="net">0 €</strong><small data-fin-kpi-note="net">Actifs moins dettes</small></div>
 <div class="fc-kpi"><span>Actifs bruts</span><strong data-fin-kpi="gross">0 €</strong><small data-fin-kpi-note="gross">Répartition des actifs</small></div>
-<div class="fc-kpi"><span>Capital financier</span><strong data-fin-kpi="financial">0 €</strong><small data-fin-kpi-note="financial">Liquidités et placements</small></div>
+<div class="fc-kpi"><span>Capital financier</span><strong data-fin-kpi="financial">0 €</strong><small data-fin-kpi-note="financial">Actifs hors immobilier direct</small></div>
 <div class="fc-kpi"><span>Marge mensuelle</span><strong data-fin-kpi="margin">0 €</strong><small data-fin-kpi-note="margin">Après dépenses saisies</small></div>
 <div class="fc-kpi"><span>Réserve liquide</span><strong data-fin-kpi="reserve">—</strong><small data-fin-kpi-note="reserve">Renseignez vos dépenses</small></div>
 </section>
@@ -41,15 +41,29 @@
 <div class="fc-field wide"><label for="fin-saving">Épargne / investissement programmé</label><input id="fin-saving" data-fin-key="budget.saving" type="number" min="0" step="25" inputmode="decimal"/><small>Ce montant reste distinct des dépenses : il sert aussi de base aux projections si aucun autre versement n’est indiqué.</small></div>
 </div><div class="fc-card-note">Les dépenses mensuelles utilisées pour la réserve de sécurité = charges fixes + dépenses variables + mensualités de crédits.</div></div>
 
-<div class="fc-card"><div class="fc-eyebrow">Actifs</div><h3>Ce que je possède</h3><table class="fc-mini-table"><thead><tr><th>Classe d’actifs</th><th>Valeur actuelle</th></tr></thead><tbody>
+<div class="fc-card fc-assets-card"><div class="fc-eyebrow">Actifs</div><h3>Ce que je possède</h3><table class="fc-mini-table"><thead><tr><th>Classe d’actifs</th><th>Valeur actuelle</th></tr></thead><tbody>
+<tr class="fc-table-group"><th colspan="2">Immobilier direct</th></tr>
 <tr><td>Résidence principale</td><td><input aria-label="Valeur résidence principale" data-fin-key="assets.home" type="number" min="0" step="1000"/></td></tr>
-<tr><td>Immobilier locatif</td><td><input aria-label="Valeur immobilier locatif" data-fin-key="assets.rental" type="number" min="0" step="1000"/></td></tr>
-<tr><td>Autre immobilier</td><td><input aria-label="Valeur autre immobilier" data-fin-key="assets.otherProperty" type="number" min="0" step="1000"/></td></tr>
-<tr><td>Liquidités</td><td><input aria-label="Liquidités" data-fin-key="assets.cash" type="number" min="0" step="500"/></td></tr>
-<tr><td>Actions &amp; ETF</td><td><input aria-label="Actions et ETF" data-fin-key="assets.equities" type="number" min="0" step="500"/></td></tr>
+<tr><td>Locatif résidentiel</td><td><input aria-label="Valeur immobilier locatif résidentiel" data-fin-key="assets.rental" type="number" min="0" step="1000"/></td></tr>
+<tr><td>Immobilier commercial direct</td><td><input aria-label="Valeur immobilier commercial direct" data-fin-key="assets.commercialProperty" type="number" min="0" step="1000"/></td></tr>
+<tr><td>Autre immobilier direct</td><td><input aria-label="Valeur autre immobilier direct" data-fin-key="assets.otherProperty" type="number" min="0" step="1000"/></td></tr>
+<tr class="fc-table-group"><th colspan="2">Liquidité & taux</th></tr>
+<tr><td>Liquidités &amp; monétaire</td><td><input aria-label="Liquidités et monétaire" data-fin-key="assets.cash" type="number" min="0" step="500"/></td></tr>
+<tr><td>Fonds euros / capital garanti</td><td><input aria-label="Fonds euros et capital garanti" data-fin-key="assets.euroFund" type="number" min="0" step="500"/></td></tr>
 <tr><td>Obligations</td><td><input aria-label="Obligations" data-fin-key="assets.bonds" type="number" min="0" step="500"/></td></tr>
-<tr><td>Autres actifs</td><td><input aria-label="Autres actifs" data-fin-key="assets.other" type="number" min="0" step="500"/></td></tr>
-</tbody></table></div>
+<tr><td>Crédit privé / dette non cotée</td><td><input aria-label="Crédit privé" data-fin-key="assets.privateCredit" type="number" min="0" step="500"/></td></tr>
+<tr class="fc-table-group"><th colspan="2">Actions & immobilier indirect</th></tr>
+<tr><td>Actions &amp; ETF actions</td><td><input aria-label="Actions et ETF actions" data-fin-key="assets.equities" type="number" min="0" step="500"/></td></tr>
+<tr><td>SCPI / OPCI</td><td><input aria-label="SCPI et OPCI" data-fin-key="assets.scpi" type="number" min="0" step="500"/></td></tr>
+<tr><td>Foncières cotées / REIT</td><td><input aria-label="Foncières cotées et REIT" data-fin-key="assets.listedProperty" type="number" min="0" step="500"/></td></tr>
+<tr class="fc-table-group"><th colspan="2">Non coté, actifs réels & alternatifs</th></tr>
+<tr><td>Private equity / entreprise non cotée</td><td><input aria-label="Private equity et entreprise non cotée" data-fin-key="assets.privateEquity" type="number" min="0" step="500"/></td></tr>
+<tr><td>Infrastructures</td><td><input aria-label="Infrastructures" data-fin-key="assets.infrastructure" type="number" min="0" step="500"/></td></tr>
+<tr><td>Or &amp; métaux précieux</td><td><input aria-label="Or et métaux précieux" data-fin-key="assets.gold" type="number" min="0" step="500"/></td></tr>
+<tr><td>Matières premières</td><td><input aria-label="Matières premières" data-fin-key="assets.commodities" type="number" min="0" step="500"/></td></tr>
+<tr><td>Crypto-actifs</td><td><input aria-label="Crypto actifs" data-fin-key="assets.crypto" type="number" min="0" step="500"/></td></tr>
+<tr><td>Autres / objets de collection</td><td><input aria-label="Autres actifs et objets de collection" data-fin-key="assets.other" type="number" min="0" step="500"/></td></tr>
+</tbody></table><div class="fc-card-note"><strong>Éviter le double comptage :</strong> saisissez l’exposition économique, pas le nom du compte. Une foncière détenue dans un PEA reste une foncière ; un fonds obligataire dans une assurance-vie reste une exposition obligataire.</div></div>
 
 <div class="fc-card"><div class="fc-eyebrow">Passif</div><h3>Ce que je dois encore</h3><table class="fc-mini-table"><thead><tr><th>Dette</th><th>Capital restant</th></tr></thead><tbody>
 <tr><td>Crédit résidence principale</td><td><input aria-label="Crédit résidence principale" data-fin-key="debts.homeLoan" type="number" min="0" step="1000"/></td></tr>
@@ -59,9 +73,9 @@
 </tbody></table><div class="fc-card-note">Le patrimoine net est calculé comme actifs bruts moins capitaux restant dus. Les mensualités restent suivies séparément dans le budget.</div></div>
 </div></section>
 
-<section class="fc-section" aria-labelledby="lecture-title"><div class="fc-section-head"><div><div class="fc-eyebrow">2 · Lire la situation</div><h2 id="lecture-title">Ce que les chiffres rendent visible.</h2><p>Répartition des actifs, poids de l’immobilier, liquidité et dette : des indicateurs descriptifs, accompagnés des dossiers qui expliquent leurs limites.</p></div></div><div class="fc-grid-2"><div class="fc-card"><h3>Répartition actuelle</h3><div class="fc-bars" data-fin-allocation></div></div><div class="fc-card"><h3>Points à regarder</h3><div class="fc-observations" data-fin-observations></div></div></div></section>
+<section class="fc-section" aria-labelledby="lecture-title"><div class="fc-section-head"><div><div class="fc-eyebrow">2 · Lire la situation</div><h2 id="lecture-title">Ce que les chiffres rendent visible.</h2><p>Le cockpit part des classes détaillées puis recompose les grands moteurs de risque : immobilier total, liquidité, dette, actifs cotés, non coté et alternatifs.</p></div></div><div class="fc-grid-2"><div class="fc-card"><h3>Répartition actuelle</h3><div class="fc-bars" data-fin-allocation></div></div><div class="fc-card"><h3>Points à regarder</h3><div class="fc-observations" data-fin-observations></div></div></div></section>
 
-<section class="fc-section" aria-labelledby="objectifs-title"><div class="fc-section-head"><div><div class="fc-eyebrow">3 · Mes objectifs</div><h2 id="objectifs-title">Définir une cible sans la confondre avec une prévision.</h2><p>Comme dans un tableur de pilotage, vous pouvez fixer une année, un capital financier cible et une répartition souhaitée. Les hypothèses restent explicitement modifiables.</p></div></div><div class="fc-grid-2">
+<section class="fc-section" aria-labelledby="objectifs-title"><div class="fc-section-head"><div><div class="fc-eyebrow">3 · Mes objectifs</div><h2 id="objectifs-title">Définir une cible sans la confondre avec une prévision.</h2><p>Vous pouvez viser une répartition par exposition économique. Une classe à 0 % reste un choix visible, pas une catégorie oubliée par le modèle.</p></div></div><div class="fc-grid-2">
 <div class="fc-card"><h3>Horizon &amp; hypothèses</h3><div class="fc-form-grid">
 <div class="fc-field"><label for="fin-year">Année cible</label><input id="fin-year" data-fin-key="goals.year" type="number" min="2026" max="2100" step="1"/></div>
 <div class="fc-field"><label for="fin-target-capital">Capital financier cible</label><input id="fin-target-capital" data-fin-key="goals.financialTarget" type="number" min="0" step="1000"/></div>
@@ -70,24 +84,38 @@
 <div class="fc-field"><label for="fin-inflation">Inflation annuelle à tester</label><input id="fin-inflation" data-fin-key="goals.inflation" type="number" min="-5" max="20" step="0.1"/></div>
 <div class="fc-field"><label for="fin-shock">Revenu conservé en scénario de choc</label><input id="fin-shock" data-fin-key="goals.incomeShock" type="number" min="0" max="150" step="5"/> <small>Ex. 60 = 60 % du revenu actuel.</small></div>
 </div></div>
-<div class="fc-card"><h3>Répartition cible</h3><table class="fc-mini-table"><thead><tr><th>Classe d’actifs</th><th>Objectif %</th></tr></thead><tbody>
+<div class="fc-card fc-assets-card"><h3>Répartition cible</h3><table class="fc-mini-table"><thead><tr><th>Classe d’actifs</th><th>Objectif %</th></tr></thead><tbody>
+<tr class="fc-table-group"><th colspan="2">Immobilier direct</th></tr>
 <tr><td>Résidence principale</td><td><input aria-label="Objectif résidence principale" data-fin-key="goals.target.home" type="number" min="0" max="100" step="0.1"/></td></tr>
-<tr><td>Immobilier locatif</td><td><input aria-label="Objectif immobilier locatif" data-fin-key="goals.target.rental" type="number" min="0" max="100" step="0.1"/></td></tr>
-<tr><td>Autre immobilier</td><td><input aria-label="Objectif autre immobilier" data-fin-key="goals.target.otherProperty" type="number" min="0" max="100" step="0.1"/></td></tr>
-<tr><td>Liquidités</td><td><input aria-label="Objectif liquidités" data-fin-key="goals.target.cash" type="number" min="0" max="100" step="0.1"/></td></tr>
-<tr><td>Actions &amp; ETF</td><td><input aria-label="Objectif actions et ETF" data-fin-key="goals.target.equities" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Locatif résidentiel</td><td><input aria-label="Objectif locatif résidentiel" data-fin-key="goals.target.rental" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Immobilier commercial direct</td><td><input aria-label="Objectif immobilier commercial direct" data-fin-key="goals.target.commercialProperty" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Autre immobilier direct</td><td><input aria-label="Objectif autre immobilier direct" data-fin-key="goals.target.otherProperty" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr class="fc-table-group"><th colspan="2">Liquidité & taux</th></tr>
+<tr><td>Liquidités &amp; monétaire</td><td><input aria-label="Objectif liquidités et monétaire" data-fin-key="goals.target.cash" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Fonds euros / capital garanti</td><td><input aria-label="Objectif fonds euros" data-fin-key="goals.target.euroFund" type="number" min="0" max="100" step="0.1"/></td></tr>
 <tr><td>Obligations</td><td><input aria-label="Objectif obligations" data-fin-key="goals.target.bonds" type="number" min="0" max="100" step="0.1"/></td></tr>
-<tr><td>Autres actifs</td><td><input aria-label="Objectif autres actifs" data-fin-key="goals.target.other" type="number" min="0" max="100" step="0.1"/></td></tr>
-</tbody></table><div class="fc-card-note">La cible est la vôtre. Le site ne préremplit aucune allocation « idéale ».</div></div>
+<tr><td>Crédit privé / dette non cotée</td><td><input aria-label="Objectif crédit privé" data-fin-key="goals.target.privateCredit" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr class="fc-table-group"><th colspan="2">Actions & immobilier indirect</th></tr>
+<tr><td>Actions &amp; ETF actions</td><td><input aria-label="Objectif actions et ETF actions" data-fin-key="goals.target.equities" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>SCPI / OPCI</td><td><input aria-label="Objectif SCPI et OPCI" data-fin-key="goals.target.scpi" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Foncières cotées / REIT</td><td><input aria-label="Objectif foncières cotées" data-fin-key="goals.target.listedProperty" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr class="fc-table-group"><th colspan="2">Non coté, actifs réels & alternatifs</th></tr>
+<tr><td>Private equity / entreprise non cotée</td><td><input aria-label="Objectif private equity" data-fin-key="goals.target.privateEquity" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Infrastructures</td><td><input aria-label="Objectif infrastructures" data-fin-key="goals.target.infrastructure" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Or &amp; métaux précieux</td><td><input aria-label="Objectif or et métaux précieux" data-fin-key="goals.target.gold" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Matières premières</td><td><input aria-label="Objectif matières premières" data-fin-key="goals.target.commodities" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Crypto-actifs</td><td><input aria-label="Objectif crypto actifs" data-fin-key="goals.target.crypto" type="number" min="0" max="100" step="0.1"/></td></tr>
+<tr><td>Autres / objets de collection</td><td><input aria-label="Objectif autres actifs" data-fin-key="goals.target.other" type="number" min="0" max="100" step="0.1"/></td></tr>
+</tbody></table><div class="fc-card-note">La cible est la vôtre. Le site ne préremplit aucune allocation « idéale » et ne suppose pas qu’il faille détenir chaque classe.</div></div>
 </div></section>
 
-<section class="fc-section" aria-labelledby="laboratoire-title"><div class="fc-section-head"><div><div class="fc-eyebrow">4 · Mon laboratoire</div><h2 id="laboratoire-title">Tester avant de décider.</h2><p>Les trois simulateurs ci-dessous utilisent directement les données saisies dans votre cockpit. Ils servent à voir ce qui dépend des hypothèses, pas à fabriquer une certitude.</p></div></div>
+<section class="fc-section" aria-labelledby="laboratoire-title"><div class="fc-section-head"><div><div class="fc-eyebrow">4 · Mon laboratoire</div><h2 id="laboratoire-title">Tester avant de décider.</h2><p>Les simulateurs utilisent directement vos hypothèses ou vous permettent de stress tester chaque classe séparément.</p></div></div>
 <div class="fc-grid-3">
 <div class="fc-card dark"><div class="fc-eyebrow">Projection</div><h3>Où peut aller mon capital financier ?</h3><p>Capital actuel, versements, rendement et inflation sont projetés jusqu’à votre année cible.</p><div data-fin-projection></div></div>
 <div class="fc-card"><div class="fc-eyebrow">Résilience</div><h3>Que se passe-t-il si mon revenu baisse ?</h3><p>Le budget est recalculé avec le pourcentage de revenu choisi et la réserve liquide absorbe un éventuel déficit.</p><div data-fin-stress></div></div>
 <div class="fc-card"><div class="fc-eyebrow">Allocation</div><h3>Quelle distance entre aujourd’hui et ma cible ?</h3><p>Le calcul traduit les écarts de pourcentage en montants théoriques à patrimoine brut constant.</p><div class="fc-allocation-gap" data-fin-gap></div></div>
 </div>
-<div class="fc-card" style="margin-top:1rem"><div class="fc-eyebrow">Simulateurs spécialisés</div><h3>Passer du cockpit à une décision précise.</h3><div class="fc-lab-links"><a class="fc-lab-link" href="simulateur-prix-attendre.html"><strong>Combien me coûte le fait d’attendre ?</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-capacite-emprunt.html"><strong>Quelle capacité d’emprunt puis-je tester ?</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-acheter-ou-louer.html"><strong>Acheter ou louer : comparer plusieurs scénarios</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-rembourser-ou-investir.html"><strong>Rembourser un crédit ou investir ?</strong><span>→</span></a></div></div>
+<div class="fc-card" style="margin-top:1rem"><div class="fc-eyebrow">Simulateurs spécialisés</div><h3>Passer du cockpit à une décision précise.</h3><div class="fc-lab-links"><a class="fc-lab-link" href="simulateur-allocation-stress-test.html"><strong>Stress tester chaque classe d’actifs</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-prix-attendre.html"><strong>Combien me coûte le fait d’attendre ?</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-capacite-emprunt.html"><strong>Quelle capacité d’emprunt puis-je tester ?</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-acheter-ou-louer.html"><strong>Acheter ou louer : comparer plusieurs scénarios</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-rembourser-ou-investir.html"><strong>Rembourser un crédit ou investir ?</strong><span>→</span></a><a class="fc-lab-link" href="dossiers/classes-actifs-allocation-patrimoine.html"><strong>Comprendre le rôle de chaque classe</strong><span>→</span></a></div></div>
 </section>
 
 <section class="fc-section" aria-labelledby="evolution-title"><div class="fc-section-head"><div><div class="fc-eyebrow">5 · Mon évolution</div><h2 id="evolution-title">Transformer une photo en historique.</h2><p>Enregistrez régulièrement une photographie. Le graphique suit le patrimoine net dans le temps sans avoir besoin d’un compte ou d’une base de données distante.</p></div><button class="fc-btn gold" type="button" data-fin-snapshot>Enregistrer la photo du jour</button></div><div class="fc-grid-2"><div class="fc-card"><h3>Patrimoine net</h3><div class="fc-chart-wrap" data-fin-chart></div></div><div class="fc-card"><h3>Photographies enregistrées</h3><div class="fc-snapshot-list" data-fin-snapshots></div></div></div></section>
@@ -96,15 +124,10 @@
 
 <section class="fc-section" aria-labelledby="continuer-title"><div class="fc-section-head"><div><div class="fc-eyebrow">En second plan</div><h2 id="continuer-title">Mes lectures et mes décisions.</h2><p>Le cockpit financier est le cœur de Mon espace. Les lectures, favoris et scénarios enregistrés restent disponibles pour relier les chiffres aux dossiers qui les expliquent.</p></div></div>
 <section class="space-top-grid" aria-label="Reprendre et résumé"><div class="space-panel dark"><div class="space-panel-head"><div><div class="space-eyebrow">À reprendre</div><h2>Continuez là où vous vous êtes arrêté.</h2></div></div><div data-space-resume></div></div><aside class="space-panel"><div class="space-panel-head"><div><div class="space-eyebrow">Bibliothèque personnelle</div><h2>En un coup d’œil</h2></div></div><div class="space-stats" data-space-stats></div></aside></section>
-
 <section class="space-section" aria-labelledby="decisions-title"><div class="space-section-title"><div><div class="space-eyebrow">Mes décisions</div><h2 id="decisions-title">Les questions qui méritent d’être suivies.</h2><p>Rassemblez un dossier, un scénario chiffré et plusieurs angles avant de trancher.</p></div><button type="button" class="space-btn gold" data-new-decision>+ Nouvelle décision</button></div><div class="space-grid" data-space-decisions></div></section>
-
 <section class="space-section" aria-labelledby="simulations-title"><div class="space-section-title"><div><div class="space-eyebrow">Mes simulations enregistrées</div><h2 id="simulations-title">Retrouver les hypothèses testées ailleurs sur le site.</h2></div></div><div class="space-panel"><div class="space-list" data-space-simulations></div></div></section>
-
 <section class="space-section" aria-labelledby="favorites-title"><div class="space-section-title"><div><div class="space-eyebrow">Enregistré pour plus tard</div><h2 id="favorites-title">Mes contenus gardés sous la main.</h2></div></div><div class="space-panel"><div class="space-list" data-space-favorites></div></div></section>
-
 <section class="space-section" aria-labelledby="recent-title"><div class="space-section-title"><div><div class="space-eyebrow">Historique récent</div><h2 id="recent-title">Mes derniers détours utiles.</h2></div></div><div class="space-panel"><div class="space-list" data-space-recent></div></div></section>
-
 <div class="space-actions-bar"><div class="left"><a class="space-btn" href="confidentialite.html">Comment ces données sont stockées</a><button type="button" class="space-btn" data-space-export>Exporter lectures et décisions</button></div><div class="right"><button type="button" class="space-btn danger" data-space-clear>Effacer lectures et décisions</button></div></div>
 </section>
 </div>
@@ -113,6 +136,6 @@
 <script src="assets/navigation-v3.js?v=20260810-1"></script>
 <script src="assets/follow.js?v=20260809-3"></script>
 <script src="assets/personal-space.js?v=20260810-2"></script>
-<script src="assets/finance-cockpit.js?v=20260810-1"></script>
+<script src="assets/finance-cockpit.js?v=20260810-2"></script>
 <script src="assets/orientation.js?v=20260810-6"></script><script src="assets/longform.js?v=20260810-1"></script></body>
 </html>
