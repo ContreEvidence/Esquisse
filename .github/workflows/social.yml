@@ -1,0 +1,119 @@
+name: Preparer et diffuser Contre-Evidence sur les reseaux
+
+on:
+  workflow_run:
+    workflows: ['Consolider et publier Contre-Evidence']
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate-publication-drafts.cjs'
+      - 'scripts/build-social-package.cjs'
+      - 'scripts/attribute-acquisition-links.cjs'
+      - 'scripts/check-social-auth.cjs'
+      - 'scripts/publish-social.cjs'
+      - 'publications/social-config.json'
+      - '.github/workflows/social.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: diffusion-sociale
+  cancel-in-progress: true
+
+jobs:
+  social:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le depot publie
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Preparer les brouillons sociaux
+        run: node scripts/generate-publication-drafts.cjs
+
+      - name: Installer le moteur d images
+        run: npm install --no-save --package-lock=false sharp
+
+      - name: Verifier ffmpeg
+        shell: bash
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y ffmpeg
+          fi
+          ffmpeg -version | head -n 1
+
+      - name: Construire le prochain media depuis le RSS publie
+        run: node scripts/build-social-package.cjs
+
+      - name: Attribuer les liens de diffusion
+        run: node scripts/attribute-acquisition-links.cjs
+
+      - name: Diagnostiquer les autorisations sociales
+        env:
+          META_USER_ACCESS_TOKEN: ${{ secrets.META_USER_ACCESS_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: node scripts/check-social-auth.cjs
+
+      - name: Enregistrer les fichiers sociaux prepares
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- publications/a-publier.md publications/social-package.json publications/social-auth-status.json publications/media
+          if git diff --cached --quiet; then
+            echo "Aucun fichier social genere a enregistrer."
+          else
+            git commit -m "Preparer le prochain paquet social"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Envoyer vers les comptes sociaux autorises
+        env:
+          META_PAGE_NAME: Contre-Évidence
+          META_USER_ACCESS_TOKEN: ${{ secrets.META_USER_ACCESS_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
+          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
+          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
+          TIKTOK_PRIVACY_LEVEL: ${{ secrets.TIKTOK_PRIVACY_LEVEL }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_PRIVACY_STATUS: ${{ secrets.YOUTUBE_PRIVACY_STATUS }}
+          YOUTUBE_CATEGORY_ID: ${{ secrets.YOUTUBE_CATEGORY_ID }}
+        run: node scripts/publish-social.cjs
+
+      - name: Enregistrer l anti-doublon social
+        shell: bash
+        run: |
+          if git diff --quiet -- publications/social-state.json; then
+            echo "Aucun nouvel etat social."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publications/social-state.json
+          git commit -m "Enregistrer l etat des publications sociales"
+          git pull --rebase origin main
+          git push
+
+# Ce pipeline ne construit jamais le site. Une erreur Sharp, ffmpeg, OAuth ou plateforme sociale ne peut donc plus bloquer la publication web.
