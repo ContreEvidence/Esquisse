@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "priority": 1,
+  "status": "prepared",
+  "item": {
+    "title": "Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?",
+    "link": "https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html",
+    "description": "Rendre visible le coût possible de l’inaction : dépenses récurrentes, inflation, retard d’investissement, frais et grosses décisions laissées sans contrôle.",
+    "category": "Commencer ses finances"
+  },
+  "editorialSequence": [
+    "prix-attendre-finances",
+    "depenses-recurrentes-abonnements-assurances",
+    "inflation-comprendre-histoire-pouvoir-achat",
+    "cout-reel-voiture-achat-credit-loa-lld",
+    "gestion-pilotee-comparer-performances"
+  ],
+  "storyboard": [
+    "Je m’occuperai de mes finances plus tard.",
+    "Le problème : plus tard n’est pas gratuit.",
+    "50 € par mois laissés sans contrôle = 3 000 € en cinq ans.",
+    "Dans une simulation à 5 %, commencer à investir 200 €/mois cinq ans plus tard crée environ 47 350 € d’écart au bout de 30 ans.",
+    "Ces chiffres ne s’additionnent pas : ils montrent des mécanismes différents.",
+    "Commence par savoir où tu en es. Dossier complet sur Contre-Évidence."
+  ],
+  "facebook": {
+    "message": "« Je m’occuperai de mes finances plus tard. »\n\nLe problème, c’est que plus tard n’est pas gratuit.\n\n50 € par mois de dépenses devenues inutiles représentent 3 000 € en cinq ans.\n\nAvec une hypothèse pédagogique de 2 % d’inflation, 10 000 € sans rendement pendant cinq ans gardent 10 000 € sur le compte mais un pouvoir d’achat équivalent à environ 9 057 € d’aujourd’hui.\n\nEt dans une simulation à 5 %, investir 200 € par mois pendant 30 ans aboutit à environ 166 450 €, contre 119 100 € si l’on commence cinq ans plus tard.\n\nAttention : ces chiffres ne s’additionnent pas et les rendements ne sont pas garantis. Ils montrent simplement que ne rien décider n’arrête pas le temps.\n\nNouveau dossier : Le prix d’attendre.\nhttps://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial\n\n#ContreEvidence #FinancesPersonnelles #Budget #Investissement"
+  },
+  "instagram": {
+    "caption": "« Je verrai ça plus tard. »\n\nEn finances, plus tard n’est pas toujours gratuit.\n\n50 €/mois laissés sans contrôle = 3 000 € en 5 ans.\n\nEt dans une simulation pédagogique à 5 %, commencer à investir 200 €/mois cinq ans plus tard crée environ 47 350 € d’écart au bout de 30 ans.\n\nCe n’est pas une promesse de rendement. Et surtout, les exemples du dossier ne s’additionnent pas.\n\nL’idée est plus simple : les prélèvements, l’inflation, les frais et le temps continuent même quand on ne décide rien.\n\nNouveau dossier sur Contre-Évidence : Le prix d’attendre.\n\n#ContreEvidence #FinancesPersonnelles #Budget #Investissement #Patrimoine"
+  },
+  "tiktok": {
+    "title": "Ton cerveau t’a encore arnaqué ! « Je m’occuperai de mes finances plus tard. » Sauf que plus tard n’est pas gratuit. 50 €/mois = 3 000 € en 5 ans. Et cinq ans de retard peuvent aussi coûter beaucoup de temps de capitalisation. #ContreEvidence #FinancesPersonnelles",
+    "hook": "Ton cerveau t’a encore arnaqué ! « Je m’occuperai de mes finances plus tard. »",
+    "cta": "Nouveau dossier : Le prix d’attendre — Contre-Évidence."
+  },
+  "youtube": {
+    "title": "Remettre ses finances à plus tard : combien ça coûte ? #Shorts",
+    "description": "Remettre ses finances à plus tard paraît neutre. Pourtant les prélèvements continuent, l’inflation agit, les frais se composent et le temps disponible pour capitaliser diminue.\n\nExemple : 50 € par mois laissés sans contrôle = 3 000 € en cinq ans. Dans une simulation pédagogique à 5 %, commencer à investir 200 € par mois cinq ans plus tard crée environ 47 350 € d’écart au bout de 30 ans.\n\nCes chiffres ne s’additionnent pas et aucun rendement n’est garanti.\n\nLire le dossier : https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial\n\n#ContreEvidence #FinancesPersonnelles #Budget #Shorts"
+  },
+  "trackedLinks": {
+    "facebook": "https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial",
+    "instagram": "https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html?utm_source=instagram&utm_medium=social&utm_campaign=editorial",
+    "tiktok": "https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html?utm_source=tiktok&utm_medium=social&utm_campaign=editorial",
+    "youtube": "https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial"
+  }
+}
