@@ -7,8 +7,8 @@
       "platforms": {
         "youtube": {
           "ok": false,
-          "error": "401 Unauthorized",
-          "checkedAt": "2026-08-09T19:58:15.348Z"
+          "error": "400 Bad Request",
+          "checkedAt": "2026-08-10T07:47:48.180Z"
         }
       },
       "title": "Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?",
