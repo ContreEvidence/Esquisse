@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 14:51:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 14:52:57 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss.xml" rel="self" type="application/rss+xml"/>
@@ -617,14 +617,14 @@
       <description>Prix total, rendement net, couverture de dette, vacance, travaux, fiscalité et concentration.</description>
     </item>
     <item>
-      <title>Acheter ou louer sa résidence principale : comparer le coût complet</title>
+      <title>Acheter ou louer sa résidence principale : durée, mobilité et scénarios de sortie</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/finances-residence-principale.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/finances-residence-principale.html</guid>
       <pubDate>Fri, 07 Aug 2026 11:10:27 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
       <category>Résidence principale</category>
-      <description>Durée de détention, frais, financement, coût d’opportunité, mobilité et scénarios de sortie.</description>
+      <description>Comparer achat et location par durée probable, mobilité, valeur d’usage, liquidité restante et scénario de sortie ; le coût complet est traité dans un dossier dédié.</description>
     </item>
     <item>
       <title>Crédit et endettement : utiliser la dette sans fragiliser son patrimoine</title>
@@ -635,16 +635,6 @@
       <category>Patrimoine</category>
       <category>Crédit</category>
       <description>Coût total, durée, levier, capacité de remboursement, liquidité et scénario dégradé.</description>
-    </item>
-    <item>
-      <title>Immobilier et patrimoine : raisonner sur le coût, le risque et la concentration</title>
-      <link>https://contreevidence.github.io/Esquisse/dossiers/finances-immobilier-patrimoine.html</link>
-      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/finances-immobilier-patrimoine.html</guid>
-      <pubDate>Fri, 07 Aug 2026 10:18:58 GMT</pubDate>
-      <category>Dossier</category>
-      <category>Patrimoine</category>
-      <category>Immobilier</category>
-      <description>Résidence principale, locatif, SCPI, foncières, dette, liquidité et poids de la pierre dans le patrimoine global.</description>
     </item>
     <item>
       <title>Analyser un investissement de A à Z</title>
@@ -677,14 +667,14 @@
       <description>Fonction des classes d’actifs, capacité de risque, drawdown, concentration, scénarios de stress et rééquilibrage.</description>
     </item>
     <item>
-      <title>Construire sa stratégie financière avant de choisir ses placements</title>
+      <title>Écrire sa politique patrimoniale en une page</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/finances-cadre-global.html</link>
       <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/finances-cadre-global.html</guid>
       <pubDate>Fri, 07 Aug 2026 07:27:28 GMT</pubDate>
       <category>Dossier</category>
       <category>Patrimoine</category>
-      <category>Stratégie patrimoniale</category>
-      <description>Bilan, flux, horizons, capacité de risque, concentration et règles de décision avant les produits.</description>
+      <category>Politique patrimoniale</category>
+      <description>Fixer objectifs, réserve minimale, allocation cible, plafonds de concentration, règles de rééquilibrage et date de revue avant les mouvements de marché.</description>
     </item>
     <item>
       <title>Tester un métier avant d’investir plusieurs mois de formation</title>
