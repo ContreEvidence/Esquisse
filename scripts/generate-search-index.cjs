@@ -5,7 +5,7 @@ const vm = require('vm');
 const ROOT = path.resolve(__dirname,'..');
 const ctx = {window:{}};
 vm.createContext(ctx);
-for (const rel of ['assets/library-catalog.js','assets/library-daily-money.js']) {
+for (const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js']) {
   const file=path.join(ROOT,rel);
   if(fs.existsSync(file)) vm.runInContext(fs.readFileSync(file,'utf8'),ctx,{filename:rel});
 }
