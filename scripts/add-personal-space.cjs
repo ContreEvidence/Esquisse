@@ -4,7 +4,7 @@ const vm=require('vm');
 const ROOT=path.resolve(__dirname,'..');
 const SITE_VERSION=require('./site-version.cjs');
 
-for(const rel of ['assets/personal-space.js','assets/finance-cockpit.js','assets/finance-architecture.js','assets/cockpit-progressive.js','assets/property-cockpit.js']){
+for(const rel of ['assets/personal-space.js','assets/finance-cockpit.js','assets/finance-architecture.js','assets/cockpit-progressive.js','assets/property-cockpit.js','assets/portfolio-cockpit.js']){
   if(fs.existsSync(path.join(ROOT,rel)))new vm.Script(fs.readFileSync(path.join(ROOT,rel),'utf8'),{filename:rel});
 }
 
@@ -24,22 +24,24 @@ for(const rel of htmlFiles()){
     const architectureCss=`<link rel="stylesheet" href="assets/finance-architecture.css?v=${SITE_VERSION}"/>`;
     const progressiveCss=`<link rel="stylesheet" href="assets/cockpit-progressive.css?v=${SITE_VERSION}"/>`;
     const propertyCss=`<link rel="stylesheet" href="assets/property-cockpit.css?v=${SITE_VERSION}"/>`;
+    const portfolioCss=`<link rel="stylesheet" href="assets/portfolio-cockpit.css?v=${SITE_VERSION}"/>`;
     const architectureJs=`<script src="assets/finance-architecture.js?v=${SITE_VERSION}"></script>`;
     const progressiveJs=`<script src="assets/cockpit-progressive.js?v=${SITE_VERSION}"></script>`;
     const propertyJs=`<script src="assets/property-cockpit.js?v=${SITE_VERSION}"></script>`;
+    const portfolioJs=`<script src="assets/portfolio-cockpit.js?v=${SITE_VERSION}"></script>`;
     const guardrail='<section class="fc-section" data-ce-finance-legal="1" aria-label="Cadre du cockpit"><div class="fc-section-head"><div><div class="fc-eyebrow">Cadre d’utilisation</div><h2>Des calculs et des scénarios, pas une recommandation personnalisée.</h2><p>Le cockpit décrit votre allocation, vos flux et la sensibilité de scénarios à vos propres hypothèses. Il ne recommande aucun instrument financier précis, aucune transaction, aucun ordre d’achat ou de vente et aucune composition de portefeuille présentée comme adaptée à votre situation.</p></div></div></section>';
 
     html=html.replace(/<link\s+rel="stylesheet"\s+href="assets\/finance-cockpit\.css(?:\?[^"']*)?"\s*\/?>/i,`<link rel="stylesheet" href="assets/finance-cockpit.css?v=${SITE_VERSION}"/>`);
     html=html.replace(/<script\s+src="assets\/finance-cockpit\.js(?:\?[^"']*)?"\s*><\/script>/i,`<script src="assets/finance-cockpit.js?v=${SITE_VERSION}"></script>`);
-    for(const asset of ['finance-architecture','cockpit-progressive','property-cockpit']){
+    for(const asset of ['finance-architecture','cockpit-progressive','property-cockpit','portfolio-cockpit']){
       html=html.replace(new RegExp(`<link\\s+rel="stylesheet"\\s+href="assets\\/${asset}\\.css(?:\\?[^"']*)?"\\s*\\/?>`,'i'),'');
       html=html.replace(new RegExp(`<script\\s+src="assets\\/${asset}\\.js(?:\\?[^"']*)?"\\s*><\\/script>`,'i'),'');
     }
     html=html.replace(/<section\s+class="fc-section"\s+data-ce-finance-legal="1"[\s\S]*?<\/section>/i,'');
-    html=html.replace(/<\/head>/i,`${architectureCss}${progressiveCss}${propertyCss}</head>`);
+    html=html.replace(/<\/head>/i,`${architectureCss}${progressiveCss}${propertyCss}${portfolioCss}</head>`);
     html=html.replace(/<div class="fc-shell">/i,`<div class="fc-shell">${guardrail}`);
-    html=html.replace(/<\/body>/i,`${architectureJs}${progressiveJs}${propertyJs}</body>`);
+    html=html.replace(/<\/body>/i,`${architectureJs}${progressiveJs}${propertyJs}${portfolioJs}</body>`);
   }
   fs.writeFileSync(file,html,'utf8');count++;
 }
-console.log(`Mon espace intégré à ${count} pages ; cockpit en divulgation progressive avec détail immobilier, version ${SITE_VERSION}.`);
+console.log(`Mon espace intégré à ${count} pages ; cockpit en divulgation progressive avec détail immobilier et portefeuille, version ${SITE_VERSION}.`);
