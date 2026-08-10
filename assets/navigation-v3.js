@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '20260810-12';
+  const VERSION = '20260810-13';
   if (document.documentElement.dataset.ceNavigation === VERSION) return;
   document.documentElement.dataset.ceNavigation = VERSION;
 
