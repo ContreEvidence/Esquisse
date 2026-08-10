@@ -3,7 +3,7 @@ const path=require('path');
 const vm=require('vm');
 const ROOT=path.resolve(__dirname,'..');
 const ctx={window:{}};vm.createContext(ctx);
-for(const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/tools-catalog.js']){
+for(const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js','assets/tools-catalog.js']){
   if(fs.existsSync(path.join(ROOT,rel)))vm.runInContext(fs.readFileSync(path.join(ROOT,rel),'utf8'),ctx,{filename:rel});
 }
 const editorial=Array.isArray(ctx.window.CE_LIBRARY_CATALOG)?ctx.window.CE_LIBRARY_CATALOG:[];
@@ -39,7 +39,7 @@ for(const rel of htmlFiles()){
   for(const [re,to] of replacements)html=html.replace(re,to);
   if(html!==before)repaired++;
 
-  const isEditorialPath=/^(articles|dossiers)\//.test(rel);
+  const isEditorialPath=/^(articles|dossiers|fiches-metiers)\//.test(rel);
   if(isEditorialPath){
     const noindex=/<meta\s+name="robots"\s+content="noindex,follow"\s*\/?>/i;
     if(keep.has(rel)){
