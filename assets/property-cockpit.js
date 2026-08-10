@@ -18,7 +18,7 @@
   function read(){try{const s=JSON.parse(localStorage.getItem(KEY)||'{}');return s&&typeof s==='object'?s:{};}catch(_){return{};}}
   function list(){const s=read();return Array.isArray(s.properties)?s.properties:[];}
   function write(properties){try{const s=read();s.properties=properties;s.updatedAt=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(s));return true;}catch(_){return false;}}
-  function money(v){return euro.format(n(v));}
+  function money(v){const x=Number(v);return euro.format(Number.isFinite(x)?x:0);}
   function percent(v){return `${pct.format(Number.isFinite(v)?v:0)} %`;}
   function calc(p){
     const value=n(p.value),debt=n(p.debt),gross=n(p.grossIncome),vac=Math.min(100,n(p.vacancyPct)),costs=n(p.annualCosts),tax=n(p.annualIncomeTax);
