@@ -25,7 +25,6 @@
     };
     renameText();
 
-    /* Sur Patrimoine, les trois chemins puis les quatre rubriques passent avant le cockpit avancé. */
     const foundation = document.querySelector('.patrimoine-hub .foundation');
     const pillars = document.querySelector('.patrimoine-hub .pillar-grid');
     if (foundation && pillars && !foundation.dataset.ceReordered) {
@@ -66,6 +65,18 @@
       window.addEventListener('scroll', syncCompact, { passive:true });
       window.addEventListener('resize', syncCompact);
       syncCompact();
+    }
+
+    /* Les anciennes règles génériques nav{display:none} couvrent encore 760–820px. */
+    const flatNav = document.querySelector('.ce-flat-nav');
+    if (flatNav && !flatNav.dataset.ceTabletBound) {
+      flatNav.dataset.ceTabletBound = '1';
+      const syncTablet = () => {
+        if (window.innerWidth >= 760) flatNav.style.display = 'block';
+        else flatNav.style.removeProperty('display');
+      };
+      window.addEventListener('resize', syncTablet);
+      syncTablet();
     }
   };
 
