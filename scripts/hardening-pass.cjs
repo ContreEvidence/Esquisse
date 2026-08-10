@@ -77,10 +77,6 @@ changed += patch('scripts/add-personal-space.cjs', code => {
   if (!code.includes("require('./site-version.cjs')")) {
     code = code.replace("const ROOT=path.resolve(__dirname,'..');\n", "const ROOT=path.resolve(__dirname,'..');\nconst SITE_VERSION=require('./site-version.cjs');\n");
   }
-  code = code.replace('`<link rel="stylesheet" href="${p}assets/personal-space.css?v=20260810-1"/>`', '`<link rel="stylesheet" href="${p}assets/personal-space.css?v=${SITE_VERSION}"/>`');
-  code = code.replace('`<script src="${p}assets/personal-space.js?v=20260810-2"></script>`', '`<script src="${p}assets/personal-space.js?v=${SITE_VERSION}"></script>`');
-  code = code.replace("const architectureCss='<link rel=\"stylesheet\" href=\"assets/finance-architecture.css?v=20260810-2\"/>';", "const architectureCss=`<link rel=\"stylesheet\" href=\"assets/finance-architecture.css?v=${SITE_VERSION}\"/>`;");
-  code = code.replace("const architectureJs='<script src=\"assets/finance-architecture.js?v=20260810-2\"></script>';", "const architectureJs=`<script src=\"assets/finance-architecture.js?v=${SITE_VERSION}\"></script>`;");
   return code;
 }) ? 1 : 0;
 
@@ -102,6 +98,10 @@ changed += patch('outil-repartir-grosse-somme.html', html => {
   html = html.replace("['bonds','Obligations / fonds obligataires'],", "['bonds','Obligations / fonds obligataires'],['privateCredit','Crédit privé / dette non cotée'],");
   html = html.replace("['listedProperty','Foncières cotées'],", "['listedProperty','Foncières cotées / REIT'],['privateEquity','Private equity / entreprise non cotée'],['infrastructure','Infrastructures'],");
   html = html.replace("['gold','Or'],['other','Autres actifs']", "['gold','Or & métaux précieux'],['commodities','Matières premières'],['crypto','Crypto-actifs'],['other','Autres actifs']");
+  if (!html.includes('data-ce-mobile-allocation="1"')) {
+    const mobile=`<style data-ce-mobile-allocation="1">@media(max-width:760px){.alloc-table{min-width:0!important}.alloc-table thead{display:none}.alloc-table,.alloc-table tbody,.alloc-table tr,.alloc-table td{display:block;width:100%}.alloc-table tr{margin:0 0 .85rem;padding:.75rem .8rem;border:1px solid rgba(16,24,32,.12);border-radius:12px;background:#fff}.alloc-table td{display:grid;grid-template-columns:minmax(130px,.9fr) minmax(0,1.1fr);gap:.65rem;align-items:center;padding:.42rem 0!important;border:0!important;text-align:left!important}.alloc-table td:first-child{display:block;padding-bottom:.65rem!important;border-bottom:1px solid rgba(16,24,32,.1)!important;font-size:1rem}.alloc-table td:not(:first-child)::before{font-size:.7rem;line-height:1.25;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:#75591e}.alloc-table td:nth-child(2)::before{content:'Patrimoine actuel'}.alloc-table td:nth-child(3)::before{content:'Nouvelle allocation'}.alloc-table td:nth-child(4)::before{content:'Poids avant'}.alloc-table td:nth-child(5)::before{content:'Poids après'}.alloc-table td:nth-child(6)::before{content:'Choc à tester'}.alloc-table td:nth-child(7)::before{content:'Valeur après choc'}.alloc-table input{width:100%!important;max-width:none!important;min-width:0!important}}</style>`;
+    html=html.replace(/<\/head>/i,`${mobile}</head>`);
+  }
   return html;
 }) ? 1 : 0;
 
@@ -119,12 +119,19 @@ function htmlFiles(dir = ROOT, prefix = '') {
 
 for (const rel of htmlFiles()) {
   changed += patch(rel, html => {
-    const re = /<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi;
-    const matches = html.match(re) || [];
-    if (matches.length <= 1) return html;
-    const keep = matches[0];
-    html = html.replace(re, '');
-    return html.replace(/<\/head>/i, `${keep}</head>`);
+    const canonical = /<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi;
+    const canonicals = html.match(canonical) || [];
+    if (canonicals.length > 1) {
+      const keep = canonicals[0];
+      html = html.replace(canonical, '');
+      html = html.replace(/<\/head>/i, `${keep}</head>`);
+    }
+    if (/data-ce-seo=["']main["']/i.test(html)) {
+      html = html.replace(/<script\s+type=["']application\/ld\+json["'](?![^>]*data-ce-seo)[^>]*>([\s\S]*?)<\/script>\s*/gi,(match,json)=>{
+        return /["']?@type["']?\s*:\s*["'](?:Article|WebApplication)["']/i.test(json) ? '' : match;
+      });
+    }
+    return html;
   }) ? 1 : 0;
 }
 
