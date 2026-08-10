@@ -22,11 +22,14 @@ on:
       - 'assets/orientation.js'
       - 'assets/ux-retention.css'
       - 'assets/longform.js'
+      - 'assets/personal-space.css'
+      - 'assets/personal-space.js'
       - 'assets/analytics-config.json'
       - 'assets/analytics-loader.js'
       - 'scripts/clean-legacy-pages.cjs'
       - 'scripts/consolidate-site.cjs'
       - 'scripts/add-ux-layer.cjs'
+      - 'scripts/add-personal-space.cjs'
       - 'scripts/add-related-content.cjs'
       - 'scripts/generate-search-index.cjs'
       - 'scripts/add-analytics-loader.cjs'
@@ -76,6 +79,9 @@ jobs:
 
       - name: Stabiliser le rendu et les parcours de lecture longue
         run: node scripts/add-ux-layer.cjs
+
+      - name: Activer Mon espace personnel local
+        run: node scripts/add-personal-space.cjs
 
       - name: Préparer le chargeur de mesure d audience
         run: node scripts/add-analytics-loader.cjs
@@ -177,5 +183,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> UX stable/lecture longue -> chargeur analytics -> parcours liés -> index plein texte -> RSS -> fraîcheur -> audit -> brouillons/media -> attribution UTM -> diffusion.
+# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> UX stable/lecture longue -> Mon espace local -> chargeur analytics -> parcours liés -> index plein texte -> RSS -> fraîcheur -> audit -> brouillons/media -> attribution UTM -> diffusion.
 # Une nouvelle version annule une consolidation obsolète encore en cours.
