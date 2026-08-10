@@ -1,4 +1,4 @@
-name: Consolider publier et diffuser Contre-Evidence
+name: Consolider et publier Contre-Evidence
 
 on:
   push:
@@ -33,6 +33,8 @@ on:
       - 'assets/finance-architecture.js'
       - 'assets/analytics-config.json'
       - 'assets/analytics-loader.js'
+      - 'scripts/site-version.cjs'
+      - 'scripts/hardening-pass.cjs'
       - 'scripts/clean-legacy-pages.cjs'
       - 'scripts/consolidate-site.cjs'
       - 'scripts/add-ux-layer.cjs'
@@ -41,16 +43,11 @@ on:
       - 'scripts/generate-search-index.cjs'
       - 'scripts/add-analytics-loader.cjs'
       - 'scripts/audit-site.cjs'
+      - 'scripts/audit-structure-site.cjs'
       - 'scripts/audit-legal-guardrails.cjs'
       - 'scripts/normalize-editorial-data.cjs'
       - 'scripts/check-editorial-data-freshness.cjs'
       - 'scripts/generate-rss.cjs'
-      - 'scripts/generate-publication-drafts.cjs'
-      - 'scripts/build-social-package.cjs'
-      - 'scripts/attribute-acquisition-links.cjs'
-      - 'scripts/check-social-auth.cjs'
-      - 'scripts/publish-social.cjs'
-      - 'publications/social-config.json'
       - '.github/workflows/rss.yml'
   workflow_dispatch:
 
@@ -58,7 +55,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: consolidation-et-diffusion
+  group: consolidation-site
   cancel-in-progress: true
 
 jobs:
@@ -76,6 +73,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Durcir les couches structurelles
+        run: node scripts/hardening-pass.cjs
+
       - name: Nettoyer et archiver les anciennes pages
         run: node scripts/clean-legacy-pages.cjs
 
@@ -91,8 +91,8 @@ jobs:
       - name: Activer Mon espace personnel local
         run: node scripts/add-personal-space.cjs
 
-      - name: Vérifier la syntaxe des moteurs de Mon espace
-        run: node --check assets/personal-space.js && node --check assets/finance-cockpit.js && node --check assets/finance-architecture.js && node --check assets/follow.js
+      - name: Vérifier la syntaxe des moteurs front
+        run: node --check assets/personal-space.js && node --check assets/finance-cockpit.js && node --check assets/finance-architecture.js && node --check assets/follow.js && node --check assets/navigation-v3.js && node --check assets/longform.js
 
       - name: Vérifier les garde-fous juridiques et de collecte
         run: node scripts/audit-legal-guardrails.cjs
@@ -112,90 +112,26 @@ jobs:
       - name: Verifier la fraîcheur entre données et dossiers
         run: node scripts/check-editorial-data-freshness.cjs
 
-      - name: Auditer le site
+      - name: Auditer les liens SEO et catalogues
         run: node scripts/audit-site.cjs
 
-      - name: Preparer les publications sociales
-        run: node scripts/generate-publication-drafts.cjs
+      - name: Auditer la structure UX et les versions
+        run: node scripts/audit-structure-site.cjs
 
-      - name: Installer le moteur de medias sociaux
-        run: npm install --no-save --package-lock=false sharp
-
-      - name: Verifier ffmpeg
-        shell: bash
-        run: |
-          if ! command -v ffmpeg >/dev/null 2>&1; then
-            sudo apt-get update -qq
-            sudo apt-get install -y ffmpeg
-          fi
-          ffmpeg -version | head -n 1
-
-      - name: Construire le prochain media depuis le RSS
-        run: node scripts/build-social-package.cjs
-
-      - name: Attribuer les liens de diffusion
-        run: node scripts/attribute-acquisition-links.cjs
-
-      - name: Diagnostiquer les autorisations sociales
-        env:
-          META_USER_ACCESS_TOKEN: ${{ secrets.META_USER_ACCESS_TOKEN }}
-          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
-          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
-          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
-          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
-          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
-          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-        run: node scripts/check-social-auth.cjs
-
-      - name: Publier les fichiers generes dans le depot
+      - name: Publier immédiatement la version consolidée du site
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- '*.html' articles dossiers themes fiches-metiers sitemap.xml 'rss*.xml' rss-feeds.json publications/a-publier.md \
-            assets/editorial-data.json assets/search-index.js editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/data-freshness.md
-          if [ -f publications/social-package.json ]; then git add publications/social-package.json; fi
-          if [ -f publications/social-auth-status.json ]; then git add publications/social-auth-status.json; fi
-          if [ -d publications/media ]; then git add publications/media; fi
+          git add -A -- '*.html' articles dossiers themes fiches-metiers sitemap.xml 'rss*.xml' rss-feeds.json \
+            assets scripts editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/audit-structure-site.md editorial/data-freshness.md
           if git diff --cached --quiet; then
             echo "Aucune modification generee."
           else
-            git commit -m "Consolider SEO parcours recherche sitemap RSS et diffusion"
+            git commit -m "Consolider le site et ses audits"
             git pull --rebase origin main
             git push
-            sleep 12
           fi
 
-      - name: Envoyer vers les comptes sociaux autorises
-        env:
-          META_PAGE_NAME: Contre-Évidence
-          META_USER_ACCESS_TOKEN: ${{ secrets.META_USER_ACCESS_TOKEN }}
-          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
-          META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
-          META_IG_USER_ID: ${{ secrets.META_IG_USER_ID }}
-          TIKTOK_ACCESS_TOKEN: ${{ secrets.TIKTOK_ACCESS_TOKEN }}
-          TIKTOK_PRIVACY_LEVEL: ${{ secrets.TIKTOK_PRIVACY_LEVEL }}
-          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
-          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
-          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-          YOUTUBE_PRIVACY_STATUS: ${{ secrets.YOUTUBE_PRIVACY_STATUS }}
-          YOUTUBE_CATEGORY_ID: ${{ secrets.YOUTUBE_CATEGORY_ID }}
-        run: node scripts/publish-social.cjs
-
-      - name: Enregistrer l anti-doublon social
-        shell: bash
-        run: |
-          if git diff --quiet -- publications/social-state.json; then
-            echo "Aucun nouvel etat social."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add publications/social-state.json
-          git commit -m "Enregistrer l etat des publications sociales"
-          git pull --rebase origin main
-          git push
-
-# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> UX stable/lecture longue -> Mon espace local/cockpit financier -> garde-fous juridiques -> chargeur analytics -> parcours liés -> index plein texte -> RSS -> fraîcheur -> audit -> brouillons/media -> attribution UTM -> diffusion.
-# Une nouvelle version annule une consolidation obsolète encore en cours.
+# Pipeline du site uniquement : durcissement -> nettoyage -> référentiel -> SEO/sitemap -> UX -> Mon espace -> garde-fous -> recherche -> RSS -> fraîcheur -> audits -> publication.
+# La diffusion sociale est volontairement découplée : elle ne peut plus bloquer la mise en ligne du site.
