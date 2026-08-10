@@ -20,6 +20,7 @@ function runCatalog(relativePath) {
 
 runCatalog('assets/library-catalog.js');
 runCatalog('assets/library-daily-money.js');
+runCatalog('assets/library-work-foundations.js');
 runCatalog('assets/tools-catalog.js');
 
 const editorial = Array.isArray(context.window.CE_LIBRARY_CATALOG)
@@ -43,9 +44,7 @@ function publicationDate(relativePath) {
     ).trim();
     const first = output.split(/\r?\n/).filter(Boolean)[0];
     if (first) date = new Date(first);
-  } catch (_) {
-    // Si l'historique Git n'est pas disponible, la date de génération reste un repli valide.
-  }
+  } catch (_) {}
   dateCache.set(relativePath, date);
   return date;
 }
@@ -95,13 +94,9 @@ function ensureAutodiscovery(relativePath) {
   if (!fs.existsSync(fullPath)) return;
   let html = fs.readFileSync(fullPath, 'utf8');
   if (html.includes('type="application/rss+xml"')) return;
-
   const canonical = /<link\s+rel="canonical"[^>]*\/>/i;
-  if (canonical.test(html)) {
-    html = html.replace(canonical, match => `${match}\n${AUTODISCOVERY}`);
-  } else {
-    html = html.replace('</head>', `${AUTODISCOVERY}\n</head>`);
-  }
+  if (canonical.test(html)) html = html.replace(canonical, match => `${match}\n${AUTODISCOVERY}`);
+  else html = html.replace('</head>', `${AUTODISCOVERY}\n</head>`);
   fs.writeFileSync(fullPath, html, 'utf8');
 }
 
@@ -110,7 +105,6 @@ function ensureFollowScript(relativePath) {
   if (!fs.existsSync(fullPath)) return false;
   let html = fs.readFileSync(fullPath, 'utf8');
   if (!/<\/body>/i.test(html) || /assets\/follow\.js/i.test(html)) return false;
-
   let src = path.relative(path.dirname(relativePath), 'assets/follow.js').replace(/\\/g, '/');
   if (!src.startsWith('.')) src = `./${src}`;
   const tag = `<script src="${src}?v=20260809-1"></script>`;
