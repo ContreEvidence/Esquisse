@@ -15,6 +15,18 @@
       },
       "title": "Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?",
       "pubDate": "Sun, 09 Aug 2026 11:17:39 GMT"
+    },
+    "https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html": {
+      "complete": false,
+      "platforms": {
+        "youtube": {
+          "ok": false,
+          "error": "400 Bad Request",
+          "checkedAt": "2026-08-10T08:54:39.075Z"
+        }
+      },
+      "title": "Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?",
+      "pubDate": "Sun, 09 Aug 2026 11:17:05 GMT"
     }
   }
 }
