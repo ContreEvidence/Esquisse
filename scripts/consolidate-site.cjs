@@ -137,8 +137,21 @@ function ensureFallbackHeader(rel) {
   const file=path.join(ROOT,rel); let html=fs.readFileSync(file,'utf8');
   if (!html.includes('<header id="site-header"></header>')) return false;
   const nested=/^(articles|dossiers|themes)\//.test(rel); const p=nested?'../':'';
-  const fallback=`<header id="site-header"><div class="ce-fallback-header" aria-label="Navigation principale"><a class="ce-fallback-brand" href="${p}index.html">Contre-Évidence</a><nav><a href="${p}themes/argent.html">Patrimoine</a><a href="${p}parcours-vie-professionnelle.html">Vie professionnelle</a><a href="${p}hors-cadre.html">Hors cadre</a><a href="${p}bibliotheque.html">Bibliothèque</a></nav></div></header>`;
+  const fallback=`<header id="site-header"><div class="ce-fallback-header" aria-label="Navigation principale"><a class="ce-fallback-brand" href="${p}index.html">Contre-Évidence</a><nav><a href="${p}themes/argent.html">Patrimoine</a><a href="${p}parcours-vie-professionnelle.html">Vie professionnelle</a><a href="${p}hors-cadre.html">Hors cadre</a><a href="${p}bibliotheque.html?type=outil">Outils</a><a href="${p}bibliotheque.html">Bibliothèque</a></nav></div></header>`;
   html=html.replace('<header id="site-header"></header>',fallback); fs.writeFileSync(file,html,'utf8'); return true;
+}
+
+function ensureOrientationScript(rel) {
+  const file=path.join(ROOT,rel); let html=fs.readFileSync(file,'utf8');
+  if (!/<\/body>/i.test(html)) return false;
+  const nested=/^(articles|dossiers|themes)\//.test(rel); const p=nested?'../':'';
+  const tag=`<script src="${p}assets/orientation.js?v=20260810-1"></script>`;
+  if (/assets\/orientation\.js(?:\?[^"']*)?/i.test(html)) {
+    html=html.replace(/<script\s+src="(?:\.\.\/)?assets\/orientation\.js(?:\?[^"']*)?"\s*><\/script>/i,tag);
+  } else {
+    html=html.replace(/<\/body>/i,`${tag}</body>`);
+  }
+  fs.writeFileSync(file,html,'utf8'); return true;
 }
 
 const structural = [
@@ -169,7 +182,7 @@ function enrichStructural(rel) {
 
 for (const item of items) enrichSeo(item.h,item);
 for (const rel of structural) enrichStructural(rel);
-for (const rel of htmlFiles()) ensureFallbackHeader(rel);
+for (const rel of htmlFiles()) { ensureFallbackHeader(rel); ensureOrientationScript(rel); }
 
 const sitemapPaths = [...new Set([...structural, ...editorial.map(x=>x.h).filter(Boolean)])];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map(rel=>`  <url><loc>${rel==='index.html'?BASE:abs(rel)}</loc><lastmod>${gitDates(rel).modified}</lastmod></url>`).join('\n')}\n</urlset>\n`;
