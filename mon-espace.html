@@ -26,9 +26,9 @@
 <section class="fc-kpis" aria-label="Indicateurs principaux">
 <div class="fc-kpi"><span>Patrimoine net</span><strong data-fin-kpi="net">0 €</strong><small data-fin-kpi-note="net">Actifs moins dettes</small></div>
 <div class="fc-kpi"><span>Actifs bruts</span><strong data-fin-kpi="gross">0 €</strong><small data-fin-kpi-note="gross">Répartition des actifs</small></div>
-<div class="fc-kpi"><span>Capital financier</span><strong data-fin-kpi="financial">0 €</strong><small data-fin-kpi-note="financial">Actifs hors immobilier direct</small></div>
-<div class="fc-kpi"><span>Marge mensuelle</span><strong data-fin-kpi="margin">0 €</strong><small data-fin-kpi-note="margin">Après dépenses saisies</small></div>
-<div class="fc-kpi"><span>Réserve liquide</span><strong data-fin-kpi="reserve">—</strong><small data-fin-kpi-note="reserve">Renseignez vos dépenses</small></div>
+<div class="fc-kpi"><span>Capital hors immobilier direct</span><strong data-fin-kpi="financial">0 €</strong><small data-fin-kpi-note="financial">Liquidités, placements et autres actifs hors immobilier direct</small></div>
+<div class="fc-kpi"><span>Marge avant épargne</span><strong data-fin-kpi="margin">0 €</strong><small data-fin-kpi-note="margin">Revenus moins dépenses saisies</small></div>
+<div class="fc-kpi"><span>Réserve immédiate</span><strong data-fin-kpi="reserve">—</strong><small data-fin-kpi-note="reserve">Liquidités &amp; monétaire seulement</small></div>
 </section>
 
 <section class="fc-section" aria-labelledby="situation-title"><div class="fc-section-head"><div><div class="fc-eyebrow">1 · Ma situation</div><h2 id="situation-title">Les données de départ.</h2><p>La logique reprend celle d’un bon tableur personnel : les flux d’un côté, le bilan patrimonial de l’autre. Les calculs se mettent à jour dès qu’un montant change.</p></div></div>
@@ -78,9 +78,9 @@
 <section class="fc-section" aria-labelledby="objectifs-title"><div class="fc-section-head"><div><div class="fc-eyebrow">3 · Mes objectifs</div><h2 id="objectifs-title">Définir une cible sans la confondre avec une prévision.</h2><p>Vous pouvez viser une répartition par exposition économique. Une classe à 0 % reste un choix visible, pas une catégorie oubliée par le modèle.</p></div></div><div class="fc-grid-2">
 <div class="fc-card"><h3>Horizon &amp; hypothèses</h3><div class="fc-form-grid">
 <div class="fc-field"><label for="fin-year">Année cible</label><input id="fin-year" data-fin-key="goals.year" type="number" min="2026" max="2100" step="1"/></div>
-<div class="fc-field"><label for="fin-target-capital">Capital financier cible</label><input id="fin-target-capital" data-fin-key="goals.financialTarget" type="number" min="0" step="1000"/></div>
+<div class="fc-field"><label for="fin-target-capital">Capital d’investissement cible</label><input id="fin-target-capital" data-fin-key="goals.financialTarget" type="number" min="0" step="1000"/></div>
 <div class="fc-field"><label for="fin-monthly">Versement mensuel à tester</label><input id="fin-monthly" data-fin-key="goals.monthlyContribution" type="number" min="0" step="25"/><small>Si laissé à 0, la projection utilise l’épargne programmée du budget.</small></div>
-<div class="fc-field"><label for="fin-return">Rendement annuel à tester</label><input id="fin-return" data-fin-key="goals.returnRate" type="number" min="-20" max="30" step="0.1"/> <small>Hypothèse, pas prévision.</small></div>
+<div class="fc-field"><label for="fin-return">Rendement annuel à tester</label><input id="fin-return" data-fin-key="goals.returnRate" type="number" min="-20" max="30" step="0.1"/> <small>Hypothèse moyenne appliquée au capital d’investissement projeté, pas prévision.</small></div>
 <div class="fc-field"><label for="fin-inflation">Inflation annuelle à tester</label><input id="fin-inflation" data-fin-key="goals.inflation" type="number" min="-5" max="20" step="0.1"/></div>
 <div class="fc-field"><label for="fin-shock">Revenu conservé en scénario de choc</label><input id="fin-shock" data-fin-key="goals.incomeShock" type="number" min="0" max="150" step="5"/> <small>Ex. 60 = 60 % du revenu actuel.</small></div>
 </div></div>
@@ -111,8 +111,8 @@
 
 <section class="fc-section" aria-labelledby="laboratoire-title"><div class="fc-section-head"><div><div class="fc-eyebrow">4 · Mon laboratoire</div><h2 id="laboratoire-title">Tester avant de décider.</h2><p>Les simulateurs utilisent directement vos hypothèses ou vous permettent de stress tester chaque classe séparément.</p></div></div>
 <div class="fc-grid-3">
-<div class="fc-card dark"><div class="fc-eyebrow">Projection</div><h3>Où peut aller mon capital financier ?</h3><p>Capital actuel, versements, rendement et inflation sont projetés jusqu’à votre année cible.</p><div data-fin-projection></div></div>
-<div class="fc-card"><div class="fc-eyebrow">Résilience</div><h3>Que se passe-t-il si mon revenu baisse ?</h3><p>Le budget est recalculé avec le pourcentage de revenu choisi et la réserve liquide absorbe un éventuel déficit.</p><div data-fin-stress></div></div>
+<div class="fc-card dark"><div class="fc-eyebrow">Projection</div><h3>Où peut aller mon capital investi ?</h3><p>La projection part des actifs d’investissement hors immobilier direct, liquidités et objets de collection. Le rendement saisi représente une hypothèse moyenne appliquée à cet ensemble.</p><div data-fin-projection></div></div>
+<div class="fc-card"><div class="fc-eyebrow">Résilience</div><h3>Que se passe-t-il si mon revenu baisse ?</h3><p>Le budget est recalculé avec le pourcentage de revenu choisi et la réserve immédiate absorbe un éventuel déficit.</p><div data-fin-stress></div></div>
 <div class="fc-card"><div class="fc-eyebrow">Allocation</div><h3>Quelle distance entre aujourd’hui et ma cible ?</h3><p>Le calcul traduit les écarts de pourcentage en montants théoriques à patrimoine brut constant.</p><div class="fc-allocation-gap" data-fin-gap></div></div>
 </div>
 <div class="fc-card" style="margin-top:1rem"><div class="fc-eyebrow">Simulateurs spécialisés</div><h3>Passer du cockpit à une décision précise.</h3><div class="fc-lab-links"><a class="fc-lab-link" href="simulateur-allocation-stress-test.html"><strong>Stress tester chaque classe d’actifs</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-prix-attendre.html"><strong>Combien me coûte le fait d’attendre ?</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-capacite-emprunt.html"><strong>Quelle capacité d’emprunt puis-je tester ?</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-acheter-ou-louer.html"><strong>Acheter ou louer : comparer plusieurs scénarios</strong><span>→</span></a><a class="fc-lab-link" href="simulateur-rembourser-ou-investir.html"><strong>Rembourser un crédit ou investir ?</strong><span>→</span></a><a class="fc-lab-link" href="dossiers/classes-actifs-allocation-patrimoine.html"><strong>Comprendre le rôle de chaque classe</strong><span>→</span></a></div></div>
@@ -135,6 +135,6 @@
 <footer><div class="container foot"><span>© <span data-year></span> Contre-évidence</span><span><a href="methode-sources.html">Méthode & sources</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="mentions.html">Mentions</a></span></div></footer>
 <script src="assets/follow.js?v=20260809-3"></script>
 <script src="assets/personal-space.js?v=20260810-2"></script>
-<script src="assets/finance-cockpit.js?v=20260810-2"></script>
+<script src="assets/finance-cockpit.js?v=20260810-3"></script>
 <script src="assets/navigation-v3.js?v=20260810-3"></script><script src="assets/orientation.js?v=20260810-8"></script><script src="assets/longform.js?v=20260810-2"></script><script src="assets/finance-architecture.js?v=20260810-1"></script></body>
 </html>
