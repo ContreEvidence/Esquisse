@@ -85,13 +85,17 @@ if(/proposer une allocation/i.test(toolsCatalog))errors.push('tools-catalog.js: 
 const inheritance=read('outil-repartir-grosse-somme.html');
 if(inheritance&&!/data-ce-mobile-allocation=["']1["']/.test(inheritance))warnings.push('Outil grosse somme: adaptation mobile en cartes non injectée.');
 const cockpit=read('mon-espace.html');
-for(const asset of ['finance-cockpit.css','finance-cockpit.js','finance-architecture.css','finance-architecture.js','cockpit-progressive.css','cockpit-progressive.js']){
+for(const asset of ['finance-cockpit.css','finance-cockpit.js','finance-architecture.css','finance-architecture.js','cockpit-progressive.css','cockpit-progressive.js','property-cockpit.css','property-cockpit.js']){
   const version=coreVersion(cockpit,asset);
   if(version===null)errors.push(`Mon espace: ${asset} absent.`);
   else if(version!==SITE_VERSION)errors.push(`Mon espace: ${asset} version ${version||'sans version'} au lieu de ${SITE_VERSION}.`);
 }
+const propertyJs=read('assets/property-cockpit.js');
+try{if(propertyJs)new vm.Script(propertyJs,{filename:'assets/property-cockpit.js'});else errors.push('property-cockpit.js: module absent.');}catch(err){errors.push(`property-cockpit.js: syntaxe invalide (${err.message}).`);}
+if(propertyJs&&!/data-property-report/.test(propertyJs))errors.push('property-cockpit.js: synchronisation explicite vers les totaux absente.');
+if(propertyJs&&!/s\.properties=properties/.test(propertyJs))errors.push('property-cockpit.js: stockage local des biens détaillés non détecté.');
 
-const report=`# Audit structurel et UX automatique — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\nVersion front attendue : ${SITE_VERSION}\n\n## Erreurs (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Périmètre\n- canonical unique ;\n- header réellement consolidé ;\n- versions cohérentes des couches front ;\n- schéma principal Article/WebApplication unique sur les contenus de référence ;\n- navigation, UX, lecture longue, suivi et Mon espace sur les contenus de référence ;\n- support des fiches métiers dans les chemins locaux ;\n- mouvement réduit ;\n- retrait de l’ancien système de menus ;\n- cockpit en divulgation progressive et composants patrimoniaux versionnés ensemble ;\n- adaptation mobile du grand tableau d’allocation ;\n- vocabulaire non prescriptif des outils patrimoniaux.\n`;
+const report=`# Audit structurel et UX automatique — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\nVersion front attendue : ${SITE_VERSION}\n\n## Erreurs (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Périmètre\n- canonical unique ;\n- header réellement consolidé ;\n- versions cohérentes des couches front ;\n- schéma principal Article/WebApplication unique sur les contenus de référence ;\n- navigation, UX, lecture longue, suivi et Mon espace sur les contenus de référence ;\n- support des fiches métiers dans les chemins locaux ;\n- mouvement réduit ;\n- retrait de l’ancien système de menus ;\n- cockpit en divulgation progressive et composants patrimoniaux versionnés ensemble ;\n- détail immobilier local, calcul par bien et synchronisation explicite vers les totaux ;\n- adaptation mobile du grand tableau d’allocation ;\n- vocabulaire non prescriptif des outils patrimoniaux.\n`;
 fs.mkdirSync(path.join(ROOT,'editorial'),{recursive:true});
 fs.writeFileSync(path.join(ROOT,'editorial/audit-structure-site.md'),report,'utf8');
 console.log(report);
