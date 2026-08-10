@@ -96,9 +96,14 @@ changed += patch('assets/tools-catalog.js', code =>
   code.replace('proposer une allocation et tester concentration, liquidité et stress.', 'saisir et tester votre propre allocation, puis observer concentration, liquidité et stress.')
 ) ? 1 : 0;
 
-changed += patch('outil-repartir-grosse-somme.html', html =>
-  html.replace(/proposer une allocation/gi, 'saisir et tester votre propre allocation')
-) ? 1 : 0;
+changed += patch('outil-repartir-grosse-somme.html', html => {
+  html = html.replace(/proposer une allocation/gi, 'saisir et tester votre propre allocation');
+  html = html.replace("['stocks','Actions individuelles / concentrées'],", '');
+  html = html.replace("['bonds','Obligations / fonds obligataires'],", "['bonds','Obligations / fonds obligataires'],['privateCredit','Crédit privé / dette non cotée'],");
+  html = html.replace("['listedProperty','Foncières cotées'],", "['listedProperty','Foncières cotées / REIT'],['privateEquity','Private equity / entreprise non cotée'],['infrastructure','Infrastructures'],");
+  html = html.replace("['gold','Or'],['other','Autres actifs']", "['gold','Or & métaux précieux'],['commodities','Matières premières'],['crypto','Crypto-actifs'],['other','Autres actifs']");
+  return html;
+}) ? 1 : 0;
 
 function htmlFiles(dir = ROOT, prefix = '') {
   const out = [];
