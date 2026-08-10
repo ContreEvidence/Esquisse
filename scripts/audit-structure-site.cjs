@@ -35,6 +35,16 @@ function coreVersion(html,asset){
   const m=html.match(new RegExp(`assets/${esc}(?:\\?v=([^\"']+))?`, 'i'));
   return m?m[1]||'':null;
 }
+function mainStructuredTypes(html){
+  const types=[];
+  for(const match of html.matchAll(/<script\s+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)){
+    const raw=match[1];
+    for(const t of raw.matchAll(/["']@type["']\s*:\s*["']([^"']+)["']/g)){
+      if(['Article','WebApplication'].includes(t[1]))types.push(t[1]);
+    }
+  }
+  return types;
+}
 
 for(const rel of htmlFiles()){
   const html=read(rel);
@@ -56,6 +66,8 @@ for(const rel of htmlFiles()){
     if(!/assets\/personal-space\.js\?v=/i.test(html))warnings.push(`${rel}: Mon espace non injecté.`);
     if(!/assets\/follow\.js\?v=/i.test(html))warnings.push(`${rel}: module Suivre non injecté.`);
     if(!/assets\/longform\.js\?v=/i.test(html))warnings.push(`${rel}: couche lecture longue non injectée.`);
+    const mainTypes=mainStructuredTypes(html);
+    if(mainTypes.length>1)errors.push(`${rel}: plusieurs schémas principaux Article/WebApplication détectés (${mainTypes.join(', ')}).`);
   }
 }
 
@@ -70,8 +82,16 @@ const navCss=read('assets/navigation.css');
 if(/\.nav-trigger\b|\.dropdown-panel\b/.test(navCss))warnings.push('navigation.css: ancien système de menus encore présent.');
 const toolsCatalog=read('assets/tools-catalog.js');
 if(/proposer une allocation/i.test(toolsCatalog))errors.push('tools-catalog.js: vocabulaire « proposer une allocation » encore présent.');
+const inheritance=read('outil-repartir-grosse-somme.html');
+if(inheritance&&!/data-ce-mobile-allocation=["']1["']/.test(inheritance))warnings.push('Outil grosse somme: adaptation mobile en cartes non injectée.');
+const cockpit=read('mon-espace.html');
+for(const asset of ['finance-cockpit.css','finance-cockpit.js','finance-architecture.css','finance-architecture.js','cockpit-progressive.css','cockpit-progressive.js']){
+  const version=coreVersion(cockpit,asset);
+  if(version===null)errors.push(`Mon espace: ${asset} absent.`);
+  else if(version!==SITE_VERSION)errors.push(`Mon espace: ${asset} version ${version||'sans version'} au lieu de ${SITE_VERSION}.`);
+}
 
-const report=`# Audit structurel et UX automatique — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\nVersion front attendue : ${SITE_VERSION}\n\n## Erreurs (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Périmètre\n- canonical unique ;\n- header réellement consolidé ;\n- versions cohérentes des couches front ;\n- navigation, UX, lecture longue, suivi et Mon espace sur les contenus de référence ;\n- support des fiches métiers dans les chemins locaux ;\n- mouvement réduit ;\n- retrait de l’ancien système de menus ;\n- vocabulaire non prescriptif des outils patrimoniaux.\n`;
+const report=`# Audit structurel et UX automatique — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\nVersion front attendue : ${SITE_VERSION}\n\n## Erreurs (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Périmètre\n- canonical unique ;\n- header réellement consolidé ;\n- versions cohérentes des couches front ;\n- schéma principal Article/WebApplication unique sur les contenus de référence ;\n- navigation, UX, lecture longue, suivi et Mon espace sur les contenus de référence ;\n- support des fiches métiers dans les chemins locaux ;\n- mouvement réduit ;\n- retrait de l’ancien système de menus ;\n- cockpit en divulgation progressive et composants patrimoniaux versionnés ensemble ;\n- adaptation mobile du grand tableau d’allocation ;\n- vocabulaire non prescriptif des outils patrimoniaux.\n`;
 fs.mkdirSync(path.join(ROOT,'editorial'),{recursive:true});
 fs.writeFileSync(path.join(ROOT,'editorial/audit-structure-site.md'),report,'utf8');
 console.log(report);
