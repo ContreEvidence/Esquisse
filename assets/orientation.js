@@ -7,7 +7,6 @@
     const prefix = nested ? '../' : '';
     const toolsHref = `${prefix}bibliotheque.html?type=outil`;
 
-    /* Libellés éditoriaux courts : éviter les intitulés administratifs dans les parcours. */
     const renameText = (root = document.body) => {
       if (!root || root.dataset.ceLabelsRenamed) return;
       const replacements = new Map([
@@ -25,6 +24,14 @@
       root.dataset.ceLabelsRenamed = '1';
     };
     renameText();
+
+    /* Sur Patrimoine, les trois chemins puis les quatre rubriques passent avant le cockpit avancé. */
+    const foundation = document.querySelector('.patrimoine-hub .foundation');
+    const pillars = document.querySelector('.patrimoine-hub .pillar-grid');
+    if (foundation && pillars && !foundation.dataset.ceReordered) {
+      pillars.insertAdjacentElement('afterend', foundation);
+      foundation.dataset.ceReordered = '1';
+    }
 
     const flatLinks = document.querySelector('.ce-flat-links');
     if (flatLinks && !flatLinks.querySelector('[data-key="outils"]')) {
