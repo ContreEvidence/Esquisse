@@ -191,12 +191,13 @@
   }
 
   function bindActions(){
-    document.querySelector('[data-fin-snapshot]')?.addEventListener('click',saveSnapshot);
-    document.querySelector('[data-fin-example]')?.addEventListener('click',loadExample);
-    document.querySelector('[data-fin-clear]')?.addEventListener('click',clearFinance);
-    document.querySelector('[data-fin-export]')?.addEventListener('click',exportFinance);
-    const importBtn=document.querySelector('[data-fin-import]'),input=document.querySelector('[data-fin-import-file]');
-    importBtn?.addEventListener('click',()=>input?.click());input?.addEventListener('change',()=>{importFinance(input.files?.[0]);input.value='';});
+    document.querySelectorAll('[data-fin-snapshot]').forEach(btn=>btn.addEventListener('click',saveSnapshot));
+    document.querySelectorAll('[data-fin-example]').forEach(btn=>btn.addEventListener('click',loadExample));
+    document.querySelectorAll('[data-fin-clear]').forEach(btn=>btn.addEventListener('click',clearFinance));
+    document.querySelectorAll('[data-fin-export]').forEach(btn=>btn.addEventListener('click',exportFinance));
+    const input=document.querySelector('[data-fin-import-file]');
+    document.querySelectorAll('[data-fin-import]').forEach(btn=>btn.addEventListener('click',()=>input?.click()));
+    input?.addEventListener('change',()=>{importFinance(input.files?.[0]);input.value='';});
   }
 
   function run(){if(!document.body.classList.contains('space-page'))return;bindFields();bindActions();render(read());}
