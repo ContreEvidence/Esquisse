@@ -7,11 +7,13 @@ on:
       - 'articles/**'
       - 'dossiers/**'
       - 'themes/**'
+      - 'fiches-metiers/**'
       - '*.html'
       - 'outil*.html'
       - 'simulateur*.html'
       - 'assets/library-catalog.js'
       - 'assets/library-daily-money.js'
+      - 'assets/library-work-foundations.js'
       - 'assets/tools-catalog.js'
       - 'assets/editorial-data.json'
       - 'assets/follow.js'
@@ -20,6 +22,7 @@ on:
       - 'assets/brand.css'
       - 'assets/library.js'
       - 'assets/orientation.js'
+      - 'assets/navigation-v3.js'
       - 'assets/ux-retention.css'
       - 'assets/longform.js'
       - 'assets/personal-space.css'
@@ -146,7 +149,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- '*.html' articles dossiers themes sitemap.xml 'rss*.xml' rss-feeds.json publications/a-publier.md \
+          git add -A -- '*.html' articles dossiers themes fiches-metiers sitemap.xml 'rss*.xml' rss-feeds.json publications/a-publier.md \
             assets/editorial-data.json assets/search-index.js editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/data-freshness.md
           if [ -f publications/social-package.json ]; then git add publications/social-package.json; fi
           if [ -f publications/social-auth-status.json ]; then git add publications/social-auth-status.json; fi
