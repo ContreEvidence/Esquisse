@@ -1,12 +1,12 @@
 # Audit technique automatique — Contre-Évidence
 
-Généré le 2026-08-10T20:01:57.610Z
+Généré le 2026-08-10T20:05:19.851Z
 
 ## Erreurs critiques (0)
 - Aucune.
 
-## Avertissements (0)
-- Aucun.
+## Avertissements (1)
+- dossiers/rembourser-credit-ou-investir.html: bloc source sans lien externe détecté
 
 ## Contrôles validés
 - Aucune erreur critique détectée dans les liens, catalogues, canonicals de référence et sitemap.

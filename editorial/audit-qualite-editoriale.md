@@ -1,12 +1,11 @@
 # Audit qualité éditoriale — Contre-Évidence
 
-Généré le 2026-08-10T20:01:57.920Z
+Généré le 2026-08-10T20:05:20.155Z
 
 ## Erreurs (0)
 - Aucune.
 
-## Avertissements (2)
-- dossiers/rembourser-credit-ou-investir.html: sujet sensible sans bloc de source externe détecté.
+## Avertissements (1)
 - dossiers/vendre-ou-conserver-bien-immobilier.html: injonction financière potentiellement personnalisante à relire (« il faut vendre »).
 
 ## Proximités éditoriales à revoir (0)
