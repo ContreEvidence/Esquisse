@@ -1,4 +1,4 @@
-name: Preparer et diffuser Contre-Evidence sur les reseaux
+name: Preparer les contenus sociaux Contre-Evidence
 
 on:
   workflow_run:
@@ -20,7 +20,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: diffusion-sociale
+  group: preparation-sociale
   cancel-in-progress: true
 
 jobs:
@@ -90,6 +90,7 @@ jobs:
           fi
 
       - name: Envoyer vers les comptes sociaux autorises
+        if: github.event_name == 'workflow_dispatch'
         env:
           META_PAGE_NAME: Contre-Évidence
           META_USER_ACCESS_TOKEN: ${{ secrets.META_USER_ACCESS_TOKEN }}
@@ -106,6 +107,7 @@ jobs:
         run: node scripts/publish-social.cjs
 
       - name: Enregistrer l anti-doublon social
+        if: github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
           if git diff --quiet -- publications/social-state.json; then
@@ -119,4 +121,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Ce pipeline ne construit jamais le site. Une erreur Sharp, ffmpeg, OAuth ou plateforme sociale ne peut donc plus bloquer la publication web.
+# Après une publication du site, ce workflow prépare le paquet social mais ne publie rien automatiquement.
+# Une diffusion réelle exige désormais un déclenchement manuel explicite du workflow.
