@@ -33,6 +33,8 @@ on:
       - 'assets/finance-architecture.js'
       - 'assets/cockpit-progressive.css'
       - 'assets/cockpit-progressive.js'
+      - 'assets/property-cockpit.css'
+      - 'assets/property-cockpit.js'
       - 'assets/analytics-config.json'
       - 'assets/analytics-loader.js'
       - 'scripts/site-version.cjs'
@@ -100,7 +102,7 @@ jobs:
         run: node scripts/hardening-pass.cjs
 
       - name: Vérifier la syntaxe des moteurs front
-        run: node --check assets/personal-space.js && node --check assets/finance-cockpit.js && node --check assets/finance-architecture.js && node --check assets/cockpit-progressive.js && node --check assets/follow.js && node --check assets/navigation-v3.js && node --check assets/longform.js
+        run: node --check assets/personal-space.js && node --check assets/finance-cockpit.js && node --check assets/finance-architecture.js && node --check assets/cockpit-progressive.js && node --check assets/property-cockpit.js && node --check assets/follow.js && node --check assets/navigation-v3.js && node --check assets/longform.js
 
       - name: Vérifier les garde-fous juridiques et de collecte
         run: node scripts/audit-legal-guardrails.cjs
