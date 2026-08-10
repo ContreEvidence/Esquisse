@@ -1,0 +1,31 @@
+# Audit du modèle patrimonial — Contre-Évidence
+
+Généré le 2026-08-10T19:27:50.654Z
+
+## Erreurs (0)
+- Aucune.
+
+## Avertissements (0)
+- Aucun.
+
+## Référence actuelle
+- home
+- rental
+- commercialProperty
+- otherProperty
+- cash
+- euroFund
+- bonds
+- privateCredit
+- equities
+- scpi
+- listedProperty
+- privateEquity
+- infrastructure
+- gold
+- commodities
+- crypto
+- other
+
+## Règle
+Les outils peuvent agréger certaines expositions pour simplifier une décision, mais ils ne doivent pas inventer une classe économique différente uniquement parce qu’un actif est concentré, détenu dans une enveloppe différente ou présenté sous un autre nom commercial.

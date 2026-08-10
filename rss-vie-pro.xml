@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Vie professionnelle.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 15:48:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 19:27:47 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss-vie-pro.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,126 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Commercial B2B : transformer un besoin en décision d’achat rentable</title>
+      <link>https://contreevidence.github.io/Esquisse/fiches-metiers/commercial-b2b.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/fiches-metiers/commercial-b2b.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:58:39 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiche métier</category>
+      <description>Prospection, qualification, vente, négociation, marge, cycle de décision, CRM, preuves et transfert de compétences vers d’autres fonctions.</description>
+    </item>
+    <item>
+      <title>Chargé de recrutement et RH : réduire l’incertitude sans réduire les personnes à un CV</title>
+      <link>https://contreevidence.github.io/Esquisse/fiches-metiers/charge-recrutement-rh.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/fiches-metiers/charge-recrutement-rh.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:58:02 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiche métier</category>
+      <description>Besoin de recrutement, tri, entretien, intégration, droit, données et relations internes : comprendre les décisions et limites du rôle.</description>
+    </item>
+    <item>
+      <title>Responsable qualité : transformer des exigences en système de travail fiable</title>
+      <link>https://contreevidence.github.io/Esquisse/fiches-metiers/responsable-qualite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/fiches-metiers/responsable-qualite.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:57:21 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiche métier</category>
+      <description>Processus, conformité, audit, amélioration, preuves, coopération avec les opérations et responsabilité : comprendre le métier au-delà des procédures.</description>
+    </item>
+    <item>
+      <title>Manager de proximité : coordonner le travail sans devenir le goulot d’étranglement</title>
+      <link>https://contreevidence.github.io/Esquisse/fiches-metiers/manager-proximite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/fiches-metiers/manager-proximite.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:56:49 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiche métier</category>
+      <description>Finalité, arbitrages quotidiens, compétences, preuves, contraintes, responsabilités et évolutions d’un rôle d’encadrement de proximité.</description>
+    </item>
+    <item>
+      <title>Fiches métiers : comprendre le travail réel derrière un intitulé</title>
+      <link>https://contreevidence.github.io/Esquisse/fiches-metiers.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/fiches-metiers.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:56:15 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Fiches métiers</category>
+      <description>Lire un métier par sa finalité, ses activités, ses décisions, ses compétences, ses preuves, ses contraintes, ses responsabilités, ses portes d’entrée et ses évolutions.</description>
+    </item>
+    <item>
+      <title>Santé au travail et équilibre de vie : le coût d’un emploi ne se résume pas au salaire</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/sante-travail-equilibre-vie-pro-perso.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/sante-travail-equilibre-vie-pro-perso.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:55:32 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Santé &amp; conditions de travail</category>
+      <description>Risques physiques, charge, horaires, récupération, risques psychosociaux, trajet, organisation et vie personnelle : évaluer la soutenabilité réelle d’un travail.</description>
+    </item>
+    <item>
+      <title>Préjugés au travail : ce qui est réellement évalué n’est pas toujours ce que l’on croit</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/prejuges-biais-monde-professionnel.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/prejuges-biais-monde-professionnel.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:54:31 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Perceptions &amp; biais</category>
+      <description>Âge, diplôme, parcours, apparence, statut, ancienneté et stéréotypes : distinguer biais de perception, critères professionnels légitimes et discrimination interdite.</description>
+    </item>
+    <item>
+      <title>Erreur, insuffisance, faute : qui est responsable de quoi au travail ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/regles-responsabilites-fautes-travail.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/regles-responsabilites-fautes-travail.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:53:33 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Droit &amp; responsabilités</category>
+      <description>Distinguer erreur, insuffisance professionnelle, manquement disciplinaire, faute simple, grave ou lourde, et replacer les obligations du salarié, du manager et de l’employeur dans leur cadre.</description>
+    </item>
+    <item>
+      <title>Management, autorité et conflits : choisir le bon mode de fonctionnement</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/management-relations-conflits.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/management-relations-conflits.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:52:33 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Management &amp; relations</category>
+      <description>Comparer direction, participation, délégation, autonomie, contrôle et feedback ; distinguer désaccord, tension et conflit puis traiter le problème au bon niveau.</description>
+    </item>
+    <item>
+      <title>Comment apprend-on réellement un métier et une compétence ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/apprendre-developper-competences.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/apprendre-developper-competences.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:51:28 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Apprentissage</category>
+      <description>Formation formelle, pratique, observation, tutorat, autoformation, feedback, mise en situation et répétition : choisir le bon mode d’apprentissage selon la compétence visée.</description>
+    </item>
+    <item>
+      <title>Métier, poste, fonction, service : comprendre qui fait quoi dans une entreprise</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/metiers-fonctions-organisation-entreprise.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/metiers-fonctions-organisation-entreprise.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:50:36 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Comprendre le travail</category>
+      <description>Lire une organisation par ses finalités, ses flux et ses responsabilités : direction, opérations, commercial, finance, RH, qualité, achats, logistique, numérique et fonctions support.</description>
+    </item>
+    <item>
+      <title>Compétences, qualification, diplôme et employabilité : remettre chaque notion à sa place</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/competences-qualification-employabilite.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/competences-qualification-employabilite.html</guid>
+      <pubDate>Mon, 10 Aug 2026 15:49:43 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Comprendre le travail</category>
+      <description>Distinguer connaissances, savoir-faire, comportements professionnels, qualification, certification, diplôme, expérience, preuves et employabilité avant de choisir une formation ou un poste.</description>
+    </item>
     <item>
       <title>Calculer le coût réel d’une formation</title>
       <link>https://contreevidence.github.io/Esquisse/simulateur-cout-formation.html</link>

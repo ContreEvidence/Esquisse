@@ -47,7 +47,8 @@ function domainInfo(d='') {
 function stripTags(s='') { return String(s).replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim(); }
 function replaceMeta(html, regex) { return html.replace(regex, ''); }
 function ensureCanonical(html, url) {
-  if (/<link\s+rel="canonical"[^>]*>/i.test(html)) return html.replace(/<link\s+rel="canonical"[^>]*>/i, `<link rel="canonical" href="${url}"/>`);
+  const canonical = /<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi;
+  html = html.replace(canonical, '');
   return html.replace(/<\/head>/i, `<link rel="canonical" href="${url}"/></head>`);
 }
 function ensureDescription(html, desc) {

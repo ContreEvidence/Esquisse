@@ -3,7 +3,7 @@
 
   const KEY = 'ce.space.v1';
   const VERSION = 1;
-  const rootPath = /\/(articles|themes|dossiers)\//.test(location.pathname) ? '../' : '';
+  const rootPath = /\/(articles|themes|dossiers|fiches-metiers)\//.test(location.pathname) ? '../' : '';
   const spaceHref = `${rootPath}mon-espace.html`;
   const now = () => new Date().toISOString();
   const uid = (prefix='id') => `${prefix}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2,8)}`;

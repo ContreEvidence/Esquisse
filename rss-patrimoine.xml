@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Patrimoine.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 15:48:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 19:27:47 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss-patrimoine.xml" rel="self" type="application/rss+xml"/>
@@ -222,7 +222,7 @@
       <category>Outil</category>
       <category>Patrimoine</category>
       <category>Héritage &amp; grosse somme</category>
-      <description>Isoler le capital réellement disponible, mesurer son effet sur le patrimoine existant, proposer une allocation et tester concentration, liquidité et stress.</description>
+      <description>Isoler le capital réellement disponible, mesurer son effet sur le patrimoine existant, saisir et tester votre propre allocation, puis observer concentration, liquidité et stress.</description>
     </item>
     <item>
       <title>Tester un investissement locatif</title>

@@ -43,17 +43,18 @@
   }
 
   function buildArticleBodyLongform() {
-    if (!document.body.classList.contains('article-body')) return;
+    const prose = document.querySelector('main article.prose');
+    if (!document.body.classList.contains('article-body') && !prose) return;
     const main = document.querySelector('main');
     const hero = main?.querySelector(':scope > .hero, :scope > .article-hero');
     if (!main || !hero || main.dataset.ceLongform === '1') return;
     main.dataset.ceLongform = '1';
 
     const sections = [...main.querySelectorAll(':scope > section')].filter(s => s !== hero && !s.classList.contains('ce-related'));
-    const h2s = sections.map(s => s.querySelector('h2')).filter(Boolean);
+    const h2s = prose ? [...prose.querySelectorAll(':scope > h2')] : sections.map(s => s.querySelector('h2')).filter(Boolean);
     if (h2s.length < 4) return;
 
-    const readingText = sections.map(s => s.textContent || '').join(' ');
+    const readingText = prose ? (prose.textContent || '') : sections.map(s => s.textContent || '').join(' ');
     const words = readingText.trim().split(/\s+/).filter(Boolean).length;
     const minutes = Math.max(1, Math.ceil(words / 220));
     const heroContainer = hero.querySelector('.container');

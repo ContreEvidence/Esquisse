@@ -4,6 +4,7 @@ const vm = require('vm');
 const { execFileSync } = require('child_process');
 
 const ROOT = path.resolve(__dirname, '..');
+const SITE_VERSION = require('./site-version.cjs');
 const BASE_URL = 'https://contreevidence.github.io/Esquisse/';
 const MAIN_FEED_NAME = 'rss.xml';
 const FEED_URL = `${BASE_URL}${MAIN_FEED_NAME}`;
@@ -107,7 +108,7 @@ function ensureFollowScript(relativePath) {
   if (!/<\/body>/i.test(html) || /assets\/follow\.js/i.test(html)) return false;
   let src = path.relative(path.dirname(relativePath), 'assets/follow.js').replace(/\\/g, '/');
   if (!src.startsWith('.')) src = `./${src}`;
-  const tag = `<script src="${src}?v=20260809-1"></script>`;
+  const tag = `<script src="${src}?v=${SITE_VERSION}"></script>`;
   html = html.replace(/<\/body>/i, `${tag}\n</body>`);
   fs.writeFileSync(fullPath, html, 'utf8');
   return true;
