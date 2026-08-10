@@ -15,8 +15,8 @@ for(const rel of htmlFiles()){
   if(/assets\/personal-space\.js(?:\?[^"']*)?/i.test(html)) html=html.replace(/<script\s+src="(?:\.\.\/)?assets\/personal-space\.js(?:\?[^"']*)?"\s*><\/script>/i,js); else html=html.replace(/<\/body>/i,`${js}</body>`);
   if(/class="ce-fallback-header"/i.test(html)&&!/<a[^>]+data-ce-space-link=/i.test(html)) html=html.replace(/(<div class="ce-fallback-header"[\s\S]*?<nav>[\s\S]*?)(<\/nav>)/i,`$1<a href="${p}mon-espace.html" data-ce-space-link="1">Mon espace</a>$2`);
   if(rel==='mon-espace.html'){
-    const architectureCss='<link rel="stylesheet" href="assets/finance-architecture.css?v=20260810-1"/>';
-    const architectureJs='<script src="assets/finance-architecture.js?v=20260810-1"></script>';
+    const architectureCss='<link rel="stylesheet" href="assets/finance-architecture.css?v=20260810-2"/>';
+    const architectureJs='<script src="assets/finance-architecture.js?v=20260810-2"></script>';
     html=html.replace(/<link\s+rel="stylesheet"\s+href="assets\/finance-architecture\.css(?:\?[^"']*)?"\s*\/?>/i,'');
     html=html.replace(/<script\s+src="assets\/finance-architecture\.js(?:\?[^"']*)?"\s*><\/script>/i,'');
     html=html.replace(/<\/head>/i,`${architectureCss}</head>`);
@@ -24,4 +24,4 @@ for(const rel of htmlFiles()){
   }
   fs.writeFileSync(file,html,'utf8');count++;
 }
-console.log(`Mon espace intégré à ${count} pages ; vue fonctionnelle du cockpit stabilisée.`);
+console.log(`Mon espace intégré à ${count} pages ; vues globale, fonctionnelle et hors résidence principale stabilisées.`);
