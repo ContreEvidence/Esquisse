@@ -48,6 +48,7 @@ on:
       - 'scripts/audit-structure-site.cjs'
       - 'scripts/audit-asset-model.cjs'
       - 'scripts/audit-editorial-balance.cjs'
+      - 'scripts/audit-editorial-quality.cjs'
       - 'scripts/audit-legal-guardrails.cjs'
       - 'scripts/normalize-editorial-data.cjs'
       - 'scripts/check-editorial-data-freshness.cjs'
@@ -131,13 +132,16 @@ jobs:
       - name: Auditer l équilibre éditorial
         run: node scripts/audit-editorial-balance.cjs
 
+      - name: Auditer la qualité éditoriale et les recouvrements
+        run: node scripts/audit-editorial-quality.cjs
+
       - name: Publier immédiatement la version consolidée du site
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A -- '*.html' articles dossiers themes fiches-metiers sitemap.xml 'rss*.xml' rss-feeds.json \
-            assets scripts editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/audit-structure-site.md editorial/audit-modele-patrimonial.md editorial/audit-equilibre-editorial.md editorial/audit-juridique-collecte.md editorial/data-freshness.md
+            assets scripts editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/audit-structure-site.md editorial/audit-modele-patrimonial.md editorial/audit-equilibre-editorial.md editorial/audit-qualite-editoriale.md editorial/audit-juridique-collecte.md editorial/data-freshness.md
           if git diff --cached --quiet; then
             echo "Aucune modification generee."
           else
