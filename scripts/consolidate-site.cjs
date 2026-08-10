@@ -145,7 +145,7 @@ function ensureOrientationScript(rel) {
   const file=path.join(ROOT,rel); let html=fs.readFileSync(file,'utf8');
   if (!/<\/body>/i.test(html)) return false;
   const nested=/^(articles|dossiers|themes)\//.test(rel); const p=nested?'../':'';
-  const tag=`<script src="${p}assets/orientation.js?v=20260810-1"></script>`;
+  const tag=`<script src="${p}assets/orientation.js?v=20260810-4"></script>`;
   if (/assets\/orientation\.js(?:\?[^"']*)?/i.test(html)) {
     html=html.replace(/<script\s+src="(?:\.\.\/)?assets\/orientation\.js(?:\?[^"']*)?"\s*><\/script>/i,tag);
   } else {
