@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 9 août 2026 à 21:57.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 09:47.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -8,7 +8,93 @@ Rien n’est envoyé automatiquement aux plateformes tant qu’aucun compte de p
 
 ---
 
-## 1. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+## 1. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html  
+**Publication du contenu :** Mon, 10 Aug 2026 07:45:45 GMT  
+
+### Facebook — post avec lien
+
+```text
+Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+
+Rendre visible le coût possible de l’inaction : dépenses récurrentes, inflation, retard d’investissement, frais et grosses décisions laissées sans contrôle.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. « Je verrai ça plus tard » est déjà une décision
+
+SLIDE 4 — 2. Les petites dépenses continuent toutes seules
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+
+Rendre visible le coût possible de l’inaction : dépenses récurrentes, inflation, retard d’investissement, frais et grosses décisions laissées sans contrôle.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Rendre visible le coût possible de l’inaction : dépenses récurrentes, inflation, retard d’investissement, frais et grosses décisions laissées sans contrôle.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+
+PROBLÈME — Rendre visible le coût possible de l’inaction : dépenses récurrentes, inflation, retard d’investissement, frais et grosses décisions laissées sans contrôle.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+---
+
+## 2. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html  
@@ -94,7 +180,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/i
 
 ---
 
-## 2. Gestion pilotée : comment comparer les performances sans se faire piéger ?
+## 3. Gestion pilotée : comment comparer les performances sans se faire piéger ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html  
@@ -180,7 +266,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/g
 
 ---
 
-## 3. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
+## 4. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html  
@@ -289,7 +375,7 @@ Lire le dossier complet : https://contreevidence.github.io/Esquisse/dossiers/dep
 
 ---
 
-## 4. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+## 5. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html  
@@ -383,7 +469,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 5. Comparer rendements, frais et intérêts composés
+## 6. Comparer rendements, frais et intérêts composés
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html  
@@ -469,7 +555,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 6. Acheter ou louer : tester plusieurs scénarios
+## 7. Acheter ou louer : tester plusieurs scénarios
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html  
@@ -555,7 +641,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 7. Vendre ou conserver un bien immobilier ?
+## 8. Vendre ou conserver un bien immobilier ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html  
@@ -641,7 +727,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 8. Rembourser son crédit ou investir ?
+## 9. Rembourser son crédit ou investir ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html  
@@ -727,7 +813,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 9. Structurer l’allocation d’un héritage ou d’une grosse somme
+## 10. Structurer l’allocation d’un héritage ou d’une grosse somme
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html  
@@ -813,7 +899,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-repa
 
 ---
 
-## 10. Tester un investissement locatif
+## 11. Tester un investissement locatif
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html  
@@ -899,7 +985,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 11. Tester son allocation patrimoniale
+## 12. Tester son allocation patrimoniale
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html  
@@ -979,92 +1065,6 @@ CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
 Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
----
-
-## 12. Tester sa réserve de sécurité
-
-**Type :** Outil · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:32:13 GMT  
-
-### Facebook — post avec lien
-
-```text
-Tester sa réserve de sécurité
-
-Mesurer la couverture actuelle puis saisir les durées de réserve que vous voulez réellement tester.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Tester sa réserve de sécurité
-
-SLIDE 2 — Votre situation
-
-SLIDE 3 — Résultats
-
-SLIDE 4 — Le nombre de mois doit être justifié par votre situation, pas copié d’une règle…
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Tester sa réserve de sécurité
-
-Mesurer la couverture actuelle puis saisir les durées de réserve que vous voulez réellement tester.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Outils #Patrimoine #FinancesPersonnelles
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Mesurer la couverture actuelle puis saisir les durées de réserve que vous voulez réellement tester.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Outils #Patrimoine #FinancesPersonnelles
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Tester sa réserve de sécurité
-
-PROBLÈME — Mesurer la couverture actuelle puis saisir les durées de réserve que vous voulez réellement tester.
-
-DÉMONSTRATION — Votre situation
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-reserve-securite.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```

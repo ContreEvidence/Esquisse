@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-10T05:12:26.776Z",
+  "generatedAt": "2026-08-10T07:47:33.988Z",
   "item": {
     "title": "Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?",
     "link": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html",
@@ -26,7 +26,7 @@
     ]
   },
   "facebook": {
-    "message": "Près de 4 000 € par an de dépenses qui finissent par devenir invisibles.\n\nPas 4 000 € « jetés par la fenêtre » : dans notre exemple, 12 prélèvements récurrents totalisent 3 963,84 € par an. Téléphone, Internet, streaming, cloud, banque, assurances, salle de sport, alarme…\n\nUne fois chaque ligne remise en coût annuel et réellement réexaminée, l’audit identifie 1 037,64 € d’économies par an — sans supprimer aveuglément les assurances ou les services utiles.\n\nLe piège ? 9,99 € par mois semble petit. 119,88 € par an l’est déjà beaucoup moins. Et surtout, une dépense répétée finit par ne plus être une décision.\n\nFaites le test sur vos propres prélèvements :\nhttps://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html\n\n#ContreEvidence #FinancesPersonnelles #Budget"
+    "message": "Près de 4 000 € par an de dépenses qui finissent par devenir invisibles.\n\nPas 4 000 € « jetés par la fenêtre » : dans notre exemple, 12 prélèvements récurrents totalisent 3 963,84 € par an. Téléphone, Internet, streaming, cloud, banque, assurances, salle de sport, alarme…\n\nUne fois chaque ligne remise en coût annuel et réellement réexaminée, l’audit identifie 1 037,64 € d’économies par an — sans supprimer aveuglément les assurances ou les services utiles.\n\nLe piège ? 9,99 € par mois semble petit. 119,88 € par an l’est déjà beaucoup moins. Et surtout, une dépense répétée finit par ne plus être une décision.\n\nFaites le test sur vos propres prélèvements :\nhttps://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial\n\n#ContreEvidence #FinancesPersonnelles #Budget"
   },
   "instagram": {
     "caption": "Tu ne dépenses peut-être pas 4 000 € de trop. Mais tu peux avoir près de 4 000 € de dépenses récurrentes que tu ne redécides presque plus.\n\nDans notre exemple : 12 prélèvements = 3 963,84 € par an. Après audit : 1 037,64 € d’économies identifiées, sans supprimer les protections utiles.\n\nLe premier réflexe : arrêter de regarder « seulement 9,99 €/mois » et convertir chaque ligne en coût annuel.\n\nDossier complet sur Contre-Évidence.\n\n#ContreEvidence #FinancesPersonnelles #Budget #Patrimoine"
@@ -36,6 +36,12 @@
   },
   "youtube": {
     "title": "Près de 4 000 € de dépenses invisibles ? Fais l’audit #Shorts",
-    "description": "Tu ne dépenses peut-être pas 4 000 € de trop. Mais des petites dépenses récurrentes peuvent finir par représenter une somme énorme sans être redécidées.\n\nDans l’exemple Contre-Évidence : 12 prélèvements = 3 963,84 € par an. Après audit : 1 037,64 € d’économies identifiées, sans supprimer les protections utiles.\n\nLire le dossier : https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html\n\n#ContreEvidence #FinancesPersonnelles #Budget #Shorts"
+    "description": "Tu ne dépenses peut-être pas 4 000 € de trop. Mais des petites dépenses récurrentes peuvent finir par représenter une somme énorme sans être redécidées.\n\nDans l’exemple Contre-Évidence : 12 prélèvements = 3 963,84 € par an. Après audit : 1 037,64 € d’économies identifiées, sans supprimer les protections utiles.\n\nLire le dossier : https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial\n\n#ContreEvidence #FinancesPersonnelles #Budget #Shorts"
+  },
+  "trackedLinks": {
+    "facebook": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial",
+    "instagram": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=instagram&utm_medium=social&utm_campaign=editorial",
+    "tiktok": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=tiktok&utm_medium=social&utm_campaign=editorial",
+    "youtube": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial"
   }
 }

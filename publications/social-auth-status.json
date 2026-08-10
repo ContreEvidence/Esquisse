@@ -1,12 +1,12 @@
 {
   "version": 4,
-  "checkedAt": "2026-08-09T19:58:00.778Z",
+  "checkedAt": "2026-08-10T07:47:34.287Z",
   "meta": false,
   "instagramId": false,
   "tiktok": false,
   "youtube": true,
   "youtubeValid": false,
-  "youtubeHttpStatus": 401,
-  "youtubeError": "unauthorized_client",
-  "youtubeErrorDescription": "Unauthorized"
+  "youtubeHttpStatus": 400,
+  "youtubeError": "invalid_grant",
+  "youtubeErrorDescription": "Token has been expired or revoked."
 }
