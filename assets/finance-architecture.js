@@ -5,6 +5,14 @@
   const euro=new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0});
   const pct=new Intl.NumberFormat('fr-FR',{maximumFractionDigits:1});
 
+  const assetKeys=['home','rental','commercialProperty','otherProperty','cash','euroFund','bonds','privateCredit','equities','scpi','listedProperty','privateEquity','infrastructure','gold','commodities','crypto','other'];
+  const assetLabels={
+    home:'Résidence principale',rental:'Immobilier locatif résidentiel',commercialProperty:'Immobilier commercial direct',otherProperty:'Autre immobilier direct',
+    cash:'Liquidités & monétaire',euroFund:'Fonds euros / capital garanti',bonds:'Obligations',privateCredit:'Crédit privé / dette non cotée',equities:'Actions & ETF actions',
+    scpi:'SCPI / OPCI',listedProperty:'Foncières cotées / REIT',privateEquity:'Private equity / entreprise non cotée',infrastructure:'Infrastructures',
+    gold:'Or & métaux précieux',commodities:'Matières premières',crypto:'Crypto-actifs',other:'Autres / objets de collection'
+  };
+
   const families=[
     {id:'liquidity',label:'Liquidité & capital garanti',keys:['cash','euroFund'],note:'Disponibilité immédiate et supports dont la fonction première est la stabilité du capital.'},
     {id:'rates',label:'Taux & crédit',keys:['bonds','privateCredit'],note:'Créances exposées au niveau des taux, à la durée, au crédit et au défaut.'},
@@ -55,7 +63,7 @@
       const note=document.createElement('div');
       note.className='fc-card-note';
       note.dataset.globalTargetNote='1';
-      note.innerHTML='<strong>Vue globale :</strong> cette cible porte sur 100 % des actifs bruts, résidence principale comprise. La vue d’arbitrage affichée plus bas exclut la résidence principale et possède sa propre cible.';
+      note.innerHTML='<strong>Vue globale :</strong> cette cible porte sur 100 % des actifs bruts, résidence principale comprise. Une poche à 0 % reste un choix explicite dès qu’une cible complète est renseignée. La vue d’arbitrage affichée plus bas exclut la résidence principale et possède sa propre cible.';
       targetCard.appendChild(note);
     }
   }
@@ -94,6 +102,29 @@
     section.appendChild(block);
   }
 
+  function renderGlobalDetailed(state,gross){
+    const assets=state.assets||{},targets=state.goals?.target||{};
+    const targetTotal=assetKeys.reduce((total,key)=>total+n(targets[key]),0);
+    const hasTarget=targetTotal>0;
+    const visible=assetKeys.filter(key=>n(assets[key])>0||n(targets[key])>0);
+    const allocation=document.querySelector('[data-fin-allocation]');
+    if(allocation&&gross>0){
+      allocation.innerHTML=visible.map(key=>{
+        const current=n(assets[key])/gross*100,target=n(targets[key]);
+        return `<div class="fc-bar-row"><div class="fc-bar-label">${assetLabels[key]}</div><div class="fc-bar-track"><span style="width:${Math.min(100,Math.max(0,current))}%"></span>${hasTarget?`<em style="left:${Math.min(100,Math.max(0,target))}%" title="Objectif ${pct.format(target)} %"></em>`:''}</div><div class="fc-bar-value">${pct.format(current)} %${hasTarget?` → ${pct.format(target)} %`:''}</div></div>`;
+      }).join('')+`<div class="fc-target-note">La cible globale est lue comme un ensemble : lorsqu’elle existe, une classe à 0 % est affichée comme une cible à 0 %, pas comme une donnée manquante.</div>`;
+    }
+    const gap=document.querySelector('[data-fin-gap]');
+    if(!gap||gross<=0)return;
+    const rows=visible.map(key=>{
+      const current=n(assets[key])/gross*100,target=n(targets[key]);
+      const diff=target-current,amount=gross*diff/100;
+      return `<div class="fc-gap-row"><strong>${assetLabels[key]}</strong><span>${pct.format(current)} %</span><span>${hasTarget?`${pct.format(target)} %`:'—'}</span><span class="${diff>=0?'fc-gap-positive':'fc-gap-negative'}">${hasTarget?`${amount>=0?'+':''}${money(amount)}`:'—'}</span></div>`;
+    }).join('');
+    const warning=hasTarget&&Math.abs(targetTotal-100)>.1?`<div class="fc-gap-warning">Vos objectifs globaux totalisent ${percent(targetTotal)} %. Ajustez-les à 100 % pour comparer une allocation complète.</div>`:'';
+    gap.innerHTML=`<div class="fc-gap-row head"><span>Classe d’actifs</span><span>Actuel</span><span>Objectif</span><span>Écart en €*</span></div>${rows}${warning}<div class="fc-target-note">* Écart théorique à patrimoine brut constant. Une cible de 0 % est un choix explicite. Ce n’est pas une recommandation de transaction.</div>`;
+  }
+
   function renderFamilies(state,gross){
     const host=document.querySelector('[data-fin-architecture]');if(!host)return;
     if(gross<=0){host.innerHTML='<div class="space-empty">Renseignez vos actifs pour construire l’architecture globale.</div>';return;}
@@ -103,7 +134,7 @@
       const amount=sum(assets,f.keys),share=amount/gross*100,target=sum(targets,f.keys);
       return `<div class="fc-architecture-row">
         <div class="fc-architecture-copy"><strong>${f.label}</strong><span>${money(amount)}</span><small>${f.note}</small></div>
-        <div class="fc-architecture-meter" aria-hidden="true"><span style="width:${Math.min(100,Math.max(0,share))}%"></span>${hasTarget&&target>0?`<em style="left:${Math.min(100,Math.max(0,target))}%"></em>`:''}</div>
+        <div class="fc-architecture-meter" aria-hidden="true"><span style="width:${Math.min(100,Math.max(0,share))}%"></span>${hasTarget?`<em style="left:${Math.min(100,Math.max(0,target))}%"></em>`:''}</div>
         <div class="fc-architecture-numbers"><strong>${percent(share)}</strong>${hasTarget?`<small>Cible ${percent(target)}</small>`:'<small>Cible non définie</small>'}</div>
       </div>`;
     }).join('')+`<div class="fc-target-note">Chaque classe détaillée n’entre que dans une seule famille de cette vue. Le trait doré indique la cible globale agrégée lorsqu’elle existe.</div>`;
@@ -127,8 +158,7 @@
     const summary=document.querySelector('[data-fin-arbitrage-summary]');
     if(!host||!summary)return;
     const assets=state.assets||{};
-    const allKeys=[...new Set(families.flatMap(f=>f.keys))];
-    const gross=sum(assets,allKeys);
+    const gross=sum(assets,assetKeys);
     const home=n(assets.home);
     const base=Math.max(0,gross-home);
     const targets=state.goals?.targetArbitrableFamilies||{};
@@ -157,8 +187,8 @@
     ensureShell();
     ensureGlobalLabels();
     const state=read(),assets=state.assets||{};
-    const allKeys=[...new Set(families.flatMap(f=>f.keys))];
-    const gross=sum(assets,allKeys);
+    const gross=sum(assets,assetKeys);
+    renderGlobalDetailed(state,gross);
     renderFamilies(state,gross);
     renderLenses(state,gross);
     renderArbitrage(state);
