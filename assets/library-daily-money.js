@@ -2,6 +2,13 @@
   if (!Array.isArray(window.CE_LIBRARY_CATALOG)) return;
   const additions = [
     {
+      d:'patrimoine',t:'guide',c:'Immobilier & allocation',
+      h:'dossiers/comparer-strategies-immobilieres.html',
+      n:'Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières',
+      x:'Comparer rendement net, gestion, stabilité, réglementation, ticket d’entrée, liquidité et scénario de sortie avant de choisir une forme d’immobilier.',
+      k:'immobilier comparaison stratégie location nue meublée colocation courte durée parking garage local commercial rendement gestion liquidité allocation'
+    },
+    {
       d:'patrimoine',t:'dossier',c:'Immobilier & allocation',
       h:'dossiers/immobilier-allocation-globale-patrimoine.html',
       n:'Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?',
