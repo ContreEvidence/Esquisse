@@ -3,7 +3,9 @@
   "lastPublicationAt": null,
   "items": {
     "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html": {
-      "complete": false,
+      "complete": true,
+      "deferred": true,
+      "deferReason": "Prioriser le dossier d'introduction Le prix d'attendre avant les contenus spécialisés.",
       "platforms": {
         "youtube": {
           "ok": false,
