@@ -46,6 +46,16 @@ function anchorExists(targetRel,anchor){
   const safe=anchor.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
   return new RegExp(`(?:id|name)=["']${safe}["']`,'i').test(html);
 }
+function hasExternalSourceBlock(html){
+  if(/class=["'][^"']*(?:source-note|source-list)[^"']*["'][\s\S]*?<a\s+[^>]*href=["']https?:\/\//i.test(html))return true;
+  const heading=/<h[23][^>]*>\s*(?:Sources?(?: et repères officiels)?|Références?|Pour vérifier|Textes? de référence)\s*<\/h[23]>/gi;
+  let m;
+  while((m=heading.exec(html))){
+    const tail=html.slice(m.index,m.index+5000);
+    if(/<a\s+[^>]*href=["']https?:\/\//i.test(tail))return true;
+  }
+  return false;
+}
 
 for(const rel of htmls){
   const html=fs.readFileSync(path.join(ROOT,rel),'utf8');
@@ -80,7 +90,7 @@ for(const rel of htmls){
       }
     }
   }
-  if(editorialPaths.has(rel)&&/class="source-note"/i.test(html)&&!/class="source-note"[^>]*>[\s\S]*?<a\s+href="https?:\/\//i.test(html))warnings.push(`${rel}: bloc source sans lien externe détecté`);
+  if(editorialPaths.has(rel)&&/class=["'][^"']*(?:source-note|source-list)[^"']*["']|<h[23][^>]*>\s*(?:Sources?|Références?)/i.test(html)&&!hasExternalSourceBlock(html))warnings.push(`${rel}: bloc source sans lien externe détecté`);
 }
 
 const seen=new Set();
@@ -104,6 +114,6 @@ const codeFiles=['assets/navigation-v3.js','assets/follow.js','assets/script.js'
 if(/utilise\s+<strong>Cloudflare Web Analytics|utilise\s+Cloudflare Web Analytics/i.test(privacy)&&!/cloudflareinsights\.com|beacon\.min\.js/i.test(codeFiles))errors.push('Confidentialité: Analytics déclaré actif mais aucun script détecté');
 
 if(!errors.length)ok.push('Aucune erreur critique détectée dans les liens, catalogues, canonicals de référence et sitemap.');
-const report=`# Audit technique automatique — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\n## Erreurs critiques (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Contrôles validés\n${ok.length?ok.map(x=>`- ${x}`).join('\n'):'- Des erreurs critiques restent à corriger.'}\n\n## Règles\n- les pages éditoriales du catalogue sont les références indexables ;\n- les anciennes pages en noindex peuvent conserver un canonical vers un dossier principal ;\n- les outils peuvent volontairement canoniser vers le dossier qui explique le raisonnement ;\n- les variables JavaScript ne sont pas interprétées comme des liens ;\n- un exemple chiffré illustratif n'est pas obligé d'avoir une source externe ;\n- les liens, ancres, fichiers du catalogue et URLs du sitemap sont contrôlés.\n`;
+const report=`# Audit technique automatique — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\n## Erreurs critiques (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Contrôles validés\n${ok.length?ok.map(x=>`- ${x}`).join('\n'):'- Des erreurs critiques restent à corriger.'}\n\n## Règles\n- les pages éditoriales du catalogue sont les références indexables ;\n- les anciennes pages en noindex peuvent conserver un canonical vers un dossier principal ;\n- les outils peuvent volontairement canoniser vers le dossier qui explique le raisonnement ;\n- les variables JavaScript ne sont pas interprétées comme des liens ;\n- un exemple chiffré illustratif n'est pas obligé d'avoir une source externe ;\n- les blocs Sources, Références, source-note et source-list sont reconnus ;\n- les liens, ancres, fichiers du catalogue et URLs du sitemap sont contrôlés.\n`;
 fs.mkdirSync(path.join(ROOT,'editorial'),{recursive:true});fs.writeFileSync(path.join(ROOT,'editorial/audit-technique-site.md'),report,'utf8');
 console.log(report);if(errors.length&&!process.argv.includes('--report-only'))process.exit(1);
