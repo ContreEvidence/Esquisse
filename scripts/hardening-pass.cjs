@@ -94,6 +94,10 @@ changed += patch('assets/tools-catalog.js', code =>
 
 changed += patch('outil-repartir-grosse-somme.html', html => {
   html = html.replace(/proposer une allocation/gi, 'saisir et tester votre propre allocation');
+  html = html.replace(/Allocation proposée restant à affecter/g, 'Allocation saisie restant à affecter');
+  html = html.replace(/Nouvelle allocation proposée/g, 'Nouvelle allocation saisie');
+  html = html.replace(/nouvelle allocation proposée/g, 'nouvelle allocation saisie');
+  html = html.replace(/Part du montant reçue encore libre/g, 'Part du montant reçu encore libre');
   html = html.replace("['stocks','Actions individuelles / concentrées'],", '');
   html = html.replace("['bonds','Obligations / fonds obligataires'],", "['bonds','Obligations / fonds obligataires'],['privateCredit','Crédit privé / dette non cotée'],");
   html = html.replace("['listedProperty','Foncières cotées'],", "['listedProperty','Foncières cotées / REIT'],['privateEquity','Private equity / entreprise non cotée'],['infrastructure','Infrastructures'],");
