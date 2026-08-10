@@ -37,7 +37,10 @@ for (const item of enriched) {
   const file = path.join(ROOT,item.h);
   if (!fs.existsSync(file)) continue;
   let html = fs.readFileSync(file,'utf8');
-  html = html.replace(/<section class="ce-related" data-ce-related="1">[\s\S]*?<\/section>\s*/gi,'');
+  // Supprimer tous les blocs générés précédemment, quel que soit l'ordre des attributs.
+  // L'ancienne expression exigeait que la balise se termine juste après data-ce-related="1",
+  // ce qui laissait les blocs avec aria-label en place et les dupliquait à chaque exécution.
+  html = html.replace(/<section\b(?=[^>]*\bclass="ce-related")(?=[^>]*\bdata-ce-related="1")[^>]*>[\s\S]*?<\/section>\s*/gi,'');
 
   const ranked = enriched.filter(other => other.h !== item.h).map(other => {
     const sameDomain = [...item._domains].some(d => other._domains.has(d));
