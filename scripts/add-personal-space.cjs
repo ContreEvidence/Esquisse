@@ -1,6 +1,8 @@
 const fs=require('fs');
 const path=require('path');
+const vm=require('vm');
 const ROOT=path.resolve(__dirname,'..');
+new vm.Script(fs.readFileSync(path.join(ROOT,'assets/personal-space.js'),'utf8'),{filename:'assets/personal-space.js'});
 function htmlFiles(dir=ROOT,prefix=''){const out=[];for(const e of fs.readdirSync(dir,{withFileTypes:true})){if(e.name.startsWith('.')||e.name==='node_modules'||e.name==='publications')continue;const rel=path.join(prefix,e.name),full=path.join(dir,e.name);if(e.isDirectory())out.push(...htmlFiles(full,rel));else if(e.isFile()&&e.name.toLowerCase().endsWith('.html'))out.push(rel.replace(/\\/g,'/'));}return out;}
 let count=0;
 for(const rel of htmlFiles()){
