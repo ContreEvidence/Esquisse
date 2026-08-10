@@ -2,6 +2,13 @@
   if (!Array.isArray(window.CE_LIBRARY_CATALOG)) return;
   const additions = [
     {
+      d:'patrimoine',t:'guide',c:'Allocation globale',
+      h:'dossiers/classes-actifs-allocation-patrimoine.html',
+      n:'Toutes les classes d’actifs : construire une allocation patrimoniale complète',
+      x:'Liquidités, fonds euros, obligations, actions, immobilier direct et indirect, non coté, infrastructures, or, matières premières, crypto et alternatifs : distinguer exposition économique, véhicule et enveloppe.',
+      k:'classes actifs allocation patrimoine liquidités monétaire fonds euros obligations crédit privé actions etf immobilier direct scpi reit foncières private equity non coté infrastructure or matières premières crypto alternatifs enveloppe pea assurance vie per cto'
+    },
+    {
       d:'patrimoine',t:'guide',c:'Immobilier & allocation',
       h:'dossiers/comparer-strategies-immobilieres.html',
       n:'Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières',
