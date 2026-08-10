@@ -3,7 +3,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname,'..');
 const UX_VERSION = '20260810-2';
-const NAV_VERSION = '20260810-2';
+const NAV_VERSION = '20260810-3';
 const ORIENTATION_VERSION = '20260810-8';
 const LONGFORM_VERSION = '20260810-2';
 
