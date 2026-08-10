@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname,'..');
+const SITE_VERSION = require('./site-version.cjs');
 const SITEMAP = path.join(ROOT,'sitemap.xml');
 const BASE = 'https://contreevidence.github.io/Esquisse/';
 if (!fs.existsSync(SITEMAP)) process.exit(0);
@@ -17,8 +18,8 @@ for (const url of urls) {
   if (!fs.existsSync(file)) continue;
   let html = fs.readFileSync(file,'utf8');
   html = html.replace(/<script\s+src=["'][^"']*assets\/analytics-loader\.js[^"']*["'][^>]*><\/script>\s*/gi,'');
-  const nested = /^(articles|dossiers|themes)\//.test(rel);
-  const src = `${nested ? '../' : ''}assets/analytics-loader.js?v=20260809-1`;
+  const nested = /^(articles|dossiers|themes|fiches-metiers)\//.test(rel);
+  const src = `${nested ? '../' : ''}assets/analytics-loader.js?v=${SITE_VERSION}`;
   if (/<\/body>/i.test(html)) {
     html = html.replace(/<\/body>/i,`<script src="${src}"></script></body>`);
     fs.writeFileSync(file,html,'utf8');
