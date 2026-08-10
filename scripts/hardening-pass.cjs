@@ -109,6 +109,13 @@ changed += patch('outil-repartir-grosse-somme.html', html => {
   return html;
 }) ? 1 : 0;
 
+changed += patch('dossiers/rembourser-credit-ou-investir.html', html => {
+  if (html.includes('data-ce-source-credit-investir="1"')) return html;
+  const sources='<h2>Sources et repères officiels</h2><ul class="source-list" data-ce-source-credit-investir="1"><li><a href="https://www.economie.gouv.fr/particuliers/emprunter-et-sassurer/rembourser-son-credit-immobilier-avant-le-terme-comment-ca" rel="noopener">Ministère de l’Économie — Rembourser son crédit immobilier avant le terme</a> : modalités, information du prêteur et indemnités éventuelles.</li><li><a href="https://www.amf-france.org/fr/espace-epargnants/savoir-bien-investir/cadrer-son-projet/risques-et-rendements-des-placements" rel="noopener">AMF — Rendements et risques des placements financiers</a> : le rendement futur d’un placement risqué n’est pas garanti et doit être rapproché du risque pris.</li></ul><p class="source-note">Les conditions du contrat de crédit, la fiscalité et les caractéristiques du placement envisagé restent à vérifier au moment de la décision.</p>';
+  if (/<h2>Ce que j’en retiens<\/h2>/i.test(html)) return html.replace(/<h2>Ce que j’en retiens<\/h2>/i,`${sources}<h2>Ce que j’en retiens</h2>`);
+  return html;
+}) ? 1 : 0;
+
 function htmlFiles(dir = ROOT, prefix = '') {
   const out = [];
   for (const entry of fs.readdirSync(dir, {withFileTypes:true})) {
