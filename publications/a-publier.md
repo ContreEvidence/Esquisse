@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 10:53.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 10:55.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -8,7 +8,93 @@ Rien n’est envoyé automatiquement aux plateformes tant qu’aucun compte de p
 
 ---
 
-## 1. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+## 1. Combien coûte le fait d’attendre ?
+
+**Type :** Outil · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/simulateur-prix-attendre.html  
+**Publication du contenu :** Mon, 10 Aug 2026 08:53:41 GMT  
+
+### Facebook — post avec lien
+
+```text
+Combien coûte le fait d’attendre ?
+
+Séparer dépenses évitables, érosion du pouvoir d’achat et écart de capitalisation liés au report d’une décision financière.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/simulateur-prix-attendre.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Outils #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Combien coûte le fait d’attendre ?
+
+SLIDE 2 — 1. Le temps que vous envisagez d’attendre
+
+SLIDE 3 — 2. Ce qui continue pendant l’attente
+
+SLIDE 4 — 3. Ce qui pourrait commencer maintenant
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Combien coûte le fait d’attendre ?
+
+Séparer dépenses évitables, érosion du pouvoir d’achat et écart de capitalisation liés au report d’une décision financière.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Outils #Patrimoine
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Séparer dépenses évitables, érosion du pouvoir d’achat et écart de capitalisation liés au report d’une décision financière.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Outils #Patrimoine
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Combien coûte le fait d’attendre ?
+
+PROBLÈME — Séparer dépenses évitables, érosion du pouvoir d’achat et écart de capitalisation liés au report d’une décision financière.
+
+DÉMONSTRATION — 1. Le temps que vous envisagez d’attendre
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-prix-attendre.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Outils #Patrimoine
+```
+
+---
+
+## 2. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html  
@@ -94,7 +180,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/p
 
 ---
 
-## 2. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+## 3. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html  
@@ -180,7 +266,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/i
 
 ---
 
-## 3. Gestion pilotée : comment comparer les performances sans se faire piéger ?
+## 4. Gestion pilotée : comment comparer les performances sans se faire piéger ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html  
@@ -266,7 +352,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/g
 
 ---
 
-## 4. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
+## 5. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html  
@@ -375,7 +461,7 @@ Lire le dossier complet : https://contreevidence.github.io/Esquisse/dossiers/dep
 
 ---
 
-## 5. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+## 6. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html  
@@ -469,7 +555,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 6. Comparer rendements, frais et intérêts composés
+## 7. Comparer rendements, frais et intérêts composés
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html  
@@ -555,7 +641,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 7. Acheter ou louer : tester plusieurs scénarios
+## 8. Acheter ou louer : tester plusieurs scénarios
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html  
@@ -641,7 +727,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 8. Vendre ou conserver un bien immobilier ?
+## 9. Vendre ou conserver un bien immobilier ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html  
@@ -727,7 +813,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 9. Rembourser son crédit ou investir ?
+## 10. Rembourser son crédit ou investir ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html  
@@ -813,7 +899,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 10. Structurer l’allocation d’un héritage ou d’une grosse somme
+## 11. Structurer l’allocation d’un héritage ou d’une grosse somme
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html  
@@ -899,7 +985,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-repa
 
 ---
 
-## 11. Tester un investissement locatif
+## 12. Tester un investissement locatif
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html  
@@ -979,92 +1065,6 @@ CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
 Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-investissement-locatif.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
----
-
-## 12. Tester son allocation patrimoniale
-
-**Type :** Outil · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:32:44 GMT  
-
-### Facebook — post avec lien
-
-```text
-Tester son allocation patrimoniale
-
-Visualiser la concentration puis appliquer vous-même un choc distinct à chaque classe d’actifs.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Tester son allocation patrimoniale
-
-SLIDE 2 — Synthèse descriptive
-
-SLIDE 3 — Dettes
-
-SLIDE 4 — Revenez à la question du dossier : pourriez-vous tenir ce scénario sans vendre au…
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Tester son allocation patrimoniale
-
-Visualiser la concentration puis appliquer vous-même un choc distinct à chaque classe d’actifs.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Outils #Patrimoine #Investissement
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Visualiser la concentration puis appliquer vous-même un choc distinct à chaque classe d’actifs.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Outils #Patrimoine #Investissement
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Tester son allocation patrimoniale
-
-PROBLÈME — Visualiser la concentration puis appliquer vous-même un choc distinct à chaque classe d’actifs.
-
-DÉMONSTRATION — Synthèse descriptive
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-allocation-stress-test.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
