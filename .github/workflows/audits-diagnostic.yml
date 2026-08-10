@@ -1,0 +1,75 @@
+name: Diagnostiquer les audits du site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/audits-diagnostic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Construire puis tester les audits
+        shell: bash
+        run: |
+          set -e
+          node scripts/hardening-pass.cjs >/dev/null
+          node scripts/clean-legacy-pages.cjs >/dev/null
+          node scripts/normalize-editorial-data.cjs >/dev/null
+          node scripts/consolidate-site.cjs >/dev/null
+          node scripts/add-ux-layer.cjs >/dev/null
+          node scripts/add-personal-space.cjs >/dev/null
+          node scripts/hardening-pass.cjs >/dev/null
+          mkdir -p editorial
+          R=editorial/audits-diagnostic.md
+          printf '# Diagnostic des audits\n\nExécuté le %s\n\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$R"
+          set +e
+          for spec in \
+            'syntax-personal|node --check assets/personal-space.js' \
+            'syntax-cockpit|node --check assets/finance-cockpit.js' \
+            'syntax-architecture|node --check assets/finance-architecture.js' \
+            'syntax-progressive|node --check assets/cockpit-progressive.js' \
+            'syntax-follow|node --check assets/follow.js' \
+            'syntax-navigation|node --check assets/navigation-v3.js' \
+            'syntax-longform|node --check assets/longform.js' \
+            'juridique|node scripts/audit-legal-guardrails.cjs' \
+            'analytics-loader|node scripts/add-analytics-loader.cjs' \
+            'related|node scripts/add-related-content.cjs' \
+            'search-index|node scripts/generate-search-index.cjs' \
+            'rss|node scripts/generate-rss.cjs' \
+            'freshness|node scripts/check-editorial-data-freshness.cjs' \
+            'audit-technique|node scripts/audit-site.cjs' \
+            'audit-structure|node scripts/audit-structure-site.cjs' \
+            'audit-modele|node scripts/audit-asset-model.cjs' \
+            'audit-equilibre|node scripts/audit-editorial-balance.cjs' \
+            'audit-qualite|node scripts/audit-editorial-quality.cjs'
+          do
+            NAME="${spec%%|*}"
+            CMD="${spec#*|}"
+            printf '## %s\n\n' "$NAME" >> "$R"
+            timeout 45s bash -lc "$CMD" > /tmp/audit.log 2>&1
+            CODE=$?
+            printf -- '- code: `%s`\n\n```text\n' "$CODE" >> "$R"
+            tail -n 100 /tmp/audit.log >> "$R"
+            printf '\n```\n\n' >> "$R"
+          done
+          set -e
+      - name: Publier le diagnostic
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add editorial/audits-diagnostic.md
+          git commit -m "Diagnostiquer les audits du site"
+          git push
