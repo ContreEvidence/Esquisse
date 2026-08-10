@@ -1,6 +1,6 @@
 # Fraîcheur du référentiel chiffré — Contre-Évidence
 
-Généré le 2026-08-10T13:06:14.373Z
+Généré le 2026-08-10T13:07:44.163Z
 
 ## Dossiers en retard sur leurs données (0)
 - Aucun.
@@ -8,7 +8,7 @@ Généré le 2026-08-10T13:06:14.373Z
 ## Liaisons contrôlées (25)
 - ✓ **markets** → `articles/choisir-etf-mondial-debutant.html` · données substantielles 2026-08-09T11:52:57.000Z · dossier 2026-08-10T11:47:49.000Z
 - ✓ **markets** → `articles/investir-grosse-somme-dun-coup-ou-progressivement.html` · données substantielles 2026-08-09T11:52:57.000Z · dossier 2026-08-10T11:47:49.000Z
-- ✓ **managedPortfolios** → `dossiers/gestion-pilotee-comparer-performances.html` · données substantielles 2026-08-09T11:36:49.000Z · dossier 2026-08-10T11:47:49.000Z
+- ✓ **managedPortfolios** → `dossiers/gestion-pilotee-comparer-performances.html` · données substantielles 2026-08-09T11:36:49.000Z · dossier 2026-08-10T13:06:51.000Z
 - ✓ **managedPortfolios** → `articles/frais-fiscalite-rendement-net.html` · données substantielles 2026-08-09T11:36:49.000Z · dossier 2026-08-10T11:47:49.000Z
 - ✓ **savings** → `articles/comparatif-produits-bancaires.html` · données substantielles 2026-08-09T11:51:19.000Z · dossier 2026-08-10T11:47:49.000Z
 - ✓ **credit** → `dossiers/finances-credit-endettement.html` · données substantielles 2026-08-09T11:51:19.000Z · dossier 2026-08-10T11:47:49.000Z
@@ -16,8 +16,8 @@ Généré le 2026-08-10T13:06:14.373Z
 - ✓ **labourMarket** → `articles/tester-metier-avant-investir.html` · données substantielles 2026-08-09T11:56:08.000Z · dossier 2026-08-10T11:47:49.000Z
 - ✓ **labourMarket** → `dossiers/experience-devient-risque-recruteur.html` · données substantielles 2026-08-09T11:56:08.000Z · dossier 2026-08-10T11:47:49.000Z
 - ✓ **realEstate** → `dossiers/finances-residence-principale.html` · données substantielles 2026-08-09T11:57:57.000Z · dossier 2026-08-10T11:47:49.000Z
-- ✓ **realEstate** → `dossiers/finances-investissement-locatif.html` · données substantielles 2026-08-09T11:57:57.000Z · dossier 2026-08-10T11:47:49.000Z
-- ✓ **tax2026** → `dossiers/finances-enveloppes-fiscalite.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-10T11:47:49.000Z
+- ✓ **realEstate** → `dossiers/finances-investissement-locatif.html` · données substantielles 2026-08-09T11:57:57.000Z · dossier 2026-08-10T13:06:51.000Z
+- ✓ **tax2026** → `dossiers/finances-enveloppes-fiscalite.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-10T13:06:51.000Z
 - ✓ **retirement2026** → `dossiers/finances-retraite-decumulation.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-10T11:47:49.000Z
 - ✓ **transmission2026** → `dossiers/finances-transmission-patrimoine.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-10T11:47:49.000Z
 - ✓ **training2026** → `dossiers/formation-vaut-elle-le-cout.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-10T11:47:49.000Z
