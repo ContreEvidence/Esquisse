@@ -7,8 +7,9 @@ const UX_VERSION = '20260810-2';
 const NAV_VERSION = '20260810-4';
 const ORIENTATION_VERSION = '20260810-9';
 const LONGFORM_VERSION = '20260810-2';
+const FOLLOW_VERSION = '20260810-4';
 
-for (const rel of ['assets/navigation-v3.js','assets/orientation.js','assets/longform.js','assets/library.js','assets/library-work-foundations.js']) {
+for (const rel of ['assets/navigation-v3.js','assets/orientation.js','assets/longform.js','assets/library.js','assets/library-work-foundations.js','assets/follow.js']) {
   new vm.Script(fs.readFileSync(path.join(ROOT,rel),'utf8'), {filename:rel});
 }
 
@@ -67,6 +68,7 @@ for (const rel of htmlFiles()) {
   html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/longform\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
   html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/orientation\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
   html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/navigation-v3\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
+  html=html.replace(/(<script\s+src=["'](?:\.\.\/|\.\/)?assets\/follow\.js)(?:\?[^"']*)?(["'][^>]*><\/script>)/gi,`$1?v=${FOLLOW_VERSION}$2`);
   html=html.replace(/<\/head>/i,`<link rel="stylesheet" href="${p}assets/ux-retention.css?v=${UX_VERSION}"/></head>`);
 
   if (/<header\s+id=["']site-header["'][^>]*>[\s\S]*?<\/header>/i.test(html)) {
@@ -81,4 +83,4 @@ for (const rel of htmlFiles()) {
     changed++;
   }
 }
-console.log(`Couche UX stable appliquée à ${changed} page(s).`);
+console.log(`Couche UX stable appliquée à ${changed} page(s), module de suivi sans collecte forcé en version ${FOLLOW_VERSION}.`);
