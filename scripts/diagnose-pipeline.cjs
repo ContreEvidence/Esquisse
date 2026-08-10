@@ -38,12 +38,14 @@ const stages=[
 let report=`# Diagnostic du pipeline site\n\nExécuté le ${new Date().toISOString()}\n\n`;
 let failures=0;
 for(const [title,cmd,args] of stages){
-  const r=spawnSync(cmd,args,{cwd:ROOT,encoding:'utf8',maxBuffer:5*1024*1024});
-  const code=typeof r.status==='number'?r.status:999;
+  const started=Date.now();
+  const r=spawnSync(cmd,args,{cwd:ROOT,encoding:'utf8',maxBuffer:5*1024*1024,timeout:20000,killSignal:'SIGTERM'});
+  const elapsed=((Date.now()-started)/1000).toFixed(2);
+  const code=typeof r.status==='number'?r.status:(r.error?.code==='ETIMEDOUT'?124:999);
   if(code!==0)failures++;
-  const output=`${r.stdout||''}${r.stderr||''}`.trim();
+  const output=`${r.stdout||''}${r.stderr||''}${r.error?`\n${r.error.code||''}: ${r.error.message||r.error}`:''}`.trim();
   const tail=output.split(/\r?\n/).slice(-100).join('\n');
-  report+=`## ${title}\n\n- Code de sortie : \`${code}\`\n\n\`\`\`text\n${tail}\n\`\`\`\n\n`;
+  report+=`## ${title}\n\n- Code de sortie : \`${code}\`\n- Durée : ${elapsed} s\n- Signal : ${r.signal||'aucun'}\n\n\`\`\`text\n${tail}\n\`\`\`\n\n`;
 }
 report+=`## Synthèse\n\n- Étapes en échec : ${failures}\n- Étapes exécutées : ${stages.length}\n`;
 fs.writeFileSync(OUT,report,'utf8');
