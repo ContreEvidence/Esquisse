@@ -4,7 +4,7 @@ const vm=require('vm');
 const ROOT=path.resolve(__dirname,'..');
 const BASE='https://contreevidence.github.io/Esquisse/';
 const ctx={window:{}};vm.createContext(ctx);
-for(const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/tools-catalog.js']){
+for(const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js','assets/tools-catalog.js']){
   if(fs.existsSync(path.join(ROOT,rel)))vm.runInContext(fs.readFileSync(path.join(ROOT,rel),'utf8'),ctx,{filename:rel});
 }
 const editorial=Array.isArray(ctx.window.CE_LIBRARY_CATALOG)?ctx.window.CE_LIBRARY_CATALOG:[];
@@ -80,8 +80,6 @@ for(const rel of htmls){
       }
     }
   }
-  // Un exemple chiffré construit par le dossier n'a pas besoin d'une source externe.
-  // En revanche, un bloc explicitement présenté comme source doit contenir un lien vers cette source.
   if(editorialPaths.has(rel)&&/class="source-note"/i.test(html)&&!/class="source-note"[^>]*>[\s\S]*?<a\s+href="https?:\/\//i.test(html))warnings.push(`${rel}: bloc source sans lien externe détecté`);
 }
 
