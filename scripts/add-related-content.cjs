@@ -11,6 +11,19 @@ for (const rel of ['assets/library-catalog.js','assets/library-daily-money.js'])
 }
 const items = Array.isArray(ctx.window.CE_LIBRARY_CATALOG) ? ctx.window.CE_LIBRARY_CATALOG.filter(x => x?.h && x?.n) : [];
 
+const preferredNext = new Map([
+  ['dossiers/inflation-comprendre-histoire-pouvoir-achat.html','dossiers/prix-attendre-finances.html'],
+  ['dossiers/prix-attendre-finances.html','dossiers/depenses-recurrentes-abonnements-assurances.html'],
+  ['dossiers/depenses-recurrentes-abonnements-assurances.html','dossiers/cout-reel-voiture-achat-credit-loa-lld.html'],
+  ['dossiers/cout-reel-voiture-achat-credit-loa-lld.html','dossiers/prix-attendre-finances.html'],
+  ['dossiers/cout-complet-achat-immobilier.html','dossiers/audit-copropriete-avant-achat.html'],
+  ['dossiers/audit-copropriete-avant-achat.html','dossiers/cout-complet-achat-immobilier.html'],
+  ['dossiers/plan-30-jours-recherche-emploi.html','dossiers/experience-devient-risque-recruteur.html'],
+  ['dossiers/experience-devient-risque-recruteur.html','dossiers/plan-30-jours-recherche-emploi.html'],
+  ['dossiers/formation-vaut-elle-le-cout.html','articles/tester-metier-avant-investir.html'],
+  ['articles/tester-metier-avant-investir.html','dossiers/formation-vaut-elle-le-cout.html']
+]);
+
 function tokens(s='') {
   return new Set(String(s).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().split(/[^a-z0-9]+/).filter(x => x.length > 2));
 }
@@ -38,6 +51,7 @@ const enriched = items.map(item => ({
   _tokens: tokens(`${item.n} ${item.c||''} ${item.k||''} ${item.x||''}`),
   _domains: new Set(String(item.d||'').split(/\s+/).filter(Boolean))
 }));
+const byHref = new Map(enriched.map(item => [item.h,item]));
 
 let count=0;
 for (const item of enriched) {
@@ -54,7 +68,11 @@ for (const item of enriched) {
     return {other,score,domain,category,shared};
   }).sort((a,b) => b.score-a.score || a.other.n.localeCompare(b.other.n,'fr'));
 
-  const primary = ranked.find(x => x.score >= 7);
+  const preferredHref = preferredNext.get(item.h);
+  const preferredItem = preferredHref ? byHref.get(preferredHref) : null;
+  const primary = preferredItem
+    ? {other:preferredItem,score:999,domain:sameDomain(item,preferredItem),category:sameCategory(item,preferredItem),shared:overlap(item._tokens,preferredItem._tokens)}
+    : ranked.find(x => x.score >= 7);
   if (!primary) { fs.writeFileSync(file,html,'utf8'); continue; }
 
   const used = new Set([primary.other.h]);
