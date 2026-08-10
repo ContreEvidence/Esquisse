@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const VERSION = '20260810-2';
+  const VERSION = '20260810-3';
   if (document.documentElement.dataset.ceNavigation === VERSION) return;
   document.documentElement.dataset.ceNavigation = VERSION;
 
@@ -20,13 +20,18 @@
     ['Fenêtres','hors-cadre.html','hors-cadre'],
     ['Outils','bibliotheque.html?type=outil','outils']
   ];
+  const mobileLinks = [
+    ['Bibliothèque','bibliotheque.html'],
+    ['Par où commencer ?','parcours-de-vie.html'],
+    ['Mon espace','mon-espace.html']
+  ];
 
   header.className = 'ce-flat-header';
   header.innerHTML = `<div class="ce-flat-shell ce-flat-top">
     <a class="ce-flat-brand" href="${u('index.html')}"><img src="${u('assets/logo.png')}?v=20260808-14" alt="Logo Contre-évidence"><span class="ce-flat-brand-copy"><strong>CONTRE-<em>ÉVIDENCE</em></strong><small>PATRIMOINE · VIE PROFESSIONNELLE · FENÊTRES</small></span></a>
     <form class="ce-search" action="${u('bibliotheque.html')}" method="get" role="search"><input type="search" name="q" aria-label="Rechercher sur le site" placeholder="Rechercher : emploi, formation, immobilier, investissement…" autocomplete="off"><button type="submit">Rechercher</button></form>
     <div class="ce-flat-actions"><a class="ce-start-link" href="${u('parcours-de-vie.html')}">Par où commencer ?</a><button class="ce-flat-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button></div>
-  </div><nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,p,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(p)}">${label}</a>`).join('')}</div></nav>`;
+  </div><nav class="ce-flat-nav" aria-label="Navigation principale"><div class="ce-flat-shell ce-flat-links">${links.map(([label,p,key]) => `<a class="ce-flat-link" data-key="${key}" href="${u(p)}">${label}</a>`).join('')}${mobileLinks.map(([label,p]) => `<a class="ce-flat-link ce-menu-only" href="${u(p)}">${label}</a>`).join('')}</div></nav>`;
 
   const q = params.get('q');
   if (q) header.querySelector('.ce-search input').value = q;
@@ -54,6 +59,10 @@
   toggle?.addEventListener('click', () => setOpen(!header.classList.contains('is-open')));
   header.querySelectorAll('.ce-flat-link').forEach(a => a.addEventListener('click', () => setOpen(false)));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+
+  const syncMobileOnly = () => header.querySelectorAll('.ce-menu-only').forEach(a => { a.style.display = window.innerWidth < 760 ? 'flex' : 'none'; });
+  window.addEventListener('resize', syncMobileOnly);
+  syncMobileOnly();
 
   if (!/\/(index\.html)?$/.test(path)) {
     document.querySelector('.ce-breadcrumb')?.remove();
