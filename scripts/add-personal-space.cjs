@@ -17,11 +17,14 @@ for(const rel of htmlFiles()){
   if(rel==='mon-espace.html'){
     const architectureCss='<link rel="stylesheet" href="assets/finance-architecture.css?v=20260810-2"/>';
     const architectureJs='<script src="assets/finance-architecture.js?v=20260810-2"></script>';
+    const guardrail='<section class="fc-section" data-ce-finance-legal="1" aria-label="Cadre du cockpit"><div class="fc-section-head"><div><div class="fc-eyebrow">Cadre d’utilisation</div><h2>Des calculs et des scénarios, pas une recommandation personnalisée.</h2><p>Le cockpit décrit votre allocation, vos flux et la sensibilité de scénarios à vos propres hypothèses. Il ne recommande aucun instrument financier précis, aucune transaction, aucun ordre d’achat ou de vente et aucune composition de portefeuille présentée comme adaptée à votre situation.</p></div></div></section>';
     html=html.replace(/<link\s+rel="stylesheet"\s+href="assets\/finance-architecture\.css(?:\?[^"']*)?"\s*\/?>/i,'');
     html=html.replace(/<script\s+src="assets\/finance-architecture\.js(?:\?[^"']*)?"\s*><\/script>/i,'');
+    html=html.replace(/<section\s+class="fc-section"\s+data-ce-finance-legal="1"[\s\S]*?<\/section>/i,'');
     html=html.replace(/<\/head>/i,`${architectureCss}</head>`);
+    html=html.replace(/<div class="fc-shell">/i,`<div class="fc-shell">${guardrail}`);
     html=html.replace(/<\/body>/i,`${architectureJs}</body>`);
   }
   fs.writeFileSync(file,html,'utf8');count++;
 }
-console.log(`Mon espace intégré à ${count} pages ; vues globale, fonctionnelle et hors résidence principale stabilisées.`);
+console.log(`Mon espace intégré à ${count} pages ; garde-fou juridique du cockpit stabilisé.`);
