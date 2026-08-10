@@ -1,12 +1,12 @@
 # Audit technique automatique — Contre-Évidence
 
-Généré le 2026-08-10T15:05:00.676Z
+Généré le 2026-08-10T15:07:20.790Z
 
 ## Erreurs critiques (0)
 - Aucune.
 
-## Avertissements (1)
-- dossiers/finances-immobilier-indirect.html: ancre introuvable → finances-immobilier-patrimoine.html#immobilier-indirect
+## Avertissements (0)
+- Aucun.
 
 ## Contrôles validés
 - Aucune erreur critique détectée dans les liens, catalogues, canonicals de référence et sitemap.
