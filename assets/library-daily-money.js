@@ -22,6 +22,15 @@
     {
       d:'patrimoine',
       t:'dossier',
+      c:'Immobilier',
+      h:'dossiers/audit-copropriete-avant-achat.html',
+      n:'Acheter en copropriété : l’audit à faire avant de signer',
+      x:'Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.',
+      k:'immobilier copropriété achat appartement audit assemblée générale pv charges impayés travaux toiture façade ascenseur fonds travaux syndic diagnostic coût'
+    },
+    {
+      d:'patrimoine',
+      t:'dossier',
       c:'Inflation & pouvoir d’achat',
       h:'dossiers/inflation-comprendre-histoire-pouvoir-achat.html',
       n:'Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent',
