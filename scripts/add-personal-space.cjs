@@ -8,7 +8,7 @@ function htmlFiles(dir=ROOT,prefix=''){const out=[];for(const e of fs.readdirSyn
 let count=0;
 for(const rel of htmlFiles()){
   const file=path.join(ROOT,rel);let html=fs.readFileSync(file,'utf8');if(!/<head[\s>]/i.test(html)||!/<\/body>/i.test(html))continue;
-  const nested=/^(articles|dossiers|themes)\//.test(rel),p=nested?'../':'';
+  const nested=/^(articles|dossiers|themes|fiches-metiers)\//.test(rel),p=nested?'../':'';
   const css=`<link rel="stylesheet" href="${p}assets/personal-space.css?v=20260810-1"/>`;
   const js=`<script src="${p}assets/personal-space.js?v=20260810-2"></script>`;
   if(/assets\/personal-space\.css(?:\?[^"']*)?/i.test(html)) html=html.replace(/<link\s+rel="stylesheet"\s+href="(?:\.\.\/)?assets\/personal-space\.css(?:\?[^"']*)?"\s*\/?>/i,css); else html=html.replace(/<\/head>/i,`${css}</head>`);
