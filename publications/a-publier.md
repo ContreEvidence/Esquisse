@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 15:10.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 15:16.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -8,7 +8,93 @@ Rien n’est envoyé automatiquement aux plateformes tant qu’aucun compte de p
 
 ---
 
-## 1. Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières
+## 1. Comparer trois stratégies immobilières
+
+**Type :** Outil · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/simulateur-comparer-strategies-immobilieres.html  
+**Publication du contenu :** Mon, 10 Aug 2026 13:15:03 GMT  
+
+### Facebook — post avec lien
+
+```text
+Comparer trois stratégies immobilières
+
+Mettre nue, meublée, colocation, courte durée, parking ou local commercial sur une même base de coût, vacance, gestion, fiscalité et temps personnel.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/simulateur-comparer-strategies-immobilieres.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Outils #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Comparer trois stratégies immobilières
+
+SLIDE 2 — Comparaison
+
+SLIDE 3 — Le scénario au rendement le plus élevé n’est pas forcément celui qui s’intègre le…
+
+SLIDE 4 — Stratégie
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Comparer trois stratégies immobilières
+
+Mettre nue, meublée, colocation, courte durée, parking ou local commercial sur une même base de coût, vacance, gestion, fiscalité et temps personnel.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Outils #Patrimoine
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Mettre nue, meublée, colocation, courte durée, parking ou local commercial sur une même base de coût, vacance, gestion, fiscalité et temps personnel.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Outils #Patrimoine
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Comparer trois stratégies immobilières
+
+PROBLÈME — Mettre nue, meublée, colocation, courte durée, parking ou local commercial sur une même base de coût, vacance, gestion, fiscalité et temps personnel.
+
+DÉMONSTRATION — Comparaison
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-comparer-strategies-immobilieres.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Outils #Patrimoine
+```
+
+---
+
+## 2. Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières
 
 **Type :** Guide · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/comparer-strategies-immobilieres.html  
@@ -94,7 +180,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 2. Un bien immobilier vaut aussi par les options qu’il laisse ouvertes
+## 3. Un bien immobilier vaut aussi par les options qu’il laisse ouvertes
 
 **Type :** Guide · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/valeur-option-bien-immobilier.html  
@@ -180,7 +266,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/v
 
 ---
 
-## 3. Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement
+## 4. Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/garages-parkings-locaux-commerciaux.html  
@@ -266,7 +352,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/g
 
 ---
 
-## 4. Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?
+## 5. Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/location-courte-duree-meuble-tourisme.html  
@@ -352,7 +438,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/l
 
 ---
 
-## 5. Location nue ou meublée : comparer l’économie complète avant la fiscalité
+## 6. Location nue ou meublée : comparer l’économie complète avant la fiscalité
 
 **Type :** Guide · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/location-nue-ou-meublee-comparer.html  
@@ -438,7 +524,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/l
 
 ---
 
-## 6. Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?
+## 7. Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/immobilier-allocation-globale-patrimoine.html  
@@ -524,7 +610,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/i
 
 ---
 
-## 7. Acheter en copropriété : l’audit à faire avant de signer
+## 8. Acheter en copropriété : l’audit à faire avant de signer
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html  
@@ -610,7 +696,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/a
 
 ---
 
-## 8. Achat immobilier : calculer le coût complet avant de regarder la mensualité
+## 9. Achat immobilier : calculer le coût complet avant de regarder la mensualité
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html  
@@ -696,7 +782,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 9. Combien coûte le fait d’attendre ?
+## 10. Combien coûte le fait d’attendre ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-prix-attendre.html  
@@ -782,7 +868,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 10. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+## 11. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html  
@@ -868,7 +954,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/p
 
 ---
 
-## 11. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+## 12. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html  
@@ -948,92 +1034,6 @@ CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
 Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Dossier #Patrimoine
-```
-
----
-
-## 12. Gestion pilotée : comment comparer les performances sans se faire piéger ?
-
-**Type :** Dossier · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html  
-**Publication du contenu :** Sun, 09 Aug 2026 11:38:16 GMT  
-
-### Facebook — post avec lien
-
-```text
-Gestion pilotée : comment comparer les performances sans se faire piéger ?
-
-Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Dossier #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Gestion pilotée : comment comparer les performances sans se faire piéger ?
-
-SLIDE 2 — Deux performances ne sont comparables que si leur risque et leur période le sont aussi.
-
-SLIDE 3 — Le niveau de risque change fortement le résultat.
-
-SLIDE 4 — Une performance sur cinq ans doit être lue avec la composition du portefeuille.
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Gestion pilotée : comment comparer les performances sans se faire piéger ?
-
-Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Dossier #Patrimoine
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Dossier #Patrimoine
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Gestion pilotée : comment comparer les performances sans se faire piéger ?
-
-PROBLÈME — Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.
-
-DÉMONSTRATION — Deux performances ne sont comparables que si leur risque et leur période le sont aussi.
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```

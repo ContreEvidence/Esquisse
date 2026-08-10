@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Patrimoine.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 13:10:51 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 13:16:02 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss-patrimoine.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,16 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Comparer trois stratégies immobilières</title>
+      <link>https://contreevidence.github.io/Esquisse/simulateur-comparer-strategies-immobilieres.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/simulateur-comparer-strategies-immobilieres.html</guid>
+      <pubDate>Mon, 10 Aug 2026 13:15:03 GMT</pubDate>
+      <category>Outil</category>
+      <category>Patrimoine</category>
+      <category>Stratégies immobilières</category>
+      <description>Mettre nue, meublée, colocation, courte durée, parking ou local commercial sur une même base de coût, vacance, gestion, fiscalité et temps personnel.</description>
+    </item>
     <item>
       <title>Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/comparer-strategies-immobilieres.html</link>
