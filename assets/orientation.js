@@ -14,8 +14,20 @@
         .ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))!important}
         .ce-flat-link[data-key="outils"]{color:#f0d48a!important}
 
-        /* Le sélecteur .beginner-hero était plus tard forcé en blanc alors que
-           les textes du hero restaient clairs : contraste presque nul. */
+        /* Hiérarchie visuelle plus calme : moins d'or, moins d'ombres, titres moins monumentaux. */
+        .theme-card,.level-card,.path-card,.article-card,.situation-card,.video-card,.home-video-card,.young-home-card,.callout-light,.library-tools{
+          border-top-width:1px!important;
+          box-shadow:0 5px 16px rgba(16,24,32,.055)!important;
+        }
+        .theme-card:hover,.level-card:hover,.path-card:hover,.article-card:hover,.situation-card:hover,.video-card:hover,.home-video-card:hover{
+          box-shadow:0 8px 20px rgba(16,24,32,.085)!important;
+        }
+        @media(min-width:821px){
+          .article-hero h1{font-size:clamp(2.55rem,5vw,4.55rem)!important}
+          .section-head h2{font-size:clamp(1.95rem,4vw,3.3rem)!important}
+        }
+
+        /* Le hero d'accueil reste volontairement contrasté. */
         .home-index .hero.beginner-hero{
           background:linear-gradient(135deg,#070708 0%,#101820 68%,#1d2730 100%)!important;
           color:#fff!important;
@@ -35,6 +47,21 @@
         .home-index .hero.beginner-hero .btn-ghost:focus-visible{
           background:#f6f1e7!important;
           color:#09090a!important;
+        }
+
+        /* Sur grand écran, l'en-tête se fait discret une fois la lecture engagée. */
+        @media(min-width:1041px){
+          .ce-flat-header,.ce-flat-top,.ce-flat-brand img,.ce-search,.ce-search input,.ce-search button,.ce-flat-link,.ce-start-link{transition:.18s ease}
+          .ce-flat-header.is-compact .ce-flat-top{min-height:48px!important;padding:.12rem 0!important}
+          .ce-flat-header.is-compact .ce-flat-brand img{width:36px!important;height:36px!important;flex-basis:36px!important;box-shadow:0 0 0 1px #d4ab56,0 0 0 2px #fff!important}
+          .ce-flat-header.is-compact .ce-flat-brand-copy small{display:none!important}
+          .ce-flat-header.is-compact .ce-flat-brand-copy strong{font-size:.92rem!important}
+          .ce-flat-header.is-compact .ce-search{max-width:410px!important}
+          .ce-flat-header.is-compact .ce-search input{height:31px!important;font-size:.8rem!important}
+          .ce-flat-header.is-compact .ce-search button{min-width:72px!important;font-size:.77rem!important}
+          .ce-flat-header.is-compact .ce-start-link{min-height:30px!important;padding:.32rem .58rem!important;font-size:.7rem!important}
+          .ce-flat-header.is-compact .ce-flat-link{min-height:29px!important;padding:.28rem .4rem!important;font-size:.87rem!important}
+          .ce-flat-header.is-compact .ce-flat-links{padding:.08rem 0 .1rem!important}
         }
 
         @media(max-width:759px){
@@ -74,6 +101,15 @@
     if (isTools && flatLinks) {
       flatLinks.querySelectorAll('.ce-flat-link.is-current').forEach(el => el.classList.remove('is-current'));
       flatLinks.querySelector('[data-key="outils"]')?.classList.add('is-current');
+    }
+
+    const header = document.querySelector('.ce-flat-header');
+    if (header && !header.dataset.ceCompactBound) {
+      header.dataset.ceCompactBound = '1';
+      const syncCompact = () => header.classList.toggle('is-compact', window.innerWidth >= 1041 && window.scrollY > 150);
+      window.addEventListener('scroll', syncCompact, { passive:true });
+      window.addEventListener('resize', syncCompact);
+      syncCompact();
     }
   };
 
