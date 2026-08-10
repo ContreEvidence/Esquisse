@@ -36,9 +36,7 @@
     if (/patrimoine|immobilier|invest|inflation|budget|épargne|epargne|crédit|credit|retraite|transmission|voiture|assurance/.test(p)) return 'Patrimoine';
     return 'Autre';
   }
-  function pageItem(type='page'){
-    return {type,id:cleanUrl(),url:cleanUrl(),title:pageTitle(),domain:pageDomain()};
-  }
+  function pageItem(type='page'){ return {type,id:cleanUrl(),url:cleanUrl(),title:pageTitle(),domain:pageDomain()}; }
 
   function toast(message){
     let el = document.querySelector('.ce-space-toast');
@@ -71,10 +69,7 @@
       const data=readState();
       const newTitle=String(form.get('newDecision')||'').trim();
       let decision=data.decisions.find(d=>d.id===form.get('decision'));
-      if (newTitle) {
-        decision={id:uid('decision'),title:newTitle,domain:item.domain||pageDomain(),status:'En cours',createdAt:now(),updatedAt:now(),items:[]};
-        data.decisions.unshift(decision);
-      }
+      if (newTitle) { decision={id:uid('decision'),title:newTitle,domain:item.domain||pageDomain(),status:'En cours',createdAt:now(),updatedAt:now(),items:[]}; data.decisions.unshift(decision); }
       if (!decision) { toast('Choisissez ou créez une décision.'); return; }
       decision.items=Array.isArray(decision.items)?decision.items:[];
       const ref={type:item.type||'page',id:item.id||item.url,url:item.url,title:item.title||item.label||'Élément enregistré',label:item.label||'',addedAt:now()};
@@ -91,18 +86,12 @@
         const start=actions.querySelector('.ce-start-link'); actions.insertBefore(a,start || actions.firstChild);
       }
       const fallback=document.querySelector('.ce-fallback-header nav');
-      if (fallback && !fallback.querySelector('[data-ce-space-link]')) {
-        const a=document.createElement('a'); a.href=spaceHref; a.dataset.ceSpaceLink='1'; a.textContent='Mon espace'; fallback.appendChild(a);
-      }
+      if (fallback && !fallback.querySelector('[data-ce-space-link]')) { const a=document.createElement('a'); a.href=spaceHref; a.dataset.ceSpaceLink='1'; a.textContent='Mon espace'; fallback.appendChild(a); }
     };
     add(); setTimeout(add,0); setTimeout(add,250);
   }
 
-  function rememberRecent(item){
-    const state=readState();
-    state.recent=state.recent.filter(x=>x.url!==item.url);
-    state.recent.unshift({...item,viewedAt:now()}); state.recent=state.recent.slice(0,12); writeState(state);
-  }
+  function rememberRecent(item){ const state=readState(); state.recent=state.recent.filter(x=>x.url!==item.url); state.recent.unshift({...item,viewedAt:now()}); state.recent=state.recent.slice(0,12); writeState(state); }
 
   function trackReading(){
     if (document.body.classList.contains('space-page')) return;
@@ -118,9 +107,7 @@
       const span=Math.max(root.offsetHeight-window.innerHeight,1);
       const progress=Math.max(0,Math.min(1,(window.scrollY-start)/span));
       if (progress<.02) return;
-      const state=readState();
-      state.readings[item.url]={...item,progress:Math.round(progress*100),lastViewed:now()};
-      writeState(state);
+      const state=readState(); state.readings[item.url]={...item,progress:Math.round(progress*100),lastViewed:now()}; writeState(state);
     };
     window.addEventListener('scroll',()=>{ if(!ticking){ ticking=true; requestAnimationFrame(sync); } },{passive:true});
     window.addEventListener('pagehide',sync); setTimeout(sync,600);
@@ -159,7 +146,8 @@
   function restoreFormValues(sim){
     if (!sim?.values) return;
     Object.entries(sim.values).forEach(([key,saved])=>{
-      const el=document.getElementById(key) || document.querySelector(`[name="${CSS.escape(key)}"]`); if(!el) return;
+      const escaped=window.CSS?.escape ? CSS.escape(key) : key.replace(/(["'\\.#:[\]()])/g,'\\$1');
+      const el=document.getElementById(key) || document.querySelector(`[name="${escaped}"]`); if(!el) return;
       if(saved.type==='checkbox' || saved.type==='radio') el.checked=Boolean(saved.checked); else el.value=saved.value;
       el.dispatchEvent(new Event('input',{bubbles:true})); el.dispatchEvent(new Event('change',{bubbles:true}));
     });
@@ -181,24 +169,19 @@
     if (document.body.classList.contains('space-page')) return;
     if (!/(^|\/)(simulateur|outil)[^/]*\.html$/i.test(location.pathname)) return;
     rememberRecent(pageItem('tool'));
-    const shell=document.querySelector('.tool-shell, main .container'); if(!shell || shell.querySelector('.ce-space-tool-save')) return;
+    const shell=document.querySelector('.tool-shell') || document.querySelector('main .container'); if(!shell || shell.querySelector('.ce-space-tool-save')) return;
     const box=document.createElement('div'); box.className='ce-space-tool-save';
     box.innerHTML='<div><strong>Gardez ce scénario pour plus tard</strong><span>Vos hypothèses sont enregistrées uniquement dans ce navigateur.</span></div><button type="button" class="ce-space-btn primary">Enregistrer ce scénario</button>';
     box.querySelector('button').addEventListener('click',saveSimulationDialog);
     const privacy=shell.querySelector('.tool-privacy'); if(privacy) privacy.insertAdjacentElement('afterend',box); else shell.insertBefore(box,shell.firstChild);
-
     const id=new URLSearchParams(location.search).get('ce-scenario');
     if(id){ const sim=readState().simulations[id]; if(sim && cleanUrl(sim.url)===cleanUrl()) setTimeout(()=>restoreFormValues(sim),120); }
   }
 
-  function decisionOptions(selected=''){
-    return ['À explorer','En cours','Décidé','À revoir'].map(v=>`<option${v===selected?' selected':''}>${v}</option>`).join('');
-  }
+  function decisionOptions(selected=''){ return ['À explorer','En cours','Décidé','À revoir'].map(v=>`<option${v===selected?' selected':''}>${v}</option>`).join(''); }
   function createDecisionDialog(){
     const html=`<form><div class="space-eyebrow">Nouvelle décision</div><h2>Qu’est-ce que vous essayez de décider ?</h2><p>Une formulation concrète suffit. Vous pourrez y rattacher ensuite lectures, favoris et simulations.</p><div class="ce-space-field"><label for="ce-decision-title">Décision</label><input id="ce-decision-title" name="title" placeholder="Ex. Acheter ou louer mon prochain logement" maxlength="90" required></div><div class="ce-space-field"><label for="ce-decision-domain">Domaine</label><select id="ce-decision-domain" name="domain"><option>Patrimoine</option><option>Vie professionnelle</option><option>Autre</option></select></div><div class="ce-space-dialog-actions"><button type="button" class="space-btn" data-ce-cancel>Annuler</button><button class="space-btn gold" type="submit">Créer la décision</button></div></form>`;
-    openDialog(html,(form,dlg)=>{
-      const state=readState(); state.decisions.unshift({id:uid('decision'),title:String(form.get('title')).trim(),domain:String(form.get('domain')),status:'En cours',createdAt:now(),updatedAt:now(),items:[]}); writeState(state); dlg.close(); renderDashboard(); toast('Décision créée.');
-    });
+    openDialog(html,(form,dlg)=>{ const state=readState(); state.decisions.unshift({id:uid('decision'),title:String(form.get('title')).trim(),domain:String(form.get('domain')),status:'En cours',createdAt:now(),updatedAt:now(),items:[]}); writeState(state); dlg.close(); renderDashboard(); toast('Décision créée.'); });
   }
 
   function renderResume(state){
@@ -258,19 +241,12 @@
     const data=readState(); const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}); const url=URL.createObjectURL(blob); const a=document.createElement('a');a.href=url;a.download=`contre-evidence-mon-espace-${new Date().toISOString().slice(0,10)}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
   function clearStateDialog(){
-    const html=`<form><div class="space-eyebrow">Données locales</div><h2>Effacer Mon espace ?</h2><p>Lectures, favoris, décisions et simulations enregistrés sur cet appareil seront supprimés. Cette action est irréversible si vous n’avez pas exporté les données auparavant.</p><div class="ce-space-dialog-actions"><button type="button" class="space-btn" data-ce-cancel>Annuler</button><button class="space-btn danger" type="submit">Tout effacer</button></div></form>`;
+    const html=`<form><div class="space-eyebrow">Données locales</div><h2>Effacer Mon espace ?</h2><p>Lectures, favoris, décisions et simulations enregistrés sur cet appareil seront supprimés. Cette action est irréversible sur ce navigateur.</p><div class="ce-space-dialog-actions"><button type="button" class="space-btn" data-ce-cancel>Annuler</button><button class="space-btn danger" type="submit">Tout effacer</button></div></form>`;
     openDialog(html,(_,dlg)=>{try{localStorage.removeItem(KEY);}catch(_){}dlg.close();renderDashboard();toast('Mon espace a été effacé sur cet appareil.');});
   }
 
-  function bindDashboard(){
-    document.querySelector('[data-new-decision]')?.addEventListener('click',createDecisionDialog);
-    document.querySelector('[data-space-export]')?.addEventListener('click',exportState);
-    document.querySelector('[data-space-clear]')?.addEventListener('click',clearStateDialog);
-  }
-  function renderDashboard(){
-    if(!document.body.classList.contains('space-page')) return;
-    const state=readState(); renderResume(state); renderStats(state); renderDecisions(state); renderSimulations(state); renderFavorites(state); renderRecent(state);
-  }
+  function bindDashboard(){ document.querySelector('[data-new-decision]')?.addEventListener('click',createDecisionDialog); document.querySelector('[data-space-export]')?.addEventListener('click',exportState); document.querySelector('[data-space-clear]')?.addEventListener('click',clearStateDialog); }
+  function renderDashboard(){ if(!document.body.classList.contains('space-page')) return; const state=readState(); renderResume(state); renderStats(state); renderDecisions(state); renderSimulations(state); renderFavorites(state); renderRecent(state); }
 
   const run=()=>{ addHeaderLink(); trackReading(); addPageActions(); addToolSave(); if(document.body.classList.contains('space-page')){bindDashboard();renderDashboard();} };
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run,{once:true}); else run();
