@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Patrimoine.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 09:02:19 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 09:05:47 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss-patrimoine.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,16 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Acheter en copropriété : l’audit à faire avant de signer</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html</guid>
+      <pubDate>Mon, 10 Aug 2026 09:04:01 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.</description>
+    </item>
     <item>
       <title>Achat immobilier : calculer le coût complet avant de regarder la mensualité</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html</link>

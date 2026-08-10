@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 11:02.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 11:05.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -8,7 +8,93 @@ Rien n’est envoyé automatiquement aux plateformes tant qu’aucun compte de p
 
 ---
 
-## 1. Achat immobilier : calculer le coût complet avant de regarder la mensualité
+## 1. Acheter en copropriété : l’audit à faire avant de signer
+
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html  
+**Publication du contenu :** Mon, 10 Aug 2026 09:04:01 GMT  
+
+### Facebook — post avec lien
+
+```text
+Acheter en copropriété : l’audit à faire avant de signer
+
+Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Acheter en copropriété : l’audit à faire avant de signer
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. Les documents ne sont pas une formalité notariale
+
+SLIDE 4 — 2. Lire trois assemblées générales comme une chronologie
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Acheter en copropriété : l’audit à faire avant de signer
+
+Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Dossier #Patrimoine #Immobilier
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Dossier #Patrimoine #Immobilier
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Acheter en copropriété : l’audit à faire avant de signer
+
+PROBLÈME — Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+---
+
+## 2. Achat immobilier : calculer le coût complet avant de regarder la mensualité
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html  
@@ -94,7 +180,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 2. Combien coûte le fait d’attendre ?
+## 3. Combien coûte le fait d’attendre ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-prix-attendre.html  
@@ -180,7 +266,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 3. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+## 4. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html  
@@ -266,7 +352,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/p
 
 ---
 
-## 4. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+## 5. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html  
@@ -352,7 +438,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/i
 
 ---
 
-## 5. Gestion pilotée : comment comparer les performances sans se faire piéger ?
+## 6. Gestion pilotée : comment comparer les performances sans se faire piéger ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html  
@@ -438,7 +524,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/g
 
 ---
 
-## 6. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
+## 7. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html  
@@ -547,7 +633,7 @@ Lire le dossier complet : https://contreevidence.github.io/Esquisse/dossiers/dep
 
 ---
 
-## 7. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
+## 8. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html  
@@ -641,7 +727,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 8. Comparer rendements, frais et intérêts composés
+## 9. Comparer rendements, frais et intérêts composés
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html  
@@ -727,7 +813,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 9. Acheter ou louer : tester plusieurs scénarios
+## 10. Acheter ou louer : tester plusieurs scénarios
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html  
@@ -813,7 +899,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 10. Vendre ou conserver un bien immobilier ?
+## 11. Vendre ou conserver un bien immobilier ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html  
@@ -899,7 +985,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 11. Rembourser son crédit ou investir ?
+## 12. Rembourser son crédit ou investir ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html  
@@ -979,92 +1065,6 @@ CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
 Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
----
-
-## 12. Structurer l’allocation d’un héritage ou d’une grosse somme
-
-**Type :** Outil · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:33:38 GMT  
-
-### Facebook — post avec lien
-
-```text
-Structurer l’allocation d’un héritage ou d’une grosse somme
-
-Isoler le capital réellement disponible, mesurer son effet sur le patrimoine existant, proposer une allocation et tester concentration, liquidité et stress.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Structurer l’allocation d’un héritage ou d’une grosse somme
-
-SLIDE 2 — 1. Ce qui est réellement disponible
-
-SLIDE 3 — Capital à arbitrer
-
-SLIDE 4 — 2. Partir du patrimoine existant
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Structurer l’allocation d’un héritage ou d’une grosse somme
-
-Isoler le capital réellement disponible, mesurer son effet sur le patrimoine existant, proposer une allocation et tester concentration, liquidité et stress.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Isoler le capital réellement disponible, mesurer son effet sur le patrimoine existant, proposer une allocation et tester concentration, liquidité et stress.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Structurer l’allocation d’un héritage ou d’une grosse somme
-
-PROBLÈME — Isoler le capital réellement disponible, mesurer son effet sur le patrimoine existant, proposer une allocation et tester concentration, liquidité et stress.
-
-DÉMONSTRATION — 1. Ce qui est réellement disponible
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/outil-repartir-grosse-somme.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Outils #Patrimoine
 ```
