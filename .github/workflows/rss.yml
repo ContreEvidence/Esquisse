@@ -41,6 +41,7 @@ on:
       - 'scripts/generate-search-index.cjs'
       - 'scripts/add-analytics-loader.cjs'
       - 'scripts/audit-site.cjs'
+      - 'scripts/audit-legal-guardrails.cjs'
       - 'scripts/normalize-editorial-data.cjs'
       - 'scripts/check-editorial-data-freshness.cjs'
       - 'scripts/generate-rss.cjs'
@@ -91,7 +92,10 @@ jobs:
         run: node scripts/add-personal-space.cjs
 
       - name: Vérifier la syntaxe des moteurs de Mon espace
-        run: node --check assets/personal-space.js && node --check assets/finance-cockpit.js && node --check assets/finance-architecture.js
+        run: node --check assets/personal-space.js && node --check assets/finance-cockpit.js && node --check assets/finance-architecture.js && node --check assets/follow.js
+
+      - name: Vérifier les garde-fous juridiques et de collecte
+        run: node scripts/audit-legal-guardrails.cjs
 
       - name: Préparer le chargeur de mesure d audience
         run: node scripts/add-analytics-loader.cjs
@@ -193,5 +197,5 @@ jobs:
           git pull --rebase origin main
           git push
 
-# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> UX stable/lecture longue -> Mon espace local/cockpit financier -> chargeur analytics -> parcours liés -> index plein texte -> RSS -> fraîcheur -> audit -> brouillons/media -> attribution UTM -> diffusion.
+# Pipeline unique : pages historiques -> référentiel -> SEO/dates/sitemap -> UX stable/lecture longue -> Mon espace local/cockpit financier -> garde-fous juridiques -> chargeur analytics -> parcours liés -> index plein texte -> RSS -> fraîcheur -> audit -> brouillons/media -> attribution UTM -> diffusion.
 # Une nouvelle version annule une consolidation obsolète encore en cours.
