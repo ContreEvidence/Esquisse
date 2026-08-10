@@ -2,9 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname,'..');
-const UX_VERSION = '20260810-1';
+const UX_VERSION = '20260810-2';
+const NAV_VERSION = '20260810-2';
 const ORIENTATION_VERSION = '20260810-6';
-const LONGFORM_VERSION = '20260810-1';
+const LONGFORM_VERSION = '20260810-2';
 
 function htmlFiles(dir=ROOT,prefix='') {
   const out=[];
@@ -19,7 +20,7 @@ function htmlFiles(dir=ROOT,prefix='') {
 
 function stableHeader(prefix='') {
   const u = p => `${prefix}${p}`;
-  return `<header id="site-header"><div class="ce-fallback-header" aria-label="Navigation principale"><a class="ce-fallback-brand" href="${u('index.html')}">CONTRE-ÉVIDENCE</a><nav><a href="${u('themes/argent.html')}">Patrimoine</a><a href="${u('parcours-vie-professionnelle.html')}">Vie professionnelle</a><a href="${u('hors-cadre.html')}">Hors cadre</a><a href="${u('bibliotheque.html?type=outil')}">Outils</a><a href="${u('bibliotheque.html')}">Bibliothèque</a></nav></div></header>`;
+  return `<header id="site-header"><div class="ce-fallback-header" aria-label="Navigation principale"><a class="ce-fallback-brand" href="${u('index.html')}">CONTRE-ÉVIDENCE</a><nav><a href="${u('themes/argent.html')}">Patrimoine</a><a href="${u('parcours-vie-professionnelle.html')}">Vie professionnelle</a><a href="${u('hors-cadre.html')}">Fenêtres</a><a href="${u('bibliotheque.html?type=outil')}">Outils</a><a href="${u('bibliotheque.html')}">Bibliothèque</a></nav></div></header>`;
 }
 
 let changed=0;
@@ -34,6 +35,7 @@ for (const rel of htmlFiles()) {
   html=html.replace(/<link\s+[^>]*href=["'](?:\.\.\/)?assets\/ux-retention\.css(?:\?[^"']*)?["'][^>]*>\s*/gi,'');
   html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/longform\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
   html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/orientation\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
+  html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/navigation-v3\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
 
   html=html.replace(/<\/head>/i,`<link rel="stylesheet" href="${p}assets/ux-retention.css?v=${UX_VERSION}"/></head>`);
 
@@ -41,7 +43,7 @@ for (const rel of htmlFiles()) {
     html=html.replace(/<header\s+id=["']site-header["'][^>]*>[\s\S]*?<\/header>/i,stableHeader(p));
   }
 
-  const scripts=`<script src="${p}assets/orientation.js?v=${ORIENTATION_VERSION}"></script><script src="${p}assets/longform.js?v=${LONGFORM_VERSION}"></script>`;
+  const scripts=`<script src="${p}assets/navigation-v3.js?v=${NAV_VERSION}"></script><script src="${p}assets/orientation.js?v=${ORIENTATION_VERSION}"></script><script src="${p}assets/longform.js?v=${LONGFORM_VERSION}"></script>`;
   html=html.replace(/<\/body>/i,`${scripts}</body>`);
 
   if (html !== before) {
