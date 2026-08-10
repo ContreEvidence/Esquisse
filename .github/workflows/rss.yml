@@ -134,7 +134,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A -- '*.html' articles dossiers themes fiches-metiers sitemap.xml 'rss*.xml' rss-feeds.json \
-            assets scripts editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/audit-structure-site.md editorial/audit-modele-patrimonial.md editorial/audit-equilibre-editorial.md editorial/data-freshness.md
+            assets scripts editorial/audit-chiffrage-bibliotheque.md editorial/audit-technique-site.md editorial/audit-structure-site.md editorial/audit-modele-patrimonial.md editorial/audit-equilibre-editorial.md editorial/audit-juridique-collecte.md editorial/data-freshness.md
           if git diff --cached --quiet; then
             echo "Aucune modification generee."
           else
