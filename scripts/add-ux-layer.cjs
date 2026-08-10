@@ -28,6 +28,30 @@ function stableHeader(prefix='') {
   return `<header id="site-header"><div class="ce-fallback-header" aria-label="Navigation principale"><a class="ce-fallback-brand" href="${u('index.html')}">CONTRE-ÉVIDENCE</a><nav><a href="${u('themes/argent.html')}">Patrimoine</a><a href="${u('parcours-vie-professionnelle.html')}">Vie professionnelle</a><a href="${u('hors-cadre.html')}">Fenêtres</a><a href="${u('bibliotheque.html?type=outil')}">Outils</a><a href="${u('bibliotheque.html')}">Bibliothèque</a></nav></div></header>`;
 }
 
+function divBlock(html,className) {
+  const start = html.indexOf(`<div class="${className}"`);
+  if (start < 0) return null;
+  const re = /<div\b[^>]*>|<\/div>/gi;
+  re.lastIndex = start;
+  let depth = 0, match;
+  while ((match = re.exec(html))) {
+    if (/^<div\b/i.test(match[0])) depth++;
+    else depth--;
+    if (depth === 0) return {start,end:re.lastIndex,text:html.slice(start,re.lastIndex)};
+  }
+  return null;
+}
+
+function stabilizePatrimoine(html) {
+  const foundation = divBlock(html,'foundation');
+  const pillars = divBlock(html,'pillar-grid');
+  if (!foundation || !pillars || foundation.start > pillars.start) return html;
+  html = html.slice(0,foundation.start) + html.slice(foundation.end);
+  const movedPillars = divBlock(html,'pillar-grid');
+  if (!movedPillars) return html;
+  return html.slice(0,movedPillars.end) + foundation.text + html.slice(movedPillars.end);
+}
+
 let changed=0;
 for (const rel of htmlFiles()) {
   const file=path.join(ROOT,rel);
@@ -37,11 +61,12 @@ for (const rel of htmlFiles()) {
   const nested=/^(articles|dossiers|themes)\//.test(rel);
   const p=nested?'../':'';
 
+  if (rel === 'themes/argent.html') html = stabilizePatrimoine(html);
+
   html=html.replace(/<link\s+[^>]*href=["'](?:\.\.\/)?assets\/ux-retention\.css(?:\?[^"']*)?["'][^>]*>\s*/gi,'');
   html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/longform\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
   html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/orientation\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
   html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/navigation-v3\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
-
   html=html.replace(/<\/head>/i,`<link rel="stylesheet" href="${p}assets/ux-retention.css?v=${UX_VERSION}"/></head>`);
 
   if (/<header\s+id=["']site-header["'][^>]*>[\s\S]*?<\/header>/i.test(html)) {
