@@ -48,7 +48,7 @@ function anchorExists(targetRel,anchor){
 }
 function hasExternalSourceBlock(html){
   if(/class=["'][^"']*(?:source-note|source-list)[^"']*["'][\s\S]*?<a\s+[^>]*href=["']https?:\/\//i.test(html))return true;
-  const heading=/<h[23][^>]*>\s*(?:Sources?(?: et repères officiels)?|Références?|Pour vérifier|Textes? de référence)\s*<\/h[23]>/gi;
+  const heading=/<h[23][^>]*>\s*(?:Sources?(?:\s+et\s+[^<]+)?|Références?(?:\s+et\s+[^<]+)?|Pour vérifier|Textes? de référence)\s*<\/h[23]>/gi;
   let m;
   while((m=heading.exec(html))){
     const tail=html.slice(m.index,m.index+5000);
