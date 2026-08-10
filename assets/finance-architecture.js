@@ -132,21 +132,25 @@
     const home=n(assets.home);
     const base=Math.max(0,gross-home);
     const targets=state.goals?.targetArbitrableFamilies||{};
+    const validIds=new Set(arbitrageFamilies.map(f=>f.id));
+    const hasTarget=Object.keys(targets).some(id=>validIds.has(id));
     const targetTotal=arbitrageFamilies.reduce((total,f)=>total+n(targets[f.id]),0);
-    summary.innerHTML=`<div><span>Actifs bruts</span><strong>${money(gross)}</strong></div><div><span>Résidence principale exclue</span><strong>${money(home)}</strong></div><div><span>Base hors résidence principale</span><strong>${money(base)}</strong></div><div><span>Total de la cible</span><strong>${targetTotal>0?percent(targetTotal):'Non définie'}</strong></div>`;
+    summary.innerHTML=`<div><span>Actifs bruts</span><strong>${money(gross)}</strong></div><div><span>Résidence principale exclue</span><strong>${money(home)}</strong></div><div><span>Base hors résidence principale</span><strong>${money(base)}</strong></div><div><span>Total de la cible</span><strong>${hasTarget?percent(targetTotal):'Non définie'}</strong></div>`;
     if(base<=0){host.innerHTML='<div class="space-empty">Renseignez au moins un actif hors résidence principale pour utiliser cette vue.</div>';return;}
     const rows=arbitrageFamilies.map(f=>{
-      const amount=sum(assets,f.keys),share=amount/base*100,target=n(targets[f.id]);
-      const gap=target>0?base*(target-share)/100:null;
+      const amount=sum(assets,f.keys),share=amount/base*100;
+      const defined=Object.prototype.hasOwnProperty.call(targets,f.id);
+      const target=n(targets[f.id]);
+      const gap=defined?base*(target-share)/100:null;
       return `<div class="fc-arbitrage-row">
         <div class="fc-arbitrage-copy"><strong>${f.label}</strong><small>${money(amount)}</small></div>
         <div class="fc-arbitrage-current"><span>Actuel</span><strong>${percent(share)}</strong></div>
-        <label class="fc-arbitrage-target"><span>Cible %</span><input type="number" min="0" max="100" step="0.1" inputmode="decimal" data-fin-arbitrage-target="${f.id}" value="${target||0}" aria-label="Cible hors résidence principale — ${f.label}"/></label>
+        <label class="fc-arbitrage-target"><span>Cible %</span><input type="number" min="0" max="100" step="0.1" inputmode="decimal" data-fin-arbitrage-target="${f.id}" value="${defined?target:''}" placeholder="—" aria-label="Cible hors résidence principale — ${f.label}"/></label>
         <div class="fc-arbitrage-gap"><span>Écart théorique</span><strong>${gap===null?'—':`${gap>=0?'+':''}${money(gap)}`}</strong></div>
       </div>`;
     }).join('');
-    const warning=targetTotal>0&&Math.abs(targetTotal-100)>.1?`<div class="fc-gap-warning">Votre cible hors résidence principale totalise ${percent(targetTotal)} %. Ajustez-la à 100 % pour comparer une allocation complète.</div>`:'';
-    host.innerHTML=rows+warning+`<div class="fc-target-note">Les écarts sont calculés à base hors résidence principale constante. Ils décrivent une direction théorique d’allocation, pas des ordres d’achat ou de vente.</div>`;
+    const warning=hasTarget&&Math.abs(targetTotal-100)>.1?`<div class="fc-gap-warning">Votre cible hors résidence principale totalise ${percent(targetTotal)} %. Ajustez-la à 100 % pour comparer une allocation complète.</div>`:'';
+    host.innerHTML=rows+warning+`<div class="fc-target-note">Les écarts sont calculés à base hors résidence principale constante. Une cible de 0 % est un choix explicite lorsqu’elle est saisie. Les écarts décrivent une direction théorique d’allocation, pas des ordres d’achat ou de vente.</div>`;
   }
 
   function render(){
@@ -171,7 +175,7 @@
 
   function bind(){
     document.addEventListener('input',e=>{
-      if(e.target?.matches?.('[data-fin-arbitrage-target]')){persistArbitrageTarget(e.target);return;}
+      if(e.target?.matches?.('[data-fin-arbitrage-target]'))return;
       if(e.target?.matches?.('[data-fin-key]'))queueMicrotask(render);
     });
     document.addEventListener('change',e=>{
