@@ -1,12 +1,12 @@
 # Audit technique automatique — Contre-Évidence
 
-Généré le 2026-08-10T12:37:45.877Z
+Généré le 2026-08-10T13:01:32.578Z
 
 ## Erreurs critiques (0)
 - Aucune.
 
-## Avertissements (0)
-- Aucun.
+## Avertissements (1)
+- dossiers/immobilier-allocation-globale-patrimoine.html: lien/ressource introuvable → location-nue-ou-meublee-comparer.html
 
 ## Contrôles validés
 - Aucune erreur critique détectée dans les liens, catalogues, canonicals de référence et sitemap.
