@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 15:07.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 15:09.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -8,7 +8,93 @@ Rien n’est envoyé automatiquement aux plateformes tant qu’aucun compte de p
 
 ---
 
-## 1. Un bien immobilier vaut aussi par les options qu’il laisse ouvertes
+## 1. Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières
+
+**Type :** Guide · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/comparer-strategies-immobilieres.html  
+**Publication du contenu :** Mon, 10 Aug 2026 13:08:57 GMT  
+
+### Facebook — post avec lien
+
+```text
+Location nue, meublée, colocation, courte durée, parking, local commercial :…
+
+Comparer rendement net, gestion, stabilité, réglementation, ticket d’entrée, liquidité et scénario de sortie avant de choisir une forme d’immobilier.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/comparer-strategies-immobilieres.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Location nue, meublée, colocation, courte durée, parking, local commercial :…
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. La bonne comparaison commence par le même capital
+
+SLIDE 4 — 2. La matrice générale
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Location nue, meublée, colocation, courte durée, parking, local commercial :…
+
+Comparer rendement net, gestion, stabilité, réglementation, ticket d’entrée, liquidité et scénario de sortie avant de choisir une forme d’immobilier.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Comparer rendement net, gestion, stabilité, réglementation, ticket d’entrée, liquidité et scénario de sortie avant de choisir une forme d’immobilier.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Location nue, meublée, colocation, courte durée, parking, local commercial :…
+
+PROBLÈME — Comparer rendement net, gestion, stabilité, réglementation, ticket d’entrée, liquidité et scénario de sortie avant de choisir une forme d’immobilier.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/comparer-strategies-immobilieres.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+---
+
+## 2. Un bien immobilier vaut aussi par les options qu’il laisse ouvertes
 
 **Type :** Guide · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/valeur-option-bien-immobilier.html  
@@ -94,7 +180,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/v
 
 ---
 
-## 2. Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement
+## 3. Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/garages-parkings-locaux-commerciaux.html  
@@ -180,7 +266,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/g
 
 ---
 
-## 3. Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?
+## 4. Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/location-courte-duree-meuble-tourisme.html  
@@ -266,7 +352,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/l
 
 ---
 
-## 4. Location nue ou meublée : comparer l’économie complète avant la fiscalité
+## 5. Location nue ou meublée : comparer l’économie complète avant la fiscalité
 
 **Type :** Guide · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/location-nue-ou-meublee-comparer.html  
@@ -352,7 +438,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/l
 
 ---
 
-## 5. Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?
+## 6. Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/immobilier-allocation-globale-patrimoine.html  
@@ -438,7 +524,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/i
 
 ---
 
-## 6. Acheter en copropriété : l’audit à faire avant de signer
+## 7. Acheter en copropriété : l’audit à faire avant de signer
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html  
@@ -524,7 +610,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/a
 
 ---
 
-## 7. Achat immobilier : calculer le coût complet avant de regarder la mensualité
+## 8. Achat immobilier : calculer le coût complet avant de regarder la mensualité
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html  
@@ -610,7 +696,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 8. Combien coûte le fait d’attendre ?
+## 9. Combien coûte le fait d’attendre ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-prix-attendre.html  
@@ -696,7 +782,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 9. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+## 10. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html  
@@ -782,7 +868,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/p
 
 ---
 
-## 10. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+## 11. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html  
@@ -868,7 +954,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/i
 
 ---
 
-## 11. Gestion pilotée : comment comparer les performances sans se faire piéger ?
+## 12. Gestion pilotée : comment comparer les performances sans se faire piéger ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html  
@@ -948,115 +1034,6 @@ CONCLUSION — Donner le réflexe ou la question de décision du dossier.
 
 DESCRIPTION
 Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Dossier #Patrimoine
-```
-
----
-
-## 12. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
-
-**Type :** Dossier · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html  
-**Publication du contenu :** Sun, 09 Aug 2026 11:17:39 GMT  
-**Données récupérées dans la page :** 5 €/mois = 60 €/an · 10 €/mois = 120 €/an · 20 €/mois = 240 €/an · 50 €/mois = 600 €/an  
-
-### Facebook — post avec lien
-
-```text
-9,99 € par mois, ça paraît presque insignifiant.
-Sur un an : près de 120 €.
-
-Et quand on additionne téléphone, streaming, cloud, banque, assurances, salle de sport, alarme… les petites lignes deviennent un vrai poste de dépenses.
-
-Dans l’exemple du dossier : 3 963,84 €/an.
-Après audit : 1 037,64 €/an d’économies identifiées sur un an.
-
-Le problème des dépenses récurrentes n’est pas qu’elles soient forcément inutiles. C’est qu’au bout d’un moment, on ne les décide plus.
-
-Lire le dossier :
-https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Dossier #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — 9,99 €/mois. Ça n’a l’air de rien.
-
-SLIDE 2 — 9,99 € × 12 = 119,88 €/an.
-
-SLIDE 3 — 12 prélèvements anodins : 3 963,84 €/an.
-
-SLIDE 4 — Après audit : 1 037,64 €/an d’économies identifiées.
-
-SLIDE 5 — Cela représente 86,47 €/mois.
-
-SLIDE 6 — Le but n’est pas de tout supprimer. Le but est de recommencer à décider.
-```
-
-### Instagram — légende
-
-```text
-Les prélèvements automatiques ont une drôle de propriété : au bout de quelques mois, on ne les voit plus.
-
-Les remettre en coût annuel change complètement la perception.
-
-Dans notre exemple, l’audit identifie 1 037,64 €/an d’économies annuelles sans supprimer aveuglément les protections utiles.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Dossier #Patrimoine #FinancesPersonnelles
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-PLAN 1
-« 9,99 € par mois ? Bof… »
-À l’écran : 9,99 €/mois
-
-PLAN 2
-« Ton cerveau : “C’est presque gratuit.” »
-À l’écran : × 12
-
-PLAN 3
-« Sauf que ça fait 119,88 € par an. »
-À l’écran : 119,88 €/an
-
-PLAN 4
-« Maintenant additionne téléphone, streaming, cloud, banque, salle de sport, assurances… »
-À l’écran : 3 963,84 €/an
-
-PLAN 5
-« Le problème ? Tu ne les achètes même plus. Ils se renouvellent tout seuls. »
-À l’écran : audit → 1 037,64 €/an d’économies identifiées
-
-CHUTE
-« Fais le total de tes prélèvements. Tu risques d’avoir une surprise. »
-
-LÉGENDE
-#ContreEvidence #Dossier #Patrimoine #FinancesPersonnelles
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 45 s
-
-0–3 s — « 9,99 € par mois, presque gratuit ? »
-3–8 s — « Non : 119,88 € par an. »
-8–18 s — « Et ce n’est qu’une ligne. Téléphone, streaming, cloud, banque, salle de sport, assurances… »
-18–25 s — « Dans notre exemple, on arrive à 3 963,84 €/an. »
-25–32 s — « Un audit identifie 1 037,64 €/an d’économies sur un an, sans couper les protections utiles. »
-32–40 s — « Le vrai problème, c’est qu’une dépense automatique finit par ne plus être une décision. »
-
-DESCRIPTION
-Lire le dossier complet : https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
 ```

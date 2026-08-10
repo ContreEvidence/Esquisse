@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 13:07:41 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 13:09:51 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,16 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/comparer-strategies-immobilieres.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/comparer-strategies-immobilieres.html</guid>
+      <pubDate>Mon, 10 Aug 2026 13:08:57 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Immobilier &amp; allocation</category>
+      <description>Comparer rendement net, gestion, stabilité, réglementation, ticket d’entrée, liquidité et scénario de sortie avant de choisir une forme d’immobilier.</description>
+    </item>
     <item>
       <title>Un bien immobilier vaut aussi par les options qu’il laisse ouvertes</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/valeur-option-bien-immobilier.html</link>
