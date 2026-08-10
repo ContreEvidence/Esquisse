@@ -1,47 +1,46 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-10T07:47:33.988Z",
+  "generatedAt": "2026-08-10T08:54:24.685Z",
   "item": {
-    "title": "Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?",
-    "link": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html",
-    "description": "Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.",
-    "pubDate": "Sun, 09 Aug 2026 11:17:39 GMT",
+    "title": "Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?",
+    "link": "https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html",
+    "description": "Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.",
+    "pubDate": "Sun, 09 Aug 2026 11:17:05 GMT",
     "cats": [
       "Dossier",
       "Patrimoine",
-      "Dépenses récurrentes"
+      "Automobile"
     ],
-    "slug": "depenses-recurrentes-abonnements-assurances"
+    "slug": "cout-reel-voiture-achat-credit-loa-lld"
   },
   "media": {
-    "localVideo": "publications/media/depenses-recurrentes-abonnements-assurances/social-vertical.mp4",
-    "rawVideoUrl": "https://raw.githubusercontent.com/ContreEvidence/Esquisse/main/publications/media/depenses-recurrentes-abonnements-assurances/social-vertical.mp4",
+    "localVideo": "publications/media/cout-reel-voiture-achat-credit-loa-lld/social-vertical.mp4",
+    "rawVideoUrl": "https://raw.githubusercontent.com/ContreEvidence/Esquisse/main/publications/media/cout-reel-voiture-achat-credit-loa-lld/social-vertical.mp4",
     "frames": [
-      "publications/media/depenses-recurrentes-abonnements-assurances/frame-01.jpg",
-      "publications/media/depenses-recurrentes-abonnements-assurances/frame-02.jpg",
-      "publications/media/depenses-recurrentes-abonnements-assurances/frame-03.jpg",
-      "publications/media/depenses-recurrentes-abonnements-assurances/frame-04.jpg",
-      "publications/media/depenses-recurrentes-abonnements-assurances/frame-05.jpg",
-      "publications/media/depenses-recurrentes-abonnements-assurances/frame-06.jpg"
+      "publications/media/cout-reel-voiture-achat-credit-loa-lld/frame-01.jpg",
+      "publications/media/cout-reel-voiture-achat-credit-loa-lld/frame-02.jpg",
+      "publications/media/cout-reel-voiture-achat-credit-loa-lld/frame-03.jpg",
+      "publications/media/cout-reel-voiture-achat-credit-loa-lld/frame-04.jpg",
+      "publications/media/cout-reel-voiture-achat-credit-loa-lld/frame-05.jpg"
     ]
   },
   "facebook": {
-    "message": "Près de 4 000 € par an de dépenses qui finissent par devenir invisibles.\n\nPas 4 000 € « jetés par la fenêtre » : dans notre exemple, 12 prélèvements récurrents totalisent 3 963,84 € par an. Téléphone, Internet, streaming, cloud, banque, assurances, salle de sport, alarme…\n\nUne fois chaque ligne remise en coût annuel et réellement réexaminée, l’audit identifie 1 037,64 € d’économies par an — sans supprimer aveuglément les assurances ou les services utiles.\n\nLe piège ? 9,99 € par mois semble petit. 119,88 € par an l’est déjà beaucoup moins. Et surtout, une dépense répétée finit par ne plus être une décision.\n\nFaites le test sur vos propres prélèvements :\nhttps://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial\n\n#ContreEvidence #FinancesPersonnelles #Budget"
+    "message": "Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?\n\nComparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.\n\nLire sur Contre-Évidence :\nhttps://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial\n\n#ContreEvidence #Patrimoine"
   },
   "instagram": {
-    "caption": "Tu ne dépenses peut-être pas 4 000 € de trop. Mais tu peux avoir près de 4 000 € de dépenses récurrentes que tu ne redécides presque plus.\n\nDans notre exemple : 12 prélèvements = 3 963,84 € par an. Après audit : 1 037,64 € d’économies identifiées, sans supprimer les protections utiles.\n\nLe premier réflexe : arrêter de regarder « seulement 9,99 €/mois » et convertir chaque ligne en coût annuel.\n\nDossier complet sur Contre-Évidence.\n\n#ContreEvidence #FinancesPersonnelles #Budget #Patrimoine"
+    "caption": "Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?\n\nComparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.\n\nDossier complet sur Contre-Évidence.\n\n#ContreEvidence #Patrimoine"
   },
   "tiktok": {
-    "title": "Ton cerveau t’a encore arnaqué ! Près de 4 000 € par an peuvent se cacher dans 12 petites dépenses récurrentes. Dans notre exemple, l’audit en récupère 1 037,64 €. Passe tout en coût annuel. #ContreEvidence #Budget"
+    "title": "Ton cerveau t’a encore arnaqué ! Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie. #ContreEvidence #Patrimoine"
   },
   "youtube": {
-    "title": "Près de 4 000 € de dépenses invisibles ? Fais l’audit #Shorts",
-    "description": "Tu ne dépenses peut-être pas 4 000 € de trop. Mais des petites dépenses récurrentes peuvent finir par représenter une somme énorme sans être redécidées.\n\nDans l’exemple Contre-Évidence : 12 prélèvements = 3 963,84 € par an. Après audit : 1 037,64 € d’économies identifiées, sans supprimer les protections utiles.\n\nLire le dossier : https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial\n\n#ContreEvidence #FinancesPersonnelles #Budget #Shorts"
+    "title": "Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ? #Shorts",
+    "description": "Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.\n\nLire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial\n\n#ContreEvidence #Patrimoine #Shorts"
   },
   "trackedLinks": {
-    "facebook": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial",
-    "instagram": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=instagram&utm_medium=social&utm_campaign=editorial",
-    "tiktok": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=tiktok&utm_medium=social&utm_campaign=editorial",
-    "youtube": "https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial"
+    "facebook": "https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial",
+    "instagram": "https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=instagram&utm_medium=social&utm_campaign=editorial",
+    "tiktok": "https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=tiktok&utm_medium=social&utm_campaign=editorial",
+    "youtube": "https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial"
   }
 }
