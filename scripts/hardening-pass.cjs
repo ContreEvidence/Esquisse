@@ -130,7 +130,7 @@ function htmlFiles(dir = ROOT, prefix = '') {
 
 const versionedAssets = [
   'navigation-v3.js','orientation.js','longform.js','follow.js','personal-space.js','personal-space.css','ux-retention.css',
-  'finance-cockpit.js','finance-cockpit.css','finance-architecture.js','finance-architecture.css','cockpit-progressive.js','cockpit-progressive.css'
+  'finance-cockpit.js','finance-cockpit.css','finance-architecture.js','finance-architecture.css','cockpit-progressive.js','cockpit-progressive.css','property-cockpit.js','property-cockpit.css'
 ];
 
 for (const rel of htmlFiles()) {
