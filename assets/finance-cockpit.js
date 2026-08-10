@@ -11,6 +11,7 @@
   const directPropertyKeys=['home','rental','commercialProperty','otherProperty'];
   const realEstateExposureKeys=[...directPropertyKeys,'scpi','listedProperty'];
   const financialKeys=['cash','euroFund','bonds','privateCredit','equities','scpi','listedProperty','privateEquity','infrastructure','gold','commodities','crypto','other'];
+  const projectionKeys=['euroFund','bonds','privateCredit','equities','scpi','listedProperty','privateEquity','infrastructure','gold','commodities','crypto'];
   const targetLabels={
     home:'Résidence principale',rental:'Immobilier locatif résidentiel',commercialProperty:'Immobilier commercial direct',otherProperty:'Autre immobilier direct',
     cash:'Liquidités & monétaire',euroFund:'Fonds euros / capital garanti',bonds:'Obligations',privateCredit:'Crédit privé / dette non cotée',equities:'Actions & ETF actions',
@@ -54,6 +55,7 @@
     const directProperty=sum(state.assets,directPropertyKeys);
     const propertyExposure=sum(state.assets,realEstateExposureKeys);
     const financial=sum(state.assets,financialKeys);
+    const projectionBase=sum(state.assets,projectionKeys);
     const gross=sum(state.assets,assetKeys);
     const debt=sum(state.debts,['homeLoan','rentalLoan','consumer','other']);
     const net=gross-debt;
@@ -68,7 +70,7 @@
     const targetTotal=assetKeys.reduce((a,k)=>a+n(state.goals.target[k]),0);
     const alternatives=sum(state.assets,['privateEquity','infrastructure','gold','commodities','crypto','other']);
     const alternativesShare=gross>0?alternatives/gross*100:0;
-    return{directProperty,propertyExposure,financial,gross,debt,net,spend,margin,afterSaving,reserveMonths,savingRate,propertyShare,cashShare,debtShare,targetTotal,alternatives,alternativesShare};
+    return{directProperty,propertyExposure,financial,projectionBase,gross,debt,net,spend,margin,afterSaving,reserveMonths,savingRate,propertyShare,cashShare,debtShare,targetTotal,alternatives,alternativesShare};
   }
 
   function fv(initial,monthly,annualPct,months){
@@ -102,7 +104,7 @@
   function renderKpis(state,d){
     const vals={net:money(d.net),gross:money(d.gross),financial:money(d.financial),margin:money(d.margin),reserve:d.spend>0?`${pct.format(d.reserveMonths)} mois`:'—'};
     Object.entries(vals).forEach(([k,v])=>{const el=document.querySelector(`[data-fin-kpi="${k}"]`);if(el)el.textContent=v;});
-    const notes={net:d.debt?`${money(d.debt)} de dettes déduites`:'Actifs moins dettes',gross:`Exposition immobilière ${percent(d.propertyShare)} des actifs`,financial:'Actifs hors immobilier direct',margin:`Avant épargne programmée : ${money(d.afterSaving)} après épargne`,reserve:d.spend>0?'Liquidités uniquement / dépenses mensuelles saisies':'Renseignez vos dépenses mensuelles'};
+    const notes={net:d.debt?`${money(d.debt)} de dettes déduites`:'Actifs moins dettes',gross:`Exposition immobilière ${percent(d.propertyShare)} des actifs`,financial:'Liquidités, placements et autres actifs hors immobilier direct',margin:`Reste après épargne programmée : ${money(d.afterSaving)}`,reserve:d.spend>0?'Liquidités & monétaire / dépenses mensuelles saisies':'Renseignez vos dépenses mensuelles'};
     Object.entries(notes).forEach(([k,v])=>{const el=document.querySelector(`[data-fin-kpi-note="${k}"]`);if(el)el.textContent=v;});
   }
 
@@ -120,7 +122,7 @@
     const host=document.querySelector('[data-fin-observations]');if(!host)return;
     if(d.gross<=0&&n(state.budget.income)<=0){host.innerHTML='<div class="space-empty"><strong>Commencez par votre situation réelle.</strong><br>Quelques montants suffisent pour que les premiers indicateurs deviennent utiles.</div>';return;}
     const obs=[];
-    if(d.spend>0)obs.push(`<div class="fc-observation"><strong>Réserve liquide : ${pct.format(d.reserveMonths)} mois de dépenses</strong><p>La réserve utilise uniquement la poche « liquidités & monétaire », pas les actifs qui doivent être vendus ou arbitrés.</p><a href="dossiers/liquidites-reserve-securite.html">Comprendre la réserve de sécurité →</a></div>`);
+    if(d.spend>0)obs.push(`<div class="fc-observation"><strong>Réserve immédiate : ${pct.format(d.reserveMonths)} mois de dépenses</strong><p>La réserve utilise uniquement la poche « liquidités & monétaire », pas les actifs qui doivent être vendus ou arbitrés.</p><a href="dossiers/liquidites-reserve-securite.html">Comprendre la réserve de sécurité →</a></div>`);
     if(d.gross>0)obs.push(`<div class="fc-observation"><strong>Exposition immobilière totale : ${pct.format(d.propertyShare)} % des actifs bruts</strong><p>Elle agrège immobilier direct, SCPI/OPCI et foncières cotées pour faire apparaître le moteur immobilier même lorsque les véhicules diffèrent.</p><a href="dossiers/immobilier-allocation-globale-patrimoine.html">Lire l’immobilier dans l’allocation globale →</a></div>`);
     if(d.debt>0)obs.push(`<div class="fc-observation"><strong>Dette : ${pct.format(d.debtShare)} % des actifs bruts</strong><p>Le ratio ne dit pas à lui seul si la dette est soutenable : durée, taux, mensualités, revenus et liquidité comptent aussi.</p><a href="dossiers/finances-credit-endettement.html">Analyser l’endettement →</a></div>`);
     if(d.gross>0&&d.alternatives>0)obs.push(`<div class="fc-observation"><strong>Non coté, actifs réels et alternatifs : ${pct.format(d.alternativesShare)} %</strong><p>Ces poches peuvent avoir des risques de liquidité, de valorisation ou de concentration très différents. Les isoler évite de les cacher dans « autres ».</p><a href="dossiers/classes-actifs-allocation-patrimoine.html">Voir le panorama des classes d’actifs →</a></div>`);
@@ -132,17 +134,17 @@
     const host=document.querySelector('[data-fin-projection]');if(!host)return;
     const years=Math.max(0,n(state.goals.year)-currentYear),months=Math.round(years*12);
     const contribution=n(state.goals.monthlyContribution)||n(state.budget.saving);
-    const projected=fv(d.financial,contribution,n(state.goals.returnRate),months);
+    const projected=fv(d.projectionBase,contribution,n(state.goals.returnRate),months);
     const real=projected/Math.pow(1+n(state.goals.inflation)/100,years||0);
-    const target=n(state.goals.financialTarget),req=requiredMonthly(d.financial,target,n(state.goals.returnRate),months),gap=target>0?projected-target:0;
-    host.innerHTML=`<div class="fc-scenario-output"><div class="fc-output"><span>Capital financier projeté</span><strong>${money(projected)}</strong><small>${years} an(s), ${pct.format(n(state.goals.returnRate))} %/an</small></div><div class="fc-output"><span>Valeur en euros d’aujourd’hui</span><strong>${money(real)}</strong><small>Avec ${pct.format(n(state.goals.inflation))} % d’inflation</small></div><div class="fc-output"><span>Versement mensuel utilisé</span><strong>${money(contribution)}</strong><small>Objectif ou épargne programmée</small></div><div class="fc-output"><span>${target>0?'Écart à l’objectif':'Versement requis'}</span><strong>${target>0?(gap>=0?`+${money(gap)}`:money(gap)):'—'}</strong><small>${target>0?`Pour ${money(target)} en ${state.goals.year} · requis ≈ ${money(req)}/mois`:'Renseignez un capital cible pour calculer l’effort requis'}</small></div></div>`;
+    const target=n(state.goals.financialTarget),req=requiredMonthly(d.projectionBase,target,n(state.goals.returnRate),months),gap=target>0?projected-target:0;
+    host.innerHTML=`<div class="fc-scenario-output"><div class="fc-output"><span>Capital d’investissement projeté</span><strong>${money(projected)}</strong><small>Base actuelle ${money(d.projectionBase)} · ${years} an(s) · ${pct.format(n(state.goals.returnRate))} %/an</small></div><div class="fc-output"><span>Valeur en euros d’aujourd’hui</span><strong>${money(real)}</strong><small>Avec ${pct.format(n(state.goals.inflation))} % d’inflation</small></div><div class="fc-output"><span>Versement mensuel utilisé</span><strong>${money(contribution)}</strong><small>Objectif ou épargne programmée</small></div><div class="fc-output"><span>${target>0?'Écart à l’objectif':'Versement requis'}</span><strong>${target>0?(gap>=0?`+${money(gap)}`:money(gap)):'—'}</strong><small>${target>0?`Pour ${money(target)} en ${state.goals.year} · requis ≈ ${money(req)}/mois`:'Renseignez un capital cible pour calculer l’effort requis'}</small></div></div><div class="fc-target-note">La base projetée exclut l’immobilier direct, les liquidités & monétaire et les objets de collection. Le rendement saisi est une hypothèse moyenne appliquée à cet ensemble : ce n’est ni une prévision ni un rendement supposé identique pour chaque classe.</div>`;
   }
 
   function renderStress(state,d){
     const host=document.querySelector('[data-fin-stress]');if(!host)return;
     const shock=Math.max(0,n(state.goals.incomeShock)),shocked=n(state.budget.income)*shock/100,margin=shocked-d.spend;
     const runway=margin<0&&n(state.assets.cash)>0?n(state.assets.cash)/Math.abs(margin):Infinity;
-    host.innerHTML=`<div class="fc-scenario-output"><div class="fc-output"><span>Revenu simulé</span><strong>${money(shocked)}</strong><small>${pct.format(shock)} du revenu actuel</small></div><div class="fc-output"><span>Marge après dépenses</span><strong>${money(margin)}</strong><small>Dépenses saisies : ${money(d.spend)}/mois</small></div><div class="fc-output"><span>Durée de la réserve</span><strong>${Number.isFinite(runway)?`${pct.format(runway)} mois`:'Pas de ponction'}</strong><small>${margin<0?'Si le déficit mensuel reste identique':'Le revenu simulé couvre les dépenses saisies'}</small></div><div class="fc-output"><span>Épargne programmée</span><strong>${money(n(state.budget.saving))}</strong><small>${margin>=n(state.budget.saving)?'Compatible avec ce scénario':'À réexaminer dans ce scénario'}</small></div></div>`;
+    host.innerHTML=`<div class="fc-scenario-output"><div class="fc-output"><span>Revenu simulé</span><strong>${money(shocked)}</strong><small>${pct.format(shock)} du revenu actuel</small></div><div class="fc-output"><span>Marge après dépenses</span><strong>${money(margin)}</strong><small>Dépenses saisies : ${money(d.spend)}/mois</small></div><div class="fc-output"><span>Durée de la réserve immédiate</span><strong>${Number.isFinite(runway)?`${pct.format(runway)} mois`:'Pas de ponction'}</strong><small>${margin<0?'Si le déficit mensuel reste identique':'Le revenu simulé couvre les dépenses saisies'}</small></div><div class="fc-output"><span>Épargne programmée</span><strong>${money(n(state.budget.saving))}</strong><small>${margin>=n(state.budget.saving)?'Compatible avec ce scénario':'À réexaminer dans ce scénario'}</small></div></div>`;
   }
 
   function renderGap(state,d){
