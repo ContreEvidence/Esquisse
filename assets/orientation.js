@@ -7,76 +7,6 @@
     const prefix = nested ? '../' : '';
     const toolsHref = `${prefix}bibliotheque.html?type=outil`;
 
-    if (!document.getElementById('ce-orientation-style')) {
-      const style = document.createElement('style');
-      style.id = 'ce-orientation-style';
-      style.textContent = `
-        .ce-flat-links{grid-template-columns:repeat(4,minmax(0,1fr))!important}
-        .ce-flat-link[data-key="outils"]{color:#f0d48a!important}
-
-        /* Hiérarchie visuelle plus calme : moins d'or, moins d'ombres, titres moins monumentaux. */
-        .theme-card,.level-card,.path-card,.article-card,.situation-card,.video-card,.home-video-card,.young-home-card,.callout-light,.library-tools{
-          border-top-width:1px!important;
-          box-shadow:0 5px 16px rgba(16,24,32,.055)!important;
-        }
-        .theme-card:hover,.level-card:hover,.path-card:hover,.article-card:hover,.situation-card:hover,.video-card:hover,.home-video-card:hover{
-          box-shadow:0 8px 20px rgba(16,24,32,.085)!important;
-        }
-        @media(min-width:821px){
-          .article-hero h1{font-size:clamp(2.55rem,5vw,4.55rem)!important}
-          .section-head h2{font-size:clamp(1.95rem,4vw,3.3rem)!important}
-        }
-
-        /* Le hero d'accueil reste volontairement contrasté. */
-        .home-index .hero.beginner-hero{
-          background:linear-gradient(135deg,#070708 0%,#101820 68%,#1d2730 100%)!important;
-          color:#fff!important;
-          border-bottom:3px solid #d4ab56!important;
-        }
-        .home-index .hero.beginner-hero h1{color:#fff!important}
-        .home-index .hero.beginner-hero p,
-        .home-index .hero.beginner-hero .home-principle span{color:#f2eee5!important;opacity:1!important}
-        .home-index .hero.beginner-hero .kicker,
-        .home-index .hero.beginner-hero .home-principle strong{color:#e8c979!important}
-        .home-index .hero.beginner-hero .btn-ghost{
-          background:#fff!important;
-          color:#101820!important;
-          border:2px solid #d4ab56!important;
-        }
-        .home-index .hero.beginner-hero .btn-ghost:hover,
-        .home-index .hero.beginner-hero .btn-ghost:focus-visible{
-          background:#f6f1e7!important;
-          color:#09090a!important;
-        }
-
-        /* Sur grand écran, l'en-tête se fait discret une fois la lecture engagée. */
-        @media(min-width:1041px){
-          .ce-flat-header,.ce-flat-top,.ce-flat-brand img,.ce-search,.ce-search input,.ce-search button,.ce-flat-link,.ce-start-link{transition:.18s ease}
-          .ce-flat-header.is-compact .ce-flat-top{min-height:48px!important;padding:.12rem 0!important}
-          .ce-flat-header.is-compact .ce-flat-brand img{width:36px!important;height:36px!important;flex-basis:36px!important;box-shadow:0 0 0 1px #d4ab56,0 0 0 2px #fff!important}
-          .ce-flat-header.is-compact .ce-flat-brand-copy small{display:none!important}
-          .ce-flat-header.is-compact .ce-flat-brand-copy strong{font-size:.92rem!important}
-          .ce-flat-header.is-compact .ce-search{max-width:410px!important}
-          .ce-flat-header.is-compact .ce-search input{height:31px!important;font-size:.8rem!important}
-          .ce-flat-header.is-compact .ce-search button{min-width:72px!important;font-size:.77rem!important}
-          .ce-flat-header.is-compact .ce-start-link{min-height:30px!important;padding:.32rem .58rem!important;font-size:.7rem!important}
-          .ce-flat-header.is-compact .ce-flat-link{min-height:29px!important;padding:.28rem .4rem!important;font-size:.87rem!important}
-          .ce-flat-header.is-compact .ce-flat-links{padding:.08rem 0 .1rem!important}
-        }
-
-        @media(max-width:759px){
-          .ce-flat-links{grid-template-columns:1fr!important}
-          .ce-flat-actions{gap:.35rem!important}
-          .ce-start-link{display:inline-flex!important;min-height:32px!important;padding:.34rem .52rem!important;font-size:.68rem!important}
-        }
-        @media(max-width:420px){
-          .ce-start-link{font-size:0!important;min-width:82px!important}
-          .ce-start-link::after{content:'Commencer';font-size:.66rem!important}
-        }
-      `;
-      document.head.appendChild(style);
-    }
-
     /* Libellés éditoriaux courts : éviter les intitulés administratifs dans les parcours. */
     const renameText = (root = document.body) => {
       if (!root || root.dataset.ceLabelsRenamed) return;
@@ -107,7 +37,7 @@
     }
 
     const fallbackNav = document.querySelector('.ce-fallback-header nav');
-    if (!flatLinks && fallbackNav && !fallbackNav.querySelector('[data-ce-tools-link]')) {
+    if (!flatLinks && fallbackNav && !fallbackNav.querySelector('[data-ce-tools-link]') && ![...fallbackNav.links].some(a => /[?&]type=outil\b/.test(a.href))) {
       const link = document.createElement('a');
       link.href = toolsHref;
       link.dataset.ceToolsLink = '1';
