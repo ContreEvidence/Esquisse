@@ -15,6 +15,16 @@
     {id:'other',label:'Alternatifs & autres',keys:['crypto','other'],note:'Poches qui doivent rester visibles sans être assimilées automatiquement aux classes traditionnelles.'}
   ];
 
+  const arbitrageFamilies=[
+    {id:'liquidity',label:'Liquidité & capital garanti',keys:['cash','euroFund']},
+    {id:'rates',label:'Taux & crédit',keys:['bonds','privateCredit']},
+    {id:'equities',label:'Actions cotées',keys:['equities']},
+    {id:'property',label:'Immobilier hors résidence principale',keys:['rental','commercialProperty','otherProperty','scpi','listedProperty']},
+    {id:'private',label:'Capital non coté',keys:['privateEquity']},
+    {id:'real',label:'Actifs réels hors immobilier',keys:['infrastructure','gold','commodities']},
+    {id:'other',label:'Alternatifs & autres',keys:['crypto','other']}
+  ];
+
   const lenses=[
     {label:'Mobilisable immédiatement',keys:['cash'],note:'Liquidités & monétaire uniquement.'},
     {label:'Liquidité + fonds euros',keys:['cash','euroFund'],note:'Une lecture de la poche disponible ou stabilisée, sans présumer de votre horizon.'},
@@ -29,11 +39,29 @@
   function sum(obj,keys){return keys.reduce((total,key)=>total+n(obj?.[key]),0);}
   function money(v){return euro.format(n(v));}
   function percent(v){return `${pct.format(n(v))} %`;}
-  function read(){
-    try{return JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(_){return {};}
+  function read(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(_){return {};}}
+  function write(state){try{state.updatedAt=new Date().toISOString();localStorage.setItem(KEY,JSON.stringify(state));return true;}catch(_){return false;}}
+
+  function ensureGlobalLabels(){
+    const title=document.getElementById('objectifs-title');
+    const section=title?.closest('.fc-section');
+    if(!section)return;
+    const cards=[...section.querySelectorAll('.fc-card')];
+    const targetCard=cards.find(card=>card.querySelector('[data-fin-key^="goals.target."]'));
+    if(!targetCard)return;
+    const h3=targetCard.querySelector('h3');
+    if(h3)h3.textContent='Répartition cible globale';
+    if(!targetCard.querySelector('[data-global-target-note]')){
+      const note=document.createElement('div');
+      note.className='fc-card-note';
+      note.dataset.globalTargetNote='1';
+      note.innerHTML='<strong>Vue globale :</strong> cette cible porte sur 100 % des actifs bruts, résidence principale comprise. La vue d’arbitrage affichée plus bas exclut la résidence principale et possède sa propre cible.';
+      targetCard.appendChild(note);
+    }
   }
 
   function ensureShell(){
+    ensureGlobalLabels();
     if(document.querySelector('[data-fin-architecture-shell]'))return;
     const title=document.getElementById('lecture-title');
     const section=title?.closest('.fc-section');
@@ -45,7 +73,7 @@
       <div class="fc-card fc-architecture-card">
         <div class="fc-eyebrow">Vue agrégée · sans double comptage</div>
         <h3>Architecture globale</h3>
-        <p>Les classes détaillées sont regroupées en familles économiques exclusives. Cette vue totalise donc bien 100 % des actifs bruts et permet de comparer l’allocation actuelle à votre cible.</p>
+        <p>Les classes détaillées sont regroupées en familles économiques exclusives. Cette vue totalise donc bien 100 % des actifs bruts, résidence principale comprise, et permet de comparer l’allocation actuelle à votre cible globale.</p>
         <div class="fc-architecture" data-fin-architecture></div>
       </div>
       <div class="fc-card fc-lenses-card">
@@ -54,6 +82,14 @@
         <p>Un même euro peut répondre à plusieurs questions. Ces indicateurs ne s’additionnent donc pas : ils servent à regarder la liquidité, la croissance, l’immobilier ou le non-coté sous plusieurs angles.</p>
         <div class="fc-lenses" data-fin-lenses></div>
         <div class="fc-card-note"><a href="dossiers/classes-actifs-allocation-patrimoine.html">Comprendre classes, véhicules, enveloppes et fonctions →</a></div>
+      </div>
+      <div class="fc-card fc-arbitrage-card">
+        <div class="fc-eyebrow">Vue d’arbitrage · résidence principale exclue</div>
+        <h3>Allocation hors résidence principale</h3>
+        <p>Cette seconde lecture retire uniquement la résidence principale du dénominateur. Elle permet de fixer une cible distincte pour le patrimoine que vous pouvez envisager de réallouer à terme, sans prétendre que tous ces actifs sont liquides ou vendables immédiatement.</p>
+        <div class="fc-arbitrage-summary" data-fin-arbitrage-summary></div>
+        <div class="fc-arbitrage" data-fin-arbitrage></div>
+        <div class="fc-lens-note"><strong>Vue d’arbitrage ≠ liquidité.</strong> Un bien locatif, une SCPI, du private equity ou certains autres actifs peuvent rester longs ou difficiles à céder. Cette vue sert à raisonner sur la structure, pas à simuler une vente instantanée.</div>
       </div>`;
     section.appendChild(block);
   }
@@ -70,7 +106,7 @@
         <div class="fc-architecture-meter" aria-hidden="true"><span style="width:${Math.min(100,Math.max(0,share))}%"></span>${hasTarget&&target>0?`<em style="left:${Math.min(100,Math.max(0,target))}%"></em>`:''}</div>
         <div class="fc-architecture-numbers"><strong>${percent(share)}</strong>${hasTarget?`<small>Cible ${percent(target)}</small>`:'<small>Cible non définie</small>'}</div>
       </div>`;
-    }).join('')+`<div class="fc-target-note">Chaque classe détaillée n’entre que dans une seule famille de cette vue. Le trait doré indique la cible agrégée lorsqu’elle existe.</div>`;
+    }).join('')+`<div class="fc-target-note">Chaque classe détaillée n’entre que dans une seule famille de cette vue. Le trait doré indique la cible globale agrégée lorsqu’elle existe.</div>`;
   }
 
   function renderLenses(state,gross){
@@ -86,18 +122,62 @@
     }).join('')+`<div class="fc-lens-note">Ces lentilles se chevauchent volontairement. Elles décrivent des fonctions ou contraintes différentes et ne doivent jamais être additionnées pour former une allocation.</div>`;
   }
 
+  function renderArbitrage(state){
+    const host=document.querySelector('[data-fin-arbitrage]');
+    const summary=document.querySelector('[data-fin-arbitrage-summary]');
+    if(!host||!summary)return;
+    const assets=state.assets||{};
+    const allKeys=[...new Set(families.flatMap(f=>f.keys))];
+    const gross=sum(assets,allKeys);
+    const home=n(assets.home);
+    const base=Math.max(0,gross-home);
+    const targets=state.goals?.targetArbitrableFamilies||{};
+    const targetTotal=arbitrageFamilies.reduce((total,f)=>total+n(targets[f.id]),0);
+    summary.innerHTML=`<div><span>Actifs bruts</span><strong>${money(gross)}</strong></div><div><span>Résidence principale exclue</span><strong>${money(home)}</strong></div><div><span>Base hors résidence principale</span><strong>${money(base)}</strong></div><div><span>Total de la cible</span><strong>${targetTotal>0?percent(targetTotal):'Non définie'}</strong></div>`;
+    if(base<=0){host.innerHTML='<div class="space-empty">Renseignez au moins un actif hors résidence principale pour utiliser cette vue.</div>';return;}
+    const rows=arbitrageFamilies.map(f=>{
+      const amount=sum(assets,f.keys),share=amount/base*100,target=n(targets[f.id]);
+      const gap=target>0?base*(target-share)/100:null;
+      return `<div class="fc-arbitrage-row">
+        <div class="fc-arbitrage-copy"><strong>${f.label}</strong><small>${money(amount)}</small></div>
+        <div class="fc-arbitrage-current"><span>Actuel</span><strong>${percent(share)}</strong></div>
+        <label class="fc-arbitrage-target"><span>Cible %</span><input type="number" min="0" max="100" step="0.1" inputmode="decimal" data-fin-arbitrage-target="${f.id}" value="${target||0}" aria-label="Cible hors résidence principale — ${f.label}"/></label>
+        <div class="fc-arbitrage-gap"><span>Écart théorique</span><strong>${gap===null?'—':`${gap>=0?'+':''}${money(gap)}`}</strong></div>
+      </div>`;
+    }).join('');
+    const warning=targetTotal>0&&Math.abs(targetTotal-100)>.1?`<div class="fc-gap-warning">Votre cible hors résidence principale totalise ${percent(targetTotal)} %. Ajustez-la à 100 % pour comparer une allocation complète.</div>`:'';
+    host.innerHTML=rows+warning+`<div class="fc-target-note">Les écarts sont calculés à base hors résidence principale constante. Ils décrivent une direction théorique d’allocation, pas des ordres d’achat ou de vente.</div>`;
+  }
+
   function render(){
     ensureShell();
+    ensureGlobalLabels();
     const state=read(),assets=state.assets||{};
     const allKeys=[...new Set(families.flatMap(f=>f.keys))];
     const gross=sum(assets,allKeys);
     renderFamilies(state,gross);
     renderLenses(state,gross);
+    renderArbitrage(state);
+  }
+
+  function persistArbitrageTarget(el){
+    const state=read();
+    state.goals=state.goals||{};
+    state.goals.targetArbitrableFamilies=state.goals.targetArbitrableFamilies||{};
+    state.goals.targetArbitrableFamilies[el.dataset.finArbitrageTarget]=Math.min(100,Math.max(0,n(el.value)));
+    write(state);
+    render();
   }
 
   function bind(){
-    document.addEventListener('input',e=>{if(e.target?.matches?.('[data-fin-key]'))queueMicrotask(render);});
-    document.addEventListener('change',e=>{if(e.target?.matches?.('[data-fin-key],[data-fin-import-file]'))setTimeout(render,0);});
+    document.addEventListener('input',e=>{
+      if(e.target?.matches?.('[data-fin-arbitrage-target]')){persistArbitrageTarget(e.target);return;}
+      if(e.target?.matches?.('[data-fin-key]'))queueMicrotask(render);
+    });
+    document.addEventListener('change',e=>{
+      if(e.target?.matches?.('[data-fin-arbitrage-target]')){persistArbitrageTarget(e.target);return;}
+      if(e.target?.matches?.('[data-fin-key],[data-fin-import-file]'))setTimeout(render,0);
+    });
     document.addEventListener('click',e=>{if(e.target?.closest?.('[data-fin-example],[data-fin-clear],[data-fin-import],[data-fin-snapshot]'))setTimeout(render,0);});
   }
 
