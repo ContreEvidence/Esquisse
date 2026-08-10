@@ -13,6 +13,15 @@
     {
       d:'patrimoine',
       t:'dossier',
+      c:'Immobilier',
+      h:'dossiers/cout-complet-achat-immobilier.html',
+      n:'Achat immobilier : calculer le coût complet avant de regarder la mensualité',
+      x:'Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.',
+      k:'immobilier achat logement coût complet mensualité crédit apport frais acquisition notaire travaux charges copropriété taxe foncière revente coût opportunité dette'
+    },
+    {
+      d:'patrimoine',
+      t:'dossier',
       c:'Inflation & pouvoir d’achat',
       h:'dossiers/inflation-comprendre-histoire-pouvoir-achat.html',
       n:'Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent',
