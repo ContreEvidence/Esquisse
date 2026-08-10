@@ -1,12 +1,12 @@
 # Audit technique automatique — Contre-Évidence
 
-Généré le 2026-08-10T20:06:13.963Z
+Généré le 2026-08-10T20:09:18.773Z
 
 ## Erreurs critiques (0)
 - Aucune.
 
 ## Avertissements (1)
-- dossiers/rembourser-credit-ou-investir.html: bloc source sans lien externe détecté
+- dossiers/cout-complet-achat-immobilier.html: bloc source sans lien externe détecté
 
 ## Contrôles validés
 - Aucune erreur critique détectée dans les liens, catalogues, canonicals de référence et sitemap.
@@ -17,4 +17,5 @@ Généré le 2026-08-10T20:06:13.963Z
 - les outils peuvent volontairement canoniser vers le dossier qui explique le raisonnement ;
 - les variables JavaScript ne sont pas interprétées comme des liens ;
 - un exemple chiffré illustratif n'est pas obligé d'avoir une source externe ;
+- les blocs Sources, Références, source-note et source-list sont reconnus ;
 - les liens, ancres, fichiers du catalogue et URLs du sitemap sont contrôlés.
