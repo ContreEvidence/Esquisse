@@ -26,6 +26,8 @@ on:
       - 'assets/personal-space.js'
       - 'assets/finance-cockpit.css'
       - 'assets/finance-cockpit.js'
+      - 'assets/finance-architecture.css'
+      - 'assets/finance-architecture.js'
       - 'assets/analytics-config.json'
       - 'assets/analytics-loader.js'
       - 'scripts/clean-legacy-pages.cjs'
@@ -86,7 +88,7 @@ jobs:
         run: node scripts/add-personal-space.cjs
 
       - name: Vérifier la syntaxe des moteurs de Mon espace
-        run: node --check assets/personal-space.js && node --check assets/finance-cockpit.js
+        run: node --check assets/personal-space.js && node --check assets/finance-cockpit.js && node --check assets/finance-architecture.js
 
       - name: Préparer le chargeur de mesure d audience
         run: node scripts/add-analytics-loader.cjs
