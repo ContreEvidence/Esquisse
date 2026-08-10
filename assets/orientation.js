@@ -3,7 +3,7 @@
 
   const run = () => {
     const path = window.location.pathname;
-    const nested = /\/(articles|themes|dossiers)\//.test(path);
+    const nested = /\/(articles|themes|dossiers|fiches-metiers)\//.test(path);
     const prefix = nested ? '../' : '';
     const toolsHref = `${prefix}bibliotheque.html?type=outil`;
 
