@@ -77,6 +77,25 @@
       document.head.appendChild(style);
     }
 
+    /* Libellés éditoriaux courts : éviter les intitulés administratifs dans les parcours. */
+    const renameText = (root = document.body) => {
+      if (!root || root.dataset.ceLabelsRenamed) return;
+      const replacements = new Map([
+        ['Budget, consommation & sécurité financière', 'Argent au quotidien'],
+        ['Budget, consommation & sécurité', 'Argent au quotidien'],
+        ['Budget, consommation, sécurité financière, immobilier, investissement, retraite & transmission : entrez par la décision à comprendre.', 'Argent au quotidien, immobilier, investissement, retraite & transmission : entrez par la décision à comprendre.']
+      ]);
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+      let node;
+      while ((node = walker.nextNode())) {
+        const trimmed = node.nodeValue.trim();
+        if (!replacements.has(trimmed)) continue;
+        node.nodeValue = node.nodeValue.replace(trimmed, replacements.get(trimmed));
+      }
+      root.dataset.ceLabelsRenamed = '1';
+    };
+    renameText();
+
     const flatLinks = document.querySelector('.ce-flat-links');
     if (flatLinks && !flatLinks.querySelector('[data-key="outils"]')) {
       const link = document.createElement('a');
