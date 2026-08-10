@@ -1,12 +1,12 @@
 # Audit technique automatique — Contre-Évidence
 
-Généré le 2026-08-10T20:09:18.773Z
+Généré le 2026-08-10T20:12:18.074Z
 
 ## Erreurs critiques (0)
 - Aucune.
 
-## Avertissements (1)
-- dossiers/cout-complet-achat-immobilier.html: bloc source sans lien externe détecté
+## Avertissements (0)
+- Aucun.
 
 ## Contrôles validés
 - Aucune erreur critique détectée dans les liens, catalogues, canonicals de référence et sitemap.
