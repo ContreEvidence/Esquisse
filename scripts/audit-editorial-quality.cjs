@@ -32,8 +32,14 @@ function financialPrescription(plain){
   const action='(?:acheter|vendre|investir|allouer|rembourser)';
   let m=plain.match(new RegExp(`\\b(?:vous devez|vous devriez)\\b[^.!?]{0,70}\\b${action}\\b`,'i'));
   if(m)return m[0].slice(0,95);
-  m=plain.match(new RegExp(`\\bil faut\\s+${action}\\b`,'i'));
-  if(m)return m[0];
+
+  const ilFaut=new RegExp(`\\bil faut\\s+${action}\\b`,'gi');
+  while((m=ilFaut.exec(plain))){
+    const before=plain.slice(Math.max(0,m.index-100),m.index);
+    // « cela ne signifie pas qu’il faut vendre » décrit précisément l’absence de conclusion automatique.
+    if(/\bne\b[^.!?]{0,70}\bpas\b[^.!?]{0,45}$/i.test(before)||/\bn['’][^.!?]{0,70}\bpas\b[^.!?]{0,45}$/i.test(before))continue;
+    return m[0];
+  }
 
   const imperative=/\b(achetez|vendez|investissez|allouez|remboursez)\b/gi;
   while((m=imperative.exec(plain))){
@@ -75,7 +81,7 @@ for(let i=0;i<items.length;i++)for(let j=i+1;j<items.length;j++){
 }
 near.sort((x,y)=>y.score-x.score);
 
-const report=`# Audit qualité éditoriale — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\n## Erreurs (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Proximités éditoriales à revoir (${near.length})\n${near.length?near.slice(0,25).map(x=>`- ${(x.score*100).toFixed(0)} % — ${x.a} ↔ ${x.b}`).join('\n'):'- Aucune proximité forte détectée par le filtre lexical.'}\n\n## Interprétation\n- un contenu court n’est pas automatiquement faible : il déclenche une revue de fusion ;\n- un sujet sensible sans bloc de source détecté doit être contrôlé manuellement ;\n- une alerte prescriptive vise une injonction financière réelle, pas « vous investissez », « vous n’achetez pas » ou une consigne de mise en forme ;\n- les sections Sources/Références et les composants source-note/source-list sont reconnus ;\n- la proximité lexicale sert à repérer des doublons potentiels, pas à interdire deux angles réellement différents ;\n- l’audit ne remplace jamais la relecture du raisonnement, des calculs et des sources.\n`;
+const report=`# Audit qualité éditoriale — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\n## Erreurs (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Proximités éditoriales à revoir (${near.length})\n${near.length?near.slice(0,25).map(x=>`- ${(x.score*100).toFixed(0)} % — ${x.a} ↔ ${x.b}`).join('\n'):'- Aucune proximité forte détectée par le filtre lexical.'}\n\n## Interprétation\n- un contenu court n’est pas automatiquement faible : il déclenche une revue de fusion ;\n- un sujet sensible sans bloc de source détecté doit être contrôlé manuellement ;\n- une alerte prescriptive vise une injonction financière réelle, pas une conjugaison descriptive ou une phrase qui nie explicitement la conclusion ;\n- les sections Sources/Références et les composants source-note/source-list sont reconnus ;\n- la proximité lexicale sert à repérer des doublons potentiels, pas à interdire deux angles réellement différents ;\n- l’audit ne remplace jamais la relecture du raisonnement, des calculs et des sources.\n`;
 fs.mkdirSync(path.join(ROOT,'editorial'),{recursive:true});
 fs.writeFileSync(path.join(ROOT,'editorial/audit-qualite-editoriale.md'),report,'utf8');
 console.log(report);
