@@ -4,6 +4,15 @@
     {
       d:'patrimoine',
       t:'dossier',
+      c:'Commencer ses finances',
+      h:'dossiers/prix-attendre-finances.html',
+      n:'Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?',
+      x:'Rendre visible le coût possible de l’inaction : dépenses récurrentes, inflation, retard d’investissement, frais et grosses décisions laissées sans contrôle.',
+      k:'commencer finances remettre plus tard attendre procrastination budget épargne investir investissement inflation frais dépenses récurrentes coût opportunité capitalisation prendre en main argent'
+    },
+    {
+      d:'patrimoine',
+      t:'dossier',
       c:'Inflation & pouvoir d’achat',
       h:'dossiers/inflation-comprendre-histoire-pouvoir-achat.html',
       n:'Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent',
