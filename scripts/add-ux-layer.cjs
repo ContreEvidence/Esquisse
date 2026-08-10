@@ -58,7 +58,7 @@ for (const rel of htmlFiles()) {
   let html=fs.readFileSync(file,'utf8');
   const before=html;
   if (!/<head[\s>]/i.test(html) || !/<\/body>/i.test(html)) continue;
-  const nested=/^(articles|dossiers|themes)\//.test(rel);
+  const nested=/^(articles|dossiers|themes|fiches-metiers)\//.test(rel);
   const p=nested?'../':'';
 
   if (rel === 'themes/argent.html') html = stabilizePatrimoine(html);
