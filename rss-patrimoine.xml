@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Patrimoine.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 10 Aug 2026 13:02:29 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 13:06:12 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss-patrimoine.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,56 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Un bien immobilier vaut aussi par les options qu’il laisse ouvertes</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/valeur-option-bien-immobilier.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/valeur-option-bien-immobilier.html</guid>
+      <pubDate>Mon, 10 Aug 2026 13:04:47 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Optionnalité immobilière</category>
+      <description>Habiter, louer, diviser, exploiter une partie, transformer ou revendre : intégrer la flexibilité future dans l’analyse d’un bien immobilier.</description>
+    </item>
+    <item>
+      <title>Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/garages-parkings-locaux-commerciaux.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/garages-parkings-locaux-commerciaux.html</guid>
+      <pubDate>Mon, 10 Aug 2026 13:04:00 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Immobilier alternatif</category>
+      <description>Ticket d’entrée, bail, vacance, travaux, dépendance à l’emplacement, liquidité et rendement : comparer les actifs immobiliers directs hors logement classique.</description>
+    </item>
+    <item>
+      <title>Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/location-courte-duree-meuble-tourisme.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/location-courte-duree-meuble-tourisme.html</guid>
+      <pubDate>Mon, 10 Aug 2026 13:03:08 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Meublé de tourisme</category>
+      <description>Occupation, saisonnalité, ménage, plateformes, copropriété, enregistrement, DPE et fiscalité : mesurer le rendement après exploitation et risque réglementaire.</description>
+    </item>
+    <item>
+      <title>Location nue ou meublée : comparer l’économie complète avant la fiscalité</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/location-nue-ou-meublee-comparer.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/location-nue-ou-meublee-comparer.html</guid>
+      <pubDate>Mon, 10 Aug 2026 13:02:09 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Investissement locatif</category>
+      <description>Bail, rotation, mobilier, travaux, fiscalité, temps de gestion et souplesse : comparer deux modes d’exploitation sans se limiter au loyer facial.</description>
+    </item>
+    <item>
+      <title>Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/immobilier-allocation-globale-patrimoine.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/immobilier-allocation-globale-patrimoine.html</guid>
+      <pubDate>Mon, 10 Aug 2026 13:01:19 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Immobilier &amp; allocation</category>
+      <description>Résidence principale, locatif, dette, liquidité, rendement, concentration et diversification : juger l’immobilier à l’échelle du patrimoine complet.</description>
+    </item>
     <item>
       <title>Acheter en copropriété : l’audit à faire avant de signer</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html</link>

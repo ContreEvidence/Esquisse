@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 15:02.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 15:06.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -8,7 +8,437 @@ Rien n’est envoyé automatiquement aux plateformes tant qu’aucun compte de p
 
 ---
 
-## 1. Acheter en copropriété : l’audit à faire avant de signer
+## 1. Un bien immobilier vaut aussi par les options qu’il laisse ouvertes
+
+**Type :** Guide · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/valeur-option-bien-immobilier.html  
+**Publication du contenu :** Mon, 10 Aug 2026 13:04:47 GMT  
+
+### Facebook — post avec lien
+
+```text
+Un bien immobilier vaut aussi par les options qu’il laisse ouvertes
+
+Habiter, louer, diviser, exploiter une partie, transformer ou revendre : intégrer la flexibilité future dans l’analyse d’un bien immobilier.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/valeur-option-bien-immobilier.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Un bien immobilier vaut aussi par les options qu’il laisse ouvertes
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. Qu’est-ce qu’une option en immobilier ?
+
+SLIDE 4 — 2. Les principales options d’un bien
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Un bien immobilier vaut aussi par les options qu’il laisse ouvertes
+
+Habiter, louer, diviser, exploiter une partie, transformer ou revendre : intégrer la flexibilité future dans l’analyse d’un bien immobilier.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Habiter, louer, diviser, exploiter une partie, transformer ou revendre : intégrer la flexibilité future dans l’analyse d’un bien immobilier.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Un bien immobilier vaut aussi par les options qu’il laisse ouvertes
+
+PROBLÈME — Habiter, louer, diviser, exploiter une partie, transformer ou revendre : intégrer la flexibilité future dans l’analyse d’un bien immobilier.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/valeur-option-bien-immobilier.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+---
+
+## 2. Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement
+
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/garages-parkings-locaux-commerciaux.html  
+**Publication du contenu :** Mon, 10 Aug 2026 13:04:00 GMT  
+
+### Facebook — post avec lien
+
+```text
+Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au…
+
+Ticket d’entrée, bail, vacance, travaux, dépendance à l’emplacement, liquidité et rendement : comparer les actifs immobiliers directs hors logement classique.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/garages-parkings-locaux-commerciaux.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au…
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. Pourquoi sortir du seul appartement locatif
+
+SLIDE 4 — 2. Parking et garage : simplicité apparente
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au…
+
+Ticket d’entrée, bail, vacance, travaux, dépendance à l’emplacement, liquidité et rendement : comparer les actifs immobiliers directs hors logement classique.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Ticket d’entrée, bail, vacance, travaux, dépendance à l’emplacement, liquidité et rendement : comparer les actifs immobiliers directs hors logement classique.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au…
+
+PROBLÈME — Ticket d’entrée, bail, vacance, travaux, dépendance à l’emplacement, liquidité et rendement : comparer les actifs immobiliers directs hors logement classique.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/garages-parkings-locaux-commerciaux.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+---
+
+## 3. Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?
+
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/location-courte-duree-meuble-tourisme.html  
+**Publication du contenu :** Mon, 10 Aug 2026 13:03:08 GMT  
+
+### Facebook — post avec lien
+
+```text
+Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?
+
+Occupation, saisonnalité, ménage, plateformes, copropriété, enregistrement, DPE et fiscalité : mesurer le rendement après exploitation et risque réglementaire.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/location-courte-duree-meuble-tourisme.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. Le piège du tarif par nuit
+
+SLIDE 4 — 2. Le taux d’occupation est la variable centrale
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?
+
+Occupation, saisonnalité, ménage, plateformes, copropriété, enregistrement, DPE et fiscalité : mesurer le rendement après exploitation et risque réglementaire.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Occupation, saisonnalité, ménage, plateformes, copropriété, enregistrement, DPE et fiscalité : mesurer le rendement après exploitation et risque réglementaire.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?
+
+PROBLÈME — Occupation, saisonnalité, ménage, plateformes, copropriété, enregistrement, DPE et fiscalité : mesurer le rendement après exploitation et risque réglementaire.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/location-courte-duree-meuble-tourisme.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+---
+
+## 4. Location nue ou meublée : comparer l’économie complète avant la fiscalité
+
+**Type :** Guide · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/location-nue-ou-meublee-comparer.html  
+**Publication du contenu :** Mon, 10 Aug 2026 13:02:09 GMT  
+
+### Facebook — post avec lien
+
+```text
+Location nue ou meublée : comparer l’économie complète avant la fiscalité
+
+Bail, rotation, mobilier, travaux, fiscalité, temps de gestion et souplesse : comparer deux modes d’exploitation sans se limiter au loyer facial.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/location-nue-ou-meublee-comparer.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Location nue ou meublée : comparer l’économie complète avant la fiscalité
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. Deux modes d’exploitation, pas deux cases fiscales
+
+SLIDE 4 — 2. Ce que dit la fiscalité en 2026
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Location nue ou meublée : comparer l’économie complète avant la fiscalité
+
+Bail, rotation, mobilier, travaux, fiscalité, temps de gestion et souplesse : comparer deux modes d’exploitation sans se limiter au loyer facial.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Guide #Patrimoine #Immobilier
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Bail, rotation, mobilier, travaux, fiscalité, temps de gestion et souplesse : comparer deux modes d’exploitation sans se limiter au loyer facial.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Guide #Patrimoine #Immobilier
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Location nue ou meublée : comparer l’économie complète avant la fiscalité
+
+PROBLÈME — Bail, rotation, mobilier, travaux, fiscalité, temps de gestion et souplesse : comparer deux modes d’exploitation sans se limiter au loyer facial.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/location-nue-ou-meublee-comparer.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Guide #Patrimoine
+```
+
+---
+
+## 5. Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?
+
+**Type :** Dossier · Patrimoine  
+**Lien :** https://contreevidence.github.io/Esquisse/dossiers/immobilier-allocation-globale-patrimoine.html  
+**Publication du contenu :** Mon, 10 Aug 2026 13:01:19 GMT  
+
+### Facebook — post avec lien
+
+```text
+Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?
+
+Résidence principale, locatif, dette, liquidité, rendement, concentration et diversification : juger l’immobilier à l’échelle du patrimoine complet.
+
+Lire sur Contre-Évidence :
+https://contreevidence.github.io/Esquisse/dossiers/immobilier-allocation-globale-patrimoine.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### Instagram — carousel
+
+```text
+SLIDE 1 — Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?
+
+SLIDE 2 — En bref
+
+SLIDE 3 — 1. Les Français détiennent massivement de l’immobilier
+
+SLIDE 4 — 2. Lire le patrimoine comme un bilan
+
+SLIDE 5 — Le dossier complet est sur Contre-Évidence.
+```
+
+### Instagram — légende
+
+```text
+Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?
+
+Résidence principale, locatif, dette, liquidité, rendement, concentration et diversification : juger l’immobilier à l’échelle du patrimoine complet.
+
+Dossier complet sur Contre-Évidence — lien dans la bio.
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### TikTok — script vidéo
+
+```text
+HOOK
+« Ton cerveau t’a encore arnaqué ! »
+
+IDÉE
+Résidence principale, locatif, dette, liquidité, rendement, concentration et diversification : juger l’immobilier à l’échelle du patrimoine complet.
+
+DÉROULÉ
+1. Poser le problème en une situation concrète.
+2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
+3. Donner le réflexe utile en une phrase.
+
+CHUTE
+« Le dossier complet est sur Contre-Évidence. »
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+### YouTube — Short
+
+```text
+SHORT — 35 à 50 s
+
+HOOK — Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?
+
+PROBLÈME — Résidence principale, locatif, dette, liquidité, rendement, concentration et diversification : juger l’immobilier à l’échelle du patrimoine complet.
+
+DÉMONSTRATION — En bref
+
+CONCLUSION — Donner le réflexe ou la question de décision du dossier.
+
+DESCRIPTION
+Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/immobilier-allocation-globale-patrimoine.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
+
+#ContreEvidence #Dossier #Patrimoine
+```
+
+---
+
+## 6. Acheter en copropriété : l’audit à faire avant de signer
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html  
@@ -94,7 +524,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/a
 
 ---
 
-## 2. Achat immobilier : calculer le coût complet avant de regarder la mensualité
+## 7. Achat immobilier : calculer le coût complet avant de regarder la mensualité
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-complet-achat-immobilier.html  
@@ -180,7 +610,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/c
 
 ---
 
-## 3. Combien coûte le fait d’attendre ?
+## 8. Combien coûte le fait d’attendre ?
 
 **Type :** Outil · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/simulateur-prix-attendre.html  
@@ -266,7 +696,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur
 
 ---
 
-## 4. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
+## 9. Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/prix-attendre-finances.html  
@@ -352,7 +782,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/p
 
 ---
 
-## 5. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
+## 10. Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/inflation-comprendre-histoire-pouvoir-achat.html  
@@ -438,7 +868,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/i
 
 ---
 
-## 6. Gestion pilotée : comment comparer les performances sans se faire piéger ?
+## 11. Gestion pilotée : comment comparer les performances sans se faire piéger ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/gestion-pilotee-comparer-performances.html  
@@ -524,7 +954,7 @@ Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/g
 
 ---
 
-## 7. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
+## 12. Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?
 
 **Type :** Dossier · Patrimoine  
 **Lien :** https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html  
@@ -629,443 +1059,5 @@ DESCRIPTION
 Lire le dossier complet : https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
 
 #ContreEvidence #Dossier #Patrimoine
-```
-
----
-
-## 8. Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
-
-**Type :** Dossier · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html  
-**Publication du contenu :** Sun, 09 Aug 2026 11:17:05 GMT  
-**Données récupérées dans la page :** Prix comptant = 30 000 € · Durée = 48 mois · Kilométrage = 60 000 km · Valeur de revente estimée = 17 000 €  
-
-### Facebook — post avec lien
-
-```text
-Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
-
-Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.
-
-Deux repères du dossier :
-Prix comptant : 30 000 €
-Durée : 48 mois
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Dossier #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
-
-SLIDE 2 — Prix comptant
-30 000 €
-
-SLIDE 3 — Durée
-48 mois
-
-SLIDE 4 — Kilométrage
-60 000 km
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
-
-Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Dossier #Patrimoine #BudgetAuto
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Dossier #Patrimoine #BudgetAuto
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?
-
-PROBLÈME — Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.
-
-DÉMONSTRATION — Prix comptant : 30 000 € / Durée : 48 mois
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/dossiers/cout-reel-voiture-achat-credit-loa-lld.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Dossier #Patrimoine
-```
-
----
-
-## 9. Comparer rendements, frais et intérêts composés
-
-**Type :** Outil · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:55:22 GMT  
-
-### Facebook — post avec lien
-
-```text
-Comparer rendements, frais et intérêts composés
-
-Isoler l’effet des frais ou comparer vos propres hypothèses par classe d’actifs. Seul le taux réglementé du Livret A est chargé comme donnée.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Comparer rendements, frais et intérêts composés
-
-SLIDE 2 — 1. Cadre commun
-
-SLIDE 3 — 2. Choisir ce que vous voulez isoler
-
-SLIDE 4 — 3. Résultats comparables
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Comparer rendements, frais et intérêts composés
-
-Isoler l’effet des frais ou comparer vos propres hypothèses par classe d’actifs. Seul le taux réglementé du Livret A est chargé comme donnée.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Outils #Patrimoine #Investissement
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Isoler l’effet des frais ou comparer vos propres hypothèses par classe d’actifs. Seul le taux réglementé du Livret A est chargé comme donnée.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Outils #Patrimoine #Investissement
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Comparer rendements, frais et intérêts composés
-
-PROBLÈME — Isoler l’effet des frais ou comparer vos propres hypothèses par classe d’actifs. Seul le taux réglementé du Livret A est chargé comme donnée.
-
-DÉMONSTRATION — 1. Cadre commun
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-capitalisation-comparateur.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
----
-
-## 10. Acheter ou louer : tester plusieurs scénarios
-
-**Type :** Outil · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:36:26 GMT  
-
-### Facebook — post avec lien
-
-```text
-Acheter ou louer : tester plusieurs scénarios
-
-Comparer achat et location sous trois hypothèses explicites de prix du logement, loyer et rendement alternatif.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Acheter ou louer : tester plusieurs scénarios
-
-SLIDE 2 — 1. Situation à comparer
-
-SLIDE 3 — 2. Hypothèses à tester
-
-SLIDE 4 — 3. Résultats
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Acheter ou louer : tester plusieurs scénarios
-
-Comparer achat et location sous trois hypothèses explicites de prix du logement, loyer et rendement alternatif.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Outils #Patrimoine #Immobilier
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Comparer achat et location sous trois hypothèses explicites de prix du logement, loyer et rendement alternatif.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Outils #Patrimoine #Immobilier
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Acheter ou louer : tester plusieurs scénarios
-
-PROBLÈME — Comparer achat et location sous trois hypothèses explicites de prix du logement, loyer et rendement alternatif.
-
-DÉMONSTRATION — 1. Situation à comparer
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-acheter-ou-louer.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
----
-
-## 11. Vendre ou conserver un bien immobilier ?
-
-**Type :** Outil · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:35:52 GMT  
-
-### Facebook — post avec lien
-
-```text
-Vendre ou conserver un bien immobilier ?
-
-Comparer capital libérable et conservation sous plusieurs scénarios, avec extinction réelle de la dette à son échéance.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Vendre ou conserver un bien immobilier ?
-
-SLIDE 2 — 1. Situation actuelle
-
-SLIDE 3 — Flux si vous conservez
-
-SLIDE 4 — 2. Trois scénarios
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Vendre ou conserver un bien immobilier ?
-
-Comparer capital libérable et conservation sous plusieurs scénarios, avec extinction réelle de la dette à son échéance.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Outils #Patrimoine #Immobilier
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Comparer capital libérable et conservation sous plusieurs scénarios, avec extinction réelle de la dette à son échéance.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Outils #Patrimoine #Immobilier
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Vendre ou conserver un bien immobilier ?
-
-PROBLÈME — Comparer capital libérable et conservation sous plusieurs scénarios, avec extinction réelle de la dette à son échéance.
-
-DÉMONSTRATION — 1. Situation actuelle
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-vendre-ou-conserver.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
----
-
-## 12. Rembourser son crédit ou investir ?
-
-**Type :** Outil · Patrimoine  
-**Lien :** https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html  
-**Publication du contenu :** Sat, 08 Aug 2026 15:34:50 GMT  
-
-### Facebook — post avec lien
-
-```text
-Rembourser son crédit ou investir ?
-
-Comparer les positions nettes et calculer le rendement d’équilibre, sans rendement de marché prérempli.
-
-Lire sur Contre-Évidence :
-https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html?utm_source=facebook&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
-```
-
-### Instagram — carousel
-
-```text
-SLIDE 1 — Rembourser son crédit ou investir ?
-
-SLIDE 2 — Crédit et capital disponible
-
-SLIDE 3 — Lecture du crédit
-
-SLIDE 4 — Tester vos rendements
-
-SLIDE 5 — Le dossier complet est sur Contre-Évidence.
-```
-
-### Instagram — légende
-
-```text
-Rembourser son crédit ou investir ?
-
-Comparer les positions nettes et calculer le rendement d’équilibre, sans rendement de marché prérempli.
-
-Dossier complet sur Contre-Évidence — lien dans la bio.
-
-#ContreEvidence #Outils #Patrimoine #Investissement
-```
-
-### TikTok — script vidéo
-
-```text
-HOOK
-« Ton cerveau t’a encore arnaqué ! »
-
-IDÉE
-Comparer les positions nettes et calculer le rendement d’équilibre, sans rendement de marché prérempli.
-
-DÉROULÉ
-1. Poser le problème en une situation concrète.
-2. Montrer un chiffre, une comparaison ou une conséquence du dossier.
-3. Donner le réflexe utile en une phrase.
-
-CHUTE
-« Le dossier complet est sur Contre-Évidence. »
-
-#ContreEvidence #Outils #Patrimoine #Investissement
-```
-
-### YouTube — Short
-
-```text
-SHORT — 35 à 50 s
-
-HOOK — Rembourser son crédit ou investir ?
-
-PROBLÈME — Comparer les positions nettes et calculer le rendement d’équilibre, sans rendement de marché prérempli.
-
-DÉMONSTRATION — Crédit et capital disponible
-
-CONCLUSION — Donner le réflexe ou la question de décision du dossier.
-
-DESCRIPTION
-Lire sur Contre-Évidence : https://contreevidence.github.io/Esquisse/simulateur-rembourser-ou-investir.html?utm_source=youtube&utm_medium=social&utm_campaign=editorial
-
-#ContreEvidence #Outils #Patrimoine
 ```
 
