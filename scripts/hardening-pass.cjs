@@ -20,7 +20,7 @@ function patch(rel, transform) {
 let changed = 0;
 
 changed += patch('assets/personal-space.js', code =>
-  code.replace(/\/\\\/(articles\|themes\|dossiers)\\\//, '/\\/(articles|themes|dossiers|fiches-metiers)\\//')
+  code.replace('(articles|themes|dossiers)', '(articles|themes|dossiers|fiches-metiers)')
 ) ? 1 : 0;
 
 changed += patch('assets/longform.js', code => {
@@ -34,6 +34,10 @@ changed += patch('assets/longform.js', code => {
   );
   return code;
 }) ? 1 : 0;
+
+changed += patch('assets/navigation-v3.js', code =>
+  code.replace(/const VERSION = '[^']+';/, `const VERSION = '${SITE_VERSION}';`)
+) ? 1 : 0;
 
 changed += patch('assets/ux-retention.css', css => {
   css = css.replace(
