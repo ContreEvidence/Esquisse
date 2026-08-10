@@ -33,17 +33,22 @@ const replacements=[
   [/themes\/entreprendre\.html#marge/g,'themes/entreprendre.html']
 ];
 
-let archived=0, repaired=0;
+let archived=0, restored=0, repaired=0;
 for(const rel of htmlFiles()){
   const file=path.join(ROOT,rel);let html=fs.readFileSync(file,'utf8');const before=html;
   for(const [re,to] of replacements)html=html.replace(re,to);
   if(html!==before)repaired++;
 
   const isEditorialPath=/^(articles|dossiers)\//.test(rel);
-  if(isEditorialPath&&!keep.has(rel)&&!/<meta\s+name="robots"\s+content="noindex,follow"/i.test(html)){
-    html=html.replace(/<head>/i,'<head><meta name="robots" content="noindex,follow"/>');
-    archived++;
+  if(isEditorialPath){
+    const noindex=/<meta\s+name="robots"\s+content="noindex,follow"\s*\/?>/i;
+    if(keep.has(rel)){
+      if(noindex.test(html)){html=html.replace(noindex,'');restored++;}
+    }else if(!noindex.test(html)){
+      html=html.replace(/<head>/i,'<head><meta name="robots" content="noindex,follow"/>');
+      archived++;
+    }
   }
   fs.writeFileSync(file,html,'utf8');
 }
-console.log(`${archived} page(s) historique(s) passées en noindex,follow ; ${repaired} page(s) avec liens historiques réparés.`);
+console.log(`${archived} page(s) historique(s) passées en noindex,follow ; ${restored} page(s) du catalogue remises en index ; ${repaired} page(s) avec liens historiques réparés.`);
