@@ -1,0 +1,52 @@
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.resolve(__dirname,'..');
+const UX_VERSION = '20260810-1';
+const ORIENTATION_VERSION = '20260810-6';
+const LONGFORM_VERSION = '20260810-1';
+
+function htmlFiles(dir=ROOT,prefix='') {
+  const out=[];
+  for (const e of fs.readdirSync(dir,{withFileTypes:true})) {
+    if (e.name.startsWith('.') || e.name === 'node_modules' || e.name === 'publications') continue;
+    const rel=path.join(prefix,e.name), full=path.join(dir,e.name);
+    if (e.isDirectory()) out.push(...htmlFiles(full,rel));
+    else if (e.isFile() && e.name.toLowerCase().endsWith('.html')) out.push(rel.replace(/\\/g,'/'));
+  }
+  return out;
+}
+
+function stableHeader(prefix='') {
+  const u = p => `${prefix}${p}`;
+  return `<header id="site-header"><div class="ce-fallback-header" aria-label="Navigation principale"><a class="ce-fallback-brand" href="${u('index.html')}">CONTRE-ÉVIDENCE</a><nav><a href="${u('themes/argent.html')}">Patrimoine</a><a href="${u('parcours-vie-professionnelle.html')}">Vie professionnelle</a><a href="${u('hors-cadre.html')}">Hors cadre</a><a href="${u('bibliotheque.html?type=outil')}">Outils</a><a href="${u('bibliotheque.html')}">Bibliothèque</a></nav></div></header>`;
+}
+
+let changed=0;
+for (const rel of htmlFiles()) {
+  const file=path.join(ROOT,rel);
+  let html=fs.readFileSync(file,'utf8');
+  const before=html;
+  if (!/<head[\s>]/i.test(html) || !/<\/body>/i.test(html)) continue;
+  const nested=/^(articles|dossiers|themes)\//.test(rel);
+  const p=nested?'../':'';
+
+  html=html.replace(/<link\s+[^>]*href=["'](?:\.\.\/)?assets\/ux-retention\.css(?:\?[^"']*)?["'][^>]*>\s*/gi,'');
+  html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/longform\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
+  html=html.replace(/<script\s+src=["'](?:\.\.\/)?assets\/orientation\.js(?:\?[^"']*)?["'][^>]*><\/script>\s*/gi,'');
+
+  html=html.replace(/<\/head>/i,`<link rel="stylesheet" href="${p}assets/ux-retention.css?v=${UX_VERSION}"/></head>`);
+
+  if (/<header\s+id=["']site-header["'][^>]*>[\s\S]*?<\/header>/i.test(html)) {
+    html=html.replace(/<header\s+id=["']site-header["'][^>]*>[\s\S]*?<\/header>/i,stableHeader(p));
+  }
+
+  const scripts=`<script src="${p}assets/orientation.js?v=${ORIENTATION_VERSION}"></script><script src="${p}assets/longform.js?v=${LONGFORM_VERSION}"></script>`;
+  html=html.replace(/<\/body>/i,`${scripts}</body>`);
+
+  if (html !== before) {
+    fs.writeFileSync(file,html,'utf8');
+    changed++;
+  }
+}
+console.log(`Couche UX stable appliquée à ${changed} page(s).`);
