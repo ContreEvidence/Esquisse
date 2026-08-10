@@ -1,0 +1,7 @@
+/* Divulgation progressive du cockpit : les classes moins courantes restent accessibles sans surcharger la saisie initiale. */
+.fc-advanced-toggle-wrap{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin:.65rem 0 .35rem;padding:.7rem .8rem;border:1px solid rgba(16,24,32,.10);border-radius:10px;background:#faf8f2}
+.fc-advanced-toggle-wrap span{font-size:.78rem;color:#667178;line-height:1.4}
+.fc-advanced-toggle{flex:0 0 auto;min-height:36px;padding:.4rem .65rem;border:1px solid rgba(16,24,32,.2);border-radius:9px;background:#fff;color:#101820;font:inherit;font-size:.76rem;font-weight:850;cursor:pointer}
+.fc-advanced-toggle:hover,.fc-advanced-toggle:focus-visible{border-color:#9c7421;background:#fffaf0}
+tr.fc-advanced-row[hidden]{display:none!important}
+@media(max-width:560px){.fc-advanced-toggle-wrap{align-items:flex-start;flex-direction:column}.fc-advanced-toggle{width:100%}}
