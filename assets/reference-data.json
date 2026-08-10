@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 3,
-    "lastChecked": "2026-08-08",
+    "lastChecked": "2026-08-10",
     "country": "FR",
     "note": "Données de référence centralisées pour les simulateurs Contre-évidence. Les taux de marché sont des repères statistiques et restent modifiables par l'utilisateur.",
     "reusePolicy": "Privilégier les sources officielles, open data, API ou données dont les conditions autorisent explicitement la réutilisation. Ne pas aspirer automatiquement des bases commerciales ou privées. Conserver source, date, périmètre et conditions de réutilisation."
@@ -31,11 +31,12 @@
     "livretA": {
       "annualRate": 0.017,
       "effectiveSince": "2026-08-01",
-      "publishedAt": "2026-07-15",
-      "scope": "Taux annuel du Livret A en vigueur à compter du 1er août 2026",
-      "source": "https://www.economie.gouv.fr/particuliers/gerer-mon-argent/gerer-mon-budget-et-mon-epargne/livret-comment-ca-marche",
-      "sourceLabel": "Ministère de l’Économie — Livret A : comment ça marche ?",
-      "reuseBasis": "Information publique officielle ; la source et la date d’effet sont conservées."
+      "effectiveUntil": "2027-01-31",
+      "publishedAt": "2026-07-29",
+      "scope": "Taux nominal annuel du Livret A applicable du 1er août 2026 au 31 janvier 2027",
+      "source": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054541376",
+      "sourceLabel": "Légifrance — Arrêté du 28 juillet 2026 relatif aux taux d'intérêt de certains produits d'épargne réglementée",
+      "reuseBasis": "Texte réglementaire officiel publié au Journal officiel ; citation de la source, de la date de publication et de la période d'application conservées."
     }
   }
 }
