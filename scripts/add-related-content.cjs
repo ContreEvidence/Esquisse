@@ -5,7 +5,7 @@ const vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
 const ctx = { window: {} };
 vm.createContext(ctx);
-for (const rel of ['assets/library-catalog.js','assets/library-daily-money.js']) {
+for (const rel of ['assets/library-catalog.js','assets/library-daily-money.js','assets/library-work-foundations.js']) {
   const file = path.join(ROOT, rel);
   if (fs.existsSync(file)) vm.runInContext(fs.readFileSync(file,'utf8'), ctx, { filename: rel });
 }
@@ -21,7 +21,14 @@ const preferredNext = new Map([
   ['dossiers/plan-30-jours-recherche-emploi.html','dossiers/experience-devient-risque-recruteur.html'],
   ['dossiers/experience-devient-risque-recruteur.html','dossiers/plan-30-jours-recherche-emploi.html'],
   ['dossiers/formation-vaut-elle-le-cout.html','articles/tester-metier-avant-investir.html'],
-  ['articles/tester-metier-avant-investir.html','dossiers/formation-vaut-elle-le-cout.html']
+  ['articles/tester-metier-avant-investir.html','dossiers/formation-vaut-elle-le-cout.html'],
+  ['dossiers/competences-qualification-employabilite.html','dossiers/apprendre-developper-competences.html'],
+  ['dossiers/apprendre-developper-competences.html','dossiers/competences-qualification-employabilite.html'],
+  ['dossiers/metiers-fonctions-organisation-entreprise.html','fiches-metiers.html'],
+  ['dossiers/management-relations-conflits.html','dossiers/prejuges-biais-monde-professionnel.html'],
+  ['dossiers/regles-responsabilites-fautes-travail.html','dossiers/sante-travail-equilibre-vie-pro-perso.html'],
+  ['dossiers/sante-travail-equilibre-vie-pro-perso.html','dossiers/management-relations-conflits.html'],
+  ['dossiers/prejuges-biais-monde-professionnel.html','dossiers/competences-qualification-employabilite.html']
 ]);
 
 function tokens(s='') {
