@@ -1,6 +1,6 @@
 # Fraîcheur du référentiel chiffré — Contre-Évidence
 
-Généré le 2026-08-10T09:01:09.849Z
+Généré le 2026-08-10T09:02:20.853Z
 
 ## Dossiers en retard sur leurs données (0)
 - Aucun.
@@ -15,7 +15,7 @@ Généré le 2026-08-10T09:01:09.849Z
 - ✓ **secureProducts** → `articles/comparatif-produits-bancaires.html` · données substantielles 2026-08-09T11:56:08.000Z · dossier 2026-08-10T09:00:04.000Z
 - ✓ **labourMarket** → `articles/tester-metier-avant-investir.html` · données substantielles 2026-08-09T11:56:08.000Z · dossier 2026-08-10T09:00:04.000Z
 - ✓ **labourMarket** → `dossiers/experience-devient-risque-recruteur.html` · données substantielles 2026-08-09T11:56:08.000Z · dossier 2026-08-10T09:00:04.000Z
-- ✓ **realEstate** → `dossiers/finances-residence-principale.html` · données substantielles 2026-08-09T11:57:57.000Z · dossier 2026-08-10T09:00:04.000Z
+- ✓ **realEstate** → `dossiers/finances-residence-principale.html` · données substantielles 2026-08-09T11:57:57.000Z · dossier 2026-08-10T09:01:40.000Z
 - ✓ **realEstate** → `dossiers/finances-investissement-locatif.html` · données substantielles 2026-08-09T11:57:57.000Z · dossier 2026-08-10T09:00:04.000Z
 - ✓ **tax2026** → `dossiers/finances-enveloppes-fiscalite.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-10T09:00:04.000Z
 - ✓ **retirement2026** → `dossiers/finances-retraite-decumulation.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-10T09:00:04.000Z

@@ -1,6 +1,6 @@
 # Publications à préparer
 
-Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 11:01.
+Généré automatiquement à partir du flux RSS de Contre-Évidence le 10 août 2026 à 11:02.
 
 Le RSS sert de **déclencheur**. Le générateur lit ensuite le contenu réel de la page pour produire des formats différents selon le réseau.
 
@@ -206,9 +206,9 @@ SLIDE 1 — Le prix d’attendre : combien coûte le fait de remettre ses financ
 
 SLIDE 2 — En bref
 
-SLIDE 3 — 1. « Je verrai ça plus tard » est déjà une décision
+SLIDE 3 — Le dossier a maintenant son simulateur.
 
-SLIDE 4 — 2. Les petites dépenses continuent toutes seules
+SLIDE 4 — 1. « Je verrai ça plus tard » est déjà une décision
 
 SLIDE 5 — Le dossier complet est sur Contre-Évidence.
 ```
