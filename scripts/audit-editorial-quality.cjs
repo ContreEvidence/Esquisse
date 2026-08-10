@@ -28,6 +28,23 @@ function hasSourceBlock(html){
   return false;
 }
 
+function financialPrescription(plain){
+  const action='(?:acheter|vendre|investir|allouer|rembourser)';
+  let m=plain.match(new RegExp(`\\b(?:vous devez|vous devriez)\\b[^.!?]{0,70}\\b${action}\\b`,'i'));
+  if(m)return m[0].slice(0,95);
+  m=plain.match(new RegExp(`\\bil faut\\s+${action}\\b`,'i'));
+  if(m)return m[0];
+
+  const imperative=/\b(achetez|vendez|investissez|allouez|remboursez)\b/gi;
+  while((m=imperative.exec(plain))){
+    const before=plain.slice(Math.max(0,m.index-24),m.index);
+    // « vous investissez », « vous achetez » ou « vous n’achetez pas » décrivent un scénario : ce ne sont pas des impératifs.
+    if(/\bvous\s+(?:n['’]\s*)?$/i.test(before)||/\bn['’]\s*$/i.test(before))continue;
+    return m[0];
+  }
+  return null;
+}
+
 const titleSeen=new Map();
 for(const item of items){
   const html=read(item.h);
@@ -39,17 +56,14 @@ for(const item of items){
   if(item.t==='dossier'&&words<650)warnings.push(`${item.h}: dossier court (${words} mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.`);
   if(item.t==='guide'&&words<450)warnings.push(`${item.h}: guide court (${words} mots) — vérifier que la méthode est suffisamment exécutable.`);
 
-  // La sensibilité est classée sur le sujet visible, avec des frontières lexicales :
-  // « endroit », « crédibilité » ou « investir du temps dans un métier » ne doivent pas déclencher un audit juridique/financier par accident.
+  // La sensibilité est classée sur le sujet visible, avec des frontières lexicales.
   const visibleSignals=norm(`${item.c} ${item.n}`);
   const highStakes=/\bfiscal(?:ite)?\b|\bjuridique\b|\bdroit\b|\bsuccession\b|\btransmission\b|\bsante\b|\bsecurite au travail\b|\bcredit et endettement\b|\brembourser\b.*\bcredit\b|\bcapacite\b.*\bemprunt\b|\bmeuble\b.*\btourisme\b|\bcourte duree\b|\bcopropriete\b/.test(visibleSignals);
   if(highStakes&&!hasSourceBlock(html))warnings.push(`${item.h}: sujet sensible sans bloc de source externe détecté.`);
 
-  // Une alerte de prescription financière ne concerne que le domaine Patrimoine.
-  // Dans Vie professionnelle, « investir dans une formation » n'est pas une recommandation d'investissement financier.
-  const personalMatch=plain.match(/\bvous devez\b|\bvous devriez\b|\bil faut\s+(?:acheter|vendre|investir|allouer|rembourser)\b|\b(?:achetez|vendez|investissez|allouez|remboursez)\b/i);
   const financialDomain=String(item.d||'').split(/\s+/).includes('patrimoine');
-  if(personalMatch&&financialDomain)warnings.push(`${item.h}: injonction financière potentiellement personnalisante à relire (« ${personalMatch[0]} »).`);
+  const prescription=financialDomain?financialPrescription(plain):null;
+  if(prescription)warnings.push(`${item.h}: injonction financière potentiellement personnalisante à relire (« ${prescription} »).`);
 }
 
 const near=[];
@@ -61,7 +75,7 @@ for(let i=0;i<items.length;i++)for(let j=i+1;j<items.length;j++){
 }
 near.sort((x,y)=>y.score-x.score);
 
-const report=`# Audit qualité éditoriale — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\n## Erreurs (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Proximités éditoriales à revoir (${near.length})\n${near.length?near.slice(0,25).map(x=>`- ${(x.score*100).toFixed(0)} % — ${x.a} ↔ ${x.b}`).join('\n'):'- Aucune proximité forte détectée par le filtre lexical.'}\n\n## Interprétation\n- un contenu court n’est pas automatiquement faible : il déclenche une revue de fusion ;\n- un sujet sensible sans bloc de source détecté doit être contrôlé manuellement ;\n- une alerte prescriptive vise les injonctions financières adressées au lecteur dans le domaine Patrimoine, pas chaque emploi général du verbe « investir » ;\n- les sections Sources/ Références et les composants source-note/source-list sont reconnus ;\n- la proximité lexicale sert à repérer des doublons potentiels, pas à interdire deux angles réellement différents ;\n- l’audit ne remplace jamais la relecture du raisonnement, des calculs et des sources.\n`;
+const report=`# Audit qualité éditoriale — Contre-Évidence\n\nGénéré le ${new Date().toISOString()}\n\n## Erreurs (${errors.length})\n${errors.length?errors.map(x=>`- ${x}`).join('\n'):'- Aucune.'}\n\n## Avertissements (${warnings.length})\n${warnings.length?warnings.map(x=>`- ${x}`).join('\n'):'- Aucun.'}\n\n## Proximités éditoriales à revoir (${near.length})\n${near.length?near.slice(0,25).map(x=>`- ${(x.score*100).toFixed(0)} % — ${x.a} ↔ ${x.b}`).join('\n'):'- Aucune proximité forte détectée par le filtre lexical.'}\n\n## Interprétation\n- un contenu court n’est pas automatiquement faible : il déclenche une revue de fusion ;\n- un sujet sensible sans bloc de source détecté doit être contrôlé manuellement ;\n- une alerte prescriptive vise une injonction financière réelle, pas « vous investissez », « vous n’achetez pas » ou une consigne de mise en forme ;\n- les sections Sources/Références et les composants source-note/source-list sont reconnus ;\n- la proximité lexicale sert à repérer des doublons potentiels, pas à interdire deux angles réellement différents ;\n- l’audit ne remplace jamais la relecture du raisonnement, des calculs et des sources.\n`;
 fs.mkdirSync(path.join(ROOT,'editorial'),{recursive:true});
 fs.writeFileSync(path.join(ROOT,'editorial/audit-qualite-editoriale.md'),report,'utf8');
 console.log(report);
