@@ -5,7 +5,7 @@ const vm = require('vm');
 const ROOT = path.resolve(__dirname,'..');
 const UX_VERSION = '20260810-2';
 const NAV_VERSION = '20260810-4';
-const ORIENTATION_VERSION = '20260810-8';
+const ORIENTATION_VERSION = '20260810-9';
 const LONGFORM_VERSION = '20260810-2';
 
 for (const rel of ['assets/navigation-v3.js','assets/orientation.js','assets/longform.js','assets/library.js','assets/library-work-foundations.js']) {
