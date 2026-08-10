@@ -1,118 +1,39 @@
 (() => {
   if (!Array.isArray(window.CE_LIBRARY_CATALOG)) return;
+
+  /* Le nouveau dossier d'allocation immobilière remplace l'ancien panorama devenu redondant. */
+  window.CE_LIBRARY_CATALOG = window.CE_LIBRARY_CATALOG.filter(item => item.h !== 'dossiers/finances-immobilier-patrimoine.html');
+
+  const policy = window.CE_LIBRARY_CATALOG.find(item => item.h === 'dossiers/finances-cadre-global.html');
+  if (policy) {
+    policy.c = 'Politique patrimoniale';
+    policy.n = 'Écrire sa politique patrimoniale en une page';
+    policy.x = 'Fixer objectifs, réserve minimale, allocation cible, plafonds de concentration, règles de rééquilibrage et date de revue avant les mouvements de marché.';
+    policy.k = 'politique patrimoniale objectifs réserve allocation cible concentration rééquilibrage règles revue stratégie patrimoine';
+  }
+
+  const home = window.CE_LIBRARY_CATALOG.find(item => item.h === 'dossiers/finances-residence-principale.html');
+  if (home) {
+    home.n = 'Acheter ou louer sa résidence principale : durée, mobilité et scénarios de sortie';
+    home.x = 'Comparer achat et location par durée probable, mobilité, valeur d’usage, liquidité restante et scénario de sortie ; le coût complet est traité dans un dossier dédié.';
+    home.k = 'acheter louer résidence principale durée occupation mobilité valeur usage liquidité sortie immobilier logement';
+  }
+
   const additions = [
-    {
-      d:'patrimoine',t:'guide',c:'Allocation globale',
-      h:'dossiers/classes-actifs-allocation-patrimoine.html',
-      n:'Toutes les classes d’actifs : construire une allocation patrimoniale complète',
-      x:'Liquidités, fonds euros, obligations, actions, immobilier direct et indirect, non coté, infrastructures, or, matières premières, crypto et alternatifs : distinguer exposition économique, véhicule et enveloppe.',
-      k:'classes actifs allocation patrimoine liquidités monétaire fonds euros obligations crédit privé actions etf immobilier direct scpi reit foncières private equity non coté infrastructure or matières premières crypto alternatifs enveloppe pea assurance vie per cto'
-    },
-    {
-      d:'patrimoine',t:'guide',c:'Immobilier & allocation',
-      h:'dossiers/comparer-strategies-immobilieres.html',
-      n:'Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières',
-      x:'Comparer rendement net, gestion, stabilité, réglementation, ticket d’entrée, liquidité et scénario de sortie avant de choisir une forme d’immobilier.',
-      k:'immobilier comparaison stratégie location nue meublée colocation courte durée parking garage local commercial rendement gestion liquidité allocation'
-    },
-    {
-      d:'patrimoine',t:'dossier',c:'Immobilier & allocation',
-      h:'dossiers/immobilier-allocation-globale-patrimoine.html',
-      n:'Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?',
-      x:'Résidence principale, locatif, dette, liquidité, rendement, concentration et diversification : juger l’immobilier à l’échelle du patrimoine complet.',
-      k:'immobilier allocation globale patrimoine résidence principale locatif dette concentration diversification liquidité rendement actifs'
-    },
-    {
-      d:'patrimoine',t:'guide',c:'Investissement locatif',
-      h:'dossiers/location-nue-ou-meublee-comparer.html',
-      n:'Location nue ou meublée : comparer l’économie complète avant la fiscalité',
-      x:'Bail, rotation, mobilier, travaux, fiscalité, temps de gestion et souplesse : comparer deux modes d’exploitation sans se limiter au loyer facial.',
-      k:'location nue meublée lmnp revenus fonciers bic bail mobilier rotation rendement fiscalité vacance gestion'
-    },
-    {
-      d:'patrimoine',t:'dossier',c:'Meublé de tourisme',
-      h:'dossiers/location-courte-duree-meuble-tourisme.html',
-      n:'Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?',
-      x:'Occupation, saisonnalité, ménage, plateformes, copropriété, enregistrement, DPE et fiscalité : mesurer le rendement après exploitation et risque réglementaire.',
-      k:'courte durée meublé tourisme airbnb saisonnier location plateforme occupation ménage copropriété dpe réglementation fiscalité'
-    },
-    {
-      d:'patrimoine',t:'dossier',c:'Immobilier alternatif',
-      h:'dossiers/garages-parkings-locaux-commerciaux.html',
-      n:'Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement',
-      x:'Ticket d’entrée, bail, vacance, travaux, dépendance à l’emplacement, liquidité et rendement : comparer les actifs immobiliers directs hors logement classique.',
-      k:'garage parking local commercial murs commerciaux immobilier alternatif bail commercial rendement vacance emplacement liquidité'
-    },
-    {
-      d:'patrimoine',t:'guide',c:'Optionnalité immobilière',
-      h:'dossiers/valeur-option-bien-immobilier.html',
-      n:'Un bien immobilier vaut aussi par les options qu’il laisse ouvertes',
-      x:'Habiter, louer, diviser, exploiter une partie, transformer ou revendre : intégrer la flexibilité future dans l’analyse d’un bien immobilier.',
-      k:'immobilier option valeur optionnelle divisibilité transformation colocation location partie revente flexibilité usage changement situation'
-    },
-    {
-      d:'patrimoine',
-      t:'dossier',
-      c:'Commencer ses finances',
-      h:'dossiers/prix-attendre-finances.html',
-      n:'Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?',
-      x:'Rendre visible le coût possible de l’inaction : dépenses récurrentes, inflation, retard d’investissement, frais et grosses décisions laissées sans contrôle.',
-      k:'commencer finances remettre plus tard attendre procrastination budget épargne investir investissement inflation frais dépenses récurrentes coût opportunité capitalisation prendre en main argent'
-    },
-    {
-      d:'patrimoine',
-      t:'dossier',
-      c:'Immobilier',
-      h:'dossiers/cout-complet-achat-immobilier.html',
-      n:'Achat immobilier : calculer le coût complet avant de regarder la mensualité',
-      x:'Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.',
-      k:'immobilier achat logement coût complet mensualité crédit apport frais acquisition notaire travaux charges copropriété taxe foncière revente coût opportunité dette'
-    },
-    {
-      d:'patrimoine',
-      t:'dossier',
-      c:'Immobilier',
-      h:'dossiers/audit-copropriete-avant-achat.html',
-      n:'Acheter en copropriété : l’audit à faire avant de signer',
-      x:'Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.',
-      k:'immobilier copropriété achat appartement audit assemblée générale pv charges impayés travaux toiture façade ascenseur fonds travaux syndic diagnostic coût'
-    },
-    {
-      d:'patrimoine',
-      t:'dossier',
-      c:'Inflation & pouvoir d’achat',
-      h:'dossiers/inflation-comprendre-histoire-pouvoir-achat.html',
-      n:'Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent',
-      x:'Définition, causes, séries historiques depuis 1945, pouvoir d’achat, rendement réel, crédit, taux et placements.',
-      k:'inflation prix pouvoir achat ipc désinflation déflation 1970 1980 épargne cash rendement réel taux crédit histoire économie'
-    },
-    {
-      d:'patrimoine',
-      t:'dossier',
-      c:'Automobile',
-      h:'dossiers/cout-reel-voiture-achat-credit-loa-lld.html',
-      n:'Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?',
-      x:'Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.',
-      k:'voiture automobile achat crédit loa lld leasing occasion neuf décote assurance entretien kilométrage coût total mensualité revente'
-    },
-    {
-      d:'patrimoine',
-      t:'dossier',
-      c:'Dépenses récurrentes',
-      h:'dossiers/depenses-recurrentes-abonnements-assurances.html',
-      n:'Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?',
-      x:'Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.',
-      k:'abonnement assurance forfait prélèvement récurrent streaming téléphone internet banque logiciel salle sport contrat coût annuel doublon résiliation renégociation budget'
-    },
-    {
-      d:'patrimoine',
-      t:'dossier',
-      c:'Gestion pilotée',
-      h:'dossiers/gestion-pilotee-comparer-performances.html',
-      n:'Gestion pilotée : comment comparer les performances sans se faire piéger ?',
-      x:'Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.',
-      k:'gestion pilotée assurance vie performance yomoni nalo ramify benchmark frais risque drawdown spiva etf portefeuille rendement'
-    }
+    {d:'patrimoine',t:'guide',c:'Allocation globale',h:'dossiers/classes-actifs-allocation-patrimoine.html',n:'Toutes les classes d’actifs : construire une allocation patrimoniale complète',x:'Liquidités, fonds euros, obligations, actions, immobilier direct et indirect, non coté, infrastructures, or, matières premières, crypto et alternatifs : distinguer exposition économique, véhicule et enveloppe.',k:'classes actifs allocation patrimoine liquidités monétaire fonds euros obligations crédit privé actions etf immobilier direct scpi reit foncières private equity non coté infrastructure or matières premières crypto alternatifs enveloppe pea assurance vie per cto'},
+    {d:'patrimoine',t:'guide',c:'Immobilier & allocation',h:'dossiers/comparer-strategies-immobilieres.html',n:'Location nue, meublée, colocation, courte durée, parking, local commercial : comparer les stratégies immobilières',x:'Comparer rendement net, gestion, stabilité, réglementation, ticket d’entrée, liquidité et scénario de sortie avant de choisir une forme d’immobilier.',k:'immobilier comparaison stratégie location nue meublée colocation courte durée parking garage local commercial rendement gestion liquidité allocation'},
+    {d:'patrimoine',t:'dossier',c:'Immobilier & allocation',h:'dossiers/immobilier-allocation-globale-patrimoine.html',n:'Immobilier et allocation globale : quelle place donner à la pierre dans son patrimoine ?',x:'Résidence principale, locatif, dette, liquidité, rendement, concentration et diversification : juger l’immobilier à l’échelle du patrimoine complet.',k:'immobilier allocation globale patrimoine résidence principale locatif dette concentration diversification liquidité rendement actifs'},
+    {d:'patrimoine',t:'guide',c:'Investissement locatif',h:'dossiers/location-nue-ou-meublee-comparer.html',n:'Location nue ou meublée : comparer l’économie complète avant la fiscalité',x:'Bail, rotation, mobilier, travaux, fiscalité, temps de gestion et souplesse : comparer deux modes d’exploitation sans se limiter au loyer facial.',k:'location nue meublée lmnp revenus fonciers bic bail mobilier rotation rendement fiscalité vacance gestion'},
+    {d:'patrimoine',t:'dossier',c:'Meublé de tourisme',h:'dossiers/location-courte-duree-meuble-tourisme.html',n:'Location courte durée : rendement élevé ou petite activité hôtelière sous contrainte ?',x:'Occupation, saisonnalité, ménage, plateformes, copropriété, enregistrement, DPE et fiscalité : mesurer le rendement après exploitation et risque réglementaire.',k:'courte durée meublé tourisme airbnb saisonnier location plateforme occupation ménage copropriété dpe réglementation fiscalité'},
+    {d:'patrimoine',t:'dossier',c:'Immobilier alternatif',h:'dossiers/garages-parkings-locaux-commerciaux.html',n:'Garages, parkings et locaux commerciaux : l’immobilier ne se résume pas au logement',x:'Ticket d’entrée, bail, vacance, travaux, dépendance à l’emplacement, liquidité et rendement : comparer les actifs immobiliers directs hors logement classique.',k:'garage parking local commercial murs commerciaux immobilier alternatif bail commercial rendement vacance emplacement liquidité'},
+    {d:'patrimoine',t:'guide',c:'Optionnalité immobilière',h:'dossiers/valeur-option-bien-immobilier.html',n:'Un bien immobilier vaut aussi par les options qu’il laisse ouvertes',x:'Habiter, louer, diviser, exploiter une partie, transformer ou revendre : intégrer la flexibilité future dans l’analyse d’un bien immobilier.',k:'immobilier option valeur optionnelle divisibilité transformation colocation location partie revente flexibilité usage changement situation'},
+    {d:'patrimoine',t:'dossier',c:'Commencer ses finances',h:'dossiers/prix-attendre-finances.html',n:'Le prix d’attendre : combien coûte le fait de remettre ses finances à plus tard ?',x:'Rendre visible le coût possible de l’inaction : dépenses récurrentes, inflation, retard d’investissement, frais et grosses décisions laissées sans contrôle.',k:'commencer finances remettre plus tard attendre procrastination budget épargne investir investissement inflation frais dépenses récurrentes coût opportunité capitalisation prendre en main argent'},
+    {d:'patrimoine',t:'dossier',c:'Immobilier',h:'dossiers/cout-complet-achat-immobilier.html',n:'Achat immobilier : calculer le coût complet avant de regarder la mensualité',x:'Prix, frais d’acquisition, crédit, apport, travaux, charges, revente et coût d’opportunité : reconstruire l’économie complète d’un achat.',k:'immobilier achat logement coût complet mensualité crédit apport frais acquisition notaire travaux charges copropriété taxe foncière revente coût opportunité dette'},
+    {d:'patrimoine',t:'dossier',c:'Immobilier',h:'dossiers/audit-copropriete-avant-achat.html',n:'Acheter en copropriété : l’audit à faire avant de signer',x:'Procès-verbaux, charges, impayés, travaux, toiture, façade, ascenseur et diagnostics : transformer les risques de l’immeuble en décisions chiffrées.',k:'immobilier copropriété achat appartement audit assemblée générale pv charges impayés travaux toiture façade ascenseur fonds travaux syndic diagnostic coût'},
+    {d:'patrimoine',t:'dossier',c:'Inflation & pouvoir d’achat',h:'dossiers/inflation-comprendre-histoire-pouvoir-achat.html',n:'Inflation : comprendre 80 ans d’histoire et l’effet sur votre argent',x:'Définition, causes, séries historiques depuis 1945, pouvoir d’achat, rendement réel, crédit, taux et placements.',k:'inflation prix pouvoir achat ipc désinflation déflation 1970 1980 épargne cash rendement réel taux crédit histoire économie'},
+    {d:'patrimoine',t:'dossier',c:'Automobile',h:'dossiers/cout-reel-voiture-achat-credit-loa-lld.html',n:'Avoir une voiture : achat, crédit, LOA ou LLD — que coûte vraiment chaque formule ?',x:'Comparer sur une même durée le financement, la décote, l’entretien, l’assurance, le kilométrage et la valeur récupérée à la sortie.',k:'voiture automobile achat crédit loa lld leasing occasion neuf décote assurance entretien kilométrage coût total mensualité revente'},
+    {d:'patrimoine',t:'dossier',c:'Dépenses récurrentes',h:'dossiers/depenses-recurrentes-abonnements-assurances.html',n:'Abonnements, assurances, forfaits : combien coûtent les dépenses qui se renouvellent toutes seules ?',x:'Ramener les prélèvements récurrents au coût annuel, retrouver les services oubliés, détecter les doublons et distinguer dépense inutile et protection utile.',k:'abonnement assurance forfait prélèvement récurrent streaming téléphone internet banque logiciel salle sport contrat coût annuel doublon résiliation renégociation budget'},
+    {d:'patrimoine',t:'dossier',c:'Gestion pilotée',h:'dossiers/gestion-pilotee-comparer-performances.html',n:'Gestion pilotée : comment comparer les performances sans se faire piéger ?',x:'Comparer performances publiées, niveau de risque, frais, benchmark, périodes et drawdowns avant de juger une gestion pilotée.',k:'gestion pilotée assurance vie performance yomoni nalo ramify benchmark frais risque drawdown spiva etf portefeuille rendement'}
   ];
   let pos = 0;
   for (const item of additions) {
