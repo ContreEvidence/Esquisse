@@ -95,6 +95,9 @@ jobs:
       - name: Activer Mon espace personnel local
         run: node scripts/add-personal-space.cjs
 
+      - name: Nettoyer les artefacts hérités après consolidation
+        run: node scripts/hardening-pass.cjs
+
       - name: Vérifier la syntaxe des moteurs front
         run: node --check assets/personal-space.js && node --check assets/finance-cockpit.js && node --check assets/finance-architecture.js && node --check assets/cockpit-progressive.js && node --check assets/follow.js && node --check assets/navigation-v3.js && node --check assets/longform.js
 
@@ -143,5 +146,5 @@ jobs:
             git push
           fi
 
-# Pipeline du site uniquement : durcissement -> nettoyage -> référentiel -> SEO/sitemap -> UX -> Mon espace -> garde-fous -> recherche -> RSS -> fraîcheur -> audits -> publication.
+# Pipeline du site uniquement : durcissement -> nettoyage -> référentiel -> SEO/sitemap -> UX -> Mon espace -> nettoyage post-build -> garde-fous -> recherche -> RSS -> fraîcheur -> audits -> publication.
 # La diffusion sociale est volontairement découplée : elle ne peut plus bloquer la mise en ligne du site.
