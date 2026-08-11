@@ -1,23 +1,23 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T11:53:31.522Z",
+  "generatedAt": "2026-08-11T11:56:48.856Z",
   "main": {
     "title": "Contre-Évidence — nouveautés",
     "url": "https://contreevidence.github.io/Esquisse/rss.xml",
-    "count": 104
+    "count": 107
   },
   "thematic": [
     {
       "domain": "patrimoine",
       "label": "Patrimoine",
       "url": "https://contreevidence.github.io/Esquisse/rss-patrimoine.xml",
-      "count": 52
+      "count": 54
     },
     {
       "domain": "vie-pro",
       "label": "Vie professionnelle",
       "url": "https://contreevidence.github.io/Esquisse/rss-vie-pro.xml",
-      "count": 54
+      "count": 56
     }
   ]
 }

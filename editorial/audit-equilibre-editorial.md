@@ -1,12 +1,12 @@
 # Audit d’équilibre éditorial — Contre-Évidence
 
-Généré le 2026-08-11T11:53:35.174Z
+Généré le 2026-08-11T11:56:52.575Z
 
 ## Volumes
-- Guides et dossiers de référence : 87
+- Guides et dossiers de référence : 90
 - Outils : 17
-- Patrimoine — éditorial : 38
-- Vie professionnelle — éditorial : 49
+- Patrimoine — éditorial : 39
+- Vie professionnelle — éditorial : 51
 - Patrimoine — outils : 12
 - Vie professionnelle — outils : 5
 
@@ -15,7 +15,7 @@ Généré le 2026-08-11T11:53:35.174Z
 - La collection Fiches métiers reste un échantillon initial (4 fiches) : éviter de la présenter comme représentative du marché du travail.
 
 ## Catégories les plus fournies
-- Patrimoine · Immobilier: 5
+- Patrimoine · Immobilier: 6
 - Vie professionnelle · Fiche métier: 4
 - Vie professionnelle · Reconversion: 3
 - Vie professionnelle · Transition: 3

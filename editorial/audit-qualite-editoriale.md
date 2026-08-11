@@ -1,6 +1,6 @@
 # Audit qualité éditoriale — Contre-Évidence
 
-Généré le 2026-08-11T11:53:35.306Z
+Généré le 2026-08-11T11:56:52.713Z
 
 ## Erreurs (0)
 - Aucune.
@@ -8,7 +8,7 @@ Généré le 2026-08-11T11:53:35.306Z
 ## Avertissements (10)
 - dossiers/acheter-sans-vider-epargne.html: guide court (412 mots) — vérifier que la méthode est suffisamment exécutable.
 - dossiers/acheter-logement-sans-se-fragiliser.html: guide court (433 mots) — vérifier que la méthode est suffisamment exécutable.
-- dossiers/patrimoine-permet-il-travailler-moins.html: dossier court (403 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
+- dossiers/patrimoine-permet-il-travailler-moins.html: dossier court (411 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
 - dossiers/patrimoine-permet-il-travailler-moins.html: injonction financière potentiellement personnalisante à relire (« achetez »).
 - dossiers/combien-epargne-avant-demissionner.html: guide court (401 mots) — vérifier que la méthode est suffisamment exécutable.
 - dossiers/puis-je-me-permettre-reconversion.html: guide court (406 mots) — vérifier que la méthode est suffisamment exécutable.

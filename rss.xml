@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Tue, 11 Aug 2026 11:53:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 11:56:48 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,37 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Utiliser son patrimoine pour gagner de la marge de manœuvre</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/patrimoine-marge-de-manoeuvre.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/patrimoine-marge-de-manoeuvre.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:46:31 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Vie professionnelle</category>
+      <category>Marge de manœuvre</category>
+      <description>Lire liquidité, dépenses, dette et actifs comme une capacité à absorber les chocs, financer des transitions et racheter du temps.</description>
+    </item>
+    <item>
+      <title>Bien immobilier : garder, vendre, louer ou transformer ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/bien-immobilier-garder-vendre-transformer.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/bien-immobilier-garder-vendre-transformer.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:46:21 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Recalculer le rendement futur, le capital net libérable, les travaux, la gestion, la concentration et les options cachées du bien.</description>
+    </item>
+    <item>
+      <title>Emploi : chercher, accepter, négocier ou évoluer</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/emploi-chercher-accepter-negocier-evoluer.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/emploi-chercher-accepter-negocier-evoluer.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:46:07 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Emploi</category>
+      <description>Diagnostiquer où la chaîne emploi casse puis traiter candidature, entretien, offre, négociation ou mobilité avec la bonne méthode.</description>
+    </item>
     <item>
       <title>Acheter un logement sans se fragiliser financièrement</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/acheter-logement-sans-se-fragiliser.html</link>
