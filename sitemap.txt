@@ -106,3 +106,4 @@ https://contreevidence.github.io/Esquisse/parcours-vie-professionnelle.html
 https://contreevidence.github.io/Esquisse/themes/argent.html
 https://contreevidence.github.io/Esquisse/themes/entreprendre.html
 https://contreevidence.github.io/Esquisse/themes/travail.html
+https://contreevidence.github.io/Esquisse/plan-du-site.html
