@@ -61,11 +61,13 @@ jobs:
               'www.francecompetences.fr', 'francecompetences.fr'
           }
 
+          url_keys = {'source', 'sourceurl', 'reuseurl', 'reuseterms'}
+
           def walk(value, trail='root'):
               if isinstance(value, dict):
                   for key, item in value.items():
                       here = f'{trail}.{key}'
-                      if key.lower().endswith(('sourceurl','reuseurl')) and isinstance(item, str):
+                      if key.lower() in url_keys and isinstance(item, str) and item.startswith(('http://','https://')):
                           parsed = urllib.parse.urlparse(item)
                           if parsed.scheme != 'https':
                               errors.append(f'{here}: URL non HTTPS: {item}')
@@ -82,7 +84,7 @@ jobs:
               ('mortgage.hcsf.maxEffortRate', data.get('mortgage',{}).get('hcsf',{}).get('maxEffortRate')),
               ('mortgage.hcsf.maxMaturityYears', data.get('mortgage',{}).get('hcsf',{}).get('maxMaturityYears')),
               ('mortgage.marketReference.housingLoanAverageRate', data.get('mortgage',{}).get('marketReference',{}).get('housingLoanAverageRate')),
-              ('regulatedSavings.livretA.rate', data.get('regulatedSavings',{}).get('livretA',{}).get('rate')),
+              ('regulatedSavings.livretA.annualRate', data.get('regulatedSavings',{}).get('livretA',{}).get('annualRate')),
           ]
           for name, value in required:
               if value is None:
@@ -96,4 +98,4 @@ jobs:
               sys.exit(1)
 
           print('OK — fichier de référence présent, récent et limité aux domaines officiels autorisés.')
-          print('Ce contrôle ne met jamais à jour automatiquement un taux ou une règle : une vérification humaine des valeurs et méthodologies reste nécessaire.')
+          print('Ce contrôle ne met jamais à jour automatiquement un taux ou une règle : une vérification humaine des valeurs, dates, licences et méthodologies reste nécessaire.')
