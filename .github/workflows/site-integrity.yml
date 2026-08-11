@@ -21,10 +21,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check sitemap targets, canonicals and internal HTML links
+      - name: Check sitemap, canonicals, metadata and internal HTML links
         shell: python
         run: |
           from __future__ import annotations
+          import collections
           import html
           import pathlib
           import re
@@ -35,6 +36,7 @@ jobs:
           root = pathlib.Path('.').resolve()
           site_prefix = '/Esquisse/'
           errors = []
+          warnings = []
 
           def local_path_from_site_url(url: str) -> pathlib.Path | None:
               parsed = urllib.parse.urlparse(url)
@@ -70,19 +72,46 @@ jobs:
 
           href_re = re.compile(r'''href\s*=\s*["']([^"']+)["']''', re.I)
           canonical_re = re.compile(r'''<link\b[^>]*rel=["'][^"']*canonical[^"']*["'][^>]*href=["']([^"']+)["']|<link\b[^>]*href=["']([^"']+)["'][^>]*rel=["'][^"']*canonical[^"']*["']''', re.I)
+          title_re = re.compile(r'<title>(.*?)</title>', re.I | re.S)
+          desc_re = re.compile(r'''<meta\b[^>]*name=["']description["'][^>]*content=["']([^"']*)["']|<meta\b[^>]*content=["']([^"']*)["'][^>]*name=["']description["']''', re.I | re.S)
+          h1_re = re.compile(r'<h1\b[^>]*>(.*?)</h1>', re.I | re.S)
+          tag_re = re.compile(r'<[^>]+>')
+
+          titles = collections.defaultdict(list)
+          canonicals = collections.defaultdict(list)
 
           for page in sorted(set(indexable_files)):
               text = page.read_text(encoding='utf-8', errors='replace')
               rel = page.relative_to(root)
 
+              title_match = title_re.search(text)
+              if not title_match:
+                  errors.append(f'Title absent sur page indexable: {rel}')
+              else:
+                  title = re.sub(r'\s+', ' ', html.unescape(tag_re.sub('', title_match.group(1)))).strip()
+                  titles[title.casefold()].append(str(rel))
+                  if not title:
+                      errors.append(f'Title vide sur page indexable: {rel}')
+
+              desc_match = desc_re.search(text)
+              if not desc_match or not next((g for g in desc_match.groups() if g), '').strip():
+                  warnings.append(f'Meta description absente ou vide: {rel}')
+
+              if not h1_re.search(text):
+                  warnings.append(f'H1 absent: {rel}')
+
               canon = canonical_re.search(text)
               if not canon:
                   errors.append(f'Canonical absent sur page indexable: {rel}')
               else:
-                  canonical_url = next(x for x in canon.groups() if x)
-                  canonical_target = local_path_from_site_url(html.unescape(canonical_url))
-                  if canonical_target is not None and not canonical_target.exists():
-                      errors.append(f'Canonical vers fichier introuvable: {rel} -> {canonical_url}')
+                  canonical_url = html.unescape(next(x for x in canon.groups() if x)).strip()
+                  canonicals[canonical_url.casefold()].append(str(rel))
+                  canonical_target = local_path_from_site_url(canonical_url)
+                  if canonical_target is not None:
+                      if not canonical_target.exists():
+                          errors.append(f'Canonical vers fichier introuvable: {rel} -> {canonical_url}')
+                      elif canonical_target.resolve() != page.resolve():
+                          errors.append(f'Page présente dans sitemap mais canonical vers une autre page: {rel} -> {canonical_url}')
 
               for raw_href in href_re.findall(text):
                   href = html.unescape(raw_href).strip()
@@ -110,9 +139,19 @@ jobs:
                   if not target.exists():
                       errors.append(f'Lien interne cassé: {rel} -> {href}')
 
+          for key, pages in titles.items():
+              if key and len(pages) > 1:
+                  errors.append(f'Title dupliqué: {pages}')
+          for key, pages in canonicals.items():
+              if key and len(pages) > 1:
+                  errors.append(f'Canonical dupliqué entre pages du sitemap: {pages}')
+
+          for warning in warnings:
+              print(f'WARNING: {warning}')
+
           if errors:
               print('\n'.join(f'ERROR: {e}' for e in errors))
-              print(f'\n{len(errors)} erreur(s) détectée(s).')
+              print(f'\n{len(errors)} erreur(s), {len(warnings)} avertissement(s).')
               sys.exit(1)
 
-          print(f'OK — {len(indexable_files)} pages HTML du sitemap contrôlées.')
+          print(f'OK — {len(indexable_files)} pages HTML du sitemap contrôlées, {len(warnings)} avertissement(s).')
