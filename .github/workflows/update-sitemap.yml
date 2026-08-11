@@ -32,11 +32,14 @@ jobs:
           root = Path('.')
           base = 'https://contreevidence.github.io/Esquisse/'
           excluded_names = {'404.html'}
+          excluded_dirs = {'node_modules', 'vendor', 'dist', 'build', 'coverage'}
 
           urls = []
           for path in sorted(root.rglob('*.html')):
               rel = path.as_posix()
               if any(part.startswith('.') for part in path.parts):
+                  continue
+              if any(part in excluded_dirs for part in path.parts):
                   continue
               if path.name in excluded_names:
                   continue
