@@ -42,6 +42,18 @@
     });
   }
 
+  function addEditorialAttribution(heroContainer) {
+    if (!heroContainer || heroContainer.querySelector('.ce-editorial-meta')) return;
+    const deep = /\/(?:dossiers|articles|fiches-metiers)\//.test(location.pathname);
+    const root = deep ? '../' : '';
+    const meta = document.createElement('div');
+    meta.className = 'ce-reading-meta ce-editorial-meta';
+    meta.innerHTML = `<span>Par <a href="${root}a-propos.html">Rédaction Contre-Évidence</a></span><span><a href="${root}methode-sources.html">Méthode & sources</a></span>`;
+    const update = heroContainer.querySelector('.ce-update-meta');
+    if (update) update.insertAdjacentElement('afterend', meta);
+    else heroContainer.appendChild(meta);
+  }
+
   function buildArticleBodyLongform() {
     const prose = document.querySelector('main article.prose');
     if (!document.body.classList.contains('article-body') && !prose) return;
@@ -50,6 +62,9 @@
     if (!main || !hero || main.dataset.ceLongform === '1') return;
     main.dataset.ceLongform = '1';
 
+    const heroContainer = hero.querySelector('.container');
+    if (prose) addEditorialAttribution(heroContainer);
+
     const sections = [...main.querySelectorAll(':scope > section')].filter(s => s !== hero && !s.classList.contains('ce-related'));
     const h2s = prose ? [...prose.querySelectorAll(':scope > h2')] : sections.map(s => s.querySelector('h2')).filter(Boolean);
     if (h2s.length < 4) return;
@@ -57,7 +72,6 @@
     const readingText = prose ? (prose.textContent || '') : sections.map(s => s.textContent || '').join(' ');
     const words = readingText.trim().split(/\s+/).filter(Boolean).length;
     const minutes = Math.max(1, Math.ceil(words / 220));
-    const heroContainer = hero.querySelector('.container');
     if (heroContainer && !heroContainer.querySelector('.ce-longform-meta')) {
       const meta = document.createElement('div');
       meta.className = 'ce-reading-meta ce-longform-meta';
