@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Patrimoine.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Tue, 11 Aug 2026 11:26:04 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 11:28:45 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss-patrimoine.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,26 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Mon patrimoine me permet-il de travailler moins ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/patrimoine-permet-il-travailler-moins.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/patrimoine-permet-il-travailler-moins.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:22:36 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Patrimoine</category>
+      <category>Liberté financière</category>
+      <description>Comparer baisse de revenu, dépenses, dette, retraite, actifs disponibles et valeur du temps libéré.</description>
+    </item>
+    <item>
+      <title>Acheter un logement sans vider son épargne : combien garder après l’achat ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/acheter-sans-vider-epargne.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/acheter-sans-vider-epargne.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:22:15 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Séparer apport, travaux et réserve puis tester la solidité du foyer après la signature.</description>
+    </item>
     <item>
       <title>Toutes les classes d’actifs : construire une allocation patrimoniale complète</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/classes-actifs-allocation-patrimoine.html</link>

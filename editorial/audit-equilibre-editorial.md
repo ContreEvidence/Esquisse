@@ -1,12 +1,12 @@
 # Audit d’équilibre éditorial — Contre-Évidence
 
-Généré le 2026-08-11T11:26:07.760Z
+Généré le 2026-08-11T11:28:48.688Z
 
 ## Volumes
-- Guides et dossiers de référence : 74
+- Guides et dossiers de référence : 80
 - Outils : 17
-- Patrimoine — éditorial : 35
-- Vie professionnelle — éditorial : 39
+- Patrimoine — éditorial : 37
+- Vie professionnelle — éditorial : 43
 - Patrimoine — outils : 12
 - Vie professionnelle — outils : 5
 
@@ -16,20 +16,20 @@ Généré le 2026-08-11T11:26:07.760Z
 
 ## Catégories les plus fournies
 - Vie professionnelle · Fiche métier: 4
-- Patrimoine · Immobilier: 3
+- Patrimoine · Immobilier: 4
 - Vie professionnelle · Comprendre le travail: 2
 - Patrimoine · Immobilier & allocation: 2
 - Patrimoine · Investissement locatif: 2
 - Patrimoine · Protection: 2
+- Vie professionnelle · Reconversion: 2
 - Vie professionnelle · Recherche d’emploi: 2
+- Vie professionnelle · Transition: 2
 - Vie professionnelle · Capacité: 2
 - Vie professionnelle · Apprentissage: 1
 - Vie professionnelle · Management & relations: 1
 - Vie professionnelle · Droit & responsabilités: 1
 - Vie professionnelle · Perceptions & biais: 1
 - Vie professionnelle · Santé & conditions de travail: 1
-- Vie professionnelle · Fiches métiers: 1
-- Patrimoine · Allocation globale: 1
 
 ## Règles de lecture
 - un volume élevé n’est pas un défaut si la demande et la profondeur du sujet le justifient ;

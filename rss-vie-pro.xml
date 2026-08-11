@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils Contre-Évidence consacrés à Vie professionnelle.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Tue, 11 Aug 2026 11:26:04 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 11:28:45 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss-vie-pro.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,46 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Accepter un emploi moins payé pour vivre mieux ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/accepter-emploi-moins-paye-vivre-mieux.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/accepter-emploi-moins-paye-vivre-mieux.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:21:56 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Qualité de vie</category>
+      <description>Comparer revenu réellement disponible, trajet, temps, santé, télétravail, progression et soutenabilité financière.</description>
+    </item>
+    <item>
+      <title>Reconversion sans perte de salaire : quelles options sont réellement possibles ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/reconversion-sans-perte-salaire.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/reconversion-sans-perte-salaire.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:21:33 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Reconversion</category>
+      <description>Distinguer maintien de revenu, manque à gagner, coût de formation et salaire de sortie avant de construire la transition.</description>
+    </item>
+    <item>
+      <title>Combien d’épargne faut-il avant de démissionner ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/combien-epargne-avant-demissionner.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/combien-epargne-avant-demissionner.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:21:11 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Transition</category>
+      <description>Calculer la réserve réellement disponible à partir des dépenses essentielles et tester un retour à l’emploi plus long que prévu.</description>
+    </item>
+    <item>
+      <title>Quitter son CDI avec un crédit immobilier : comment savoir si vous pouvez vous le permettre ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/quitter-cdi-avec-credit-immobilier.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/quitter-cdi-avec-credit-immobilier.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:20:36 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Transition</category>
+      <description>Mesurer la marge financière, vérifier les droits et comparer rester, préparer la sortie ou partir lorsque le foyer porte déjà un crédit.</description>
+    </item>
     <item>
       <title>Commercial B2B : transformer un besoin en décision d’achat rentable</title>
       <link>https://contreevidence.github.io/Esquisse/fiches-metiers/commercial-b2b.html</link>
