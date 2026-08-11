@@ -25,9 +25,6 @@
     };
     renameText();
 
-    /* Compatibilité avec les anciennes ancres du hub Vie professionnelle.
-       Plusieurs dossiers historiques pointaient vers #formation, #salariat ou #entrepreneuriat.
-       Après la refonte par situations, on conserve ces destinations au lieu de laisser un lien arriver en haut de page. */
     if (/\/parcours-vie-professionnelle\.html$/.test(path)) {
       const legacyTargets = {
         formation: 'a.situation-card[href="dossiers/quitter-travail-reconversion-sans-se-fragiliser.html"]',
@@ -42,6 +39,46 @@
       if (legacyTargets[requested]) {
         requestAnimationFrame(() => document.getElementById(requested)?.scrollIntoView({block:'start'}));
       }
+    }
+
+    /* Ponts dossier -> outil pour les intentions d'acquisition les plus fortes.
+       Le bloc est ajouté près de la réponse courte sans remplacer le contenu éditorial. */
+    const toolMap = {
+      '/dossiers/combien-epargne-avant-demissionner.html': {
+        href:'../simulateur-epargne-demission.html',
+        title:'Calculez votre runway avec vos propres chiffres',
+        text:'Dépenses essentielles, revenus certains, réserve protégée et scénario adverse : transformez votre épargne en mois de marge.'
+      },
+      '/dossiers/quitter-cdi-avec-credit-immobilier.html': {
+        href:'../simulateur-epargne-demission.html',
+        title:'Mesurez combien de mois le foyer peut réellement financer',
+        text:'Le crédit entre dans vos dépenses essentielles : testez la marge créée par les revenus qui restent et les liquidités disponibles.'
+      },
+      '/dossiers/passer-80-pourcent-cout-reel.html': {
+        href:'../simulateur-80-pourcent-cout-reel.html',
+        title:'Calculez le prix réel de votre journée libérée',
+        text:'Saisissez le revenu net attendu, les coûts de travail évités et les heures réellement récupérées.'
+      },
+      '/dossiers/travailler-moins-vivre-mieux.html': {
+        href:'../simulateur-80-pourcent-cout-reel.html',
+        title:'Testez ce que vous coûterait un passage à 80 %',
+        text:'Comparez le coût net mensuel au nombre d’heures de vie réellement récupérées avant de comparer les autres options.'
+      },
+      '/dossiers/comparer-deux-offres-emploi.html': {
+        href:'../outil-comparer-offres-emploi.html',
+        title:'Mettez les deux offres sur la même base',
+        text:'Revenu disponible et temps capturé sont calculés ; contrat, manager, risque, progression et inconnues restent séparés, sans faux score.'
+      }
+    };
+    const tool = Object.entries(toolMap).find(([suffix]) => path.endsWith(suffix))?.[1];
+    const prose = document.querySelector('main article.prose');
+    if (tool && prose && !prose.querySelector('.ce-tool-bridge')) {
+      const bridge = document.createElement('div');
+      bridge.className = 'decision-box ce-tool-bridge';
+      bridge.innerHTML = `<h3>Tester avec vos données</h3><p><strong>${tool.title}</strong><br>${tool.text}</p><p><a class="btn btn-primary" href="${tool.href}">Ouvrir l’outil →</a></p>`;
+      const answer = prose.querySelector(':scope > .answer-box, :scope > .voice-note');
+      if (answer) answer.insertAdjacentElement('afterend', bridge);
+      else prose.insertAdjacentElement('afterbegin', bridge);
     }
 
     const foundation = document.querySelector('.patrimoine-hub .foundation');
@@ -86,7 +123,6 @@
       syncCompact();
     }
 
-    /* Les anciennes règles génériques nav{display:none} couvrent encore 760–820px. */
     const flatNav = document.querySelector('.ce-flat-nav');
     if (flatNav && !flatNav.dataset.ceTabletBound) {
       flatNav.dataset.ceTabletBound = '1';
