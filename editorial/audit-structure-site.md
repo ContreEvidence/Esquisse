@@ -1,6 +1,6 @@
 # Audit structurel et UX automatique — Contre-Évidence
 
-Généré le 2026-08-11T11:23:38.638Z
+Généré le 2026-08-11T11:25:40.122Z
 
 Version front attendue : 20260810-13
 
