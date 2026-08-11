@@ -1,18 +1,17 @@
 # Audit qualité éditoriale — Contre-Évidence
 
-Généré le 2026-08-11T12:09:07.387Z
+Généré le 2026-08-11T12:09:31.396Z
 
 ## Erreurs (0)
 - Aucune.
 
-## Avertissements (8)
+## Avertissements (7)
 - dossiers/acheter-sans-vider-epargne.html: guide court (412 mots) — vérifier que la méthode est suffisamment exécutable.
 - dossiers/acheter-logement-sans-se-fragiliser.html: guide court (433 mots) — vérifier que la méthode est suffisamment exécutable.
 - dossiers/combien-epargne-avant-demissionner.html: guide court (401 mots) — vérifier que la méthode est suffisamment exécutable.
 - dossiers/puis-je-me-permettre-reconversion.html: guide court (406 mots) — vérifier que la méthode est suffisamment exécutable.
 - dossiers/accepter-emploi-moins-paye-vivre-mieux.html: dossier court (422 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
 - dossiers/travailler-moins-vivre-mieux.html: guide court (425 mots) — vérifier que la méthode est suffisamment exécutable.
-- dossiers/passer-80-pourcent-cout-reel.html: dossier court (471 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
 - dossiers/comparer-deux-offres-emploi.html: dossier court (381 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
 
 ## Proximités éditoriales à revoir (0)

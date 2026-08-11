@@ -1,6 +1,6 @@
 # Fraîcheur du référentiel chiffré — Contre-Évidence
 
-Généré le 2026-08-11T12:09:06.960Z
+Généré le 2026-08-11T12:09:31.077Z
 
 ## Dossiers en retard sur leurs données (0)
 - Aucun.
@@ -21,7 +21,7 @@ Généré le 2026-08-11T12:09:06.960Z
 - ✓ **retirement2026** → `dossiers/finances-retraite-decumulation.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-11T11:32:57.000Z
 - ✓ **transmission2026** → `dossiers/finances-transmission-patrimoine.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-11T11:56:52.000Z
 - ✓ **training2026** → `dossiers/formation-vaut-elle-le-cout.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-11T11:35:34.000Z
-- ✓ **wages2024** → `dossiers/negocier-salaire-responsabilites.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-11T11:56:52.000Z
+- ✓ **wages2024** → `dossiers/negocier-salaire-responsabilites.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-11T12:09:07.000Z
 - ✓ **business2026** → `dossiers/tresorerie-bfr-entreprise.html` · données substantielles 2026-08-09T12:53:13.000Z · dossier 2026-08-11T11:42:39.000Z
 - ✓ **insurance2025** → `dossiers/assurer-ou-autoassurer-risques.html` · données substantielles 2026-08-09T13:08:32.000Z · dossier 2026-08-11T11:42:39.000Z
 - ✓ **subcontracting2026** → `dossiers/embaucher-ou-sous-traiter.html` · données substantielles 2026-08-09T13:08:32.000Z · dossier 2026-08-10T20:40:39.000Z
