@@ -1,13 +1,12 @@
 # Audit qualité éditoriale — Contre-Évidence
 
-Généré le 2026-08-11T12:18:55.167Z
+Généré le 2026-08-11T12:22:43.805Z
 
 ## Erreurs (0)
 - Aucune.
 
-## Avertissements (3)
+## Avertissements (2)
 - dossiers/acheter-logement-sans-se-fragiliser.html: guide court (433 mots) — vérifier que la méthode est suffisamment exécutable.
-- dossiers/puis-je-me-permettre-reconversion.html: guide court (406 mots) — vérifier que la méthode est suffisamment exécutable.
 - dossiers/travailler-moins-vivre-mieux.html: guide court (425 mots) — vérifier que la méthode est suffisamment exécutable.
 
 ## Proximités éditoriales à revoir (0)
