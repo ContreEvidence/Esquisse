@@ -28,6 +28,7 @@ https://contreevidence.github.io/Esquisse/dossiers/assurer-ou-autoassurer-risque
 https://contreevidence.github.io/Esquisse/dossiers/audit-budget-60-minutes.html
 https://contreevidence.github.io/Esquisse/dossiers/audit-copropriete-avant-achat.html
 https://contreevidence.github.io/Esquisse/dossiers/automatiser-ou-non-processus.html
+https://contreevidence.github.io/Esquisse/dossiers/bien-immobilier-garder-vendre-transformer.html
 https://contreevidence.github.io/Esquisse/dossiers/calculer-prix-minimum-rentable.html
 https://contreevidence.github.io/Esquisse/dossiers/capacite-refuser-travail-rentabilite.html
 https://contreevidence.github.io/Esquisse/dossiers/classes-actifs-allocation-patrimoine.html
@@ -44,6 +45,7 @@ https://contreevidence.github.io/Esquisse/dossiers/dependance-gros-client.html
 https://contreevidence.github.io/Esquisse/dossiers/depenses-recurrentes-abonnements-assurances.html
 https://contreevidence.github.io/Esquisse/dossiers/devenir-manager-premiere-fois.html
 https://contreevidence.github.io/Esquisse/dossiers/embaucher-ou-sous-traiter.html
+https://contreevidence.github.io/Esquisse/dossiers/emploi-chercher-accepter-negocier-evoluer.html
 https://contreevidence.github.io/Esquisse/dossiers/experience-devient-risque-recruteur.html
 https://contreevidence.github.io/Esquisse/dossiers/finances-allocation-portefeuille.html
 https://contreevidence.github.io/Esquisse/dossiers/finances-cadre-global.html
@@ -98,8 +100,6 @@ https://contreevidence.github.io/Esquisse/
 https://contreevidence.github.io/Esquisse/marches-analyses-avancees.html
 https://contreevidence.github.io/Esquisse/mentions.html
 https://contreevidence.github.io/Esquisse/methode-sources.html
-https://contreevidence.github.io/Esquisse/node_modules/tslib/tslib.es6.html
-https://contreevidence.github.io/Esquisse/node_modules/tslib/tslib.html
 https://contreevidence.github.io/Esquisse/parcours-argent.html
 https://contreevidence.github.io/Esquisse/parcours-de-vie.html
 https://contreevidence.github.io/Esquisse/parcours-vie-professionnelle.html
