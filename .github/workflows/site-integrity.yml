@@ -1,0 +1,118 @@
+name: Site integrity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.html"
+      - "sitemap.xml"
+      - ".github/workflows/site-integrity.yml"
+  pull_request:
+    paths:
+      - "**/*.html"
+      - "sitemap.xml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-indexable-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check sitemap targets, canonicals and internal HTML links
+        shell: python
+        run: |
+          from __future__ import annotations
+          import html
+          import pathlib
+          import re
+          import sys
+          import urllib.parse
+          import xml.etree.ElementTree as ET
+
+          root = pathlib.Path('.').resolve()
+          site_prefix = '/Esquisse/'
+          errors = []
+
+          def local_path_from_site_url(url: str) -> pathlib.Path | None:
+              parsed = urllib.parse.urlparse(url)
+              if parsed.netloc and parsed.netloc != 'contreevidence.github.io':
+                  return None
+              path = urllib.parse.unquote(parsed.path)
+              if path in ('/Esquisse', '/Esquisse/'):
+                  return root / 'index.html'
+              if path.startswith(site_prefix):
+                  path = path[len(site_prefix):]
+              elif path.startswith('/'):
+                  return None
+              path = path.lstrip('/')
+              if not path:
+                  path = 'index.html'
+              return (root / path).resolve()
+
+          tree = ET.parse('sitemap.xml')
+          ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = [node.text.strip() for node in tree.findall('.//s:loc', ns) if node.text]
+
+          indexable_files = []
+          for url in urls:
+              target = local_path_from_site_url(url)
+              if target is None:
+                  errors.append(f'Sitemap URL hors domaine attendu: {url}')
+                  continue
+              if not target.exists():
+                  errors.append(f'Sitemap → fichier introuvable: {url} -> {target.relative_to(root)}')
+                  continue
+              if target.suffix.lower() == '.html':
+                  indexable_files.append(target)
+
+          href_re = re.compile(r'''href\s*=\s*["']([^"']+)["']''', re.I)
+          canonical_re = re.compile(r'''<link\b[^>]*rel=["'][^"']*canonical[^"']*["'][^>]*href=["']([^"']+)["']|<link\b[^>]*href=["']([^"']+)["'][^>]*rel=["'][^"']*canonical[^"']*["']''', re.I)
+
+          for page in sorted(set(indexable_files)):
+              text = page.read_text(encoding='utf-8', errors='replace')
+              rel = page.relative_to(root)
+
+              canon = canonical_re.search(text)
+              if not canon:
+                  errors.append(f'Canonical absent sur page indexable: {rel}')
+              else:
+                  canonical_url = next(x for x in canon.groups() if x)
+                  canonical_target = local_path_from_site_url(html.unescape(canonical_url))
+                  if canonical_target is not None and not canonical_target.exists():
+                      errors.append(f'Canonical vers fichier introuvable: {rel} -> {canonical_url}')
+
+              for raw_href in href_re.findall(text):
+                  href = html.unescape(raw_href).strip()
+                  if not href or href.startswith(('#', 'mailto:', 'tel:', 'javascript:', 'data:')):
+                      continue
+                  parsed = urllib.parse.urlparse(href)
+                  if parsed.scheme in ('http', 'https'):
+                      if parsed.netloc != 'contreevidence.github.io':
+                          continue
+                      target = local_path_from_site_url(href)
+                  else:
+                      clean = urllib.parse.unquote(parsed.path)
+                      if not clean or clean.endswith(('.css','.js','.png','.jpg','.jpeg','.webp','.svg','.xml','.json','.webmanifest','.pdf','.mp4','.mp3','.csv','.zip')):
+                          continue
+                      target = (page.parent / clean).resolve()
+                      if clean.endswith('/'):
+                          target = target / 'index.html'
+                  if target is None:
+                      continue
+                  try:
+                      target.relative_to(root)
+                  except ValueError:
+                      errors.append(f'Lien sortant du dépôt: {rel} -> {href}')
+                      continue
+                  if not target.exists():
+                      errors.append(f'Lien interne cassé: {rel} -> {href}')
+
+          if errors:
+              print('\n'.join(f'ERROR: {e}' for e in errors))
+              print(f'\n{len(errors)} erreur(s) détectée(s).')
+              sys.exit(1)
+
+          print(f'OK — {len(indexable_files)} pages HTML du sitemap contrôlées.')
