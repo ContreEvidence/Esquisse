@@ -25,6 +25,25 @@
     };
     renameText();
 
+    /* Compatibilité avec les anciennes ancres du hub Vie professionnelle.
+       Plusieurs dossiers historiques pointaient vers #formation, #salariat ou #entrepreneuriat.
+       Après la refonte par situations, on conserve ces destinations au lieu de laisser un lien arriver en haut de page. */
+    if (/\/parcours-vie-professionnelle\.html$/.test(path)) {
+      const legacyTargets = {
+        formation: 'a.situation-card[href="dossiers/quitter-travail-reconversion-sans-se-fragiliser.html"]',
+        salariat: 'a.situation-card[href="dossiers/plan-30-jours-recherche-emploi.html"]',
+        entrepreneuriat: 'a.situation-card[href="dossiers/lancer-activite-sans-quitter-emploi.html"]'
+      };
+      Object.entries(legacyTargets).forEach(([id, selector]) => {
+        const target = document.querySelector(selector);
+        if (target && !target.id) target.id = id;
+      });
+      const requested = window.location.hash.replace(/^#/, '');
+      if (legacyTargets[requested]) {
+        requestAnimationFrame(() => document.getElementById(requested)?.scrollIntoView({block:'start'}));
+      }
+    }
+
     const foundation = document.querySelector('.patrimoine-hub .foundation');
     const pillars = document.querySelector('.patrimoine-hub .pillar-grid');
     if (foundation && pillars && !foundation.dataset.ceReordered) {
