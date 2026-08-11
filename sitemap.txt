@@ -104,6 +104,7 @@ https://contreevidence.github.io/Esquisse/methode-sources.html
 https://contreevidence.github.io/Esquisse/parcours-argent.html
 https://contreevidence.github.io/Esquisse/parcours-de-vie.html
 https://contreevidence.github.io/Esquisse/parcours-vie-professionnelle.html
+https://contreevidence.github.io/Esquisse/simulateur-80-pourcent-cout-reel.html
 https://contreevidence.github.io/Esquisse/simulateur-epargne-demission.html
 https://contreevidence.github.io/Esquisse/themes/argent.html
 https://contreevidence.github.io/Esquisse/themes/entreprendre.html
