@@ -1,6 +1,6 @@
 # Audit d’équilibre éditorial — Contre-Évidence
 
-Généré le 2026-08-11T11:56:52.575Z
+Généré le 2026-08-11T12:09:07.256Z
 
 ## Volumes
 - Guides et dossiers de référence : 90
