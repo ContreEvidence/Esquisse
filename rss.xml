@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Tue, 11 Aug 2026 11:35:30 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 11:42:35 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,36 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Acheter un logement sans se fragiliser financièrement</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/acheter-logement-sans-se-fragiliser.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/acheter-logement-sans-se-fragiliser.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:40:31 GMT</pubDate>
+      <category>Guide</category>
+      <category>Patrimoine</category>
+      <category>Immobilier</category>
+      <description>Relier apport, épargne restante, coût complet, crédit, mobilité et scénarios avant de signer.</description>
+    </item>
+    <item>
+      <title>Travailler moins, gagner moins, vivre mieux : comment arbitrer ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/travailler-moins-vivre-mieux.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/travailler-moins-vivre-mieux.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:40:08 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Qualité de vie</category>
+      <description>Relier temps partiel, revenu, trajet, santé, patrimoine et objectifs de vie sans réduire la décision au salaire.</description>
+    </item>
+    <item>
+      <title>Quitter son travail ou se reconvertir sans se fragiliser</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/quitter-travail-reconversion-sans-se-fragiliser.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/quitter-travail-reconversion-sans-se-fragiliser.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:39:47 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Transition</category>
+      <description>Clarifier ce qui doit changer, mesurer la marge financière, tester le marché et choisir une transition progressive ou complète.</description>
+    </item>
     <item>
       <title>Deux offres d’emploi : laquelle choisir ?</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/comparer-deux-offres-emploi.html</link>
