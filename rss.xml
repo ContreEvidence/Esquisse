@@ -5,7 +5,7 @@
     <link>https://contreevidence.github.io/Esquisse/</link>
     <description>Nouveaux guides, dossiers et outils de Contre-Évidence : patrimoine, vie professionnelle et décisions concrètes.</description>
     <language>fr-FR</language>
-    <lastBuildDate>Tue, 11 Aug 2026 11:33:29 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 11 Aug 2026 11:35:30 GMT</lastBuildDate>
     <ttl>60</ttl>
     <generator>Contre-Évidence / GitHub Actions</generator>
     <atom:link href="https://contreevidence.github.io/Esquisse/rss.xml" rel="self" type="application/rss+xml"/>
@@ -14,6 +14,46 @@
       <title>Contre-Évidence</title>
       <link>https://contreevidence.github.io/Esquisse/</link>
     </image>
+    <item>
+      <title>Deux offres d’emploi : laquelle choisir ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/comparer-deux-offres-emploi.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/comparer-deux-offres-emploi.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:34:13 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Choix d’emploi</category>
+      <description>Comparer salaire, revenu disponible, trajet, télétravail, temps, stabilité, compétences et qualité de vie.</description>
+    </item>
+    <item>
+      <title>Lancer une activité sans quitter son emploi : quand basculer ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/lancer-activite-sans-quitter-emploi.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/lancer-activite-sans-quitter-emploi.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:33:53 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Entrepreneuriat</category>
+      <description>Tester demande, marge, trésorerie, temps disponible et seuil de bascule avant de quitter le salaire.</description>
+    </item>
+    <item>
+      <title>Puis-je financièrement me permettre une reconversion ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/puis-je-me-permettre-reconversion.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/puis-je-me-permettre-reconversion.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:33:32 GMT</pubDate>
+      <category>Guide</category>
+      <category>Vie professionnelle</category>
+      <category>Reconversion</category>
+      <description>Mesurer dépenses, réserve, manque à gagner, coût de formation, délai de retour à l’emploi et scénario adverse.</description>
+    </item>
+    <item>
+      <title>Passer à 80 % : combien ça coûte vraiment ?</title>
+      <link>https://contreevidence.github.io/Esquisse/dossiers/passer-80-pourcent-cout-reel.html</link>
+      <guid isPermaLink="true">https://contreevidence.github.io/Esquisse/dossiers/passer-80-pourcent-cout-reel.html</guid>
+      <pubDate>Tue, 11 Aug 2026 11:33:15 GMT</pubDate>
+      <category>Dossier</category>
+      <category>Vie professionnelle</category>
+      <category>Temps de travail</category>
+      <description>Comparer revenu disponible, frais évités, retraite, épargne, charge réelle et temps récupéré.</description>
+    </item>
     <item>
       <title>Mon patrimoine me permet-il de travailler moins ?</title>
       <link>https://contreevidence.github.io/Esquisse/dossiers/patrimoine-permet-il-travailler-moins.html</link>

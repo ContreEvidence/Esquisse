@@ -1,16 +1,19 @@
 # Audit qualité éditoriale — Contre-Évidence
 
-Généré le 2026-08-11T11:33:33.718Z
+Généré le 2026-08-11T11:35:34.323Z
 
 ## Erreurs (0)
 - Aucune.
 
-## Avertissements (5)
+## Avertissements (8)
 - dossiers/acheter-sans-vider-epargne.html: guide court (421 mots) — vérifier que la méthode est suffisamment exécutable.
-- dossiers/patrimoine-permet-il-travailler-moins.html: dossier court (404 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
+- dossiers/patrimoine-permet-il-travailler-moins.html: dossier court (402 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
 - dossiers/patrimoine-permet-il-travailler-moins.html: injonction financière potentiellement personnalisante à relire (« achetez »).
 - dossiers/combien-epargne-avant-demissionner.html: guide court (401 mots) — vérifier que la méthode est suffisamment exécutable.
-- dossiers/accepter-emploi-moins-paye-vivre-mieux.html: dossier court (437 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
+- dossiers/puis-je-me-permettre-reconversion.html: guide court (406 mots) — vérifier que la méthode est suffisamment exécutable.
+- dossiers/accepter-emploi-moins-paye-vivre-mieux.html: dossier court (418 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
+- dossiers/passer-80-pourcent-cout-reel.html: dossier court (474 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
+- dossiers/comparer-deux-offres-emploi.html: dossier court (381 mots) — vérifier qu’il mérite un dossier autonome plutôt qu’une fusion.
 
 ## Proximités éditoriales à revoir (0)
 - Aucune proximité forte détectée par le filtre lexical.
