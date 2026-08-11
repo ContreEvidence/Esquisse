@@ -1,0 +1,89 @@
+name: Build legacy redirects
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/legacy-redirects.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  redirects:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout legacy project site
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Replace legacy HTML with path-preserving redirects
+        shell: python
+        run: |
+          from pathlib import Path
+          from urllib.parse import quote
+          import html
+
+          root = Path('.')
+          base = 'https://contreevidence.github.io/'
+          excluded_dirs = {'node_modules', 'vendor', 'dist', 'build', 'coverage'}
+          changed = 0
+
+          def stub(target: str) -> str:
+              safe = html.escape(target, quote=True)
+              js = target.replace('\\', '\\\\').replace('"', '\\"')
+              return f'''<!doctype html>
+          <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>Page déplacée — Contre-Évidence</title>
+          <link rel="canonical" href="{safe}">
+          <meta http-equiv="refresh" content="0;url={safe}">
+          <meta name="description" content="Cette page de Contre-Évidence a été déplacée vers la nouvelle adresse du site.">
+          <script>location.replace("{js}" + location.search + location.hash);</script>
+          </head><body><main><h1>Cette page a déménagé.</h1><p><a href="{safe}">Continuer vers la nouvelle adresse de Contre-Évidence</a></p></main></body></html>'''
+
+          for path in sorted(root.rglob('*.html')):
+              if any(part.startswith('.') for part in path.parts):
+                  continue
+              if any(part in excluded_dirs for part in path.parts):
+                  continue
+              rel = path.relative_to(root).as_posix()
+              if rel == '404.html':
+                  continue
+              target = base if rel == 'index.html' else base + quote(rel, safe='/-._~')
+              path.write_text(stub(target), encoding='utf-8')
+              changed += 1
+
+          dynamic_404 = '''<!doctype html>
+          <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>Page déplacée — Contre-Évidence</title>
+          <meta name="description" content="Contre-Évidence est désormais disponible à sa nouvelle adresse.">
+          <script>
+          (function(){
+            var p = location.pathname.replace(/^\/Esquisse(?:\/|$)/, '/');
+            if (!p || p === '/Esquisse') p = '/';
+            location.replace('https://contreevidence.github.io' + p + location.search + location.hash);
+          })();
+          </script></head><body><main><h1>Contre-Évidence a déménagé.</h1><p><a href="https://contreevidence.github.io/">Ouvrir le nouveau site</a></p></main></body></html>'''
+          Path('404.html').write_text(dynamic_404, encoding='utf-8')
+
+          Path('robots.txt').write_text(
+              'User-agent: *\nAllow: /\nSitemap: https://contreevidence.github.io/Esquisse/sitemap.xml\n',
+              encoding='utf-8'
+          )
+          print(f'{changed} legacy HTML pages converted to path-preserving redirects.')
+
+      - name: Commit redirect layer
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- '*.html' '**/*.html' robots.txt
+          if git diff --cached --quiet; then
+            echo "Legacy redirects already current."
+            exit 0
+          fi
+          git commit -m "Redirige l'ancien site vers la racine Contre-Evidence"
+          git push
