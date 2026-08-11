@@ -101,6 +101,7 @@ https://contreevidence.github.io/Esquisse/
 https://contreevidence.github.io/Esquisse/marches-analyses-avancees.html
 https://contreevidence.github.io/Esquisse/mentions.html
 https://contreevidence.github.io/Esquisse/methode-sources.html
+https://contreevidence.github.io/Esquisse/outil-comparer-offres-emploi.html
 https://contreevidence.github.io/Esquisse/parcours-argent.html
 https://contreevidence.github.io/Esquisse/parcours-de-vie.html
 https://contreevidence.github.io/Esquisse/parcours-vie-professionnelle.html
