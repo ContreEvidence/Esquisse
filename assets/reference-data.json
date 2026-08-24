@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 3,
-    "lastChecked": "2026-08-10",
+    "lastChecked": "2026-08-24",
     "country": "FR",
     "note": "Données de référence centralisées pour les simulateurs Contre-évidence. Les taux de marché sont des repères statistiques et restent modifiables par l'utilisateur.",
     "reusePolicy": "Privilégier les sources officielles, open data, API ou données dont les conditions autorisent explicitement la réutilisation. Ne pas aspirer automatiquement des bases commerciales ou privées. Conserver source, date, périmètre et conditions de réutilisation."
@@ -17,12 +17,12 @@
       "reuseBasis": "Information publique officielle ; citation de la source et vérification de la version en vigueur."
     },
     "marketReference": {
-      "housingLoanAverageRate": 0.0321,
-      "period": "2026-05",
-      "publishedAt": "2026-07-08",
-      "scope": "Nouveaux crédits à l'habitat hors renégociations, toutes durées, hors frais et assurance",
-      "source": "https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2026-05",
-      "sourceLabel": "Banque de France — Crédits aux particuliers, mai 2026",
+      "housingLoanAverageRate": 0.0327,
+      "period": "2026-06",
+      "publishedAt": "2026-08-05",
+      "scope": "Nouveaux crédits à l'habitat hors renégociations, toutes durées, TESE, moyenne pondérée par les flux, hors frais et assurance ; donnée de juin 2026 provisoire",
+      "source": "https://www.banque-france.fr/fr/statistiques/credit/credits-aux-particuliers-2026-06",
+      "sourceLabel": "Banque de France — Crédits aux particuliers, juin 2026",
       "reuseTerms": "https://www.banque-france.fr/fr/infos-legales",
       "reuseBasis": "La Banque de France autorise, sauf spécification contraire, la réutilisation de ses données dont elle est l’unique source, sous réserve notamment de préserver l’intégrité des données et de faire apparaître la source et la date de mise à jour."
     }
